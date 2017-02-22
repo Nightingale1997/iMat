@@ -1,0 +1,117 @@
+/* @font-face {
+    font-family: Opensans;
+    src: url(fonts/OpenSans.ttf)
+}
+
+@font-face {
+    font-family: Novecentosans;
+    src: url(fonts/Novecentosans.otf);
+}
+
+@font-face {
+    font-family: SegoePrint;
+    src: url(fonts/SegoePrint.ttf);
+}
+*/
+
+.mainpane {
+    -fx-background-color: #F2E4DC;
+}
+
+.subpane {
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+    -fx-background-color: #7EA656;
+    -fx-border-color: #BFAE99;
+    -fx-effect: innershadow( gaussian, rgba(0, 0, 0, 0.7), 7.5, 0, 0, 0);
+    /* -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.4), 10, 0, 3, 3); */
+}
+
+.notopborder {
+    -fx-border-radius: 0 0 5 5;
+    -fx-background-radius: 0 0 5 5;
+}
+
+.nobottomborder {
+    -fx-border-radius: 5 5 0 0;
+    -fx-background-radius: 5 5 0 0;
+}
+
+.lightpane {
+    -fx-background-color: #E3F2AC;
+    -fx-effect: innershadow( gaussian, rgba(0, 0, 0, 0.7), 7.5, 0, 0, 0);
+}
+
+.tabselect:top {
+    -fx-background-color: #8C765A;
+}
+
+.tabselect:top {
+    -fx-background-color: #8C765A;
+}
+
+.tabselect:bottom {
+    -fx-background-color: #8C765A;
+}
+
+.tabselect:top:selected {
+    -fx-background-color: #BFAE99;
+}
+
+.invinsible {
+    -fx-background-color: rgba(255, 0, 0, 0.0);
+}
+
+.tab-header-background {
+    -fx-effect: innershadow( gaussian, rgba(0, 0, 0, 0.0), 7.5, 0, 0, 0);
+    -fx-background-color: #F2E4DC;
+    ;
+}
+
+.button {
+    -fx-background-color: #8C765A;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.4), 10, 0, 0, 0);
+}
+
+.bigbutton {
+    -fx-background-color: #8C765A;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.0), 0, 0, 0, 0);
+    -fx-background-radius: 0;
+    -fx-border-radius: 0;
+    -fx-border-color: black;
+    -fx-border-width: 2px;
+}
+
+.bottomleftcornerround {
+    -fx-border-radius: 0 0 0 5;
+    -fx-background-radius: 0 0 0 5;
+}
+
+.bottomrightcornerround {
+    -fx-border-radius: 0 0 5 0;
+    -fx-background-radius: 0 0 5 0;
+}
+
+.toprightcornerround {
+    -fx-border-radius: 0 5 0 0;
+    -fx-background-radius: 0 5 0 0;
+}
+
+.topleftcornerround {
+    -fx-border-radius: 5 0 0 0;
+    -fx-background-radius: 5 0 0 0;
+}
+
+.testtext {
+    -fx-font-family: "Novecentosans";
+}
+
+.search {
+    -fx-effect: innershadow( gaussian, rgba(0, 0, 0, 0.5), 5, 0, 0, 0);
+}
+
+.list-view {
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+    -fx-control-inner-background: #E3F2AC;
+}
