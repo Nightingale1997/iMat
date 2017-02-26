@@ -14,7 +14,6 @@ import java.net.URL;
 import java.util.HashMap;
 import java.util.List;
 import java.util.ResourceBundle;
-import java.util.StringJoiner;
 
 public class Controller implements Initializable{
     @FXML 
@@ -35,7 +34,9 @@ public class Controller implements Initializable{
     @FXML
     private GridPane frame;
 
-
+    HashMap categoryHash;
+    
+    IMatDataHandler instance = IMatDataHandler.getInstance();
 
 
     private HashMap<String, ProductCategory> createHashMap() {
@@ -45,15 +46,15 @@ public class Controller implements Initializable{
         categoryMap.put("Kål", ProductCategory.CABBAGE);
         categoryMap.put("Citrusfrukter", ProductCategory.CITRUS_FRUIT);
         categoryMap.put("Kalla drycker", ProductCategory.COLD_DRINKS);
-        
         return categoryMap;
     }
 
     
     @Override
     public void initialize (URL url, ResourceBundle rb) {
+        
         frame.setVisible(true);
-        HashMap categoryHash = createHashMap();
+        categoryHash = createHashMap();
         categories.setRoot(createCategoryTree());
         categories.setShowRoot(false);
 
@@ -72,7 +73,8 @@ public class Controller implements Initializable{
         // Accept clicks only on node cells, and not on empty spaces of the TreeView
         if (node instanceof Text || (node instanceof TreeCell && ((TreeCell) node).getText() != null)) {
             String name = (String) ((TreeItem)categories.getSelectionModel().getSelectedItem()).getValue();
-            System.out.println("Node click: " + name);
+            List x = instance.getProducts((ProductCategory)categoryHash.get(name));
+            System.out.println(x);
         }
     }
     
