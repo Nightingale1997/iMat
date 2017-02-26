@@ -1,14 +1,20 @@
 package sample;
 
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.control.*;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
+import javafx.scene.text.Text;
 import se.chalmers.ait.dat215.project.*;
 
 import java.net.URL;
 import java.util.HashMap;
+import java.util.List;
 import java.util.ResourceBundle;
+import java.util.StringJoiner;
 
 public class Controller implements Initializable{
     @FXML 
@@ -28,9 +34,12 @@ public class Controller implements Initializable{
     
     @FXML
     private GridPane frame;
-    
-    private HashMap createHashMap() {
-        HashMap categoryMap = new HashMap();
+
+
+
+
+    private HashMap<String, ProductCategory> createHashMap() {
+        HashMap<String, ProductCategory> categoryMap = new HashMap<String, ProductCategory>();
         categoryMap.put("Bär", ProductCategory.BERRY);
         categoryMap.put("Bröd", ProductCategory.BREAD);
         categoryMap.put("Kål", ProductCategory.CABBAGE);
@@ -44,20 +53,50 @@ public class Controller implements Initializable{
     @Override
     public void initialize (URL url, ResourceBundle rb) {
         frame.setVisible(true);
+        HashMap categoryHash = createHashMap();
         categories.setRoot(createCategoryTree());
         categories.setShowRoot(false);
+
+        EventHandler<MouseEvent> mouseEventHandle = (MouseEvent event) -> {
+            handleMouseClicked(event);
+        };
+        
+        
+        categories.addEventHandler(MouseEvent.MOUSE_CLICKED, mouseEventHandle);
+    
     }
     
+    /* Code handling mouse event + TreeView found at http://stackoverflow.com/questions/15792090/javafx-treeview-item-action-event */
+    private void handleMouseClicked(MouseEvent event) {
+        Node node = event.getPickResult().getIntersectedNode();
+        // Accept clicks only on node cells, and not on empty spaces of the TreeView
+        if (node instanceof Text || (node instanceof TreeCell && ((TreeCell) node).getText() != null)) {
+            String name = (String) ((TreeItem)categories.getSelectionModel().getSelectedItem()).getValue();
+            System.out.println("Node click: " + name);
+        }
+    }
+    
+    
+    
     private TreeItem<String> createCategoryTree() {
-        String[] greens = {"Citrusfrukter", "Exotiska frukter", "Kål", "Meloner", "Rotfrukter", "Örter"};
+        String[] greens = {"Citrusfrukter", "Exotiska frukter", "Kål", "Meloner", "Rotfrukter", "Stenfrukter", "Rotfrukter",  "Örter"};
+        String[] dryStuff = {"Mjöl, socker och Salt", "Nötter och frön", "Pasta", "Potatis och ris"};
         TreeItem<String> tree = new TreeItem<>();
         /* creates the "roots" of the tree from where branches/leaves will branch out. */
-        TreeItem<String> fruitsgreens = new TreeItem<>("Frukt och grönt");
-        TreeItem<String> meats = new TreeItem<>("Kött");
-        tree.getChildren().add(fruitsgreens);
-        tree.getChildren().add(meats);
+        TreeItem<String> fruitsgreens = addNode("Frukt och grönt", tree);
+        //TreeItem<String> meats = addNode("Kött", tree);
+        TreeItem<String> drygoods = addNode("Skafferi", tree);
+        TreeItem<String> sweets = addNode("Sötsaker", tree);
+        addNode("Kött", tree);
+        addNode("Mejeriprodukter", tree);
+        
+        
         for (String productCategory : greens){
-            TreeItem<String> treeItem = new TreeItem<>(productCategory);
+            System.out.println(productCategory);
+            addNode(productCategory, fruitsgreens);
+        }
+        for (String productCategory : dryStuff){
+            addNode(productCategory, drygoods);
         }
         return tree;
     }
@@ -68,5 +107,6 @@ public class Controller implements Initializable{
         parent.getChildren().add(newNode);
         return newNode;
     }
+    
 
 }
