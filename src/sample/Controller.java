@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.control.*;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.Text;
@@ -128,13 +129,19 @@ public class Controller implements Initializable{
     
     @FXML
     private void searchBarSearch(){
-        String searchphrase = searchBar.toString();
+        String searchphrase = searchBar.getText();
         for (Product product : instance.getProducts()){
-            if(product.toString().equalsIgnoreCase(searchphrase))
+            if(product.toString().toLowerCase().contains(searchphrase.toLowerCase()))
             System.out.println(product);
             else{
-                System.out.println("FFFFFFFFFEL");
             }
+        }
+    }
+    
+    @FXML
+    private void enterSearch(KeyEvent event){
+        if (event.getCode().toString().equalsIgnoreCase("ENTER")){
+            searchBarSearch();
         }
     }
     

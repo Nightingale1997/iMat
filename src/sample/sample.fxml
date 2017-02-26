@@ -29,7 +29,7 @@
   <children>
     <Pane prefHeight="720.0" prefWidth="1280.0" styleClass="mainpane" GridPane.columnIndex="0" GridPane.rowIndex="0">
       <children>
-        <TextField fx:id="searchBar" layoutX="305.0" layoutY="46.0" prefHeight="37.9609375" prefWidth="500.0" styleClass="search" />
+        <TextField fx:id="searchBar" layoutX="305.0" layoutY="46.0" onKeyPressed="#enterSearch" prefHeight="37.9609375" prefWidth="500.0" styleClass="search" />
         <Button fx:id="searchButton" layoutX="805.0" layoutY="46.0" mnemonicParsing="false" onMouseClicked="#searchBarSearch" prefHeight="37.961037499997474" prefWidth="68.0" text="Sök" textFill="WHITE" />
         <Pane layoutX="24.0" layoutY="150.0" prefHeight="499.999977929685" prefWidth="230.0" styleClass="subpane">
           <children>
