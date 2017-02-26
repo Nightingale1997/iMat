@@ -91,7 +91,6 @@ public class Controller implements Initializable{
         if (node instanceof Text || (node instanceof TreeCell && ((TreeCell) node).getText() != null)) {
             String name = (String) ((TreeItem)categories.getSelectionModel().getSelectedItem()).getValue();
             List x = instance.getProducts((ProductCategory)categoryHash.get(name));
-            System.out.println(x);
         }
     }
     
@@ -125,6 +124,18 @@ public class Controller implements Initializable{
         newNode.setExpanded(true);
         parent.getChildren().add(newNode);
         return newNode;
+    }
+    
+    @FXML
+    private void searchBarSearch(){
+        String searchphrase = searchBar.toString();
+        for (Product product : instance.getProducts()){
+            if(product.toString().equalsIgnoreCase(searchphrase))
+            System.out.println(product);
+            else{
+                System.out.println("FFFFFFFFFEL");
+            }
+        }
     }
     
 
