@@ -115,3 +115,7 @@
     -fx-border-radius: 5;
     -fx-control-inner-background: #E3F2AC;
 }
+
+.scroll-pane {
+    -fx-background-color: #7EA656;
+}
