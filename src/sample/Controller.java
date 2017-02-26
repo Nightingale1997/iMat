@@ -46,6 +46,23 @@ public class Controller implements Initializable{
         categoryMap.put("Kål", ProductCategory.CABBAGE);
         categoryMap.put("Citrusfrukter", ProductCategory.CITRUS_FRUIT);
         categoryMap.put("Kalla drycker", ProductCategory.COLD_DRINKS);
+        categoryMap.put("Varma drycker", ProductCategory.HOT_DRINKS);
+        categoryMap.put("Exotiska frukter", ProductCategory.EXOTIC_FRUIT);
+        categoryMap.put("Fisk", ProductCategory.FISH);
+        categoryMap.put("Grönsaksfrukter", ProductCategory.VEGETABLE_FRUIT);
+        categoryMap.put("Kött", ProductCategory.MEAT);
+        categoryMap.put("Mejeriprodukter", ProductCategory.DAIRIES);
+        categoryMap.put("Meloner", ProductCategory.MELONS);
+        categoryMap.put("Mjöl, socker och salt", ProductCategory.FLOUR_SUGAR_SALT);
+        categoryMap.put("Nötter och frön", ProductCategory.NUTS_AND_SEEDS);
+        categoryMap.put("Pasta", ProductCategory.PASTA);
+        categoryMap.put("Potatis och ris", ProductCategory.POTATO_RICE);
+        categoryMap.put("Rotfrukter", ProductCategory.ROOT_VEGETABLE);
+        categoryMap.put("Stenfrukter", ProductCategory.FRUIT);
+        categoryMap.put("Sötsaker", ProductCategory.SWEET);
+        categoryMap.put("Örter", ProductCategory.HERB);
+        categoryMap.put("Baljväxter", ProductCategory.POD);
+        
         return categoryMap;
     }
 
@@ -82,7 +99,7 @@ public class Controller implements Initializable{
     
     private TreeItem<String> createCategoryTree() {
         String[] greens = {"Citrusfrukter", "Exotiska frukter", "Kål", "Meloner", "Rotfrukter", "Stenfrukter", "Rotfrukter",  "Örter"};
-        String[] dryStuff = {"Mjöl, socker och Salt", "Nötter och frön", "Pasta", "Potatis och ris"};
+        String[] dryStuff = {"Mjöl, socker och salt", "Nötter och frön", "Pasta", "Potatis och ris"};
         TreeItem<String> tree = new TreeItem<>();
         /* creates the "roots" of the tree from where branches/leaves will branch out. */
         TreeItem<String> fruitsgreens = addNode("Frukt och grönt", tree);
