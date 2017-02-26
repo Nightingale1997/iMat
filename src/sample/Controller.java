@@ -1,5 +1,6 @@
 package sample;
 
+import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -30,7 +31,7 @@ public class Controller implements Initializable{
     private ListView shoppingCart;
     
     @FXML
-    private Button loginButton;
+    private Button loginButton, item0, item1, item2, item3, item4, item5, item6, item7, item8;
     
     @FXML
     private GridPane frame;
@@ -79,8 +80,6 @@ public class Controller implements Initializable{
         EventHandler<MouseEvent> mouseEventHandle = (MouseEvent event) -> {
             handleMouseClicked(event);
         };
-        
-        
         categories.addEventHandler(MouseEvent.MOUSE_CLICKED, mouseEventHandle);
     
     }
@@ -103,7 +102,6 @@ public class Controller implements Initializable{
         TreeItem<String> tree = new TreeItem<>();
         /* creates the "roots" of the tree from where branches/leaves will branch out. */
         TreeItem<String> fruitsgreens = addNode("Frukt och grönt", tree);
-        //TreeItem<String> meats = addNode("Kött", tree);
         TreeItem<String> drygoods = addNode("Skafferi", tree);
         TreeItem<String> sweets = addNode("Sötsaker", tree);
         addNode("Kött", tree);
@@ -143,6 +141,12 @@ public class Controller implements Initializable{
         if (event.getCode().toString().equalsIgnoreCase("ENTER")){
             searchBarSearch();
         }
+    }
+    
+    @FXML
+    private void onClick(Event event){
+        Button button = (Button) event.getSource();
+        button.setText(event.getSource().toString());
     }
     
 

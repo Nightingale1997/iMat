@@ -91,21 +91,21 @@
                 </Tab>
               </tabs>
             </TabPane>
-            <GridPane prefHeight="499.9998779296875" prefWidth="732.0">
+            <GridPane fx:id="itemGrid" prefHeight="499.9998779296875" prefWidth="732.0">
               <children>
-                <Button mnemonicParsing="false" prefHeight="170.0" prefWidth="366.0" styleClass="bigbutton, toprightcornerround" text="Button" GridPane.columnIndex="2" />
-                <Button mnemonicParsing="false" prefHeight="170.0" prefWidth="366.0" styleClass="bigbutton" text="Button" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                <Button mnemonicParsing="false" prefHeight="166.0" prefWidth="366.0" styleClass="bigbutton, bottomleftcornerround" text="Button" GridPane.columnIndex="0" GridPane.rowIndex="2" />
-                <Button mnemonicParsing="false" prefHeight="165.9998779296875" prefWidth="366.0" styleClass="bigbutton, bottomrightcornerround" text="Button" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                <Button mnemonicParsing="false" prefHeight="181.0" prefWidth="366.0" text="Button">
+                <Button fx:id="item2" mnemonicParsing="false" onAction="#onClick" prefHeight="170.0" prefWidth="366.0" styleClass="bigbutton, toprightcornerround" text="Button" GridPane.columnIndex="2" />
+                <Button fx:id="item4" mnemonicParsing="false" onAction="#onClick" prefHeight="170.0" prefWidth="366.0" styleClass="bigbutton" text="Button" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <Button fx:id="item6" mnemonicParsing="false" onAction="#onClick" prefHeight="166.0" prefWidth="366.0" styleClass="bigbutton, bottomleftcornerround" text="Button" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                <Button fx:id="item8" mnemonicParsing="false" onAction="#onClick" prefHeight="165.9998779296875" prefWidth="366.0" styleClass="bigbutton, bottomrightcornerround" text="Button" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                <Button fx:id="item0" mnemonicParsing="false" onAction="#onClick" prefHeight="181.0" prefWidth="366.0" text="Button">
                            <styleClass>
                               <String fx:value="bigbutton" />
                               <String fx:value="topleftcornerround" />
                            </styleClass></Button>
-                <Button mnemonicParsing="false" prefHeight="181.0" prefWidth="366.0" styleClass="bigbutton" text="Button" GridPane.columnIndex="0" GridPane.rowIndex="1" />
-                        <Button mnemonicParsing="false" prefHeight="170.0" prefWidth="366.0" styleClass="bigbutton" text="Button" GridPane.columnIndex="1" />
-                        <Button mnemonicParsing="false" prefHeight="170.0" prefWidth="366.0" styleClass="bigbutton" text="Button" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                        <Button mnemonicParsing="false" prefHeight="170.0" prefWidth="366.0" styleClass="bigbutton" text="Button" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                <Button fx:id="item3" mnemonicParsing="false" onAction="#onClick" prefHeight="181.0" prefWidth="366.0" styleClass="bigbutton" text="Button" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                        <Button fx:id="item1" mnemonicParsing="false" onAction="#onClick" prefHeight="170.0" prefWidth="366.0" styleClass="bigbutton" text="Button" GridPane.columnIndex="1" />
+                        <Button fx:id="item7" mnemonicParsing="false" onAction="#onClick" prefHeight="170.0" prefWidth="366.0" styleClass="bigbutton" text="Button" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Button fx:id="item5" mnemonicParsing="false" onAction="#onClick" prefHeight="170.0" prefWidth="366.0" styleClass="bigbutton" text="Button" GridPane.columnIndex="2" GridPane.rowIndex="1" />
               </children>
               <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
