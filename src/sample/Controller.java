@@ -6,6 +6,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.control.*;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
@@ -17,7 +18,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.ResourceBundle;
 
-public class Controller implements Initializable{
+public class    Controller implements Initializable{
     @FXML 
     private TextField searchBar;
     
@@ -25,16 +26,19 @@ public class Controller implements Initializable{
     private TreeView categories;
     
     @FXML 
-    private Button searchButton;
-    
-    @FXML 
     private ListView shoppingCart;
     
     @FXML
-    private Button loginButton, item0, item1, item2, item3, item4, item5, item6, item7, item8;
+    private Button getSearchButton, loginButton, addItem, incItem, decItem, item0, item1, item2, item3, item4, item5, item6, item7, item8;
     
     @FXML
     private GridPane frame;
+    
+    @FXML
+    private Label itemLabel, itemPriceLabel;
+    
+    @FXML
+    private ImageView addFavourite, itemImage;        
 
     HashMap categoryHash;
     
@@ -77,14 +81,15 @@ public class Controller implements Initializable{
         categories.setRoot(createCategoryTree());
         categories.setShowRoot(false);
 
-        EventHandler<MouseEvent> mouseEventHandle = (MouseEvent event) -> {
+        EventHandler<MouseEvent> mouseEventHandle = (MouseEvent event) -> { 
             handleMouseClicked(event);
         };
         categories.addEventHandler(MouseEvent.MOUSE_CLICKED, mouseEventHandle);
     
     }
     
-    /* Code handling mouse event + TreeView found at http://stackoverflow.com/questions/15792090/javafx-treeview-item-action-event */
+    /* Code handling mouse event + TreeView found at http://stackoverflow.com/questions/15792090/javafx-treeview-item-action-event 
+    * Den här koden behöver man inte nödvändigtvis förstå, den gör sitt jobb.*/
     private void handleMouseClicked(MouseEvent event) {
         Node node = event.getPickResult().getIntersectedNode();
         // Accept clicks only on node cells, and not on empty spaces of the TreeView
@@ -95,7 +100,7 @@ public class Controller implements Initializable{
     }
     
     
-    
+    /* TODO: Bolda de fem huvudkategorierna. */
     private TreeItem<String> createCategoryTree() {
         String[] greens = {"Citrusfrukter", "Exotiska frukter", "Kål", "Meloner", "Rotfrukter", "Stenfrukter", "Rotfrukter",  "Örter"};
         String[] dryStuff = {"Mjöl, socker och salt", "Nötter och frön", "Pasta", "Potatis och ris"};
@@ -130,7 +135,7 @@ public class Controller implements Initializable{
         String searchphrase = searchBar.getText();
         for (Product product : instance.getProducts()){
             if(product.toString().toLowerCase().contains(searchphrase.toLowerCase()))
-            System.out.println(product);
+                System.out.println(product);
             else{
             }
         }
