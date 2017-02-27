@@ -19,6 +19,9 @@ import java.util.List;
 import java.util.ResourceBundle;
 
 public class    Controller implements Initializable{
+    /*
+    @FXML skrivs för att det är element från JavaFX/Scenebuilder man jobbar med.
+     */
     @FXML 
     private TextField searchBar;
     
@@ -74,7 +77,7 @@ public class    Controller implements Initializable{
 
     /*
     TODO:
-    1.
+    1. Listor/Vyer uppdateras dynamiskt med produkterna från sökningar.
     2.
     3.
     4.
@@ -83,6 +86,11 @@ public class    Controller implements Initializable{
     7.
     8.
     9.
+     */
+    /*
+    Initierar vy, skapar en hashmap för att komma åt produkt-kategorierna. 
+    Sedan skapas TreeView:en och roten döljs.
+    MouseEventHandlern hanterar så man kan klicka i TreeView.
      */
     @Override
     public void initialize (URL url, ResourceBundle rb) {
@@ -112,6 +120,10 @@ public class    Controller implements Initializable{
     
     
     /* TODO: Bolda de fem huvudkategorierna. */
+    /*
+    Listor med alla namn på kategorierna skapas.
+    Ett tomt träd skapas där man sedan lägger till alla rotnoder och sedan läggs alla kategorier som ska ligga under rotnoderna.
+     */
     private TreeItem<String> createCategoryTree() {
         String[] greens = {"Citrusfrukter", "Exotiska frukter", "Kål", "Meloner", "Rotfrukter", "Stenfrukter", "Rotfrukter",  "Örter"};
         String[] dryStuff = {"Mjöl, socker och salt", "Nötter och frön", "Pasta", "Potatis och ris"};
@@ -125,7 +137,6 @@ public class    Controller implements Initializable{
         
         
         for (String productCategory : greens){
-            System.out.println(productCategory);
             addNode(productCategory, fruitsgreens);
         }
         for (String productCategory : dryStuff){
@@ -134,6 +145,9 @@ public class    Controller implements Initializable{
         return tree;
     }
     
+    /*
+    Tar ett namn och en nod som ska vara nodens rot och kopplar ihop dem så man kan bygga ett träd.
+     */
     private TreeItem<String> addNode(String name, TreeItem<String> parent){
         TreeItem<String> newNode = new TreeItem<>(name);
         newNode.setExpanded(true);
@@ -141,6 +155,15 @@ public class    Controller implements Initializable{
         return newNode;
     }
     
+    /*
+    Hämtar en sträng från searchBar:en som finns i JavaFX/Scenebuilder. Sedan jämför den strängen med 
+    alla produkter som finns i programmet(efter att ha konverterat alla char:s till gemener) och i nuläget
+    printar den ut alla produkter som matchar i terminalen.
+     */
+    /*
+    @FXML skriver man vid metoderna för att de ska synas i Scenebuilder så man kan koppla dem
+    till element där. Se exempelvis searchBar i Scenebuilder.(I "Code" dropdown menyn till höger.)
+     */
     @FXML
     private void searchBarSearch(){
         String searchphrase = searchBar.getText();
@@ -151,7 +174,10 @@ public class    Controller implements Initializable{
             }
         }
     }
-    
+    /*
+    Kontrollerar ifall det är enter-knappen som trycks på när man är i searchBar:en.
+    Om det är det så kör den searchBarSearch som finns ovan,
+     */
     @FXML
     private void enterSearch(KeyEvent event){
         if (event.getCode().toString().equalsIgnoreCase("ENTER")){
@@ -159,11 +185,13 @@ public class    Controller implements Initializable{
         }
     }
     
+    /*
+    Sparar ned vilken knapp man tryckt på till pressedButton och sedan ändrar den(i nuläget)
+    vad som står på knappen till vilken knapp knapptryckningen uppfattades ifrån.
+     */
     @FXML
     private void onClick(Event event){
-        Button button = (Button) event.getSource();
-        button.setText(event.getSource().toString());
+        Button pressedButton = (Button) event.getSource();
+        pressedButton.setText(event.getSource().toString());
     }
-    
-
 }
