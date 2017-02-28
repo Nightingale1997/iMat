@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+  <children>
+    <GridPane id="" alignment="CENTER" hgap="10.0" layoutX="-340.0" layoutY="-160.0" vgap="10.0">
+      <children>
+        <Pane prefHeight="720.0" prefWidth="1280.0" styleClass="mainpane" GridPane.columnIndex="0" GridPane.rowIndex="0">
+          <children>
+            <TextField id="searchBar" layoutX="305.0" layoutY="46.0" onKeyPressed="#enterSearch" prefHeight="37.9609375" prefWidth="500.0" styleClass="search" />
+            <Button id="searchButton" layoutX="805.0" layoutY="46.0" mnemonicParsing="false" onMouseClicked="#searchBarSearch" prefHeight="37.961037499997474" prefWidth="68.0" text="Sök" textFill="WHITE" />
+            <Pane layoutX="14.0" layoutY="150.0" prefHeight="499.9998779296875" prefWidth="1252.0" styleClass="subpane">
+              <children>
+                <Text layoutX="339.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Förnamn" />
+                <Text layoutX="726.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Efternamn" />
+                <Text layoutX="339.0" layoutY="209.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adress" />
+                <Text layoutX="530.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bekräfta Uppgifter">
+                  <font>
+                    <Font name="System Bold" size="25.0" />
+                  </font>
+                </Text>
+                <Text layoutX="726.0" layoutY="209.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ort" />
+                <Text layoutX="726.0" layoutY="277.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Postnummer" />
+                <Text layoutX="339.0" layoutY="277.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telefonnummer" />
+                <Button id="loginButton" layoutX="1123.0" layoutY="437.0" mnemonicParsing="false" prefHeight="37.9609375" prefWidth="115.0" text="Bekräfta" textFill="WHITE">
+                  <font>
+                    <Font name="System Bold" size="20.0" />
+                  </font>
+                </Button>
+                <Button id="loginButton" layoutX="24.0" layoutY="439.0" minHeight="21.9609375" mnemonicParsing="false" prefHeight="33.251953125" prefWidth="84.0234375" text="Tillbaka" textFill="WHITE">
+                  <font>
+                    <Font name="System Bold" size="15.0" />
+                  </font>
+                </Button>
+                <Text layoutX="597.0" layoutY="450.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sida 4 av 4" />
+                <Text layoutX="340.0" layoutY="166.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Namn" />
+                <Text layoutX="726.0" layoutY="166.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Namnsson" />
+                <Text layoutX="339.0" layoutY="233.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gatugatan 12" />
+                <Text layoutX="726.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Genericsborg" />
+                <Text layoutX="340.0" layoutY="301.0" strokeType="OUTSIDE" strokeWidth="0.0" text="123 456 789" />
+                <Text layoutX="726.0" layoutY="298.0" strokeType="OUTSIDE" strokeWidth="0.0" text="42296" />
+                <Text layoutX="339.0" layoutY="338.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mastercard med numret **** **** **** 5234" />
+              </children>
+            </Pane>
+            <Pane layoutX="14.0" layoutY="682.0" prefHeight="37.9609375" prefWidth="1252.0" styleClass="subpane, nobottomborder" />
+            <Button id="loginButton" layoutX="1135.0" layoutY="44.0" mnemonicParsing="false" prefHeight="37.9609375" prefWidth="115.0" text="Logga in" textFill="WHITE" />
+            <ImageView fitHeight="106.0" fitWidth="106.0" layoutX="1006.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@../img/help.png" />
+              </image>
+            </ImageView>
+            <ImageView fitHeight="106.0" fitWidth="181.32995575843736" layoutX="38.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@../img/Logga.png" />
+              </image>
+            </ImageView>
+            <ImageView fitHeight="106.0" fitWidth="106.0" layoutX="930.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@../img/speech-bubble-png-11.png" />
+              </image>
+            </ImageView>
+            <Label layoutX="947.0" layoutY="27.0" text="Klicka här om" />
+            <Label layoutX="948.0" layoutY="43.0" text="du behöver" />
+            <Label layoutX="955.0" layoutY="57.0" text="Hjälp!" textAlignment="LEFT" textFill="#7ea656">
+              <font>
+                <Font name="System Bold" size="16.0" />
+              </font>
+            </Label>
+          </children>
+        </Pane>
+      </children>
+      <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+      </columnConstraints>
+      <rowConstraints>
+        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+      </rowConstraints>
+      <stylesheets>
+        <URL value="@../css/mainsheet.css" />
+      </stylesheets>
+    </GridPane>
+  </children>
+</AnchorPane>
