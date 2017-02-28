@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="574.0" maxWidth="728.0" minHeight="574.0" minWidth="728.0" prefHeight="574.0" prefWidth="728.0" styleClass="backgroundPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="23.0" layoutY="12.0" text="Registrera konto">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Pane layoutX="12.0" layoutY="67.0" prefHeight="495.0" prefWidth="707.0" styleClass="containerPane">
+         <children>
+            <Label layoutX="23.0" layoutY="25.0" styleClass="informationHeadline" text="Kortnummer" textFill="#1c6d11" />
+            <Label layoutX="20.0" layoutY="80.0" styleClass="informationHeadline" text="CVC" textFill="#1c6d11" />
+            <Label layoutX="23.0" layoutY="154.0" styleClass="informationHeadline" text="Kortinnehavarens namn" textFill="#1c6d11" />
+            <Label layoutX="23.0" layoutY="212.0" styleClass="informationHeadline" text="Utgångsdatum" textFill="#1c6d11" />
+            <Pane fx:id="change" layoutX="548.0" layoutY="432.0" prefHeight="41.0" prefWidth="136.0" styleClass="cancelPane">
+               <children>
+                  <Label layoutX="51.0" layoutY="10.0" text="Spara" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <TextField layoutX="21.0" layoutY="42.0" />
+            <TextField layoutX="21.0" layoutY="97.0" />
+            <TextField layoutX="21.0" layoutY="173.0" />
+            <TextField layoutX="23.0" layoutY="231.0" prefHeight="25.0" prefWidth="58.0" />
+            <Label layoutX="325.0" layoutY="453.0" text="Steg 2 av 2" />
+            <TextField layoutX="90.0" layoutY="231.0" prefHeight="25.0" prefWidth="58.0" />
+         </children>
+      </Pane>
+   </children>
+   <stylesheets>
+      <URL value="@../../iMat-master/iMat-master/src/sample/css/accountSheet.css" />
+      <URL value="@../../../../../../../Downloads/iMat-master/iMat-master/src/sample/css/accountSheet.css" />
+   </stylesheets>
+</Pane>
