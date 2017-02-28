@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+  <children>
+    <GridPane id="" alignment="CENTER" hgap="10.0" layoutX="-340.0" layoutY="-160.0" vgap="10.0">
+      <children>
+        <Pane prefHeight="720.0" prefWidth="1280.0" styleClass="mainpane" GridPane.columnIndex="0" GridPane.rowIndex="0">
+          <children>
+            <TextField id="searchBar" layoutX="305.0" layoutY="46.0" onKeyPressed="#enterSearch" prefHeight="37.9609375" prefWidth="500.0" styleClass="search" />
+            <Button id="searchButton" layoutX="805.0" layoutY="46.0" mnemonicParsing="false" onMouseClicked="#searchBarSearch" prefHeight="37.961037499997474" prefWidth="68.0" text="Sök" textFill="WHITE" />
+            <Pane layoutX="14.0" layoutY="150.0" prefHeight="499.9998779296875" prefWidth="1252.0" styleClass="subpane">
+              <children>
+                <Pane layoutX="14.0" layoutY="66.0" prefHeight="419.9998779296875" prefWidth="277.0" styleClass="lightpane">
+                  <children>
+                    <ListView id="shoppingCart" layoutX="0.0" layoutY="0.0" orientation="VERTICAL" prefHeight="281.999977929685" prefWidth="277.0" />
+                    <Label layoutX="14.0" layoutY="357.0" text="Antal Varor:" />
+                    <Label layoutX="14.0" layoutY="390.0" text="Totalpris:" />
+                    <Label layoutX="162.0" layoutY="357.0" text="0" />
+                    <Label layoutX="157.0" layoutY="387.0" text="0kr" />
+                  </children>
+                </Pane>
+                <Label layoutX="53.0" layoutY="14.0" text="Kundvagn" textFill="BLACK">
+                  <font>
+                    <Font name="System Bold" size="26.0" />
+                  </font>
+                </Label>
+                <Button id="loginButton" layoutX="447.0" layoutY="66.0" mnemonicParsing="false" prefHeight="66.9609375" prefWidth="133.0" text="Ja, jag vill beställa nu" textFill="WHITE" wrapText="true">
+                  <font>
+                    <Font size="20.0" fx:id="x1" />
+                  </font>
+                </Button>
+                <Button id="loginButton" font="$x1" layoutX="447.0" layoutY="169.0" mnemonicParsing="false" prefHeight="90.0" prefWidth="133.0" text="Nej, jag vill fortsätta handla." textFill="WHITE" wrapText="true" />
+                <ImageView fitHeight="402.9609069824219" fitWidth="636.5355994803392" layoutX="580.0" layoutY="58.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                    <Image url="file:/C:/Users/Nightingale/Documents/GitHub/iMat/src/sample/img/kassa.png" />
+                  </image>
+                </ImageView>
+                <ImageView fitHeight="174.0" fitWidth="174.0" layoutX="759.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                    <Image url="@../img/speech-bubble-png-11.png" />
+                  </image>
+                </ImageView>
+                <Label layoutX="768.0" layoutY="31.0" prefHeight="90.0" prefWidth="165.0" text="Har du handlat klart?" wrapText="true">
+                  <font>
+                    <Font name="System Bold" size="24.0" />
+                  </font>
+                </Label>
+              </children>
+            </Pane>
+            <Pane layoutX="14.0" layoutY="682.0" prefHeight="37.9609375" prefWidth="1252.0" styleClass="subpane, nobottomborder" />
+            <Button id="loginButton" layoutX="1135.0" layoutY="44.0" mnemonicParsing="false" prefHeight="37.9609375" prefWidth="115.0" text="Logga in" textFill="WHITE" />
+            <ImageView fitHeight="106.0" fitWidth="106.0" layoutX="1006.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@../img/help.png" />
+              </image>
+            </ImageView>
+            <ImageView fitHeight="106.0" fitWidth="181.32995575843736" layoutX="38.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@../img/Logga.png" />
+              </image>
+            </ImageView>
+            <ImageView fitHeight="106.0" fitWidth="106.0" layoutX="930.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@../img/speech-bubble-png-11.png" />
+              </image>
+            </ImageView>
+            <Label layoutX="947.0" layoutY="27.0" text="Klicka här om" />
+            <Label layoutX="948.0" layoutY="43.0" text="du behöver" />
+            <Label layoutX="955.0" layoutY="57.0" text="Hjälp!" textAlignment="LEFT" textFill="#7ea656">
+              <font>
+                <Font name="System Bold" size="16.0" />
+              </font>
+            </Label>
+          </children>
+        </Pane>
+      </children>
+      <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+      </columnConstraints>
+      <rowConstraints>
+        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+      </rowConstraints>
+      <stylesheets>
+        <URL value="@../css/mainsheet.css" />
+      </stylesheets>
+    </GridPane>
+  </children>
+</AnchorPane>
