@@ -82,6 +82,16 @@
     -fx-border-width: 2px;
 }
 
+.button:hover,
+.bigbutton:hover {
+    -fx-background-color: rgb(93, 79, 60);
+}
+
+.button:active,
+.bigbutton:active {
+    -fx-background-color: rgb(62, 53, 40);
+}
+
 .bottomleftcornerround {
     -fx-border-radius: 0 0 0 5;
     -fx-background-radius: 0 0 0 5;

@@ -74,12 +74,21 @@
 }
 
 .bigbutton {
-    -fx-background-color: #8C765A;
     -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.0), 0, 0, 0, 0);
     -fx-background-radius: 0;
     -fx-border-radius: 0;
     -fx-border-color: black;
     -fx-border-width: 2px;
+}
+
+.button:hover,
+.bigbutton:hover {
+    -fx-background-color: rgb(93, 79, 60);
+}
+
+.button:active,
+.bigbutton:active {
+    -fx-background-color: rgb(62, 53, 40);
 }
 
 .bottomleftcornerround {
