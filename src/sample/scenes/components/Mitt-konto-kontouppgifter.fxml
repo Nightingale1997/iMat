@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="574.0" maxWidth="728.0" minHeight="574.0" minWidth="728.0" prefHeight="574.0" prefWidth="728.0" styleClass="backgroundPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="232.0" layoutY="14.0" text="Mitt konto">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <ListView layoutX="16.0" layoutY="67.0" prefHeight="495.0" prefWidth="197.0" styleClass="listPane" />
+      <Label layoutX="23.0" layoutY="76.0" styleClass="menuHeadline" text="Välkommen" textFill="#1c6d11" />
+      <Label layoutX="23.0" layoutY="111.0" styleClass="menuHeadline" text="Kontouppgifter" textFill="#1c6d11">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="23.0" layoutY="146.0" styleClass="menuHeadline" text="Tidigare inköp" textFill="#1c6d11" />
+      <Pane layoutX="223.0" layoutY="67.0" prefHeight="495.0" prefWidth="489.0" styleClass="containerPane">
+         <children>
+            <Label layoutX="23.0" layoutY="14.0" styleClass="contentHeadline" text="Kontouppgifter" textFill="#1c6d11" />
+            <Label layoutX="23.0" layoutY="44.0" styleClass="informationHeadline" text="Förnamn" textFill="#1c6d11" />
+            <Label layoutX="187.0" layoutY="44.0" styleClass="informationHeadline" text="Efternamn" textFill="#1c6d11" />
+            <Label layoutX="23.0" layoutY="95.0" styleClass="informationHeadline" text="Personnummer" textFill="#1c6d11" />
+            <Label layoutX="23.0" layoutY="160.0" styleClass="informationHeadline" text="Adress" textFill="#1c6d11" />
+            <Label layoutX="187.0" layoutY="212.0" styleClass="informationHeadline" text="Ort" textFill="#1c6d11" />
+            <Label layoutX="23.0" layoutY="212.0" styleClass="informationHeadline" text="Postnummer" textFill="#1c6d11" />
+            <Label layoutX="23.0" layoutY="279.0" styleClass="informationHeadline" text="Telefonnummer" textFill="#1c6d11" />
+            <Label layoutX="23.0" layoutY="390.0" styleClass="informationHeadline" text="Lösenord" textFill="#1c6d11" />
+            <Label layoutX="23.0" layoutY="330.0" styleClass="informationHeadline" text="E-post" textFill="#1c6d11" />
+            <Label layoutX="23.0" layoutY="62.0" styleClass="informationText" text="Förnamn" />
+            <Label layoutX="187.0" layoutY="62.0" styleClass="informationText" text="Efternamn" />
+            <Label layoutX="23.0" layoutY="113.0" styleClass="informationText" text="360101-1234" />
+            <Label layoutX="23.0" layoutY="178.0" styleClass="informationText" text="Adress" />
+            <Label layoutX="187.0" layoutY="230.0" styleClass="informationText" text="Ort" />
+            <Label layoutX="23.0" layoutY="230.0" styleClass="informationText" text="12345" />
+            <Label layoutX="23.0" layoutY="296.0" styleClass="informationText" text="1234567890" />
+            <Label layoutX="23.0" layoutY="347.0" styleClass="informationText" text="E-post" />
+            <Label layoutX="23.0" layoutY="408.0" styleClass="informationText" text="********" />
+            <Pane fx:id="change" layoutX="332.0" layoutY="435.0" prefHeight="41.0" prefWidth="136.0" styleClass="cancelPane">
+               <children>
+                  <Label layoutX="20.0" layoutY="10.0" text="Ändra uppgifter" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane layoutX="524.0" layoutY="18.0" prefHeight="41.0" prefWidth="181.0" styleClass="cancelPane">
+         <children>
+            <Label layoutX="68.0" layoutY="10.0" text="Fortsätt handla">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="32.0" fitWidth="43.0" layoutX="22.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../img/back.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+   <stylesheets>
+      <URL value="@../../iMat-master/iMat-master/src/sample/css/accountSheet.css" />
+      <URL value="@../../css/accountSheet.css" />
+   </stylesheets>
+</Pane>

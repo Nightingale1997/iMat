@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="574.0" maxWidth="728.0" minHeight="574.0" minWidth="728.0" prefHeight="574.0" prefWidth="728.0" styleClass="backgroundPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane layoutX="524.0" layoutY="18.0" prefHeight="41.0" prefWidth="181.0" styleClass="cancelPane">
+         <children>
+            <Label layoutX="68.0" layoutY="10.0" text="Fortsätt handla">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="32.0" fitWidth="43.0" layoutX="22.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../img/back.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <ListView layoutX="16.0" layoutY="67.0" prefHeight="495.0" prefWidth="197.0" styleClass="listPane" />
+      <Label layoutX="23.0" layoutY="83.0" styleClass="menuHeadline" text="Handla" textFill="#1c6d11">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="23.0" layoutY="161.0" styleClass="menuHeadline" text="Leverans" textFill="#1c6d11" />
+      <Label layoutX="23.0" layoutY="265.0" styleClass="menuHeadline" text="Kundtjänst" textFill="#1c6d11" />
+      <Label layoutX="23.0" layoutY="339.0" styleClass="menuHeadline" text="Övrigt" textFill="#1c6d11" />
+      <Label layoutX="26.0" layoutY="114.0" styleClass="category" text="Hur handlar jag?" />
+      <Label layoutX="26.0" layoutY="131.0" styleClass="category" text="Betalningsalternativ" />
+      <Label layoutX="26.0" layoutY="227.0" styleClass="category" text="Leveranstid" />
+      <Label layoutX="26.0" layoutY="192.0" styleClass="category" text="Leveransområden" />
+      <Label layoutX="26.0" layoutY="210.0" styleClass="category" text="Leveranskostnad" />
+      <Label layoutX="26.0" layoutY="296.0" styleClass="category" text="Användarvillkor" />
+      <Label layoutX="26.0" layoutY="312.0" styleClass="category" text="Kontakta oss" />
+      <Label layoutX="26.0" layoutY="368.0" styleClass="category" text="Ändra personuppgifter" />
+      <Label layoutX="26.0" layoutY="385.0" styleClass="category" text="Om oss" />
+      <Pane layoutX="223.0" layoutY="67.0" prefHeight="495.0" prefWidth="489.0" styleClass="containerPane">
+         <children>
+            <Label layoutX="25.0" layoutY="14.0" styleClass="contentHeadline" text="Kontakta oss" textFill="#1c6d11" />
+            <Label layoutX="25.0" layoutY="54.0" text="Telefonnummer: 987654321" />
+         </children>
+      </Pane>
+      <Label layoutX="232.0" layoutY="14.0" text="Hjälp">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+   </children>
+   <stylesheets>
+      <URL value="@iMat_test_27.02.17.css" />
+      <URL value="@../../css/accountSheet.css" />
+   </stylesheets>
+</Pane>

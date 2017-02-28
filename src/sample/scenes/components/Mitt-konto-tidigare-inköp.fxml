@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="574.0" maxWidth="728.0" minHeight="574.0" minWidth="728.0" prefHeight="574.0" prefWidth="728.0" styleClass="backgroundPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="232.0" layoutY="14.0" text="Mitt konto">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <ListView layoutX="16.0" layoutY="67.0" prefHeight="495.0" prefWidth="197.0" styleClass="listPane" />
+      <Label layoutX="23.0" layoutY="76.0" styleClass="menuHeadline" text="Välkommen" textFill="#1c6d11" />
+      <Label layoutX="23.0" layoutY="111.0" styleClass="menuHeadline" text="Kontouppgifter" textFill="#1c6d11">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="23.0" layoutY="146.0" styleClass="menuHeadline" text="Tidigare inköp" textFill="#1c6d11" />
+      <Pane layoutX="223.0" layoutY="67.0" prefHeight="495.0" prefWidth="489.0" styleClass="containerPane">
+         <children>
+            <Label layoutX="23.0" layoutY="14.0" styleClass="contentHeadline" text="Tidigare inköp" textFill="#1c6d11" />
+            <Pane fx:id="change" layoutX="267.0" layoutY="415.0" prefHeight="62.0" prefWidth="157.0" styleClass="cancelPane">
+               <children>
+                  <Label layoutX="10.0" layoutY="-2.0" prefHeight="62.0" prefWidth="139.0" text="Lägg till alla varor i kundvagnen" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <ListView layoutX="17.0" layoutY="56.0" prefHeight="419.0" prefWidth="193.0" styleClass="listPane" />
+            <ListView layoutX="233.0" layoutY="56.0" prefHeight="348.0" prefWidth="219.0" styleClass="listPane" />
+            <Label layoutX="31.0" layoutY="66.0" text="Måndag 23 jan 2017">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="32.0" layoutY="85.0" text="Lördag 10 jan 2017">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="260.0" layoutY="68.0" text="Måndag 23 jan2017">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Label>
+            <Label layoutX="256.0" layoutY="94.0" text="Tid: 18:33">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="258.0" layoutY="108.0" text="Ordernummer: 123456">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="240.0" layoutY="141.0" text="Vara     Jämförpris     Antal     Totalt" textFill="#1c6d11">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="239.0" layoutY="165.0" text="Blåbär     14 kr/st         8 st          66 kr">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="238.0" layoutY="185.0" text="Rambutan  2 kr/st        3 st            6 kr">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <Separator layoutX="244.0" layoutY="336.0" prefWidth="200.0" />
+            <Label layoutX="274.0" layoutY="348.0" text="Antal varor:               11 st">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="273.0" layoutY="361.0" text="Totalpris:                   72 kr">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="524.0" layoutY="18.0" prefHeight="41.0" prefWidth="181.0" styleClass="cancelPane">
+         <children>
+            <Label layoutX="68.0" layoutY="10.0" text="Fortsätt handla">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="32.0" fitWidth="43.0" layoutX="22.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../img/back.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+   <stylesheets>
+      <URL value="@../iMat_test_27.02.17.css" />
+      <URL value="@../../css/accountSheet.css" />
+   </stylesheets>
+</Pane>
