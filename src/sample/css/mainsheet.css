@@ -84,12 +84,13 @@
 
 .button:hover,
 .bigbutton:hover {
-    -fx-background-color: rgb(93, 79, 60);
+    -fx-background-color: linear-gradient(to bottom, rgba(181, 151, 125, 1) 0%, rgba(140, 125, 108, 1) 50%, rgba(122, 103, 79, 1) 51%, rgba(179, 149, 124, 1) 100%);
 }
 
 .button:active,
 .bigbutton:active {
-    -fx-background-color: rgb(62, 53, 40);
+    -fx-position: relative;
+    -fx-top: 2px;
 }
 
 .bottomleftcornerround {

@@ -69,7 +69,7 @@
 }
 
 .button {
-    -fx-background-color: linear-gradient(#686868 0%, #232723 25%, #373837 75%, #757575 100%), linear-gradient(#020b02, #3a3a3a), linear-gradient(#9d9e9d 0%, #6b6a6b 20%, #343534 80%, #242424 100%), linear-gradient(#8a8a8a 0%, #6b6a6b 20%, #343534 80%, #262626 100%), linear-gradient(#777777 0%, #606060 50%, #505250 51%, #2a2b2a 100%);
+    -fx-background-color: linear-gradient(to bottom, rgba(200, 168, 140, 1) 0%, rgba(166, 149, 128, 1) 50%, rgba(140, 118, 90, 1) 51%, rgba(200, 168, 140, 1) 100%);
     -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.4), 10, 0, 0, 0);
 }
 
@@ -84,12 +84,13 @@
 
 .button:hover,
 .bigbutton:hover {
-    -fx-background-color: rgb(93, 79, 60);
+    -fx-background-color: linear-gradient(to bottom, rgba(181, 151, 125, 1) 0%, rgba(140, 125, 108, 1) 50%, rgba(122, 103, 79, 1) 51%, rgba(179, 149, 124, 1) 100%);
 }
 
 .button:active,
 .bigbutton:active {
-    -fx-background-color: rgb(62, 53, 40);
+    -fx-position: relative;
+    -fx-top: 2px;
 }
 
 .bottomleftcornerround {
