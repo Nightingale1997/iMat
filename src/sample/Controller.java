@@ -1,19 +1,24 @@
 package sample;
 
+import javafx.collections.ObservableList;
 import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.control.*;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
 import se.chalmers.ait.dat215.project.*;
 
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.ResourceBundle;
@@ -42,6 +47,14 @@ public class    Controller implements Initializable{
     
     @FXML
     private ImageView addFavourite, itemImage;        
+    
+    @FXML
+    private Text favouriteText;
+    
+    @FXML
+    private AnchorPane firstSearchView;        
+
+    List<Product> currentSearch = new ArrayList<>();
 
     HashMap categoryHash;
     
@@ -167,9 +180,10 @@ public class    Controller implements Initializable{
     @FXML
     private void searchBarSearch(){
         String searchphrase = searchBar.getText();
+        currentSearch.clear();
         for (Product product : instance.getProducts()){
             if(product.toString().toLowerCase().contains(searchphrase.toLowerCase()))
-                System.out.println(product);
+                currentSearch.add(product);
             else{
             }
         }
@@ -193,5 +207,27 @@ public class    Controller implements Initializable{
     private void onClick(Event event){
         Button pressedButton = (Button) event.getSource();
         pressedButton.setText(event.getSource().toString());
+        System.out.println(currentSearch);
+        setupSearch();
     }
+    
+    @FXML
+    private void setupSearch(){
+        Pane childPane = (Pane)firstSearchView.getChildren().get(0);
+        ObservableList searchItems = childPane.getChildren();
+        ImageView imageView = (ImageView)searchItems.get(0);
+        String home = System.getProperty("user.home");
+        imageView.setImage(new Image("file:" + home + "/.dat215/imat/images/" + currentSearch.get(0).getImageName()));
+        Label label = (Label)searchItems.get(1);
+        label.setText(currentSearch.get(0).getName());
+        searchItems.set(1, label);
+        Label priceLabel = (Label)searchItems.get(2);
+        priceLabel.setText(currentSearch.get(0).getPrice() + " " + currentSearch.get(0).getUnit());
+        searchItems.set(2, priceLabel);
+        Text favourite = (Text)searchItems.get(7);
+        //TODO:check if favourite and adjust text. 
+        System.out.println(searchItems.get(7));
+    }   
+    
+    
 }
