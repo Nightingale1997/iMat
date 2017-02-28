@@ -3,6 +3,7 @@
 <?import java.lang.*?>
 <?import java.net.*?>
 <?import java.util.*?>
+<?import javafx.collections.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
@@ -21,21 +22,20 @@
               <children>
                 <TextField layoutX="326.0" layoutY="153.0" prefWidth="200.0" />
                 <TextField layoutX="726.0" layoutY="153.0" prefWidth="200.0" />
-                <Text layoutX="339.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Förnamn" />
-                <Text layoutX="726.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Efternamn" />
-                <Text layoutX="339.0" layoutY="209.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adress" />
+                <Text layoutX="339.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kortnummer" />
+                <Text layoutX="726.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kortinnehavarens Namn" />
+                <Text layoutX="339.0" layoutY="209.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CVC" />
                 <TextField layoutX="326.0" layoutY="220.0" prefWidth="200.0" />
-                <Text layoutX="530.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Personuppgifter">
+                <Text layoutX="530.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kortuppgifter">
                   <font>
                     <Font name="System Bold" size="25.0" />
                   </font>
                 </Text>
                 <TextField layoutX="726.0" layoutY="220.0" prefWidth="200.0" />
                 <Text layoutX="735.0" layoutY="209.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ort" />
-                <TextField layoutX="820.0" layoutY="256.0" prefWidth="106.0" />
-                <Text layoutX="735.0" layoutY="269.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Postnummer" />
-                <TextField layoutX="326.0" layoutY="286.0" prefWidth="200.0" />
-                <Text layoutX="339.0" layoutY="277.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telefonnummer" />
+                <TextField layoutX="726.0" layoutY="286.0" prefWidth="46.0" />
+                <Text layoutX="735.0" layoutY="269.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CVC" />
+                <Text layoutX="339.0" layoutY="277.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Utgångsdatum" />
                 <Button id="loginButton" layoutX="1123.0" layoutY="437.0" mnemonicParsing="false" prefHeight="37.9609375" prefWidth="115.0" text="Vidare" textFill="WHITE">
                   <font>
                     <Font name="System Bold" size="20.0" />
@@ -46,7 +46,25 @@
                     <Font name="System Bold" size="15.0" />
                   </font>
                 </Button>
-                <Text layoutX="597.0" layoutY="450.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sida 1 av 3" />
+                <Text layoutX="597.0" layoutY="450.0" scaleX="1.0" scaleY="1.0000076480665687" strokeType="OUTSIDE" strokeWidth="0.0" text="Sida 2 av 4" />
+                <ComboBox layoutX="326.0" layoutY="287.0" promptText="Månad">
+                  <items>
+                    <FXCollections fx:factory="observableArrayList">
+                      <String fx:value="Item 1" />
+                      <String fx:value="Item 2" />
+                      <String fx:value="Item 3" />
+                    </FXCollections>
+                  </items>
+                </ComboBox>
+                <ComboBox layoutX="415.0" layoutY="287.0" minWidth="46.0" prefHeight="21.0" prefWidth="46.0" promptText="År">
+                  <items>
+                    <FXCollections fx:factory="observableArrayList">
+                      <String fx:value="Item 1" />
+                      <String fx:value="Item 2" />
+                      <String fx:value="Item 3" />
+                    </FXCollections>
+                  </items>
+                </ComboBox>
               </children>
             </Pane>
             <Pane layoutX="14.0" layoutY="682.0" prefHeight="37.9609375" prefWidth="1252.0" styleClass="subpane, nobottomborder" />

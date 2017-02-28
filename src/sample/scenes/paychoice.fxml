@@ -19,7 +19,7 @@
             <Button id="searchButton" layoutX="805.0" layoutY="46.0" mnemonicParsing="false" onMouseClicked="#searchBarSearch" prefHeight="37.961037499997474" prefWidth="68.0" text="Sök" textFill="WHITE" />
             <Pane layoutX="14.0" layoutY="150.0" prefHeight="499.9998779296875" prefWidth="1252.0" styleClass="subpane">
               <children>
-                <Text layoutX="530.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Personuppgifter">
+                <Text layoutX="574.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Betalsätt">
                   <font>
                     <Font name="System Bold" size="25.0" />
                   </font>
@@ -29,7 +29,7 @@
                     <Font name="System Bold" size="15.0" />
                   </font>
                 </Button>
-                <Text layoutX="597.0" layoutY="450.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sida 1 av 3" />
+                <Text layoutX="597.0" layoutY="450.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sida 2 av 3" />
                 <Button id="loginButton" layoutX="541.0" layoutY="159.0" mnemonicParsing="false" prefHeight="130.9609375" prefWidth="141.0" text="" textFill="WHITE">
                   <graphic>
                     <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
@@ -39,6 +39,11 @@
                     </ImageView>
                   </graphic>
                 </Button>
+                <Label layoutX="323.0" layoutY="327.0" text="Betala vid leverans">
+                  <font>
+                    <Font size="18.0" fx:id="x1" />
+                  </font>
+                </Label>
                 <Button id="loginButton" layoutX="768.0" layoutY="159.0" mnemonicParsing="false" prefHeight="155.0" prefWidth="170.0001220703125" text="" textFill="WHITE">
                   <graphic>
                     <ImageView fitHeight="91.5634599049853" fitWidth="130.9998779296875" pickOnBounds="true" preserveRatio="true">
@@ -54,6 +59,8 @@
                     <Image url="@../img/Betala%20vid%20leverans.png" />
                   </image>
                 </ImageView>
+                <Label font="$x1" layoutX="609.0" layoutY="327.0" text="Kort" />
+                <Label font="$x1" layoutX="824.0" layoutY="322.0" text="Faktura" />
               </children>
             </Pane>
             <Pane layoutX="14.0" layoutY="682.0" prefHeight="37.9609375" prefWidth="1252.0" styleClass="subpane, nobottomborder" />
