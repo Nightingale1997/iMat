@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="574.0" maxWidth="728.0" minHeight="574.0" minWidth="728.0" prefHeight="574.0" prefWidth="728.0" styleClass="backgroundPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="232.0" layoutY="14.0" text="Mitt konto">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <ListView layoutX="16.0" layoutY="67.0" prefHeight="495.0" prefWidth="197.0" styleClass="listPane" />
+      <Label layoutX="23.0" layoutY="76.0" styleClass="menuHeadline" text="Välkommen" textFill="#1c6d11" />
+      <Label layoutX="23.0" layoutY="111.0" styleClass="menuHeadline" text="Kontouppgifter" textFill="#1c6d11">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="23.0" layoutY="146.0" styleClass="menuHeadline" text="Tidigare inköp" textFill="#1c6d11" />
+      <Pane layoutX="223.0" layoutY="67.0" prefHeight="495.0" prefWidth="489.0" styleClass="containerPane">
+         <children>
+            <Label layoutX="25.0" layoutY="14.0" styleClass="contentHeadline" text="Välkommen" textFill="#1c6d11" />
+            <ImageView fitHeight="206.0" fitWidth="388.0" layoutX="15.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../bilder%20och%20ikoner/17015308_10154510925584385_860802045_o.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="274.0" fitWidth="239.0" layoutX="238.0" layoutY="119.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Design%20och%20ikoner/Personal.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="34.0" layoutY="89.0" styleClass="menuHeadline" text="Välkommen till mitt konto!" />
+            <Label layoutX="48.0" layoutY="107.0" prefHeight="73.0" prefWidth="321.0" text="Här kan du ändra dina kontouppgifter och se tidigare inköp." wrapText="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="524.0" layoutY="18.0" prefHeight="41.0" prefWidth="181.0" styleClass="cancelPane">
+         <children>
+            <Label layoutX="68.0" layoutY="10.0" text="Fortsätt handla">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="32.0" fitWidth="43.0" layoutX="22.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../bilder%20och%20ikoner/17078726_10154510926249385_153880600_n.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+   <stylesheets>
+      <URL value="@iMat_test_27.02.17.css" />
+      <URL value="@iMat_test_27.02.17%20(1).css" />
+   </stylesheets>
+</Pane>
