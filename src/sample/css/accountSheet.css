@@ -1,0 +1,62 @@
+.backgroundPane {
+    -fx-border-radius: 5;
+    -fx-background-color: #7ea656;
+    -fx-background-radius: 20;
+    }
+
+.containerPane {
+    -fx-background-color: #FFF;
+    -fx-background-radius: 20;
+    -fx-border: 2px solid;
+    -fx-border-color: #1c6d11;
+    -fx-border-radius: 20;
+}
+
+.listPane {
+    -fx-background-radius: 20;
+    -fx-border: 2px solid;
+    -fx-border-color: #1c6d11;
+    -fx-border-radius: 20;
+}
+
+.menuHeadline {
+    -fx-font-size: 14;
+    -fx-font-weight: bold;
+    -fx-text-color: #1c6d11;
+    -fx-label-padding: 10px 0px 5px 20px;
+   }
+
+.contentHeadline {
+    -fx-font-size: 18;
+    -fx-font-weight: bold;
+}
+
+.category {
+    -fx-font-size: 11;
+    -fx-font-weight: normal;
+    -fx-label-padding: 5px 0px 0px 25px;
+    -fx-margin: 5px 0px 0px 25px;
+}
+
+.informationHeadline {
+    -fx-font-size: 12;
+    -fx-font-weight: bold;
+}
+
+.informationText {
+    -fx-font-size: 12;
+    -fx-font-weight: normal;
+}
+
+
+.cancelPane {
+    -fx-background-color: #FFF;
+    -fx-background-radius: 20;
+    -fx-border: 2px solid;
+    -fx-border-color: #1c6d11;
+    -fx-border-radius: 20;
+}
+
+#change {
+    -fx-background-color: #1c6d11;
+}
