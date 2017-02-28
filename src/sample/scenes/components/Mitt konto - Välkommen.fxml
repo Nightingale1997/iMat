@@ -8,7 +8,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane maxHeight="574.0" maxWidth="728.0" minHeight="574.0" minWidth="728.0" prefHeight="574.0" prefWidth="728.0" styleClass="backgroundPane" stylesheets="@../../../../../../../Downloads/iMat-master/iMat-master/src/sample/css/accountSheet.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="574.0" maxWidth="728.0" minHeight="574.0" minWidth="728.0" prefHeight="574.0" prefWidth="728.0" styleClass="backgroundPane" stylesheets="@../../iMat-master/iMat-master/src/sample/css/accountSheet.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Label layoutX="232.0" layoutY="14.0" text="Mitt konto">
          <font>
@@ -28,12 +28,12 @@
             <Label layoutX="25.0" layoutY="14.0" styleClass="contentHeadline" text="Välkommen" textFill="#1c6d11" />
             <ImageView fitHeight="206.0" fitWidth="388.0" layoutX="15.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../../../Downloads/iMat-master/iMat-master/src/sample/img/17015308_10154510925584385_860802045_o.png" />
+                  <Image url="@../../iMat-master/iMat-master/src/sample/img/17015308_10154510925584385_860802045_o.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="274.0" fitWidth="239.0" layoutX="238.0" layoutY="119.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../../../Downloads/iMat-master/iMat-master/src/sample/img/Personal.png" />
+                  <Image url="@../../iMat-master/iMat-master/src/sample/img/Personal.png" />
                </image>
             </ImageView>
             <Label layoutX="34.0" layoutY="89.0" styleClass="menuHeadline" text="Välkommen till mitt konto!" />
@@ -53,7 +53,7 @@
             </Label>
             <ImageView fitHeight="32.0" fitWidth="43.0" layoutX="22.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../../../Downloads/iMat-master/iMat-master/src/sample/img/back.png" />
+                  <Image url="@../../iMat-master/iMat-master/src/sample/img/back.png" />
                </image>
             </ImageView>
          </children>
