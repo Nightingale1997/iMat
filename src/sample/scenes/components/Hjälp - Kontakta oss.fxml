@@ -57,5 +57,6 @@
    <stylesheets>
       <URL value="@iMat_test_27.02.17.css" />
       <URL value="@../../css/accountSheet.css" />
+      <URL value="@../../css/accountSheet.css" />
    </stylesheets>
 </Pane>

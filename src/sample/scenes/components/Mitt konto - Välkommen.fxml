@@ -8,7 +8,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane maxHeight="574.0" maxWidth="728.0" minHeight="574.0" minWidth="728.0" prefHeight="574.0" prefWidth="728.0" styleClass="backgroundPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="574.0" maxWidth="728.0" minHeight="574.0" minWidth="728.0" prefHeight="574.0" prefWidth="728.0" styleClass="backgroundPane" stylesheets="@../../css/accountSheet.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Label layoutX="232.0" layoutY="14.0" text="Mitt konto">
          <font>
@@ -59,8 +59,4 @@
          </children>
       </Pane>
    </children>
-   <stylesheets>
-      <URL value="@../../../../../../../Documents/GitHub/iMat/src/sample/iMat-master/iMat-master/src/sample/css/accountSheet.css" />
-      <URL value="@../../css/accountSheet.css" />
-   </stylesheets>
 </Pane>

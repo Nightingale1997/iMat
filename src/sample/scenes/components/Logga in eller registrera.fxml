@@ -8,7 +8,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane maxHeight="574.0" maxWidth="728.0" minHeight="574.0" minWidth="728.0" prefHeight="574.0" prefWidth="728.0" styleClass="backgroundPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="574.0" maxWidth="728.0" minHeight="574.0" minWidth="728.0" prefHeight="574.0" prefWidth="728.0" styleClass="backgroundPane" stylesheets="@../../css/accountSheet.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Label layoutX="23.0" layoutY="12.0" text="Logga in eller registrera">
          <font>
@@ -17,7 +17,12 @@
       </Label>
       <Pane layoutX="12.0" layoutY="67.0" prefHeight="495.0" prefWidth="707.0" styleClass="containerPane">
          <children>
-            <Pane layoutX="372.0" layoutY="56.0" prefHeight="298.0" prefWidth="252.0" styleClass="containerPane">
+            <ImageView fitHeight="142.0" fitWidth="269.0" layoutX="216.0" layoutY="353.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../img/17015308_10154510925584385_860802045_o.png" />
+               </image>
+            </ImageView>
+            <Pane layoutX="372.0" layoutY="48.0" prefHeight="298.0" prefWidth="252.0" styleClass="containerPane">
                <children>
                   <Label layoutX="57.0" layoutY="66.0" text="E-post" textFill="#1c6d11">
                      <font>
@@ -29,26 +34,29 @@
                         <Font name="System Bold" size="12.0" />
                      </font>
                   </Label>
-                  <Label layoutX="82.0" layoutY="11.0" prefHeight="53.0" prefWidth="92.0" text="Logga in" textAlignment="CENTER" textFill="#1c6d11" wrapText="true">
+                  <Label layoutX="82.0" layoutY="10.0" prefHeight="53.0" prefWidth="92.0" text="Logga in" textAlignment="CENTER" textFill="#1c6d11" wrapText="true">
                      <font>
                         <Font name="System Bold" size="18.0" />
                      </font>
                   </Label>
-                  <TextField layoutX="52.0" layoutY="83.0" />
+                  <TextField layoutX="53.0" layoutY="83.0" />
                   <TextField layoutX="54.0" layoutY="139.0" />
                </children>
             </Pane>
-            <Pane layoutX="87.0" layoutY="56.0" prefHeight="298.0" prefWidth="261.0" styleClass="containerPane" />
-            <Pane fx:id="change" layoutX="150.0" layoutY="266.0" prefHeight="41.0" prefWidth="136.0" styleClass="cancelPane">
+            <Pane layoutX="92.0" layoutY="47.0" prefHeight="298.0" prefWidth="261.0" styleClass="containerPane">
                <children>
-                  <Label layoutX="23.0" layoutY="10.0" text="Till registrering" textFill="WHITE">
-                     <font>
-                        <Font size="14.0" />
-                     </font>
-                  </Label>
+                  <Pane fx:id="change" layoutX="65.0" layoutY="203.0" prefHeight="41.0" prefWidth="136.0" styleClass="cancelPane">
+                     <children>
+                        <Label layoutX="23.0" layoutY="10.0" text="Till registrering" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
                </children>
             </Pane>
-            <Pane fx:id="change" layoutX="432.0" layoutY="266.0" prefHeight="41.0" prefWidth="136.0" styleClass="cancelPane">
+            <Pane fx:id="change" layoutX="435.0" layoutY="253.0" prefHeight="41.0" prefWidth="136.0" styleClass="cancelPane">
                <children>
                   <Label layoutX="39.0" layoutY="10.0" text="Logga in" textFill="WHITE">
                      <font>
@@ -57,17 +65,23 @@
                   </Label>
                </children>
             </Pane>
-            <Label layoutX="100.0" layoutY="60.0" prefHeight="102.0" prefWidth="236.0" text="Fördelar med att registrera ett konto hos oss:" textAlignment="CENTER" textFill="#1c6d11" wrapText="true">
+            <Label layoutX="102.0" layoutY="54.0" prefHeight="102.0" prefWidth="236.0" text="Fördelar med att registrera ett konto hos oss:" textAlignment="CENTER" textFill="#1c6d11" wrapText="true">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
-            <Label layoutX="122.0" layoutY="111.0" prefHeight="132.0" prefWidth="193.0" text="Spara favoriter, se gamla inköp, spara betalningsinformation mm." textAlignment="CENTER" wrapText="true" />
+            <Label layoutX="122.0" layoutY="104.0" prefHeight="132.0" prefWidth="193.0" text="Spara favoriter, se gamla inköp, spara betalningsinformation mm." textAlignment="CENTER" wrapText="true" />
+            <Label layoutX="237.0" layoutY="375.0" prefHeight="64.0" prefWidth="221.0" text="PS! Du kan självklart handla hos oss utan ett konto. Börja bara söka och lägg till varor i kundvagnen." textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="102.0" fitWidth="122.0" layoutX="454.0" layoutY="380.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../img/help.png" />
+               </image>
+            </ImageView>
          </children>
       </Pane>
    </children>
-   <stylesheets>
-      <URL value="@../../iMat-master/iMat-master/src/sample/css/accountSheet.css" />
-      <URL value="@../../../../../../../Downloads/iMat-master/iMat-master/src/sample/css/accountSheet.css" />
-   </stylesheets>
 </Pane>

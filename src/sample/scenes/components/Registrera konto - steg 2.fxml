@@ -40,7 +40,7 @@
       </Pane>
    </children>
    <stylesheets>
-      <URL value="@../../iMat-master/iMat-master/src/sample/css/accountSheet.css" />
       <URL value="@../../../../../../../Downloads/iMat-master/iMat-master/src/sample/css/accountSheet.css" />
+      <URL value="@../../css/accountSheet.css" />
    </stylesheets>
 </Pane>
