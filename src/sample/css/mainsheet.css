@@ -74,7 +74,7 @@
 }
 
 .bigbutton {
-    -fx-background-color: #8C765A;
+    -fx-background-color: linear-gradient(to bottom, rgba(200, 168, 140, 1) 0%, rgba(166, 149, 128, 1) 50%, rgba(140, 118, 90, 1) 51%, rgba(200, 168, 140, 1) 100%);
     -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.0), 0, 0, 0, 0);
     -fx-background-radius: 0;
     -fx-border-radius: 0;
