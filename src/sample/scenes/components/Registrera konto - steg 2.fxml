@@ -8,34 +8,36 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane maxHeight="574.0" maxWidth="728.0" minHeight="574.0" minWidth="728.0" prefHeight="574.0" prefWidth="728.0" styleClass="backgroundPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="574.0" maxWidth="728.0" minHeight="574.0" minWidth="728.0" prefHeight="574.0" prefWidth="728.0" styleClass="contentPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Label layoutX="23.0" layoutY="12.0" text="Registrera konto">
+      <Label layoutX="23.0" layoutY="12.0" styleClass="headline1" text="Registrera konto">
          <font>
             <Font name="System Bold" size="36.0" />
          </font>
       </Label>
-      <Pane layoutX="12.0" layoutY="67.0" prefHeight="495.0" prefWidth="707.0" styleClass="containerPane">
+      <Pane layoutX="12.0" layoutY="67.0" prefHeight="495.0" prefWidth="707.0" styleClass="modulePane">
          <children>
-            <Label layoutX="23.0" layoutY="25.0" styleClass="informationHeadline" text="Kortnummer" textFill="#1c6d11" />
-            <Label layoutX="20.0" layoutY="80.0" styleClass="informationHeadline" text="CVC" textFill="#1c6d11" />
-            <Label layoutX="23.0" layoutY="154.0" styleClass="informationHeadline" text="Kortinnehavarens namn" textFill="#1c6d11" />
-            <Label layoutX="23.0" layoutY="212.0" styleClass="informationHeadline" text="Utgångsdatum" textFill="#1c6d11" />
-            <Pane fx:id="change" layoutX="548.0" layoutY="432.0" prefHeight="41.0" prefWidth="136.0" styleClass="cancelPane">
+            <Label layoutX="23.0" layoutY="25.0" styleClass="boldStandardText" text="Kortnummer" textFill="#1c6d11" />
+            <Label layoutX="20.0" layoutY="80.0" styleClass="boldStandardText" text="CVC" textFill="#1c6d11" />
+            <Label layoutX="23.0" layoutY="154.0" styleClass="boldStandardText" text="Kortinnehavarens namn" textFill="#1c6d11" />
+            <Label layoutX="23.0" layoutY="212.0" styleClass="boldStandardText" text="Utgångsdatum" textFill="#1c6d11" />
+            <Pane fx:id="change" layoutX="548.0" layoutY="432.0" prefHeight="41.0" prefWidth="136.0" styleClass="actionButton">
                <children>
-                  <Label layoutX="51.0" layoutY="10.0" text="Spara" textFill="WHITE">
+                  <Label layoutX="51.0" layoutY="10.0" styleClass="standardText" text="Spara" textFill="WHITE">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Label>
                </children>
             </Pane>
-            <TextField layoutX="21.0" layoutY="42.0" />
-            <TextField layoutX="21.0" layoutY="97.0" />
-            <TextField layoutX="21.0" layoutY="173.0" />
-            <TextField layoutX="23.0" layoutY="231.0" prefHeight="25.0" prefWidth="58.0" />
-            <Label layoutX="325.0" layoutY="453.0" text="Steg 2 av 2" />
-            <TextField layoutX="90.0" layoutY="231.0" prefHeight="25.0" prefWidth="58.0" />
+            <TextField layoutX="21.0" layoutY="44.0" />
+            <TextField layoutX="21.0" layoutY="99.0" />
+            <TextField layoutX="21.0" layoutY="175.0" />
+            <Label layoutX="456.0" layoutY="444.0" styleClass="standardText" text="Steg 2 av 2" />
+            <Label layoutX="24.0" layoutY="232.0" styleClass="standardText" text="Månad" />
+            <ChoiceBox layoutX="20.0" layoutY="252.0" prefHeight="25.0" prefWidth="68.0" />
+            <Label layoutX="107.0" layoutY="232.0" styleClass="standardText" text="År" />
+            <ChoiceBox layoutX="102.0" layoutY="252.0" prefHeight="25.0" prefWidth="68.0" />
          </children>
       </Pane>
    </children>
