@@ -4,8 +4,11 @@ import javafx.collections.ObservableList;
 import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -15,6 +18,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
 import se.chalmers.ait.dat215.project.*;
 
 import java.net.URL;
@@ -228,6 +232,27 @@ public class    Controller implements Initializable{
         //TODO:check if favourite and adjust text. 
         System.out.println(searchItems.get(7));
     }   
+    
+    @FXML
+    private void goToPayment(){
+        Stage stage;
+        Parent root;
+        stage=(Stage) frame.getScene().getWindow();
+        try {
+            System.out.println("1");
+            root = FXMLLoader.load(getClass().getResource("scenes/payinfo.fxml"));
+            //create a new scene with root and set the stage
+            System.out.println("2");
+            Scene scene = new Scene(root, 1280, 720);
+            System.out.println("3");
+            stage.setScene(scene);
+
+        }
+        catch (Exception e){
+            System.out.println("something went wrong");
+        }
+        stage.show();
+    }
     
     
 }

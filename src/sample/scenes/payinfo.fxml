@@ -38,7 +38,7 @@
                     <Font size="20.0" fx:id="x1" />
                   </font>
                 </Button>
-                <Button id="loginButton" font="$x1" layoutX="447.0" layoutY="169.0" mnemonicParsing="false" prefHeight="90.0" prefWidth="133.0" text="Nej, jag vill fortsätta handla." textFill="WHITE" wrapText="true" />
+                <Button id="loginButton" fx:id="noButton" font="$x1" layoutX="447.0" layoutY="169.0" mnemonicParsing="false" onAction="#noClick" prefHeight="90.0" prefWidth="133.0" text="Nej, jag vill fortsätta handla." textFill="WHITE" wrapText="true" />
                 <ImageView fitHeight="402.9609069824219" fitWidth="636.5355994803392" layoutX="580.0" layoutY="58.0" pickOnBounds="true" preserveRatio="true">
                   <image>
                     <Image url="file:/C:/Users/Nightingale/Documents/GitHub/iMat/src/sample/img/kassa.png" />

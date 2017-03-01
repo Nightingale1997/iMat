@@ -25,7 +25,7 @@
 <?import javafx.scene.text.*?>
 <?import javafx.scene.text.Font?>
 
-<GridPane id="" fx:id="frame" alignment="CENTER" hgap="10.0" vgap="10.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="sample.Controller">
+<GridPane id="" fx:id="frame" alignment="CENTER" hgap="10.0" stylesheets="@../css/mainsheet.css" vgap="10.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
   <children>
     <Pane prefHeight="720.0" prefWidth="1280.0" styleClass="mainpane" GridPane.columnIndex="0" GridPane.rowIndex="0">
       <children>
@@ -43,7 +43,7 @@
         </Pane>
         <Pane layoutX="1036.0" layoutY="150.0" prefHeight="499.9998779296875" prefWidth="230.0" styleClass="subpane">
           <children>
-            <Button layoutX="60.0" layoutY="424.0" mnemonicParsing="false" prefHeight="37.9609375" prefWidth="115.0" text="Betala" textFill="WHITE" />
+            <Button layoutX="60.0" layoutY="424.0" mnemonicParsing="false" onAction="#goToPayment" prefHeight="37.9609375" prefWidth="115.0" text="Betala" textFill="WHITE" />
             <Pane layoutX="14.0" layoutY="66.0" prefHeight="338.0" prefWidth="200.0" styleClass="lightpane">
               <children>
                 <ListView fx:id="shoppingCart" layoutX="0.0" layoutY="0.0" orientation="VERTICAL" prefHeight="281.999977929685" prefWidth="200.0" />
@@ -60,12 +60,12 @@
         <Button fx:id="loginButton" layoutX="1135.0" layoutY="44.0" mnemonicParsing="false" prefHeight="37.9609375" prefWidth="115.0" text="Logga in" textFill="WHITE" />
         <ImageView fitHeight="106.0" fitWidth="106.0" layoutX="1006.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true">
           <image>
-            <Image url="@img/help.png" />
+            <Image url="@../img/help.png" />
           </image>
         </ImageView>
         <ImageView fitHeight="106.0" fitWidth="181.32995575843736" layoutX="38.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
           <image>
-            <Image url="@img/Logga.png" />
+            <Image url="@../img/Logga.png" />
           </image>
         </ImageView>
         <StackPane layoutX="274.0" layoutY="150.0" prefHeight="500.0" prefWidth="732.0">
@@ -79,7 +79,7 @@
                   <graphic>
                     <ImageView fitHeight="133.2916717529297" fitWidth="180.9900996663492" pickOnBounds="true" preserveRatio="true">
                       <image>
-                        <Image url="@img/14312-illustration-of-a-carton-of-milk-pv.png" />
+                        <Image url="@../img/14312-illustration-of-a-carton-of-milk-pv.png" />
                       </image>
                     </ImageView>
                   </graphic>
@@ -88,7 +88,7 @@
                   <graphic>
                     <ImageView fitHeight="133.2916717529297" fitWidth="180.9900996663492" pickOnBounds="true" preserveRatio="true">
                       <image>
-                        <Image url="@img/meat-leg-fleischkeule-vector-file.png" />
+                        <Image url="@../img/meat-leg-fleischkeule-vector-file.png" />
                       </image>
                     </ImageView>
                   </graphic>
@@ -97,7 +97,7 @@
                   <graphic>
                     <ImageView fitHeight="133.2916717529297" fitWidth="180.9900996663492" pickOnBounds="true" preserveRatio="true">
                       <image>
-                        <Image url="@img/sack-309849_960_720.png" />
+                        <Image url="@../img/sack-309849_960_720.png" />
                       </image>
                     </ImageView>
                   </graphic>
@@ -106,7 +106,7 @@
                   <graphic>
                     <ImageView fitHeight="133.2916717529297" fitWidth="180.9900996663492" pickOnBounds="true" preserveRatio="true">
                       <image>
-                        <Image url="@img/the-cake-349451_960_720.png" />
+                        <Image url="@../img/the-cake-349451_960_720.png" />
                       </image>
                     </ImageView>
                   </graphic>
@@ -115,7 +115,7 @@
                   <graphic>
                     <ImageView fitHeight="133.2916717529297" fitWidth="180.9900996663492" pickOnBounds="true" preserveRatio="true">
                       <image>
-                        <Image url="@img/keditbookmarks.png" />
+                        <Image url="@../img/keditbookmarks.png" />
                       </image>
                     </ImageView>
                   </graphic>
@@ -124,7 +124,7 @@
                   <graphic>
                     <ImageView fitHeight="133.2916717529297" fitWidth="180.9900996663492" pickOnBounds="true" preserveRatio="true">
                       <image>
-                        <Image url="@img/fruits-155616_960_720.png" />
+                        <Image url="@../img/fruits-155616_960_720.png" />
                       </image>
                     </ImageView>
                   </graphic>
@@ -154,7 +154,7 @@
                                   <children>
                                     <ImageView fx:id="itemImage" fitHeight="71.0" fitWidth="94.66666470403257" layoutX="14.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
                                       <image>
-                                        <Image url="@img/croissant-31742_960_720.png" />
+                                        <Image url="@../img/croissant-31742_960_720.png" />
                                       </image>
                                     </ImageView>
                                     <Label fx:id="itemLabel" layoutX="135.0" layoutY="4.0" text="Varunamn">
@@ -182,7 +182,7 @@
                                     <Text layoutX="297.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lägg till i favoriter" />
                                     <ImageView fx:id="addFavourite" fitHeight="47.0" fitWidth="47.0" layoutX="325.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
                                       <image>
-                                        <Image url="@img/keditbookmarks.png" />
+                                        <Image url="@../img/keditbookmarks.png" />
                                       </image>
                                     </ImageView>
                                   </children>
@@ -211,7 +211,7 @@
                                   <children>
                                     <ImageView fitHeight="50.10590175907936" fitWidth="81.66666412353516" layoutX="39.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                                       <image>
-                                        <Image url="@img/croissant-31742_960_720.png" />
+                                        <Image url="@../img/croissant-31742_960_720.png" />
                                       </image>
                                     </ImageView>
                                     <Label layoutX="5.0" layoutY="61.0" text="Varunamn">
@@ -238,7 +238,7 @@
                                     </Text>
                                     <ImageView fitHeight="21.28125" fitWidth="21.28125" layoutX="134.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true">
                                       <image>
-                                        <Image url="@img/keditbookmarks.png" />
+                                        <Image url="@../img/keditbookmarks.png" />
                                       </image>
                                     </ImageView>
                                     <Text font="$x4" layoutX="95.0" layoutY="90.0" scaleX="1.0137899621863182" scaleY="1.200006883259912" strokeType="OUTSIDE" strokeWidth="0.0" text="i favoriter" />
@@ -263,7 +263,7 @@
         </StackPane>
         <ImageView fitHeight="106.0" fitWidth="106.0" layoutX="930.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
           <image>
-            <Image url="@img/speech-bubble-png-11.png" />
+            <Image url="@../img/speech-bubble-png-11.png" />
           </image>
         </ImageView>
         <Label layoutX="947.0" layoutY="27.0" text="Klicka här om" />
@@ -282,7 +282,4 @@
   <rowConstraints>
     <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
   </rowConstraints>
-  <stylesheets>
-    <URL value="@css/mainsheet.css" />
-  </stylesheets>
 </GridPane>
