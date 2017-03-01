@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="574.0" maxWidth="728.0" minHeight="574.0" minWidth="728.0" prefHeight="574.0" prefWidth="728.0" styleClass="contentPane" stylesheets="@../../css/accountSheet.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="232.0" layoutY="14.0" styleClass="headline1" text="Mitt konto">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <ListView layoutX="16.0" layoutY="67.0" prefHeight="495.0" prefWidth="197.0" styleClass="modulePane" />
+      <Label layoutX="31.0" layoutY="83.0" styleClass="headline2" text="Välkommen" textFill="#1c6d11" />
+      <Label layoutX="31.0" layoutY="118.0" styleClass="headline2" text="Kontouppgifter" textFill="#1c6d11">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="31.0" layoutY="153.0" styleClass="headline2" text="Tidigare inköp" textFill="#1c6d11" />
+      <Pane layoutX="223.0" layoutY="67.0" prefHeight="495.0" prefWidth="489.0" styleClass="modulePane">
+         <children>
+            <Label layoutX="23.0" layoutY="14.0" styleClass="headline2" text="Kontouppgifter" textFill="#1c6d11" />
+            <Label layoutX="23.0" layoutY="44.0" styleClass="boldStandardText" text="Förnamn" textFill="#1c6d11" />
+            <Label layoutX="23.0" layoutY="62.0" styleClass="standardText" text="Förnamn" />
+            <Label layoutX="187.0" layoutY="44.0" styleClass="boldStandardText" text="Efternamn" textFill="#1c6d11" />
+            <Label layoutX="187.0" layoutY="62.0" styleClass="standardText" text="Efternamn" />
+            <Label layoutX="23.0" layoutY="119.0" styleClass="boldStandardText" text="Adress" textFill="#1c6d11" />
+            <Label layoutX="23.0" layoutY="137.0" styleClass="standardText" text="Adress" />
+            <Label layoutX="23.0" layoutY="171.0" styleClass="boldStandardText" text="Postnummer" textFill="#1c6d11" />
+            <Label layoutX="23.0" layoutY="189.0" styleClass="standardText" text="12345" />
+            <Label layoutX="187.0" layoutY="171.0" styleClass="boldStandardText" text="Ort" textFill="#1c6d11" />
+            <Label layoutX="187.0" layoutY="189.0" styleClass="standardText" text="Ort" />
+            <Label layoutX="25.0" layoutY="239.0" styleClass="boldStandardText" text="Telefonnummer" textFill="#1c6d11" />
+            <Label layoutX="25.0" layoutY="256.0" styleClass="standardText" text="1234567890" />
+            <Label layoutX="25.0" layoutY="290.0" styleClass="boldStandardText" text="E-post" textFill="#1c6d11" />
+            <Label layoutX="25.0" layoutY="307.0" styleClass="standardText" text="E-post" />
+            <Label layoutX="22.0" layoutY="349.0" styleClass="boldStandardText" text="Lösenord" textFill="#1c6d11" />
+            <Label layoutX="22.0" layoutY="367.0" styleClass="standardText" text="********" />
+            <Pane fx:id="change" layoutX="332.0" layoutY="435.0" prefHeight="41.0" prefWidth="136.0" styleClass="actionButton">
+               <children>
+                  <Label layoutX="20.0" layoutY="10.0" styleClass="standardText" text="Ändra uppgifter" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane layoutX="515.0" layoutY="18.0" prefHeight="41.0" prefWidth="190.0" styleClass="modulePane">
+         <children>
+            <Label layoutX="56.0" layoutY="10.0" styleClass="standardText" text="Stäng Mitt konto">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="30.0" fitWidth="47.0" layoutX="12.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../img/cross.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</Pane>

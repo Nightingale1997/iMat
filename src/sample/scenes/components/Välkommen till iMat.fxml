@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="574.0" maxWidth="728.0" minHeight="574.0" minWidth="728.0" prefHeight="574.0" prefWidth="728.0" styleClass="contentPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="23.0" layoutY="12.0" styleClass="headline1" text="Välkommen till iMat!">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Pane layoutX="12.0" layoutY="67.0" prefHeight="495.0" prefWidth="707.0" styleClass="modulePane">
+         <children>
+            <Pane layoutX="89.0" layoutY="43.0" prefHeight="298.0" prefWidth="252.0" styleClass="modulePane">
+               <children>
+                  <ImageView fitHeight="124.0" fitWidth="222.0" layoutX="14.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/17015308_10154510925584385_860802045_o.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="49.0" layoutY="237.0" prefHeight="41.0" prefWidth="171.0" styleClass="headline2" text="Hur handlar jag?" textAlignment="CENTER" textFill="#1c6d11" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="159.0" fitWidth="139.0" layoutX="99.0" layoutY="78.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/Personal.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="47.0" layoutY="29.0" prefHeight="60.0" prefWidth="156.0" styleClass="standardText" text="Låt mig visa hur iMat fungerar!" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="359.0" layoutY="43.0" prefHeight="298.0" prefWidth="261.0" styleClass="modulePane">
+               <children>
+                  <Label layoutX="71.0" layoutY="233.0" prefHeight="41.0" prefWidth="120.0" styleClass="headline2" text="Börja handla" textAlignment="CENTER" textFill="#1c6d11" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="231.0" fitWidth="214.0" layoutX="24.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/basket-160442_960_720.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="change" layoutX="91.0" layoutY="367.0" prefHeight="60.0" prefWidth="528.0" styleClass="actionButton">
+               <children>
+                  <Label layoutX="161.0" layoutY="15.0" styleClass="contentHeadline" text="Logga in/Registrera konto" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Label>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+   <stylesheets>
+      <URL value="@../iMat_test_27.02.17.css" />
+      <URL value="@../../iMat-master/iMat-master/src/sample/css/accountSheet.css" />
+      <URL value="@../../css/accountSheet.css" />
+   </stylesheets>
+</Pane>

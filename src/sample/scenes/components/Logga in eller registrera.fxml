@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="574.0" maxWidth="728.0" minHeight="574.0" minWidth="728.0" prefHeight="574.0" prefWidth="728.0" styleClass="backgroundPane" stylesheets="@../../css/accountSheet.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="23.0" layoutY="12.0" styleClass="headline1" text="Logga in eller registrera">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Pane layoutX="12.0" layoutY="67.0" prefHeight="495.0" prefWidth="707.0" styleClass="contentPane">
+         <children>
+            <ImageView fitHeight="164.0" fitWidth="288.0" layoutX="225.0" layoutY="347.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../img/17015308_10154510925584385_860802045_o.png" />
+               </image>
+            </ImageView>
+            <Pane layoutX="360.0" layoutY="25.0" prefHeight="321.0" prefWidth="296.0" styleClass="modulePane">
+               <children>
+                  <Pane fx:id="change" layoutX="62.0" layoutY="237.0" prefHeight="41.0" prefWidth="172.0" styleClass="actionButton">
+                     <children>
+                        <Label layoutX="58.0" layoutY="10.0" text="Logga in" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Label layoutX="66.0" layoutY="81.0" text="E-post" textFill="#1c6d11">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="65.0" layoutY="138.0" text="Lösenord" textFill="#1c6d11">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="102.0" layoutY="14.0" prefHeight="53.0" prefWidth="92.0" styleClass="headline2" text="Logga in" textAlignment="CENTER" textFill="#1c6d11" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField layoutX="62.0" layoutY="101.0" />
+                  <TextField layoutX="63.0" layoutY="157.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="55.0" layoutY="24.0" prefHeight="321.0" prefWidth="288.0" styleClass="modulePane">
+               <children>
+                  <Label layoutX="37.0" layoutY="-2.0" prefHeight="102.0" prefWidth="215.0" styleClass="headline2" text="Fördelar med att registrera ett konto:" textAlignment="CENTER" textFill="#1c6d11" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Pane fx:id="change" layoutX="59.0" layoutY="241.0" prefHeight="41.0" prefWidth="172.0" styleClass="actionButton">
+                     <children>
+                        <Label layoutX="42.0" layoutY="10.0" text="Till registrering" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Label layoutX="22.0" layoutY="79.0" prefHeight="153.0" prefWidth="245.0" styleClass="standardText" text="Du får fler funktioner som gör det ännu smidigare att handla, du kan t.ex:&#10;&#10;- Se tidigare inköp&#10;- Spara betalningsinformation &#10;- Spara favoriter &#10;&#10;" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Label layoutX="259.0" layoutY="375.0" prefHeight="64.0" prefWidth="221.0" text="PS! Du kan självklart handla hos oss utan ett konto. Börja bara söka och lägg till varor i kundvagnen." textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="System Italic" size="14.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="120.0" fitWidth="128.0" layoutX="458.0" layoutY="364.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../img/help.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</Pane>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="574.0" maxWidth="728.0" minHeight="574.0" minWidth="728.0" prefHeight="574.0" prefWidth="728.0" styleClass="contentPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="232.0" layoutY="14.0" styleClass="headline1" text="Hjälp">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Pane layoutX="524.0" layoutY="18.0" prefHeight="41.0" prefWidth="181.0" styleClass="modulePane">
+         <children>
+            <Label layoutX="68.0" layoutY="10.0" styleClass="standardText" text="Stäng Hjälpen">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="32.0" fitWidth="43.0" layoutX="18.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../img/cross.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <ListView layoutX="16.0" layoutY="67.0" prefHeight="495.0" prefWidth="197.0" styleClass="modulePane" stylesheets="@../../css/accountSheet.css" />
+      <Label layoutX="43.0" layoutY="87.0" styleClass="headline2" text="Hjälp" textFill="#1c6d11">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="43.0" layoutY="119.0" styleClass="headline2" text="Handla" textFill="#1c6d11">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="43.0" layoutY="197.0" styleClass="headline2" text="Leverans" textFill="#1c6d11" />
+      <Label layoutX="43.0" layoutY="301.0" styleClass="headline2" text="Kundtjänst" textFill="#1c6d11" />
+      <Label layoutX="43.0" layoutY="375.0" styleClass="headline2" text="Övrigt" textFill="#1c6d11" />
+      <Label layoutX="46.0" layoutY="150.0" styleClass="standardText" text="Hur handlar jag?" />
+      <Label layoutX="46.0" layoutY="167.0" styleClass="standardText" text="Betalningsalternativ" />
+      <Label layoutX="46.0" layoutY="263.0" styleClass="standardText" text="Leveranstid" />
+      <Label layoutX="46.0" layoutY="228.0" styleClass="standardText" text="Leveransområden" />
+      <Label layoutX="46.0" layoutY="246.0" styleClass="standardText" text="Leveranskostnad" />
+      <Label layoutX="46.0" layoutY="332.0" styleClass="standardText" text="Användarvillkor" />
+      <Label layoutX="46.0" layoutY="348.0" styleClass="standardText" text="Kontakta oss" />
+      <Label layoutX="46.0" layoutY="404.0" styleClass="standardText" text="Ändra personuppgifter" />
+      <Label layoutX="46.0" layoutY="421.0" styleClass="standardText" text="Om oss" />
+      <Pane layoutX="223.0" layoutY="67.0" prefHeight="495.0" prefWidth="489.0" styleClass="modulePane" stylesheets="@../../css/accountSheet.css">
+         <children>
+            <ImageView fitHeight="165.0" fitWidth="397.0" layoutX="31.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../img/17015308_10154510925584385_860802045_o.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="25.0" layoutY="14.0" styleClass="headline2" text="Hjälp" textFill="#1c6d11" />
+            <ImageView fitHeight="304.0" fitWidth="252.0" layoutX="223.0" layoutY="160.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../img/Personal.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="78.0" layoutY="106.0" prefHeight="69.0" prefWidth="197.0" styleClass="standardText" text="Vad kan jag hjälpa dig med?&#10;Välj bland kategorierna i menyn till vänster.&#10;" textAlignment="CENTER" wrapText="true" />
+         </children>
+      </Pane>
+   </children>
+   <stylesheets>
+      <URL value="@iMat_test_27.02.17.css" />
+      <URL value="@../../css/accountSheet.css" />
+      <URL value="@../../css/accountSheet.css" />
+   </stylesheets>
+</Pane>

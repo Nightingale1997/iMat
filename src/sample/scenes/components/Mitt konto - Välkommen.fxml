@@ -8,25 +8,25 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane maxHeight="574.0" maxWidth="728.0" minHeight="574.0" minWidth="728.0" prefHeight="574.0" prefWidth="728.0" styleClass="backgroundPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="574.0" maxWidth="728.0" minHeight="574.0" minWidth="728.0" prefHeight="574.0" prefWidth="728.0" styleClass="contentPane" stylesheets="@../../css/accountSheet.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Label layoutX="232.0" layoutY="14.0" text="Mitt konto">
+      <Label layoutX="232.0" layoutY="14.0" styleClass="headline1" text="Mitt konto">
          <font>
             <Font name="System Bold" size="36.0" />
          </font>
       </Label>
-      <ListView layoutX="16.0" layoutY="67.0" prefHeight="495.0" prefWidth="197.0" styleClass="listPane" />
-      <Label layoutX="23.0" layoutY="76.0" styleClass="menuHeadline" text="Välkommen" textFill="#1c6d11" />
-      <Label layoutX="23.0" layoutY="111.0" styleClass="menuHeadline" text="Kontouppgifter" textFill="#1c6d11">
+      <ListView layoutX="16.0" layoutY="67.0" prefHeight="495.0" prefWidth="197.0" styleClass="modulePane" />
+      <Label layoutX="37.0" layoutY="91.0" styleClass="headline2" text="Välkommen" textFill="#1c6d11" />
+      <Label layoutX="37.0" layoutY="126.0" styleClass="headline2" text="Kontouppgifter" textFill="#1c6d11">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <Label layoutX="23.0" layoutY="146.0" styleClass="menuHeadline" text="Tidigare inköp" textFill="#1c6d11" />
-      <Pane layoutX="223.0" layoutY="67.0" prefHeight="495.0" prefWidth="489.0" styleClass="containerPane">
+      <Label layoutX="37.0" layoutY="161.0" styleClass="headline2" text="Tidigare inköp" textFill="#1c6d11" />
+      <Pane layoutX="223.0" layoutY="67.0" prefHeight="495.0" prefWidth="489.0" styleClass="modulePane">
          <children>
-            <Label layoutX="25.0" layoutY="14.0" styleClass="contentHeadline" text="Välkommen" textFill="#1c6d11" />
-            <ImageView fitHeight="206.0" fitWidth="388.0" layoutX="15.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
+            <Label layoutX="25.0" layoutY="14.0" styleClass="headline2" text="Välkommen" textFill="#1c6d11" />
+            <ImageView fitHeight="193.0" fitWidth="351.0" layoutX="37.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../img/17015308_10154510925584385_860802045_o.png" />
                </image>
@@ -36,31 +36,26 @@
                   <Image url="@../../img/Personal.png" />
                </image>
             </ImageView>
-            <Label layoutX="34.0" layoutY="89.0" styleClass="menuHeadline" text="Välkommen till mitt konto!" />
-            <Label layoutX="48.0" layoutY="107.0" prefHeight="73.0" prefWidth="321.0" text="Här kan du ändra dina kontouppgifter och se tidigare inköp." wrapText="true">
+            <Label layoutX="57.0" layoutY="98.0" prefHeight="73.0" prefWidth="296.0" styleClass="standardText" text="Välkommen till ditt konto!&#10;Här kan du ändra dina kontouppgifter och se tidigare inköp." textAlignment="CENTER" wrapText="true">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
          </children>
       </Pane>
-      <Pane layoutX="524.0" layoutY="18.0" prefHeight="41.0" prefWidth="181.0" styleClass="cancelPane">
+      <Pane layoutX="524.0" layoutY="18.0" prefHeight="41.0" prefWidth="181.0" styleClass="modulePane">
          <children>
-            <Label layoutX="68.0" layoutY="10.0" text="Fortsätt handla">
+            <Label layoutX="55.0" layoutY="11.0" styleClass="standardText" text="Stäng Mitt konto">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <ImageView fitHeight="32.0" fitWidth="43.0" layoutX="22.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="32.0" fitWidth="43.0" layoutX="6.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../img/back.png" />
+                  <Image url="@../../img/cross.png" />
                </image>
             </ImageView>
          </children>
       </Pane>
    </children>
-   <stylesheets>
-      <URL value="@../../../../../../../Documents/GitHub/iMat/src/sample/iMat-master/iMat-master/src/sample/css/accountSheet.css" />
-      <URL value="@../../css/accountSheet.css" />
-   </stylesheets>
 </Pane>
