@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="574.0" maxWidth="728.0" minHeight="574.0" minWidth="728.0" prefHeight="574.0" prefWidth="728.0" styleClass="backgroundPane" stylesheets="@../../css/accountSheet.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane layoutX="15.0" layoutY="67.0" prefHeight="495.0" prefWidth="706.0" styleClass="contentPane">
+         <children>
+            <Pane layoutX="11.0" layoutY="12.0" prefHeight="265.0" prefWidth="177.0" styleClass="modulePane">
+               <children>
+                  <ImageView fitHeight="81.0" fitWidth="70.0" layoutX="55.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/14312-illustration-of-a-carton-of-milk-pv.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="12.0" layoutY="125.0" styleClass="boldStandardText" text="Mjölk">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="11.0" layoutY="142.0" styleClass="standardText" text="10 kr/st" />
+                  <ImageView fitHeight="30.0" fitWidth="37.0" layoutX="129.0" layoutY="127.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/star.png" />
+                     </image>
+                  </ImageView>
+                  <Pane layoutX="31.0" layoutY="181.0" prefHeight="26.0" prefWidth="26.0" styleClass="spinnerAdjuster">
+                     <children>
+                        <Label layoutX="9.0" layoutY="-2.0" styleClass="headline2" text="-" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="104.0" layoutY="181.0" prefHeight="26.0" prefWidth="26.0" styleClass="spinnerAdjuster">
+                     <children>
+                        <Label layoutX="7.0" layoutY="-2.0" styleClass="headline2" text="+" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <TextField layoutX="56.0" layoutY="181.0" prefHeight="26.0" prefWidth="49.0" />
+                  <Label layoutX="138.0" layoutY="186.0" styleClass="standardText" text="st" />
+                  <Pane layoutX="18.0" layoutY="216.0" prefHeight="44.0" prefWidth="147.0" styleClass="actionButton">
+                     <children>
+                        <Label layoutX="61.0" layoutY="12.0" styleClass="standardText" text="Köp" textFill="WHITE" wrapText="true" />
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</Pane>
