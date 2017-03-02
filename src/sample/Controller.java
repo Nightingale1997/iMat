@@ -61,7 +61,8 @@ public class    Controller implements Initializable{
     
     IMatDataHandler instance = IMatDataHandler.getInstance();
 
-
+    static SearchController searchController = new SearchController();
+    
     private HashMap<String, ProductCategory> createHashMap() {
         HashMap<String, ProductCategory> categoryMap = new HashMap<String, ProductCategory>();
         categoryMap.put("Bär", ProductCategory.BERRY);
@@ -182,13 +183,16 @@ public class    Controller implements Initializable{
     private void searchBarSearch(){
         String searchphrase = searchBar.getText();
         currentSearch.clear();
-        for (Product product : instance.getProducts()){
-            if(product.toString().toLowerCase().contains(searchphrase.toLowerCase()))
-                currentSearch.add(product);
-            else{
+        if (!(searchphrase.equalsIgnoreCase(""))) {
+            for (Product product : instance.getProducts()) {
+                if (product.toString().toLowerCase().contains(searchphrase.toLowerCase()))
+                    currentSearch.add(product);
+                else {
+                }
             }
+            addSearchHits();
         }
-        addSearchHits();
+
     }
     /*
     Kontrollerar ifall det är enter-knappen som trycks på när man är i searchBar:en.
@@ -231,13 +235,20 @@ public class    Controller implements Initializable{
         System.out.println(searchItems.get(7));
     }   
     
+    
     private void addSearchHits(){
         Pane childPane = (Pane)firstSearchView.getChildren().get(0);
-        for (int i=0;i<10;i++) {
+        for (int i=0;i<currentSearch.size();i++) {
             try {
-                System.out.println("1");
-                firstSearchView.getChildren().add(FXMLLoader.load(getClass().getResource("scenes/components/Searchresult1.fxml")));
-                System.out.println("2");
+                //FXMLLoader loader = new FXMLLoader(getClass().getResource("scenes/components/Searchresult1.fxml"));
+                AnchorPane x = FXMLLoader.load(getClass().getResource("scenes/components/Searchresult1.fxml"));
+                searchController.setItemName(x, currentSearch.get(0).getName());
+                searchController.setItemPic(x, currentSearch.get(0).getImageName());
+                searchController.setItemPrice(x, currentSearch.get(0).getPrice() + " " + currentSearch.get(0).getUnit());
+                searchController.setFavouriteStar(x, "sample/img/keditbookmarks.png");
+                firstSearchView.getChildren().add(x);
+                
+                
 
 
             } catch (Exception e) {
