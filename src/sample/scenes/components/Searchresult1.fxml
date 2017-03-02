@@ -9,47 +9,44 @@
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="85.0" prefWidth="696.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="85.0" prefWidth="696.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SearchController">
   <children>
-    <Pane layoutX="0.0" layoutY="0.0" prefHeight="85.0" prefWidth="696.0" styleClass="lightpane">
+    <Pane fx:id="panePane" layoutX="0.0" layoutY="0.0" prefHeight="85.0" prefWidth="696.0" styleClass="lightpane" stylesheets="@../../css/mainsheet.css">
       <children>
-        <ImageView id="itemImage" fitHeight="71.0" fitWidth="94.66666470403257" layoutX="14.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView id="itemImage" fx:id="itemPic" fitHeight="71.0" fitWidth="94.66666470403257" layoutX="14.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
           <image>
             <Image url="@../img/croissant-31742_960_720.png" />
           </image>
         </ImageView>
-        <Label id="itemLabel" layoutX="135.0" layoutY="4.0" text="Varunamn">
+        <Label id="itemLabel" fx:id="itemName" layoutX="135.0" layoutY="4.0" text="Varunamn">
           <font>
             <Font name="System Bold" size="20.0" />
           </font>
         </Label>
-        <Label id="itemPriceLabel" layoutX="135.0" layoutY="30.0" text="x kr/kilo">
+        <Label id="itemPriceLabel" fx:id="itemPrice" layoutX="135.0" layoutY="30.0" text="x kr/kilo">
           <font>
             <Font size="16.0" />
           </font>
         </Label>
-        <Button id="addItem" layoutX="571.0" layoutY="18.0" mnemonicParsing="false" prefHeight="49.961037499997474" prefWidth="114.0" text="Lägg Till" textFill="WHITE">
+        <Button id="addItem" fx:id="addButton" layoutX="571.0" layoutY="18.0" mnemonicParsing="false" prefHeight="49.961037499997474" prefWidth="114.0" text="Lägg Till" textFill="WHITE">
           <font>
             <Font name="System Bold" size="12.0" fx:id="x1" />
           </font>
         </Button>
-        <TextField layoutX="515.0" layoutY="32.0" prefWidth="40.0001220703125" />
-        <Button id="decItem" font="$x1" layoutX="521.0" layoutY="56.0" minWidth="17.0" mnemonicParsing="false" prefHeight="21.28125" prefWidth="26.0" text="-" textFill="WHITE" />
-        <Button id="incItem" layoutX="521.0" layoutY="7.0" minWidth="17.0" mnemonicParsing="false" prefHeight="21.28125" prefWidth="26.0" text="+" textFill="WHITE">
+        <TextField fx:id="addItemField" layoutX="515.0" layoutY="32.0" prefWidth="40.0001220703125" />
+        <Button id="decItem" fx:id="decItem" font="$x1" layoutX="521.0" layoutY="56.0" minWidth="17.0" mnemonicParsing="false" prefHeight="21.28125" prefWidth="26.0" text="-" textFill="WHITE" />
+        <Button id="incItem" fx:id="incItem" layoutX="521.0" layoutY="7.0" minWidth="17.0" mnemonicParsing="false" prefHeight="21.28125" prefWidth="26.0" text="+" textFill="WHITE">
           <font>
             <Font name="System Bold" size="11.0" />
           </font>
         </Button>
-        <Text layoutX="297.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lägg till i favoriter" />
-        <ImageView id="addFavourite" fitHeight="47.0" fitWidth="47.0" layoutX="325.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+        <Text fx:id="favouriteText" layoutX="297.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lägg till i favoriter" />
+        <ImageView id="addFavourite" fx:id="favouriteStar" fitHeight="47.0" fitWidth="47.0" layoutX="325.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
           <image>
             <Image url="@../img/keditbookmarks.png" />
           </image>
         </ImageView>
       </children>
-      <stylesheets>
-        <URL value="@../css/mainsheet.css" />
-      </stylesheets>
     </Pane>
   </children>
 </AnchorPane>

@@ -22,10 +22,7 @@ import javafx.stage.Stage;
 import se.chalmers.ait.dat215.project.*;
 
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.ResourceBundle;
+import java.util.*;
 
 public class    Controller implements Initializable{
     /*
@@ -56,7 +53,7 @@ public class    Controller implements Initializable{
     private Text favouriteText;
     
     @FXML
-    private AnchorPane firstSearchView;        
+        private AnchorPane firstSearchView;        
 
     List<Product> currentSearch = new ArrayList<>();
 
@@ -191,6 +188,7 @@ public class    Controller implements Initializable{
             else{
             }
         }
+        addSearchHits();
     }
     /*
     Kontrollerar ifall det är enter-knappen som trycks på när man är i searchBar:en.
@@ -232,6 +230,24 @@ public class    Controller implements Initializable{
         //TODO:check if favourite and adjust text. 
         System.out.println(searchItems.get(7));
     }   
+    
+    private void addSearchHits(){
+        Pane childPane = (Pane)firstSearchView.getChildren().get(0);
+        for (int i=0;i<10;i++) {
+            try {
+                System.out.println("1");
+                firstSearchView.getChildren().add(FXMLLoader.load(getClass().getResource("scenes/components/Searchresult1.fxml")));
+                System.out.println("2");
+
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            ;
+        }
+        ObservableList searchItems = childPane.getChildren();
+        System.out.println(searchItems);
+    }
     
     @FXML
     private void goToPayment(){

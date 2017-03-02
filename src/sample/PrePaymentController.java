@@ -10,7 +10,7 @@ import javafx.stage.Stage;
 /**
  * Created by flirre on 2/28/17.
  */
-public class PaymentController {
+public class PrePaymentController {
     @FXML
     private Button yesButton, noButton;
 

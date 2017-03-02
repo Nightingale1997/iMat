@@ -50,7 +50,7 @@
                 <Button id="loginButton" fx:id="noButton" layoutX="447.0" layoutY="169.0" mnemonicParsing="false" onAction="#noClick" prefHeight="90.0" prefWidth="133.0" text="Nej, jag vill fortsätta handla." textFill="WHITE" wrapText="true" />
                 <ImageView fitHeight="402.9609069824219" fitWidth="636.5355994803392" layoutX="580.0" layoutY="58.0" pickOnBounds="true" preserveRatio="true">
                   <image>
-                    <Image url="file:/C:/Users/Nightingale/Documents/GitHub/iMat/src/sample/img/kassa.png" />
+                    <Image url="@../img/kassa.png" />
                   </image>
                 </ImageView>
                 <ImageView fitHeight="174.0" fitWidth="174.0" layoutX="759.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">

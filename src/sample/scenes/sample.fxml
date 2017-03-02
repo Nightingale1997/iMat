@@ -148,7 +148,7 @@
                       <children>
                         <ScrollPane hbarPolicy="NEVER" prefHeight="395.0198974609375" prefWidth="730.0" vbarPolicy="AS_NEEDED" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="73.98">
                           <content>
-                            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="391.0" prefWidth="728.0" styleClass="subpane">
+                            <AnchorPane id="Content" fx:id="firstSearchView" minHeight="0.0" minWidth="0.0" prefHeight="391.0" prefWidth="728.0" styleClass="subpane">
                               <children>
                                 <Pane layoutX="14.0" layoutY="14.0" prefHeight="85.0" prefWidth="696.0" styleClass="lightpane">
                                   <children>
