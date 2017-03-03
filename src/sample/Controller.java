@@ -241,13 +241,13 @@ public class    Controller implements Initializable{
     
     private void addSearchHits(){
         FlowPane childPane = (FlowPane)firstSearchView.getChildren().get(0);
-        for (int i=0;i<10;i++) {
+        for (int i=0;i<currentSearch.size();i++) {
             try {
                 //FXMLLoader loader = new FXMLLoader(getClass().getResource("scenes/components/Searchresult1.fxml"));
                 AnchorPane x = FXMLLoader.load(getClass().getResource("scenes/components/Searchresult1.fxml"));
-                searchController.setItemName(x, currentSearch.get(0).getName());
-                searchController.setItemPic(x, currentSearch.get(0).getImageName());
-                searchController.setItemPrice(x, currentSearch.get(0).getPrice() + " " + currentSearch.get(0).getUnit());
+                searchController.setItemName(x, currentSearch.get(i).getName());
+                searchController.setItemPic(x, currentSearch.get(i).getImageName());
+                searchController.setItemPrice(x, currentSearch.get(i).getPrice() + " " + currentSearch.get(i).getUnit());
                 searchController.setFavouriteStar(x, "sample/img/keditbookmarks.png");
                 childPane.getChildren().add(x);
                 
