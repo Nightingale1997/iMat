@@ -93,14 +93,14 @@ public class    Controller implements Initializable{
     /*
     TODO:
     1. Listor/Vyer uppdateras dynamiskt med produkterna från sökningar.
-    2.
-    3.
-    4.
-    5.
-    6.
-    7.
-    8.
-    9.
+    2. Fixa kundvagnen så att den visar vad som finns i kundvagnen.
+    3. Koppla "Lägg till"-knappen till lägg till funktioner.
+    4. Koppla "Hjälp"-knappen så att den går till hjälpsidan.
+    5. Koppla "Betala"-knappen så att den går vidare till betala-vyn.
+    6. Kommentera kod.
+    7. Koppla "Logga in"-knappen så att den leder till Logga-in vyn.
+    8. Gör allt som jag glömt skriva här.
+    Läs igenom Java-Doc:en så hittar ni mycket matnyttiga funktioner för kundvagnar och dylikt.
      */
     /*
     Initierar vy, skapar en hashmap för att komma åt produkt-kategorierna. 
@@ -253,8 +253,7 @@ public class    Controller implements Initializable{
 
             } catch (Exception e) {
                 e.printStackTrace();
-            }
-            ;
+            };
         }
         ObservableList searchItems = childPane.getChildren();
         System.out.println(searchItems);
