@@ -100,6 +100,7 @@ public class    Controller implements Initializable{
     6. Kommentera kod.
     7. Koppla "Logga in"-knappen så att den leder till Logga-in vyn.
     8. Gör allt som jag glömt skriva här.
+    9. Sätt 1 till default-antal, låt det gå ner till 1 igen efter tryck på "lägg i kundvagn"
     Läs igenom Java-Doc:en så hittar ni mycket matnyttiga funktioner för kundvagnar och dylikt.
      */
     /*
