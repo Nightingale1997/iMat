@@ -14,6 +14,8 @@
 }
 */
 
+/* Panes */
+
 .mainpane {
     -fx-background-color: #F2E4DC;
 }
@@ -27,6 +29,20 @@
     /* -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.4), 10, 0, 3, 3); */
 }
 
+.lightpane {
+    -fx-background-color: #E3F2AC;
+    -fx-effect: innershadow( gaussian, rgba(0, 0, 0, 0.7), 7.5, 0, 0, 0);
+}
+
+
+.scroll-pane {
+    -fx-background-color: #7EA656;
+}
+
+
+
+/* Borders */
+
 .notopborder {
     -fx-border-radius: 0 0 5 5;
     -fx-background-radius: 0 0 5 5;
@@ -37,36 +53,9 @@
     -fx-background-radius: 5 5 0 0;
 }
 
-.lightpane {
-    -fx-background-color: #E3F2AC;
-    -fx-effect: innershadow( gaussian, rgba(0, 0, 0, 0.7), 7.5, 0, 0, 0);
-}
 
-.tabselect:top {
-    -fx-background-color: #8C765A;
-}
 
-.tabselect:top {
-    -fx-background-color: #8C765A;
-}
-
-.tabselect:bottom {
-    -fx-background-color: #8C765A;
-}
-
-.tabselect:top:selected {
-    -fx-background-color: #BFAE99;
-}
-
-.invinsible {
-    -fx-background-color: rgba(255, 0, 0, 0.0);
-}
-
-.tab-header-background {
-    -fx-effect: innershadow( gaussian, rgba(0, 0, 0, 0.0), 7.5, 0, 0, 0);
-    -fx-background-color: #F2E4DC;
-    ;
-}
+/* Buttons */
 
 .button {
     -fx-background-color: linear-gradient(to bottom, rgba(200, 168, 140, 1) 0%, rgba(166, 149, 128, 1) 50%, rgba(140, 118, 90, 1) 51%, rgba(200, 168, 140, 1) 100%);
@@ -93,6 +82,10 @@
     -fx-top: 2px;
 }
 
+
+
+/* Radius */
+
 .bottomleftcornerround {
     -fx-border-radius: 0 0 0 5;
     -fx-background-radius: 0 0 0 5;
@@ -113,9 +106,28 @@
     -fx-background-radius: 5 0 0 0;
 }
 
+
+
+
+/* Text */
+
+.standardText {
+	-fx-font-size: 24;
+    	-fx-font-weight: normal;
+}
+
+.boldStandardText {
+	-fx-font-size: 24;
+    	-fx-font-weight: bold;
+}
+
 .testtext {
     -fx-font-family: "Novecentosans";
 }
+
+
+
+/* General */
 
 .search {
     -fx-effect: innershadow( gaussian, rgba(0, 0, 0, 0.5), 5, 0, 0, 0);
@@ -127,6 +139,12 @@
     -fx-control-inner-background: #E3F2AC;
 }
 
-.scroll-pane {
-    -fx-background-color: #7EA656;
+.invinsible {
+    -fx-background-color: rgba(255, 0, 0, 0.0);
+}
+
+.tab-header-background {
+    -fx-effect: innershadow( gaussian, rgba(0, 0, 0, 0.0), 7.5, 0, 0, 0);
+    -fx-background-color: #F2E4DC;
+    ;
 }
