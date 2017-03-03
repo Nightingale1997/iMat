@@ -103,6 +103,8 @@ public class    Controller implements Initializable{
     8. Gör allt som jag glömt skriva här.
     9. Lös så att klick på kategorierna ger en relevant sökning.
     10. Sätt 1 till default-antal, låt det gå ner till 1 igen efter tryck på "lägg i kundvagn"
+    11. Fetstilta stängda kategorier som default.
+    12. 
     Läs igenom Java-Doc:en så hittar ni mycket matnyttiga funktioner för kundvagnar och dylikt.
      */
     /*
@@ -160,6 +162,7 @@ public class    Controller implements Initializable{
         for (String productCategory : dryStuff){
             addNode(productCategory, drygoods);
         }
+        
         return tree;
     }
     
