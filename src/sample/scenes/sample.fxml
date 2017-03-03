@@ -1,31 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.lang.String?>
-<?import java.net.*?>
-<?import java.net.URL?>
-<?import javafx.scene.control.*?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
-<?import javafx.scene.control.Tab?>
-<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
 <?import javafx.scene.control.TreeView?>
-<?import javafx.scene.image.*?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.StackPane?>
-<?import javafx.scene.text.*?>
 <?import javafx.scene.text.Font?>
 
-<GridPane id="" fx:id="frame" alignment="CENTER" hgap="10.0" stylesheets="@../css/mainsheet.css" vgap="10.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<GridPane id="" fx:id="frame" alignment="CENTER" hgap="10.0" stylesheets="@../css/mainsheet.css" vgap="10.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
   <children>
     <Pane prefHeight="720.0" prefWidth="1280.0" styleClass="mainpane" GridPane.columnIndex="0" GridPane.rowIndex="0">
       <children>
@@ -140,125 +133,22 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
             </GridPane>
-            <TabPane prefHeight="499.9998779296875" prefWidth="732.0" tabClosingPolicy="UNAVAILABLE">
-              <tabs>
-                <Tab styleClass=", tabselect" text="Untitled Tab 1">
-                  <content>
-                    <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="478.0" prefWidth="732.0" styleClass="subpane">
-                      <children>
-                        <ScrollPane hbarPolicy="NEVER" prefHeight="395.0198974609375" prefWidth="730.0" vbarPolicy="AS_NEEDED" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="73.98">
+                  <Pane prefHeight="200.0" prefWidth="200.0" styleClass="subpane">
+                     <children>
+            <ToggleButton layoutX="366.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="183.0" styleClass="bigbutton" text="Hej" />
+            <ToggleButton layoutX="183.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="183.0" styleClass="bigbutton" text="ToggleButton" />
+            <ToggleButton mnemonicParsing="false" prefHeight="81.0" prefWidth="183.0" styleClass="bigbutton, topleftcornerround" text="Kategori1" />
+            <ToggleButton layoutX="549.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="183.0" styleClass="bigbutton, toprightcornerround" text="ToggleButton" />
+                        <ScrollPane layoutY="81.0" prefHeight="419.0" prefWidth="732.0">
                           <content>
-                            <AnchorPane id="Content" fx:id="firstSearchView" minHeight="0.0" minWidth="0.0" prefHeight="391.0" prefWidth="728.0" styleClass="subpane">
-                              <children>
-                                <Pane layoutX="14.0" layoutY="14.0" prefHeight="85.0" prefWidth="696.0" styleClass="lightpane">
-                                  <children>
-                                    <ImageView fx:id="itemImage" fitHeight="71.0" fitWidth="94.66666470403257" layoutX="14.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
-                                      <image>
-                                        <Image url="@../img/croissant-31742_960_720.png" />
-                                      </image>
-                                    </ImageView>
-                                    <Label fx:id="itemLabel" layoutX="135.0" layoutY="4.0" text="Varunamn">
-                                      <font>
-                                        <Font name="System Bold" size="20.0" />
-                                      </font>
-                                    </Label>
-                                    <Label fx:id="itemPriceLabel" layoutX="135.0" layoutY="30.0" text="x kr/kilo">
-                                      <font>
-                                        <Font size="16.0" />
-                                      </font>
-                                    </Label>
-                                    <Button fx:id="addItem" layoutX="571.0" layoutY="18.0" mnemonicParsing="false" prefHeight="49.961037499997474" prefWidth="114.0" text="Lägg Till" textFill="WHITE">
-                                      <font>
-                                        <Font name="System Bold" size="12.0" fx:id="x2" />
-                                      </font>
-                                    </Button>
-                                    <TextField layoutX="515.0" layoutY="32.0" prefWidth="40.0001220703125" />
-                                    <Button fx:id="decItem" font="$x2" layoutX="521.0" layoutY="56.0" minWidth="17.0" mnemonicParsing="false" prefHeight="21.28125" prefWidth="26.0" text="-" textFill="WHITE" />
-                                    <Button fx:id="incItem" layoutX="521.0" layoutY="7.0" minWidth="17.0" mnemonicParsing="false" prefHeight="21.28125" prefWidth="26.0" text="+" textFill="WHITE">
-                                      <font>
-                                        <Font name="System Bold" size="11.0" fx:id="x3" />
-                                      </font>
-                                    </Button>
-                                    <Text layoutX="297.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lägg till i favoriter" />
-                                    <ImageView fx:id="addFavourite" fitHeight="47.0" fitWidth="47.0" layoutX="325.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
-                                      <image>
-                                        <Image url="@../img/keditbookmarks.png" />
-                                      </image>
-                                    </ImageView>
-                                  </children>
-                                </Pane>
-                              </children>
-                            </AnchorPane>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="417.0" prefWidth="730.0">
+                                 <children>
+                                    <FlowPane prefHeight="200.0" prefWidth="200.0" styleClass="subpane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children></AnchorPane>
                           </content>
                         </ScrollPane>
-                        <ToggleButton layoutX="182.0" layoutY="0.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="183.0" styleClass="bigbutton" text="Hej" />
-                        <ToggleButton layoutX="365.0" layoutY="0.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="183.0" styleClass="bigbutton" text="ToggleButton" />
-                        <ToggleButton layoutX="0.0" layoutY="0.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="183.0" styleClass="bigbutton, topleftcornerround" text="Kategori1" />
-                        <ToggleButton layoutX="548.0" layoutY="0.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="183.0" styleClass="bigbutton, toprightcornerround" text="ToggleButton" />
-                      </children>
-                    </AnchorPane>
-                  </content>
-                </Tab>
-                <Tab styleClass="tabselect" text="Untitled Tab 2">
-                  <content>
-                    <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="subpane">
-                      <children>
-                        <ScrollPane hbarPolicy="NEVER" prefHeight="387.9998779296875" prefWidth="730.0" vbarPolicy="AS_NEEDED" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="81.0">
-                          <content>
-                            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="384.0" prefWidth="728.0" styleClass="subpane">
-                              <children>
-                                <Pane layoutX="7.0" layoutY="8.0" prefHeight="175.0" prefWidth="160.0" styleClass="lightpane">
-                                  <children>
-                                    <ImageView fitHeight="50.10590175907936" fitWidth="81.66666412353516" layoutX="39.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
-                                      <image>
-                                        <Image url="@../img/croissant-31742_960_720.png" />
-                                      </image>
-                                    </ImageView>
-                                    <Label layoutX="5.0" layoutY="61.0" text="Varunamn">
-                                      <font>
-                                        <Font name="System Bold" size="15.0" />
-                                      </font>
-                                    </Label>
-                                    <Label layoutX="12.0" layoutY="80.0" text="x kr/kilo">
-                                      <font>
-                                        <Font size="15.0" />
-                                      </font>
-                                    </Label>
-                                    <Button font="$x2" layoutX="17.0" layoutY="130.0" mnemonicParsing="false" prefHeight="34.582009179684974" prefWidth="125.0" text="Lägg Till" textFill="WHITE" />
-                                    <TextField layoutX="51.0" layoutY="104.0" prefWidth="61.0" />
-                                    <Button layoutX="113.0" layoutY="104.0" minWidth="17.0" mnemonicParsing="false" prefHeight="21.28125" prefWidth="23.999900000002526" text="+" textFill="WHITE">
-                                      <font>
-                                        <Font name="System Bold" size="10.0" fx:id="x6" />
-                                      </font>
-                                    </Button>
-                                    <Text layoutX="95.0" layoutY="80.0" scaleX="1.0137899621863182" scaleY="1.200006883259912" strokeType="OUTSIDE" strokeWidth="0.0" text="Lägg till">
-                                      <font>
-                                        <Font size="10.0" fx:id="x4" />
-                                      </font>
-                                    </Text>
-                                    <ImageView fitHeight="21.28125" fitWidth="21.28125" layoutX="134.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true">
-                                      <image>
-                                        <Image url="@../img/keditbookmarks.png" />
-                                      </image>
-                                    </ImageView>
-                                    <Text font="$x4" layoutX="95.0" layoutY="90.0" scaleX="1.0137899621863182" scaleY="1.200006883259912" strokeType="OUTSIDE" strokeWidth="0.0" text="i favoriter" />
-                                    <Button font="$x6" layoutX="27.0" layoutY="104.0" minWidth="17.0" mnemonicParsing="false" prefHeight="21.28125" prefWidth="23.999900000002526" text="-" textFill="WHITE" />
-                                  </children>
-                                </Pane>
-                              </children>
-                            </AnchorPane>
-                          </content>
-                        </ScrollPane>
-                        <ToggleButton layoutX="366.0" layoutY="1.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="183.0" styleClass="bigbutton" text="ToggleButton" />
-                        <ToggleButton layoutX="549.0" layoutY="1.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="183.0" styleClass="bigbutton, toprightcornerround" text="ToggleButton" />
-                        <ToggleButton layoutX="183.0" layoutY="0.0" mnemonicParsing="false" prefHeight="82.0" prefWidth="183.0" styleClass="bigbutton" text="ToggleButton" />
-                        <ToggleButton layoutX="0.0" layoutY="0.0" mnemonicParsing="false" prefHeight="82.0" prefWidth="183.0" styleClass="bigbutton, topleftcornerround" text="Kategori1" />
-                      </children>
-                    </AnchorPane>
-                  </content>
-                </Tab>
-              </tabs>
-            </TabPane>
+                     </children>
+                  </Pane>
           </children>
         </StackPane>
         <ImageView fitHeight="106.0" fitWidth="106.0" layoutX="930.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
