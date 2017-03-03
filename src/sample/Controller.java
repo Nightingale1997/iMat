@@ -15,6 +15,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
@@ -53,7 +54,7 @@ public class    Controller implements Initializable{
     private Text favouriteText;
     
     @FXML
-        private AnchorPane firstSearchView;        
+    private AnchorPane firstSearchView;        
 
     List<Product> currentSearch = new ArrayList<>();
 
@@ -100,6 +101,7 @@ public class    Controller implements Initializable{
     6. Kommentera kod.
     7. Koppla "Logga in"-knappen så att den leder till Logga-in vyn.
     8. Gör allt som jag glömt skriva här.
+    9. Lös så att klick på kategorierna ger en relevant sökning.
     Läs igenom Java-Doc:en så hittar ni mycket matnyttiga funktioner för kundvagnar och dylikt.
      */
     /*
@@ -237,8 +239,8 @@ public class    Controller implements Initializable{
     
     
     private void addSearchHits(){
-        Pane childPane = (Pane)firstSearchView.getChildren().get(0);
-        for (int i=0;i<currentSearch.size();i++) {
+        FlowPane childPane = (FlowPane)firstSearchView.getChildren().get(0);
+        for (int i=0;i<10;i++) {
             try {
                 //FXMLLoader loader = new FXMLLoader(getClass().getResource("scenes/components/Searchresult1.fxml"));
                 AnchorPane x = FXMLLoader.load(getClass().getResource("scenes/components/Searchresult1.fxml"));
@@ -246,7 +248,7 @@ public class    Controller implements Initializable{
                 searchController.setItemPic(x, currentSearch.get(0).getImageName());
                 searchController.setItemPrice(x, currentSearch.get(0).getPrice() + " " + currentSearch.get(0).getUnit());
                 searchController.setFavouriteStar(x, "sample/img/keditbookmarks.png");
-                firstSearchView.getChildren().add(x);
+                childPane.getChildren().add(x);
                 
                 
 
