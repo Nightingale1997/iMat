@@ -27,7 +27,12 @@
   <children>
     <Pane prefHeight="720.0" prefWidth="1280.0" styleClass="mainpane" GridPane.columnIndex="0" GridPane.rowIndex="0">
       <children>
-        <TextField fx:id="searchBar" layoutX="253.0" layoutY="51.0" onKeyPressed="#enterSearch" prefHeight="37.9609375" prefWidth="500.0" styleClass="search" />
+        <ImageView fitHeight="106.0" fitWidth="106.0" layoutX="998.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+          <image>
+            <Image url="@../img/help.png" />
+          </image>
+        </ImageView>
+        <TextField fx:id="searchBar" layoutX="304.0" layoutY="51.0" onKeyPressed="#enterSearch" prefHeight="39.0" prefWidth="449.0" styleClass="search" />
         <Button fx:id="searchButton" layoutX="753.0" layoutY="50.0" mnemonicParsing="false" onMouseClicked="#searchBarSearch" prefHeight="37.961037499997474" prefWidth="68.0" text="Sök" textFill="WHITE" />
         <Pane layoutX="14.0" layoutY="129.0" prefHeight="533.0" prefWidth="217.0" styleClass="subpane">
           <children>
@@ -39,29 +44,32 @@
             <TreeView fx:id="categories" layoutX="14.0" layoutY="56.0" prefHeight="464.0" prefWidth="188.0" styleClass="lightpane" />
           </children>
         </Pane>
-        <Pane layoutX="1036.0" layoutY="150.0" prefHeight="499.9998779296875" prefWidth="230.0" styleClass="subpane">
+        <Pane layoutX="1015.0" layoutY="129.0" prefHeight="533.0" prefWidth="251.0" styleClass="subpane">
           <children>
-            <Button layoutX="60.0" layoutY="424.0" mnemonicParsing="false" onAction="#goToPayment" prefHeight="37.9609375" prefWidth="115.0" text="Betala" textFill="WHITE" />
-            <Pane layoutX="14.0" layoutY="66.0" prefHeight="338.0" prefWidth="200.0" styleClass="lightpane">
+            <Button layoutX="56.0" layoutY="466.0" mnemonicParsing="false" onAction="#goToPayment" prefHeight="48.0" prefWidth="148.0" text="Betala" textFill="WHITE" />
+            <Pane layoutX="14.0" layoutY="66.0" prefHeight="387.0" prefWidth="224.0" styleClass="lightpane">
               <children>
-                <ListView fx:id="shoppingCart" layoutX="0.0" layoutY="0.0" orientation="VERTICAL" prefHeight="281.999977929685" prefWidth="200.0" styleClass="lightpane" />
-                <Label layoutX="14.0" layoutY="290.0" text="Antal Varor:" />
-                <Label layoutX="14.0" layoutY="308.0" text="Totalpris:" />
-                <Label layoutX="165.0" layoutY="293.0" text="0" />
-                <Label layoutX="165.0" layoutY="311.0" text="0kr" />
+                <Label layoutX="35.0" layoutY="328.0" text="Antal varor:" />
+                <Label layoutX="35.0" layoutY="350.0" text="Totalpris:" />
+                <Label layoutX="157.0" layoutY="330.0" text="0 st" />
+                <Label layoutX="157.0" layoutY="350.0" text="0 kr" />
+                        <ListView fx:id="shoppingCart" prefHeight="326.0" prefWidth="224.0" />
               </children>
             </Pane>
             <Label font="$x1" layoutX="53.0" layoutY="14.0" text="Kundvagn" textFill="BLACK" />
           </children>
         </Pane>
-        <Pane layoutX="14.0" layoutY="672.0" prefHeight="48.0" prefWidth="1252.0" styleClass="subpane, nobottomborder" />
-        <Button fx:id="loginButton" layoutX="1135.0" layoutY="44.0" mnemonicParsing="false" prefHeight="37.9609375" prefWidth="115.0" text="Logga in" textFill="WHITE" />
-        <ImageView fitHeight="106.0" fitWidth="106.0" layoutX="1006.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true">
-          <image>
-            <Image url="@../img/help.png" />
-          </image>
-        </ImageView>
-        <ImageView fitHeight="134.0" fitWidth="217.0" layoutX="14.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+        <Pane layoutX="14.0" layoutY="672.0" prefHeight="48.0" prefWidth="1252.0" styleClass="subpane, nobottomborder">
+               <children>
+                  <Label layoutX="570.0" layoutY="11.0" styleClass="standardText" text="Kontakta iMat: 031-1234567" textFill="WHITE" />
+                  <ImageView fitHeight="27.0" fitWidth="40.0" layoutX="519.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/phone-297726_960_720.png" />
+                     </image>
+                  </ImageView>
+               </children></Pane>
+        <Button fx:id="loginButton" layoutX="1116.0" layoutY="36.0" mnemonicParsing="false" prefHeight="69.0" prefWidth="148.0" text="Logga in eller registrera" textAlignment="CENTER" textFill="WHITE" wrapText="true" />
+        <ImageView fitHeight="134.0" fitWidth="217.0" layoutX="14.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true">
           <image>
             <Image url="@../img/Logga.png" />
           </image>
@@ -138,31 +146,32 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
             </GridPane>
-                  <Pane prefHeight="200.0" prefWidth="200.0" styleClass="subpane">
+                  <Pane minWidth="-Infinity" prefHeight="426.0" prefWidth="596.0" styleClass="subpane">
                      <children>
                         <ScrollPane layoutY="81.0" prefHeight="419.0" prefWidth="732.0">
                           <content>
                             <AnchorPane fx:id="firstSearchView" minHeight="0.0" minWidth="0.0" prefHeight="417.0" prefWidth="730.0">
                                  <children>
                                     <FlowPane prefHeight="200.0" prefWidth="200.0" styleClass="subpane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                                 </children></AnchorPane>
+                                 </children>
+                              </AnchorPane>
                           </content>
                         </ScrollPane>
                      </children>
                   </Pane>
           </children>
         </StackPane>
-        <ImageView fitHeight="154.0" fitWidth="155.0" layoutX="881.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="140.0" fitWidth="144.0" layoutX="875.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
           <image>
             <Image url="@../img/speech-bubble-png-11.png" />
           </image>
         </ImageView>
-        <Label layoutX="935.0" layoutY="85.0" styleClass="boldStandardText" text="Hjälp!" textAlignment="LEFT" textFill="#7ea656">
+            <Label layoutX="881.0" layoutY="10.0" prefHeight="61.0" prefWidth="129.0" styleClass="standardText" text="Klicka här om du behöver" textAlignment="CENTER" wrapText="true" />
+        <Label layoutX="920.0" layoutY="64.0" styleClass="boldStandardText" text="Hjälp!" textAlignment="LEFT" textFill="#7ea656">
           <font>
             <Font name="System Bold" size="16.0" />
           </font>
         </Label>
-            <Label layoutX="892.0" layoutY="-7.0" prefHeight="127.0" prefWidth="154.0" styleClass="standardText" text="Klicka här om du behöver" textAlignment="CENTER" wrapText="true" />
       </children>
     </Pane>
   </children>
