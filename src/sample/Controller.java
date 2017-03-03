@@ -241,6 +241,7 @@ public class    Controller implements Initializable{
     
     private void addSearchHits(){
         FlowPane childPane = (FlowPane)firstSearchView.getChildren().get(0);
+        childPane.getChildren().clear();
         for (int i=0;i<currentSearch.size();i++) {
             try {
                 //FXMLLoader loader = new FXMLLoader(getClass().getResource("scenes/components/Searchresult1.fxml"));
