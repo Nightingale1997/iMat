@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="574.0" maxWidth="728.0" minHeight="530.0" minWidth="728.0" prefHeight="530.0" prefWidth="728.0" styleClass="subpane" stylesheets="@../../css/mainsheet.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="23.0" layoutY="12.0" styleClass="headline1" text="Registrera konto">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Pane layoutX="12.0" layoutY="67.0" prefHeight="446.0" prefWidth="707.0" styleClass="lightpane">
+         <children>
+            <Label layoutX="22.0" layoutY="25.0" styleClass="smallBoldText" text="Kortnummer" textFill="#1c6d11" />
+            <Label layoutX="22.0" layoutY="80.0" styleClass="smallBoldText" text="CVC" textFill="#1c6d11" />
+            <Label layoutX="22.0" layoutY="154.0" styleClass="smallBoldText" text="Kortinnehavarens namn" textFill="#1c6d11" />
+            <Label layoutX="22.0" layoutY="212.0" styleClass="smallBoldText" text="Utgångsdatum" textFill="#1c6d11" />
+            <TextField layoutX="22.0" layoutY="44.0" prefHeight="25.0" prefWidth="172.0" />
+            <TextField layoutX="22.0" layoutY="99.0" prefHeight="25.0" prefWidth="57.0" />
+            <TextField layoutX="22.0" layoutY="175.0" />
+            <Label layoutX="191.0" layoutY="345.0" styleClass="standardText" text="Steg 2 av 2" />
+            <Label layoutX="22.0" layoutY="232.0" styleClass="smallText" text="Månad" />
+            <ChoiceBox layoutX="22.0" layoutY="252.0" prefHeight="25.0" prefWidth="68.0" />
+            <Label layoutX="107.0" layoutY="232.0" styleClass="smallText" text="År" />
+            <ChoiceBox layoutX="102.0" layoutY="252.0" prefHeight="25.0" prefWidth="68.0" />
+         </children>
+      </Pane>
+   </children>
+</Pane>

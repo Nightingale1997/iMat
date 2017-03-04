@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="574.0" maxWidth="728.0" minHeight="530.0" minWidth="728.0" prefHeight="530.0" prefWidth="728.0" styleClass="subpane" stylesheets="@../../css/mainsheet.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="23.0" layoutY="12.0" styleClass="headline1" stylesheets="@../../css/mainsheet.css" text="Registrera konto">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Pane layoutX="12.0" layoutY="67.0" prefHeight="451.0" prefWidth="707.0" styleClass="lightpane">
+         <children>
+            <Label layoutX="22.0" layoutY="25.0" styleClass="smallBoldText" text="Förnamn" textFill="#1c6d11">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <TextField layoutX="22.0" layoutY="46.0" prefHeight="25.0" prefWidth="200.0" />
+            <Label layoutX="250.0" layoutY="25.0" styleClass="smallBoldText" text="Efternamn" textFill="#1c6d11" />
+            <TextField layoutX="250.0" layoutY="45.0" prefHeight="25.0" prefWidth="200.0" />
+            <Label layoutX="22.0" layoutY="97.0" styleClass="smallBoldText" text="Adress" textFill="#1c6d11" />
+            <TextField layoutX="22.0" layoutY="118.0" prefHeight="25.0" prefWidth="428.0" />
+            <Label layoutX="22.0" layoutY="154.0" styleClass="smallBoldText" text="Postnummer" textFill="#1c6d11" />
+            <TextField layoutX="22.0" layoutY="174.0" prefHeight="25.0" prefWidth="96.0" />
+            <Label layoutX="140.0" layoutY="154.0" styleClass="smallBoldText" text="Ort" textFill="#1c6d11" />
+            <TextField layoutX="140.0" layoutY="174.0" prefHeight="25.0" prefWidth="310.0" />
+            <Label layoutX="22.0" layoutY="226.0" styleClass="smallBoldText" text="Telefonnummer" textFill="#1c6d11" />
+            <TextField layoutX="22.0" layoutY="249.0" prefHeight="25.0" prefWidth="200.0" />
+            <Label layoutX="22.0" layoutY="282.0" styleClass="smallBoldText" text="E-post" textFill="#1c6d11" />
+            <TextField layoutX="22.0" layoutY="306.0" prefHeight="25.0" prefWidth="200.0" />
+            <Label layoutX="23.0" layoutY="349.0" styleClass="smallBoldText" text="Lösenord" textFill="#1c6d11" />
+            <TextField layoutX="22.0" layoutY="372.0" prefHeight="25.0" prefWidth="200.0" />
+            <Button layoutX="312.0" layoutY="393.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="138.0" text="Skapa konto" textFill="WHITE" />
+            <ImageView fitHeight="257.0" fitWidth="236.0" layoutX="468.0" layoutY="203.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../img/Personal.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</Pane>

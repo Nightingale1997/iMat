@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="574.0" maxWidth="728.0" minHeight="530.0" minWidth="728.0" prefHeight="530.0" prefWidth="728.0" styleClass="subpane" stylesheets="@../../css/mainsheet.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="209.0" layoutY="9.0" styleClass="headline1" text="Välkommen till iMat!">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <Pane layoutX="59.0" layoutY="67.0" prefHeight="321.0" prefWidth="288.0" styleClass="lightpane">
+         <children>
+            <ImageView fitHeight="124.0" fitWidth="222.0" layoutX="23.0" layoutY="88.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../img/17015308_10154510925584385_860802045_o.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="159.0" fitWidth="139.0" layoutX="134.0" layoutY="135.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../img/Personal.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="56.0" layoutY="105.0" prefHeight="60.0" prefWidth="156.0" styleClass="standardText" text="Låt mig visa hur iMat fungerar!" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="47.0" layoutY="24.0" prefHeight="41.0" prefWidth="197.0" styleClass="headline2" text="Hur handlar jag?" textAlignment="CENTER" textFill="#1c6d11" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="363.0" layoutY="67.0" prefHeight="321.0" prefWidth="288.0" styleClass="lightpane">
+         <children>
+            <ImageView fitHeight="231.0" fitWidth="214.0" layoutX="45.0" layoutY="95.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../img/basket-160442_960_720.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="73.0" layoutY="23.0" prefHeight="41.0" prefWidth="156.0" styleClass="headline2" text="Börja handla" textAlignment="CENTER" textFill="#1c6d11" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Button layoutX="59.0" layoutY="414.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="593.0" text="Logga in eller registrera konto" textFill="WHITE" />
+   </children>
+</Pane>

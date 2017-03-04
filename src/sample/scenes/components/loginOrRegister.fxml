@@ -10,19 +10,14 @@
 
 <Pane maxHeight="574.0" maxWidth="728.0" minHeight="574.0" minWidth="728.0" prefHeight="574.0" prefWidth="728.0" styleClass="backgroundPane" stylesheets="@../../css/mainsheet.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Label layoutX="23.0" layoutY="12.0" styleClass="headline1" text="Logga in eller registrera">
-         <font>
-            <Font name="System Bold" size="36.0" />
-         </font>
-      </Label>
-      <Pane layoutX="12.0" layoutY="67.0" prefHeight="495.0" prefWidth="707.0" styleClass="subpane">
+      <Pane layoutX="11.0" layoutY="41.0" prefHeight="530.0" prefWidth="707.0" styleClass="subpane">
          <children>
-            <ImageView fitHeight="153.0" fitWidth="336.0" layoutX="200.0" layoutY="419.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="153.0" fitWidth="336.0" layoutX="202.0" layoutY="380.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../img/17015308_10154510925584385_860802045_o.png" />
                </image>
             </ImageView>
-            <Pane layoutX="362.0" layoutY="25.0" prefHeight="321.0" prefWidth="288.0" styleClass="lightpane">
+            <Pane layoutX="362.0" layoutY="59.0" prefHeight="321.0" prefWidth="288.0" styleClass="lightpane">
                <children>
                   <Label layoutX="52.0" layoutY="81.0" text="E-post" textFill="#1c6d11">
                      <font>
@@ -49,7 +44,7 @@
                   </Label>
                </children>
             </Pane>
-            <Pane layoutX="56.0" layoutY="24.0" prefHeight="321.0" prefWidth="288.0" styleClass="lightpane">
+            <Pane layoutX="56.0" layoutY="59.0" prefHeight="321.0" prefWidth="288.0" styleClass="lightpane">
                <children>
                   <Label layoutX="22.0" layoutY="79.0" prefHeight="137.0" prefWidth="245.0" styleClass="standardText" text="- Se tidigare inköp&#10;- Spara betalningsinformation &#10;- Spara favoriter &#10;&#10;" textAlignment="CENTER" wrapText="true">
                      <font>
@@ -64,16 +59,21 @@
                   </Label>
                </children>
             </Pane>
-            <Label layoutX="14.0" layoutY="435.0" prefHeight="120.0" prefWidth="296.0" styleClass="standardText" text="PS! Du kan handla hos oss utan ett konto. Börja söka och lägg till varor i kundvagnen." textAlignment="CENTER" wrapText="true">
+            <Label layoutX="223.0" layoutY="381.0" prefHeight="120.0" prefWidth="245.0" styleClass="smallText" text="PS! Du kan handla hos oss utan ett konto. Börja söka och lägg till varor i kundvagnen." textAlignment="CENTER" wrapText="true">
                <font>
                   <Font name="System Italic" size="14.0" />
                </font>
             </Label>
-            <ImageView fitHeight="120.0" fitWidth="128.0" layoutX="494.0" layoutY="364.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="120.0" fitWidth="128.0" layoutX="468.0" layoutY="396.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../img/help.png" />
                </image>
             </ImageView>
+            <Label layoutX="183.0" layoutY="6.0" styleClass="headline1" text="Logga in eller registrera">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
          </children>
       </Pane>
    </children>

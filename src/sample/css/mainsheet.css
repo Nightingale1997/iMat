@@ -116,6 +116,11 @@
 
 /* Text */
 
+.headline1 {
+    -fx-font-size: 30;
+    -fx-font-weight: bold;
+}
+
 .headline2 {
     -fx-font-size: 24;
     -fx-font-weight: bold;
@@ -135,6 +140,12 @@
     -fx-font-size: 14;
     -fx-font-weight: normal;
 }
+
+.smallBoldText {
+    -fx-font-size: 14;
+    -fx-font-weight: bold;
+}
+
 
 .testtext {
     -fx-font-family: "Novecentosans";
