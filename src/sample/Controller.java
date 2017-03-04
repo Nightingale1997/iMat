@@ -265,7 +265,8 @@ public class    Controller implements Initializable{
         ObservableList searchItems = childPane.getChildren();
         System.out.println(searchItems);
     }
-    
+
+
     @FXML
     private void goToPayment(){
         Stage stage;

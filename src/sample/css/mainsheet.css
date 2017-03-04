@@ -116,14 +116,24 @@
 
 /* Text */
 
+.headline2 {
+    -fx-font-size: 24;
+    -fx-font-weight: bold;
+}
+
 .standardText {
 	-fx-font-size: 18;
-    	-fx-font-weight: normal;
+    -fx-font-weight: normal;
 }
 
 .boldStandardText {
 	-fx-font-size: 18;
-    	-fx-font-weight: bold;
+    -fx-font-weight: bold;
+}
+
+.smallText {
+    -fx-font-size: 14;
+    -fx-font-weight: normal;
 }
 
 .testtext {
