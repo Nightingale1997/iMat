@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<GridPane id="" fx:id="frame" alignment="CENTER" hgap="10.0" stylesheets="@../css/mainsheet.css" vgap="10.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+  <children>
+    <Pane prefHeight="720.0" prefWidth="1280.0" styleClass="mainpane" stylesheets="@../css/mainsheet.css" GridPane.columnIndex="0" GridPane.rowIndex="0">
+      <children>
+        <ImageView fitHeight="106.0" fitWidth="106.0" layoutX="998.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+          <image>
+            <Image url="@../img/help.png" />
+          </image>
+        </ImageView>
+        <TextField fx:id="searchBar" layoutX="304.0" layoutY="51.0" onKeyPressed="#enterSearch" prefHeight="39.0" prefWidth="449.0" styleClass="search" />
+        <Button fx:id="searchButton" layoutX="753.0" layoutY="50.0" mnemonicParsing="false" onMouseClicked="#searchBarSearch" prefHeight="37.961037499997474" prefWidth="68.0" text="Sök" textFill="WHITE" />
+        <Pane layoutX="14.0" layoutY="129.0" prefHeight="533.0" prefWidth="217.0" styleClass="subpane">
+          <children>
+            <Label layoutX="43.0" layoutY="7.0" text="Kategorier" textFill="BLACK">
+              <font>
+                <Font name="System Bold" size="26.0" fx:id="x1" />
+              </font>
+            </Label>
+            <TreeView fx:id="categories" layoutX="14.0" layoutY="56.0" prefHeight="464.0" prefWidth="188.0" styleClass="lightpane" />
+          </children>
+        </Pane>
+        <Pane layoutX="1015.0" layoutY="129.0" prefHeight="533.0" prefWidth="251.0" styleClass="subpane">
+          <children>
+            <Button layoutX="56.0" layoutY="466.0" mnemonicParsing="false" onAction="#goToPayment" prefHeight="48.0" prefWidth="148.0" text="Betala" textFill="WHITE" />
+            <Pane layoutX="14.0" layoutY="66.0" prefHeight="387.0" prefWidth="224.0" styleClass="lightpane">
+              <children>
+                <Label layoutX="35.0" layoutY="330.0" styleClass="standardText" stylesheets="@../css/mainsheet.css" text="Antal varor:" />
+                <Label layoutX="35.0" layoutY="353.0" styleClass="standardText" text="Totalpris:" />
+                <Label layoutX="157.0" layoutY="332.0" styleClass="standardText" text="0 st" />
+                <Label layoutX="157.0" layoutY="353.0" styleClass="standardText" text="0 kr" />
+                        <ListView fx:id="shoppingCart" prefHeight="326.0" prefWidth="224.0" />
+              </children>
+            </Pane>
+            <Label font="$x1" layoutX="58.0" layoutY="14.0" text="Kundvagn" textFill="BLACK" />
+          </children>
+        </Pane>
+        <Pane layoutX="14.0" layoutY="672.0" prefHeight="48.0" prefWidth="1252.0" styleClass="subpane, nobottomborder">
+               <children>
+                  <Label layoutX="570.0" layoutY="11.0" styleClass="standardText" text="Kontakta iMat: 031-1234567" textFill="WHITE" />
+                  <ImageView fitHeight="27.0" fitWidth="40.0" layoutX="519.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/phone-297726_960_720.png" />
+                     </image>
+                  </ImageView>
+               </children></Pane>
+        <Button fx:id="loginButton" layoutX="1116.0" layoutY="36.0" mnemonicParsing="false" onMouseClicked="#loginOrRegister" prefHeight="69.0" prefWidth="148.0" text="Logga in eller registrera" textAlignment="CENTER" textFill="WHITE" wrapText="true" />
+        <ImageView fitHeight="134.0" fitWidth="217.0" layoutX="14.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true">
+          <image>
+            <Image url="@../img/Logga.png" />
+          </image>
+        </ImageView>
+        <StackPane layoutX="239.0" layoutY="131.0" prefHeight="533.0" prefWidth="767.0">
+               <children>
+                  <Pane fx:id="mainPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="530.0" prefWidth="763.0" styleClass="subpane" />
+               </children>
+        </StackPane>
+        <ImageView fitHeight="140.0" fitWidth="144.0" layoutX="875.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+          <image>
+            <Image url="@../img/speech-bubble-png-11.png" />
+          </image>
+        </ImageView>
+            <Label layoutX="881.0" layoutY="10.0" prefHeight="61.0" prefWidth="129.0" styleClass="standardText" text="Klicka här om du behöver" textAlignment="CENTER" wrapText="true" />
+        <Label layoutX="920.0" layoutY="64.0" styleClass="boldStandardText" text="Hjälp!" textAlignment="LEFT" textFill="#7ea656">
+          <font>
+            <Font name="System Bold" size="16.0" />
+          </font>
+        </Label>
+      </children>
+    </Pane>
+  </children>
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+</GridPane>

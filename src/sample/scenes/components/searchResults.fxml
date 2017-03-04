@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="578.0" maxWidth="765.0" minHeight="530.0" minWidth="709.0" prefHeight="530.0" prefWidth="765.0" styleClass="backgroundPane" stylesheets="@../../css/mainsheet.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane prefHeight="530.0" prefWidth="766.0" styleClass="subpane">
+         <children>
+            <FlowPane fx:id="firstSearchView" layoutX="14.0" layoutY="74.0" prefHeight="448.0" prefWidth="743.0" />
+            <Label layoutX="303.0" layoutY="14.0" styleClass="headline1" text="Sökresultat" />
+         </children>
+      </AnchorPane>
+   </children>
+</Pane>

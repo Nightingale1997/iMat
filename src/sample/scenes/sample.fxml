@@ -68,7 +68,7 @@
                      </image>
                   </ImageView>
                </children></Pane>
-        <Button fx:id="loginButton" layoutX="1116.0" layoutY="36.0" mnemonicParsing="false" prefHeight="69.0" prefWidth="148.0" text="Logga in eller registrera" textAlignment="CENTER" textFill="WHITE" wrapText="true" />
+        <Button fx:id="loginButton" layoutX="1116.0" layoutY="36.0" mnemonicParsing="false" onMouseClicked="#loginOrRegister" prefHeight="69.0" prefWidth="148.0" text="Logga in eller registrera" textAlignment="CENTER" textFill="WHITE" wrapText="true" />
         <ImageView fitHeight="134.0" fitWidth="217.0" layoutX="14.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true">
           <image>
             <Image url="@../img/Logga.png" />
@@ -146,7 +146,7 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
             </GridPane>
-                  <Pane minWidth="-Infinity" prefHeight="426.0" prefWidth="596.0" styleClass="subpane">
+                  <Pane fx:id="mainPane" minWidth="-Infinity" prefHeight="426.0" prefWidth="596.0" styleClass="subpane">
                      <children>
                         <ScrollPane layoutY="81.0" prefHeight="419.0" prefWidth="732.0">
                           <content>
