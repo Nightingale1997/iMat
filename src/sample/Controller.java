@@ -49,7 +49,7 @@ public class Controller implements Initializable {
     private Label itemLabel, itemPriceLabel;
 
     @FXML
-    private ImageView addFavourite, itemImage;
+    private ImageView addFavourite, itemImage, setFavourite;
 
     @FXML
     private Text favouriteText;
@@ -61,6 +61,8 @@ public class Controller implements Initializable {
     private Pane mainPane;
 
     List<Product> currentSearch = new ArrayList<>();
+
+    List<Product> favourites = new ArrayList<>();
 
     HashMap categoryHash;
 
@@ -100,10 +102,10 @@ public class Controller implements Initializable {
     1. Listor/Vyer uppdateras dynamiskt med produkterna från sökningar.
     2. Fixa kundvagnen så att den visar vad som finns i kundvagnen.
     3. Koppla "Lägg till"-knappen till lägg till funktioner.
-    4. Koppla "Hjälp"-knappen så att den går till hjälpsidan.
-    5. Koppla "Betala"-knappen så att den går vidare till betala-vyn.
+    4. Koppla "Hjälp"-knappen så att den går till hjälpsidan. ok
+    5. Koppla "Betala"-knappen så att den går vidare till betala-vyn. ok
     6. Kommentera kod.
-    7. Koppla "Logga in"-knappen så att den leder till Logga-in vyn.
+    7. Koppla "Logga in"-knappen så att den leder till Logga-in vyn. ok
     8. Gör allt som jag glömt skriva här.
     9. Lös så att klick på kategorierna ger en relevant sökning.
     10. Sätt 1 till default-antal, låt det gå ner till 1 igen efter tryck på "lägg i kundvagn"
@@ -272,6 +274,17 @@ public class Controller implements Initializable {
     }
 
 
+    //Laddar in aktuella sidan i huvudutrymmet
+    private void changeMainTo(String path) {
+        try {
+            mainPane.getChildren().clear();
+            mainPane.getChildren().add(FXMLLoader.load(getClass().getResource(path)));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
     @FXML
     private void loadMainPageCategories() {
         changeMainTo("scenes/components/mainPageCategories.fxml");
@@ -294,6 +307,8 @@ public class Controller implements Initializable {
 
 
     /*
+    Laddar de olika hjälpvyerna. Har dock inte lyckats koppla dem till någon knapp än.
+
     @FXML
     private void loadHelpTutorial() {
         changeMainTo("scenes/components/helpTutorial.fxml");
@@ -317,25 +332,6 @@ public class Controller implements Initializable {
     }
 
 
-    //Laddar in aktuella sidan i huvudutrymmet
-    private void changeMainTo(String path) {
-        try {
-            mainPane.getChildren().clear();
-            mainPane.getChildren().add(FXMLLoader.load(getClass().getResource(path)));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    private void changeMainTo2(String path) {
-        try {
-            mainPane.getChildren().clear();
-            mainPane.getChildren().add(FXMLLoader.load(getClass().getResource(path)));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
     @FXML
     private void goToPayment() {
         Stage stage;
@@ -358,4 +354,35 @@ public class Controller implements Initializable {
     }
 
 
+    /* Började göra metoder för att lägga till och ta bort favorier men behöver lite hjälp :)
+
+    @FXML
+    private void setFavouriteStatus(Product product) {
+        if (favourites.contains(product)) {
+            removeFromFavourites(product);
+        } else {
+            addToFavourites(product);
+        }
+    }
+
+    private void addToFavourites(Product product) {
+        favourites.add(product);
+        try {
+            setFavourite.setImage(new Image("img/keditbookmarks.png"));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void removeFromFavourites(Product product) {
+        favourites.remove(product);
+        try {
+            setFavourite.setImage(new Image("img/star.png"));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    */
 }
