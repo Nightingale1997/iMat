@@ -85,7 +85,7 @@
           </image>
         </ImageView>
             <Label layoutX="881.0" layoutY="10.0" onMouseClicked="#loadHelpOverview" prefHeight="61.0" prefWidth="129.0" styleClass="standardText" text="Klicka här om du behöver" textAlignment="CENTER" wrapText="true" />
-        <Label layoutX="920.0" layoutY="64.0" onMouseClicked="#loadHelpOverview" styleClass="boldStandardText" text="Hjälp!" textAlignment="LEFT" textFill="#7ea656">
+        <Label layoutX="920.0" layoutY="64.0" onMouseClicked="#loadHelpOverview" styleClass="boldStandardText" text="Hjälp!" textAlignment="LEFT" textFill="#1c6d11">
           <font>
             <Font name="System Bold" size="16.0" />
           </font>

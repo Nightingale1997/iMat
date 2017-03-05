@@ -305,11 +305,22 @@ public class Controller implements Initializable {
 
     //Behöver kopplas till en "favoritknapp"
     @FXML
-    private void loadFavourites() { changeMainTo("scenes/components/favourites.fxml"); }
+    private void loadFavourites() {
+        changeMainTo("scenes/components/favourites.fxml");
+    }
 
 
     //Laddar in aktuella sidan i huvudutrymmet
     private void changeMainTo(String path) {
+        try {
+            mainPane.getChildren().clear();
+            mainPane.getChildren().add(FXMLLoader.load(getClass().getResource(path)));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void changeMainTo2(String path) {
         try {
             mainPane.getChildren().clear();
             mainPane.getChildren().add(FXMLLoader.load(getClass().getResource(path)));
