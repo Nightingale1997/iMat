@@ -32,7 +32,7 @@
             <Image url="@../img/help.png" />
           </image>
         </ImageView>
-        <TextField fx:id="searchBar" layoutX="304.0" layoutY="51.0" onKeyPressed="#enterSearch" prefHeight="39.0" prefWidth="449.0" styleClass="search" />
+        <TextField fx:id="searchBar" layoutX="331.0" layoutY="51.0" onKeyPressed="#enterSearch" prefHeight="39.0" prefWidth="422.0" styleClass="search" />
         <Button fx:id="searchButton" layoutX="753.0" layoutY="50.0" mnemonicParsing="false" onMouseClicked="#searchBarSearch" prefHeight="37.961037499997474" prefWidth="68.0" text="Sök" textFill="WHITE" />
         <Pane layoutX="14.0" layoutY="129.0" prefHeight="534.0" prefWidth="217.0" styleClass="subpane">
           <children>
@@ -90,6 +90,11 @@
             <Font name="System Bold" size="16.0" />
           </font>
         </Label>
+            <ImageView fitHeight="61.0" fitWidth="51.0" layoutX="270.0" layoutY="41.0" onMouseClicked="#loadMainPageCategories" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/house-308936_960_720.png" />
+               </image>
+            </ImageView>
       </children>
     </Pane>
   </children>

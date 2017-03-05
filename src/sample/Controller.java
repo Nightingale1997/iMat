@@ -271,14 +271,15 @@ public class Controller implements Initializable {
         System.out.println(searchItems);
     }
 
-    @FXML
-    private void loadLoginOrRegister() {
-        changeMainTo("scenes/components/logInOrRegister.fxml");
-    }
 
     @FXML
     private void loadMainPageCategories() {
         changeMainTo("scenes/components/mainPageCategories.fxml");
+    }
+
+    @FXML
+    private void loadLoginOrRegister() {
+        changeMainTo("scenes/components/logInOrRegister.fxml");
     }
 
     @FXML
@@ -344,7 +345,7 @@ public class Controller implements Initializable {
             System.out.println("1");
             changeMainTo("scenes/components/checkout.fxml");
             root = FXMLLoader.load(getClass().getResource("scenes/payinfo.fxml"));
-                        //create a new scene with root and set the stage
+            //create a new scene with root and set the stage
             System.out.println("2");
             //Scene scene = new Scene(root, 1280, 720);
             System.out.println("3");
