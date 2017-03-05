@@ -8,40 +8,36 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane maxHeight="574.0" maxWidth="728.0" minHeight="530.0" minWidth="728.0" prefHeight="530.0" prefWidth="728.0" styleClass="subpane" stylesheets="@../../css/mainsheet.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="528.0" maxWidth="767.0" minHeight="528.0" minWidth="728.0" prefHeight="528.0" prefWidth="767.0" styleClass="backgroundPane" stylesheets="@../../css/mainsheet.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Label layoutX="224.0" layoutY="5.0" styleClass="headline1" text="Hjälp">
-         <font>
-            <Font name="System Bold" size="36.0" />
-         </font>
-      </Label>
-      <ListView layoutX="16.0" layoutY="54.0" prefHeight="467.0" prefWidth="197.0" styleClass="lightpane" />
-      <Label layoutX="33.0" layoutY="70.0" styleClass="boldStandardText" text="Översikt" textFill="#1c6d11">
-         <font>
-            <Font name="System Bold" size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="33.0" layoutY="102.0" styleClass="boldStandardText" text="Hur handlar jag?" textFill="#1c6d11">
-         <font>
-            <Font name="System Bold" size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="33.0" layoutY="175.0" styleClass="boldStandardText" text="Kontakta oss" textFill="#1c6d11" />
-      <Label layoutX="33.0" layoutY="138.0" styleClass="boldStandardText" text="Vanliga frågor" textFill="#1c6d11" />
-      <Pane layoutX="223.0" layoutY="54.0" prefHeight="467.0" prefWidth="489.0" styleClass="lightpane">
+      <Pane prefHeight="530.0" prefWidth="767.0" styleClass="subpane" stylesheets="@../../css/mainsheet.css">
          <children>
-            <Label layoutX="22.0" layoutY="14.0" text="Vanliga frågor" textFill="#1c6d11">
+            <Label layoutX="202.0" layoutY="11.0" styleClass="headline1" text="Hjälp">
                <font>
-                  <Font name="System Bold" size="24.0" />
-               </font></Label>
-            <ImageView fitHeight="45.0" fitWidth="42.0" layoutX="431.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../img/help-97859_960_720.png" />
-               </image>
-            </ImageView>
-            <Label layoutX="22.0" layoutY="58.0" styleClass="standardText" text="Vanliga frågor och svar." wrapText="true" />
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Label>
+            <Pane layoutX="202.0" layoutY="59.0" prefHeight="461.0" prefWidth="555.0" styleClass="lightpane">
+               <children>
+                  <Label layoutX="22.0" layoutY="11.0" styleClass="headline2" text="Vanliga frågor" textFill="#1c6d11" />
+                  <Label layoutX="24.0" layoutY="46.0" prefHeight="45.0" prefWidth="376.0" styleClass="standardText" text="Vanliga frågor och svar.&#10;" textAlignment="CENTER" wrapText="true" />
+                  <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="495.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/help.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane layoutX="14.0" layoutY="59.0" prefHeight="461.0" prefWidth="181.0" styleClass="lightpane">
+               <children>
+                  <Label layoutX="22.0" layoutY="14.0" onMouseClicked="#loadHelpOverview" styleClass="boldStandardText" text="Översikt" textFill="#1c6d11" />
+                  <Label layoutX="22.0" layoutY="48.0" onMouseClicked="#loadHelpTutorial" styleClass="boldStandardText" text="Hur handlar jag?" textFill="#1c6d11" />
+                  <Label layoutX="22.0" layoutY="86.0" onMouseClicked="#loadHelpFAQ" styleClass="boldStandardText" text="Vanliga frågor" textFill="#1c6d11" />
+                  <Label layoutX="22.0" layoutY="125.0" onMouseClicked="#loadHelpContact" styleClass="boldStandardText" text="Kontakta oss" textFill="#1c6d11" />
+               </children>
+            </Pane>
+            <Button layoutX="647.0" layoutY="12.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="109.0" text="Stäng" textFill="WHITE" />
          </children>
       </Pane>
-      <Button layoutX="576.0" layoutY="7.0" mnemonicParsing="false" text="Stäng Hjälpen" textFill="WHITE" />
    </children>
 </Pane>

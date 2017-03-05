@@ -254,7 +254,7 @@ public class Controller implements Initializable {
         for (int i = 0; i < currentSearch.size(); i++) {
             try {
                 //FXMLLoader loader = new FXMLLoader(getClass().getResource("scenes/components/Searchresult1.fxml"));
-                AnchorPane x = FXMLLoader.load(getClass().getResource("scenes/components/searchResults.fxml"));
+                AnchorPane x = FXMLLoader.load(getClass().getResource("scenes/components/Searchresults1.fxml"));
                 searchController.setItemName(x, currentSearch.get(i).getName());
                 searchController.setItemPic(x, currentSearch.get(i).getImageName());
                 searchController.setItemPrice(x, currentSearch.get(i).getPrice() + " " + currentSearch.get(i).getUnit());
@@ -272,15 +272,43 @@ public class Controller implements Initializable {
     }
 
     @FXML
-    private void loginOrRegister() {
+    private void loadLoginOrRegister() {
         changeMainTo("scenes/components/logInOrRegister.fxml");
     }
 
-    /*@FXML
-    private void search() {
-        changeMainTo("scenes/components/searchResults.fxml");
+    @FXML
+    private void loadMainPageCategories() {
+        changeMainTo("scenes/components/mainPageCategories.fxml");
+    }
+
+    @FXML
+    private void loadHelpOverview() {
+        changeMainTo("scenes/components/testHelp.fxml");
+    }
+
+    /*
+    @FXML
+    private void loadHelpTutorial() {
+        changeMainTo("scenes/components/helpTutorial.fxml");
+    }
+
+    @FXML
+    private void loadHelpFAQ() {
+        changeMainTo("scenes/components/helpFAQ.fxml");
+    }
+
+    @FXML
+    private void loadHelpContact() {
+        changeMainTo("scenes/components/helpContact.fxml");
     }*/
 
+
+    //Behöver kopplas till en "favoritknapp"
+    @FXML
+    private void loadFavourites() { changeMainTo("scenes/components/favourites.fxml"); }
+
+
+    //Laddar in aktuella sidan i huvudutrymmet
     private void changeMainTo(String path) {
         try {
             mainPane.getChildren().clear();
