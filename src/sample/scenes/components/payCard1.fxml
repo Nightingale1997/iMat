@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="528.0" maxWidth="767.0" minHeight="528.0" minWidth="728.0" prefHeight="528.0" prefWidth="767.0" styleClass="backgroundPane" stylesheets="@../../css/mainsheet.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane prefHeight="534.0" prefWidth="767.0" styleClass="subpane" stylesheets="@../../css/mainsheet.css">
+         <children>
+            <Label layoutX="247.0" layoutY="11.0" styleClass="headline1" text="Betalning med kort">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Label>
+            <Pane layoutX="14.0" layoutY="57.0" prefHeight="469.0" prefWidth="743.0" styleClass="lightpane">
+               <children>
+                  <Button layoutX="266.0" layoutY="377.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="212.0" text="Nästa steg" textFill="WHITE" />
+                  <Label layoutX="166.0" layoutY="67.0" styleClass="smallBoldText" text="Förnamn" />
+                  <TextField layoutX="400.0" layoutY="92.0" prefHeight="25.0" prefWidth="196.0" />
+                  <Label layoutX="400.0" layoutY="67.0" styleClass="smallBoldText" text="Efternamn" />
+                  <TextField layoutX="400.0" layoutY="229.0" prefHeight="25.0" prefWidth="196.0" />
+                  <Label layoutX="166.0" layoutY="144.0" styleClass="smallBoldText" text="Adress" />
+                  <TextField layoutX="166.0" layoutY="168.0" prefHeight="25.0" prefWidth="430.0" />
+                  <Label layoutX="166.0" layoutY="203.0" styleClass="smallBoldText" text="Postnummer" />
+                  <TextField layoutX="166.0" layoutY="229.0" prefHeight="25.0" prefWidth="109.0" />
+                  <Label layoutX="400.0" layoutY="203.0" styleClass="smallBoldText" text="Ort" />
+                  <TextField layoutX="166.0" layoutY="92.0" prefHeight="25.0" prefWidth="212.0" />
+                  <Label layoutX="166.0" layoutY="284.0" styleClass="smallBoldText" text="Telefonnummer" />
+                  <TextField layoutX="166.0" layoutY="310.0" prefHeight="25.0" prefWidth="212.0" />
+                  <Label layoutX="400.0" layoutY="283.0" styleClass="smallBoldText" text="E-post" />
+                  <TextField layoutX="400.0" layoutY="309.0" prefHeight="25.0" prefWidth="196.0" />
+                  <Label layoutX="299.0" layoutY="14.0" styleClass="boldStandardText" text="Personuppgifter" />
+                  <Label layoutX="331.0" layoutY="41.0" styleClass="smallText" text="Steg 1 av 4" />
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Button layoutX="15.0" layoutY="9.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="159.0" text="Tillbaka" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="27.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../img/_416389.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</Pane>

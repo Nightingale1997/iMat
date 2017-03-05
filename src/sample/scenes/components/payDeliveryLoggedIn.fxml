@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="528.0" maxWidth="767.0" minHeight="528.0" minWidth="728.0" prefHeight="528.0" prefWidth="767.0" styleClass="backgroundPane" stylesheets="@../../css/mainsheet.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane prefHeight="534.0" prefWidth="767.0" styleClass="subpane" stylesheets="@../../css/mainsheet.css">
+         <children>
+            <Label layoutX="228.0" layoutY="11.0" styleClass="headline1" text="Betalning vid leverans">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Label>
+            <Pane layoutX="14.0" layoutY="57.0" prefHeight="469.0" prefWidth="743.0" styleClass="lightpane">
+               <children>
+                  <ImageView fitHeight="205.0" fitWidth="187.0" layoutX="550.0" layoutY="244.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/Betala%20vid%20leverans.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="189.0" layoutY="70.0" styleClass="smallBoldText" text="Leveransdag" />
+                  <Label layoutX="405.0" layoutY="70.0" styleClass="smallBoldText" text="Leveranstid" />
+                  <ChoiceBox layoutX="188.0" layoutY="94.0" prefWidth="150.0" />
+                  <ChoiceBox layoutX="404.0" layoutY="94.0" prefWidth="150.0" />
+                  <Label layoutX="188.0" layoutY="145.0" styleClass="smallBoldText" text="Kommentar" />
+                  <TextArea layoutX="188.0" layoutY="169.0" prefHeight="152.0" prefWidth="364.0" />
+                  <Button layoutX="266.0" layoutY="377.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="212.0" text="Skicka beställning" textFill="WHITE" />
+                  <Label layoutX="319.0" layoutY="337.0" styleClass="standardText" text="Totalpris: x kr" />
+               </children>
+            </Pane>
+            <Button layoutX="15.0" layoutY="9.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="159.0" text="Tillbaka" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="27.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/_416389.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</Pane>

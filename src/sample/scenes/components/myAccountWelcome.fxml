@@ -8,9 +8,9 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane maxHeight="574.0" maxWidth="728.0" minHeight="530.0" minWidth="728.0" prefHeight="530.0" prefWidth="728.0" styleClass="subpane" stylesheets="@../../css/mainsheet.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="574.0" maxWidth="767.0" minHeight="530.0" minWidth="728.0" prefHeight="534.0" prefWidth="767.0" styleClass="subpane" stylesheets="@../../css/mainsheet.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <ListView layoutX="14.0" layoutY="57.0" prefHeight="457.0" prefWidth="197.0" styleClass="lightpane" />
+      <ListView layoutX="14.0" layoutY="57.0" prefHeight="466.0" prefWidth="197.0" styleClass="lightpane" />
       <Label layoutX="32.0" layoutY="73.0" styleClass="boldStandardText" text="Välkommen" textFill="#1c6d11" />
       <Label layoutX="32.0" layoutY="106.0" styleClass="boldStandardText" text="Personuppgifter" textFill="#1c6d11">
          <font>
@@ -18,7 +18,7 @@
          </font>
       </Label>
       <Label layoutX="32.0" layoutY="173.0" styleClass="boldStandardText" text="Tidigare inköp" textFill="#1c6d11" />
-      <Pane layoutX="223.0" layoutY="57.0" prefHeight="457.0" prefWidth="489.0" styleClass="lightpane">
+      <Pane layoutX="217.0" layoutY="57.0" prefHeight="466.0" prefWidth="541.0" styleClass="lightpane">
          <children>
             <Label layoutX="22.0" layoutY="11.0" styleClass="headline2" text="Välkommen" textFill="#1c6d11" />
             <ImageView fitHeight="214.0" fitWidth="387.0" layoutX="31.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
@@ -32,15 +32,23 @@
                </image>
             </ImageView>
             <Label layoutX="66.0" layoutY="90.0" prefHeight="119.0" prefWidth="302.0" styleClass="standardText" text="Välkommen till ditt konto! Här kan du ändra dina kontouppgifter och se tidigare inköp." textAlignment="CENTER" wrapText="true" />
-            <ImageView fitHeight="39.0" fitWidth="39.0" layoutX="429.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="39.0" fitWidth="39.0" layoutX="488.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../img/cog-147414_960_720.png" />
                </image>
             </ImageView>
          </children>
       </Pane>
-      <Button layoutX="553.0" layoutY="10.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="159.0" text="Stäng Mitt konto" textFill="WHITE" />
-      <Label layoutX="223.0" layoutY="9.0" styleClass="headline1" text="Mitt konto" />
+      <Label layoutX="218.0" layoutY="11.0" styleClass="headline1" text="Mitt konto" />
       <Label layoutX="32.0" layoutY="139.0" styleClass="boldStandardText" text="Kortuppgifter" textFill="#1c6d11" />
+      <Button layoutX="15.0" layoutY="9.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="159.0" text="Tillbaka" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="27.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../img/_416389.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
    </children>
 </Pane>

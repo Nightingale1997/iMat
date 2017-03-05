@@ -8,14 +8,14 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane maxHeight="574.0" maxWidth="728.0" minHeight="530.0" minWidth="728.0" prefHeight="530.0" prefWidth="728.0" styleClass="subpane" stylesheets="@../../css/mainsheet.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="574.0" maxWidth="767.0" minHeight="530.0" minWidth="728.0" prefHeight="534.0" prefWidth="767.0" styleClass="subpane" stylesheets="@../../css/mainsheet.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Label layoutX="209.0" layoutY="9.0" styleClass="headline1" text="Välkommen till iMat!">
+      <Label layoutX="235.0" layoutY="11.0" styleClass="headline1" text="Välkommen till iMat!">
          <font>
             <Font name="System Bold" size="30.0" />
          </font>
       </Label>
-      <Pane layoutX="59.0" layoutY="67.0" prefHeight="321.0" prefWidth="288.0" styleClass="lightpane">
+      <Pane layoutX="88.0" layoutY="66.0" prefHeight="321.0" prefWidth="288.0" styleClass="lightpane">
          <children>
             <ImageView fitHeight="124.0" fitWidth="222.0" layoutX="23.0" layoutY="88.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -39,7 +39,7 @@
             </Label>
          </children>
       </Pane>
-      <Pane layoutX="363.0" layoutY="67.0" prefHeight="321.0" prefWidth="288.0" styleClass="lightpane">
+      <Pane layoutX="392.0" layoutY="66.0" prefHeight="321.0" prefWidth="288.0" styleClass="lightpane">
          <children>
             <ImageView fitHeight="231.0" fitWidth="214.0" layoutX="45.0" layoutY="95.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -53,6 +53,6 @@
             </Label>
          </children>
       </Pane>
-      <Button layoutX="59.0" layoutY="414.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="593.0" text="Logga in eller registrera konto" textFill="WHITE" />
+      <Button layoutX="87.0" layoutY="401.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="593.0" text="Logga in eller registrera konto" textFill="WHITE" />
    </children>
 </Pane>

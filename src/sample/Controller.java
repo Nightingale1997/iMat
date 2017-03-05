@@ -283,8 +283,14 @@ public class Controller implements Initializable {
 
     @FXML
     private void loadHelpOverview() {
-        changeMainTo("scenes/components/testHelp.fxml");
+        changeMainTo("scenes/components/helpOverview.fxml");
     }
+
+    @FXML
+    private void loadMyAccount() {
+        changeMainTo("scenes/components/myAccountWelcome.fxml");
+    }
+
 
     /*
     @FXML
@@ -336,12 +342,13 @@ public class Controller implements Initializable {
         stage = (Stage) frame.getScene().getWindow();
         try {
             System.out.println("1");
+            changeMainTo("scenes/components/checkout.fxml");
             root = FXMLLoader.load(getClass().getResource("scenes/payinfo.fxml"));
-            //create a new scene with root and set the stage
+                        //create a new scene with root and set the stage
             System.out.println("2");
-            Scene scene = new Scene(root, 1280, 720);
+            //Scene scene = new Scene(root, 1280, 720);
             System.out.println("3");
-            stage.setScene(scene);
+            //stage.setScene(scene);
 
         } catch (Exception e) {
             System.out.println("something went wrong");
