@@ -9,7 +9,7 @@ import javafx.scene.control.Button;
  */
 public class RegisterOrLoginController {
 
-    static Controller controller = new Controller();
+    static Controller controller = Controller.getThisInstance();
 
     @FXML
     private Button toRegistration, toLogin;

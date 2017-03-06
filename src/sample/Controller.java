@@ -29,6 +29,12 @@ import java.nio.file.Paths;
 import java.util.*;
 
 public class Controller implements Initializable {
+
+    public static Controller getThisInstance() {
+        return thisInstance;
+    }
+
+    static Controller thisInstance;
     /*
     @FXML skrivs för att det är element från JavaFX/Scenebuilder man jobbar med.
      */
@@ -123,6 +129,7 @@ public class Controller implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 
+        thisInstance = this;
         frame.setVisible(true);
         categoryHash = createHashMap();
         categories.setRoot(createCategoryTree());
