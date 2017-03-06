@@ -24,6 +24,8 @@ import se.chalmers.ait.dat215.project.*;
 
 import java.io.IOException;
 import java.net.URL;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.*;
 
 public class Controller implements Initializable {
@@ -193,6 +195,7 @@ public class Controller implements Initializable {
      */
     @FXML
     private void searchBarSearch() {
+        //changeMainTo("scenes/sample2.fxml");
         changeMainTo("scenes/components/searchResults.fxml");
         String searchphrase = searchBar.getText();
         currentSearch.clear();
@@ -233,7 +236,7 @@ public class Controller implements Initializable {
 
     @FXML
     private void setupSearch() {
-        Pane childPane = (Pane) firstSearchView.getChildren().get(0);
+        FlowPane childPane = (FlowPane) firstSearchView.getChildren().get(0);
         ObservableList searchItems = childPane.getChildren();
         ImageView imageView = (ImageView) searchItems.get(0);
         String home = System.getProperty("user.home");
@@ -246,7 +249,7 @@ public class Controller implements Initializable {
         searchItems.set(2, priceLabel);
         Text favourite = (Text) searchItems.get(7);
         //TODO:check if favourite and adjust text. 
-        System.out.println(searchItems.get(7));
+        //System.out.println(searchItems.get(7));
     }
 
 
@@ -255,12 +258,13 @@ public class Controller implements Initializable {
         childPane.getChildren().clear();
         for (int i = 0; i < currentSearch.size(); i++) {
             try {
-                //FXMLLoader loader = new FXMLLoader(getClass().getResource("scenes/components/Searchresult1.fxml"));
-                AnchorPane x = FXMLLoader.load(getClass().getResource("scenes/components/Searchresults1.fxml"));
+                AnchorPane x = FXMLLoader.load(getClass().getResource("scenes/components/Searchresult1.fxml"));
+                Pane y = (Pane)x.getChildren().get(0);
                 searchController.setItemName(x, currentSearch.get(i).getName());
                 searchController.setItemPic(x, currentSearch.get(i).getImageName());
                 searchController.setItemPrice(x, currentSearch.get(i).getPrice() + " " + currentSearch.get(i).getUnit());
                 searchController.setFavouriteStar(x, "sample/img/keditbookmarks.png");
+                System.out.println(y.getChildren());
                 childPane.getChildren().add(x);
 
 
@@ -271,6 +275,7 @@ public class Controller implements Initializable {
         }
         ObservableList searchItems = childPane.getChildren();
         System.out.println(searchItems);
+        mainPane.getChildren().add(firstSearchView);
     }
 
 
