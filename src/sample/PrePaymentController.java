@@ -11,6 +11,9 @@ import javafx.stage.Stage;
  * Created by flirre on 2/28/17.
  */
 public class PrePaymentController {
+
+    static Controller controller = Controller.getThisInstance();
+
     @FXML
     private Button yesButton, noButton;
 
@@ -27,5 +30,10 @@ public class PrePaymentController {
         catch (Exception e) {}
 
         stage.show();
+    }
+
+    @FXML
+    private void loadPayChoice() {
+        controller.changeMainTo("scenes/components/payChoice.fxml");
     }
 }

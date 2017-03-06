@@ -8,7 +8,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane maxHeight="528.0" maxWidth="767.0" minHeight="528.0" minWidth="728.0" prefHeight="528.0" prefWidth="767.0" styleClass="backgroundPane" stylesheets="@../../css/mainsheet.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="528.0" maxWidth="767.0" minHeight="528.0" minWidth="728.0" prefHeight="528.0" prefWidth="767.0" styleClass="backgroundPane" stylesheets="@../../css/mainsheet.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.PayChoiceController">
    <children>
       <Pane prefHeight="534.0" prefWidth="767.0" styleClass="subpane" stylesheets="@../../css/mainsheet.css">
          <children>

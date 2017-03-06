@@ -8,7 +8,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane maxHeight="528.0" maxWidth="767.0" minHeight="528.0" minWidth="728.0" prefHeight="528.0" prefWidth="767.0" styleClass="backgroundPane" stylesheets="@../../css/mainsheet.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="528.0" maxWidth="767.0" minHeight="528.0" minWidth="728.0" prefHeight="528.0" prefWidth="767.0" styleClass="backgroundPane" stylesheets="@../../css/mainsheet.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.PrePaymentController">
    <children>
       <Pane prefHeight="534.0" prefWidth="767.0" styleClass="subpane" stylesheets="@../../css/mainsheet.css">
          <children>
@@ -28,7 +28,7 @@
                </image>
             </ImageView>
             <Label layoutX="113.0" layoutY="147.0" styleClass="standardText" text="Har du handlat klart?" />
-            <Button layoutX="512.0" layoutY="135.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="190.0" text="Ja, gå till betalning" textFill="WHITE" />
+            <Button fx:id="goToPay" layoutX="512.0" layoutY="135.0" mnemonicParsing="false" onMouseClicked="#loadPayChoice" prefHeight="52.0" prefWidth="190.0" text="Ja, gå till betalning" textFill="WHITE" />
             <Button layoutX="512.0" layoutY="218.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="190.0" text="Nej, fortsätt handla" textFill="WHITE" />
          </children>
       </Pane>

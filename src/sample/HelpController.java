@@ -13,7 +13,7 @@ public class HelpController {
     static Controller controller = Controller.getThisInstance();
 
     @FXML
-    private Label helpHeadline, information, staffLabel;
+    private Label helpHeadline, information, staffLabel, helpTutorial, helpFAQ, helpContact, helpOverview;
 
     @FXML
     private ImageView staff, staffBubble;
@@ -22,34 +22,34 @@ public class HelpController {
     private void loadHelpOverview() {
         try {
             staff.setImage(new Image("sample/img/Personal.png"));
-            staffBubble.setImage(new Image("sample/img/17015308_10154510925584385_860802045_o.png.png"));
-            //staffLabel.setText(new Image("sample/img/17015308_10154510925584385_860802045_o.png.png"));
+            staffBubble.setImage(new Image("sample/img/17015308_10154510925584385_860802045_o.png"));
+            staffLabel.setText("Vad kan jag hjälpa dig med?\n" +
+                    "Välj bland kategorierna i listan till vänster.\n");
             information.setText(null);
-            helpHeadline.setText("Översikt");
+            helpHeadline.setText(helpOverview.getText());
         } catch (Exception e) {
-
+            //Vet inte riktigt vad det ska stå här
         }
     }
 
     @FXML
     private void loadHelpTutorial() {
-        String headline = "Hur handlar jag?";
         String informationText = "Instruktioner till hur iMat fungerar.";
-        loadHelpViews(headline, informationText);
+        loadHelpViews(informationText, helpTutorial.getText());
     }
 
     @FXML
     private void loadHelpFAQ() {
         String headline = "Vanliga frågor";
         String informationText = "Vanliga frågor och svar.";
-        loadHelpViews(headline, informationText);
+        loadHelpViews(informationText, helpFAQ.getText());
     }
 
     @FXML
     private void loadHelpContact() {
         String headline = "Kontakta oss";
         String informationText = "Telefonnummer: 031-1234567";
-        loadHelpViews(headline, informationText);
+        loadHelpViews(informationText, helpContact.getText());
     }
 
     @FXML
