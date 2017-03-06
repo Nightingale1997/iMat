@@ -9,6 +9,10 @@ import static sample.RegisterOrLoginController.controller;
  */
 public class RegistrationController {
 
+    static Controller controller = Controller.getThisInstance();
+
+    @FXML
+    private void loadMyAccount() { controller.changeMainTo("scenes/components/myAccountWelcome.fxml"); }
 
 
 }

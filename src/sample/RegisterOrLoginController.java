@@ -20,8 +20,6 @@ public class RegisterOrLoginController {
     }
 
     @FXML
-    private void loadMyAccount() {
-        controller.loadMyAccount();
-    }
+    private void loadMyAccount() { controller.changeMainTo("scenes/components/myAccountWelcome.fxml"); }
 
 }
