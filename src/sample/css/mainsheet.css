@@ -17,8 +17,18 @@
 
 /* Panes */
 
+@font-face {
+    font-family: 'Open Sans';
+    src: url('OpenSans.ttf');
+}
+
+.opensans, .button, .bigbutton, .label{
+    -fx-font-family: 'Open Sans';
+}
+
 .mainpane {
     -fx-background-color: #F2E4DC;
+    
 }
 
 

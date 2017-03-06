@@ -5,11 +5,17 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.scene.text.*;
 
 public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
+
+
+        // load the  font.
+        Font.loadFont(getClass().getResourceAsStream("css/OpenSans.ttf"), 14);
+
         //Parent root = FXMLLoader.load(getClass().getResource("scenes/payinfo.fxml"));
         Parent root = FXMLLoader.load(getClass().getResource("scenes/sample2.fxml"));
         primaryStage.setTitle("iMat - Handla Enkelt!");
