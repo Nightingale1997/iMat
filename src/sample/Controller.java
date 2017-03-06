@@ -280,7 +280,7 @@ public class Controller implements Initializable {
 
 
     //Laddar in aktuella sidan i huvudutrymmet
-    private void changeMainTo(String path) {
+    public void changeMainTo(String path) {
         try {
             mainPane.getChildren().clear();
             mainPane.getChildren().add(FXMLLoader.load(getClass().getResource(path)));
@@ -296,7 +296,7 @@ public class Controller implements Initializable {
     }
 
     @FXML
-    private void loadLoginOrRegister() {
+    public void loadRegisterOrLogin() {
         changeMainTo("scenes/components/logInOrRegister.fxml");
     }
 
@@ -306,7 +306,7 @@ public class Controller implements Initializable {
     }
 
     @FXML
-    private void loadMyAccount() {
+    public void loadMyAccount() {
         changeMainTo("scenes/components/myAccountWelcome.fxml");
     }
 

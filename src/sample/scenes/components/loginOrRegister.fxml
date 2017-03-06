@@ -8,7 +8,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane maxHeight="578.0" maxWidth="728.0" minHeight="530.0" minWidth="709.0" prefHeight="530.0" prefWidth="709.0" styleClass="backgroundPane" stylesheets="@../../css/mainsheet.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="578.0" maxWidth="728.0" minHeight="530.0" minWidth="709.0" prefHeight="530.0" prefWidth="709.0" styleClass="backgroundPane" stylesheets="@../../css/mainsheet.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.RegisterOrLoginController">
    <children>
       <Pane prefHeight="534.0" prefWidth="766.0" styleClass="subpane">
          <children>
@@ -31,7 +31,7 @@
                   </Label>
                   <TextField layoutX="52.0" layoutY="101.0" prefHeight="25.0" prefWidth="184.0" />
                   <TextField layoutX="52.0" layoutY="158.0" prefHeight="25.0" prefWidth="184.0" />
-                  <Button layoutX="54.0" layoutY="246.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="184.0" text="Logga in" textFill="WHITE" />
+                  <Button fx:id="toLogin" layoutX="54.0" layoutY="246.0" mnemonicParsing="false" onMouseClicked="#loadMyAccount" prefHeight="53.0" prefWidth="184.0" text="Logga in" textFill="WHITE" />
                   <Label layoutX="98.0" layoutY="31.0" styleClass="headline2" stylesheets="@../../css/mainsheet.css" text="Logga in" textFill="#1c6d11">
                      <font>
                         <Font size="24.0" />
@@ -51,7 +51,7 @@
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <Button layoutX="54.0" layoutY="246.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="184.0" text="Till registrering" textFill="WHITE" />
+                  <Button fx:id="toRegistration" layoutX="54.0" layoutY="246.0" mnemonicParsing="false" onMouseClicked="#loadRegistration" prefHeight="53.0" prefWidth="184.0" text="Till registrering" textFill="WHITE" />
                   <Label layoutX="93.0" layoutY="29.0" styleClass="headline2" stylesheets="@../../css/mainsheet.css" text="Registrera" textFill="#1c6d11">
                      <font>
                         <Font size="24.0" />
