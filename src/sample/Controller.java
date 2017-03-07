@@ -173,10 +173,15 @@ public class Controller implements Initializable {
         TreeItem<String> tree = new TreeItem<>();
         /* creates the "roots" of the tree from where branches/leaves will branch out. */
         TreeItem<String> fruitsgreens = addNode("Frukt och grönt", tree);
+        fruitsgreens.setExpanded(false);
         TreeItem<String> drygoods = addNode("Skafferi", tree);
+        drygoods.setExpanded(false);
         TreeItem<String> sweets = addNode("Sötsaker", tree);
-        addNode("Kött", tree);
-        addNode("Mejeriprodukter", tree);
+        sweets.setExpanded(false);
+        TreeItem<String> meat = addNode("Kött", tree);
+        meat.setExpanded(false);
+        TreeItem<String> dairies = addNode("Mejeriprodukter", tree);
+        dairies.setExpanded(false);
 
 
         for (String productCategory : greens) {
