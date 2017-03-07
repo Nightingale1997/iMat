@@ -11,13 +11,13 @@
 <Pane maxHeight="574.0" maxWidth="767.0" minHeight="530.0" minWidth="728.0" prefHeight="534.0" prefWidth="767.0" styleClass="subpane" stylesheets="@../../css/mainsheet.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MyAccountInformationController">
    <children>
       <ListView layoutX="14.0" layoutY="57.0" prefHeight="466.0" prefWidth="197.0" styleClass="lightpane" />
-      <Label layoutX="32.0" layoutY="73.0" styleClass="boldStandardText" text="Välkommen" textFill="#1c6d11" />
+      <Label layoutX="32.0" layoutY="73.0" onMouseClicked="#loadMyAccountWelcome" styleClass="boldStandardText" text="Välkommen" textFill="#1c6d11" />
       <Label layoutX="32.0" layoutY="106.0" styleClass="boldStandardText" text="Personuppgifter" textFill="#1c6d11">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <Label layoutX="32.0" layoutY="173.0" styleClass="boldStandardText" text="Tidigare inköp" textFill="#1c6d11" />
+      <Label layoutX="32.0" layoutY="173.0" onMouseClicked="#loadMyAccountHistory" styleClass="boldStandardText" text="Tidigare inköp" textFill="#1c6d11" />
       <Pane fx:id="informationPane" layoutX="217.0" layoutY="57.0" prefHeight="466.0" prefWidth="541.0" styleClass="lightpane">
          <children>
             <Label layoutX="22.0" layoutY="11.0" styleClass="headline2" text="Personuppgifter" textFill="#1c6d11" />

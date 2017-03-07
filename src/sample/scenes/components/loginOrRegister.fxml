@@ -12,12 +12,7 @@
    <children>
       <Pane prefHeight="534.0" prefWidth="766.0" styleClass="subpane">
          <children>
-            <ImageView fitHeight="153.0" fitWidth="336.0" layoutX="202.0" layoutY="380.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../img/17015308_10154510925584385_860802045_o.png" />
-               </image>
-            </ImageView>
-            <Pane layoutX="395.0" layoutY="59.0" prefHeight="321.0" prefWidth="288.0" styleClass="lightpane">
+            <Pane layoutX="395.0" layoutY="92.0" prefHeight="321.0" prefWidth="288.0" styleClass="lightpane">
                <children>
                   <Label layoutX="52.0" layoutY="81.0" text="E-post" textFill="#1c6d11">
                      <font>
@@ -44,7 +39,7 @@
                   </Label>
                </children>
             </Pane>
-            <Pane layoutX="89.0" layoutY="59.0" prefHeight="321.0" prefWidth="288.0" styleClass="lightpane">
+            <Pane layoutX="89.0" layoutY="92.0" prefHeight="321.0" prefWidth="288.0" styleClass="lightpane">
                <children>
                   <Label layoutX="22.0" layoutY="79.0" prefHeight="137.0" prefWidth="245.0" styleClass="standardText" text="- Se tidigare inköp&#10;- Spara betalningsinformation &#10;- Spara favoriter &#10;&#10;" textAlignment="CENTER" wrapText="true">
                      <font>
@@ -59,16 +54,6 @@
                   </Label>
                </children>
             </Pane>
-            <Label layoutX="223.0" layoutY="381.0" prefHeight="120.0" prefWidth="245.0" styleClass="smallText" text="PS! Du kan handla hos oss utan ett konto. Börja söka och lägg till varor i kundvagnen." textAlignment="CENTER" wrapText="true">
-               <font>
-                  <Font name="System Italic" size="14.0" />
-               </font>
-            </Label>
-            <ImageView fitHeight="120.0" fitWidth="128.0" layoutX="468.0" layoutY="396.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../img/help.png" />
-               </image>
-            </ImageView>
             <Label layoutX="218.0" layoutY="11.0" styleClass="headline1" text="Logga in eller registrera">
                <font>
                   <Font name="System Bold" size="30.0" />

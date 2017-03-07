@@ -17,7 +17,7 @@
                   <Font name="System Bold" size="36.0" />
                </font>
             </Label>
-            <Button layoutX="60.0" layoutY="127.0" mnemonicParsing="false" prefHeight="185.0" prefWidth="194.0">
+            <Button layoutX="60.0" layoutY="127.0" mnemonicParsing="false" onAction="#loadPayDeliveryLoggedIn" prefHeight="185.0" prefWidth="194.0">
                <graphic>
                   <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -26,7 +26,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button layoutX="286.0" layoutY="127.0" mnemonicParsing="false" prefHeight="185.0" prefWidth="194.0">
+            <Button layoutX="286.0" layoutY="127.0" mnemonicParsing="false" onAction="#loadPayCardLoggedIn" prefHeight="185.0" prefWidth="194.0">
                <graphic>
                   <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -35,7 +35,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button layoutX="510.0" layoutY="127.0" mnemonicParsing="false" prefHeight="185.0" prefWidth="194.0">
+            <Button layoutX="510.0" layoutY="127.0" mnemonicParsing="false" onAction="#loadPayInvoiceLoggedIn" prefHeight="185.0" prefWidth="194.0">
                <graphic>
                   <ImageView fitHeight="123.0" fitWidth="154.0" pickOnBounds="true" preserveRatio="true">
                      <image>

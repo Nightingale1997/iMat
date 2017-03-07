@@ -66,7 +66,6 @@ public class MyAccountController {
         /*String informationText = "Instruktioner till hur iMat fungerar.";
         loadMyAccountViews(informationText, myAccountInformation.getText());*/
         controller.changeMainTo("scenes/components/myAccountInformation.fxml");
-
     }
 
     @FXML
@@ -78,8 +77,9 @@ public class MyAccountController {
 
     @FXML
     private void loadMyAccountHistory() {
-        String informationText = "Telefonnummer: 031-1234567";
-        loadMyAccountViews(informationText, myAccountHistory.getText());
+        /*String informationText = "Telefonnummer: 031-1234567";
+        loadMyAccountViews(informationText, myAccountHistory.getText());*/
+        controller.changeMainTo("scenes/components/myAccountHistory.fxml");
     }
 
     @FXML
