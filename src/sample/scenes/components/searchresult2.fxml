@@ -11,7 +11,7 @@
 
 <AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="318.0" prefWidth="246.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SearchController">
   <children>
-    <Pane layoutY="-9.0" prefHeight="330.0" prefWidth="246.0" styleClass="lightpane">
+    <Pane layoutY="-9.0" prefHeight="330.0" prefWidth="246.0" styleClass="lightpane" stylesheets="@../../css/mainsheet.css">
       <children>
         <ImageView fitHeight="105.0" fitWidth="132.0" layoutX="59.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true" smooth="false" />
         <Label layoutX="14.0" layoutY="133.0" styleClass="boldStandardText" stylesheets="@../../css/mainsheet.css" text="Varunamn">
@@ -52,10 +52,6 @@
                   <Font size="1.0" />
                </font></Text>
       </children>
-      <stylesheets>
-        <URL value="@mainsheet.css" />
-            <URL value="@../../css/mainsheet.css" />
-      </stylesheets>
     </Pane>
   </children>
 </AnchorPane>
