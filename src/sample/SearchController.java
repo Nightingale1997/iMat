@@ -10,6 +10,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
+import se.chalmers.ait.dat215.project.IMatDataHandler;
 
 /**
  * Created by flirre on 3/2/17.
@@ -31,7 +32,11 @@ public class SearchController {
     private TextField addItemField;
     
     @FXML
-    private Text favouriteText;
+    private Text favouriteText, id;
+    
+    static Controller controller = Controller.getThisInstance();
+
+    IMatDataHandler cartInstance = IMatDataHandler.getInstance();
 
     public String getItemName(AnchorPane anchorPane) {
         Pane childPane = (Pane) anchorPane.getChildren().get(0);
@@ -75,6 +80,22 @@ public class SearchController {
         ImageView imageView = (ImageView) childPane.getChildren().get(5);
         imageView.setImage(new Image(imageUrl));
     }
+
+    public void setItemId(AnchorPane anchorPane, int id){
+        Pane childPane = (Pane) anchorPane.getChildren().get(0);
+        Text idText = (Text) childPane.getChildren().get(9);
+        idText.setText(new Integer(id).toString());
+    }
     
+    public int getItemId(AnchorPane anchorPane){
+        Pane childPane = (Pane) anchorPane.getChildren().get(0);
+        Text itemId = (Text) childPane.getChildren().get(9);
+        return Integer.parseInt(itemId.getText());
+    }
+    
+    @FXML
+    private void addToCart(){
+        
+    }
     
 }
