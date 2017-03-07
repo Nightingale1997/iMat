@@ -9,43 +9,39 @@
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="385.0" prefWidth="284.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SearchController">
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="318.0" prefWidth="246.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SearchController">
   <children>
-    <Pane layoutY="-9.0" prefHeight="392.0" prefWidth="284.0" styleClass="lightpane">
+    <Pane layoutY="-9.0" prefHeight="330.0" prefWidth="246.0" styleClass="lightpane">
       <children>
-        <ImageView fitHeight="102.0" fitWidth="88.0" layoutX="100.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
-          <image>
-            <Image url="@../../img/14312-illustration-of-a-carton-of-milk-pv.png" />
-          </image>
-        </ImageView>
-        <Label layoutX="14.0" layoutY="174.0" styleClass="boldStandardText" stylesheets="@../../css/mainsheet.css" text="Varunamn">
+        <ImageView fitHeight="105.0" fitWidth="132.0" layoutX="59.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true" smooth="false" />
+        <Label layoutX="14.0" layoutY="133.0" styleClass="boldStandardText" stylesheets="@../../css/mainsheet.css" text="Varunamn">
           <font>
             <Font name="System Bold" size="15.0" />
           </font>
         </Label>
-        <Label layoutX="14.0" layoutY="202.0" styleClass="standardText" text="x kr/kilo">
+        <Label layoutX="17.0" layoutY="160.0" styleClass="standardText" text="x kr/kilo">
           <font>
             <Font size="15.0" />
           </font>
         </Label>
-        <Button layoutX="7.0" layoutY="324.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="270.0" text="Lägg till i kundvagn" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+        <Button layoutX="23.0" layoutY="253.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="200.0" text="Lägg till i kundvagn" textAlignment="CENTER" textFill="WHITE" wrapText="true">
           <font>
             <Font name="System Bold" size="20.0" />
           </font>
         </Button>
-        <Button layoutX="160.0" layoutY="268.0" minWidth="17.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="46.0" text="+" textFill="WHITE">
+        <Button layoutX="141.0" layoutY="201.0" minWidth="17.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="39.0" text="+" textFill="WHITE">
           <font>
             <Font name="System Bold" size="18.0" fx:id="x2" />
           </font>
         </Button>
-        <ImageView fx:id="setFavourite" fitHeight="45.0" fitWidth="46.0" layoutX="227.0" layoutY="180.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fx:id="setFavourite" fitHeight="39.0" fitWidth="39.0" layoutX="190.0" layoutY="133.0" pickOnBounds="true" preserveRatio="true">
           <image>
             <Image url="@../../img/star.png" />
           </image>
         </ImageView>
-        <TextField layoutX="95.0" layoutY="268.0" prefHeight="45.0" prefWidth="66.0" />
-            <Label layoutX="219.0" layoutY="273.0" styleClass="standardText" text="st" />
-            <Button layoutX="49.0" layoutY="268.0" minWidth="17.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="46.0" text="-" textFill="WHITE">
+        <TextField layoutX="76.0" layoutY="202.0" prefHeight="38.0" prefWidth="66.0" />
+            <Label layoutX="193.0" layoutY="207.0" styleClass="standardText" text="st" />
+            <Button layoutX="38.0" layoutY="201.0" minWidth="17.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="39.0" text="-" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="18.0" fx:id="x21" />
                </font>
