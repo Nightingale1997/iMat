@@ -9,7 +9,7 @@
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="175.0" prefWidth="160.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="175.0" prefWidth="160.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SearchController">
   <children>
     <Pane layoutY="-9.0" prefHeight="392.0" prefWidth="284.0" styleClass="lightpane">
       <children>
@@ -38,7 +38,7 @@
             <Font name="System Bold" size="18.0" fx:id="x2" />
           </font>
         </Button>
-        <ImageView fx:id="setFavourite" fitHeight="45.0" fitWidth="46.0" layoutX="227.0" layoutY="180.0" onMouseClicked="#setFavouriteStatus" pickOnBounds="true" preserveRatio="true">
+        <ImageView fx:id="setFavourite" fitHeight="45.0" fitWidth="46.0" layoutX="227.0" layoutY="180.0" pickOnBounds="true" preserveRatio="true">
           <image>
             <Image url="@../../img/star.png" />
           </image>
