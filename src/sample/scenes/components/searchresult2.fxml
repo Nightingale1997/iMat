@@ -28,7 +28,7 @@
             <Font size="15.0" />
           </font>
         </Label>
-        <Button layoutX="7.0" layoutY="324.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="270.0" text="Lägg till i kundvagn" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+        <Button fx:id="addButton" layoutX="7.0" layoutY="324.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="270.0" text="Lägg till i kundvagn" textAlignment="CENTER" textFill="WHITE" wrapText="true">
           <font>
             <Font name="System Bold" size="20.0" />
           </font>
@@ -50,6 +50,7 @@
                   <Font name="System Bold" size="18.0" fx:id="x21" />
                </font>
             </Button>
+            <Text fx:id="itemId" strokeType="OUTSIDE" strokeWidth="0.0" text="Id" />
       </children>
       <stylesheets>
         <URL value="@mainsheet.css" />

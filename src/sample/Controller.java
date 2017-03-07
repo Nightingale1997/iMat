@@ -74,7 +74,7 @@ public class Controller implements Initializable {
     @FXML
     private FlowPane itemList;
 
-    List<Product> currentSearch = new ArrayList<>();
+    static List<Product> currentSearch = new ArrayList<>();
 
     List<Product> favourites = new ArrayList<>();
 
@@ -249,6 +249,7 @@ public class Controller implements Initializable {
 
 
     private void addSearchHits() {
+        int currentId;
         itemList.getChildren().clear();
         for (int i = 0; i < currentSearch.size(); i++) {
             try {
@@ -257,6 +258,8 @@ public class Controller implements Initializable {
                 searchController.setItemPic(x, currentSearch.get(i).getImageName());
                 searchController.setItemPrice(x, currentSearch.get(i).getPrice() + " " + currentSearch.get(i).getUnit());
                 searchController.setFavouriteStar(x, "sample/img/keditbookmarks.png");
+                searchController.setItemId(x, currentSearch.get(i).getProductId());
+                System.out.println(searchController.getItemId(x));
                 itemList.getChildren().add(x);
             } catch (Exception e) {
                 e.printStackTrace();
