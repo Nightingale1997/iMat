@@ -26,8 +26,8 @@
                   </ImageView>
                   <Label layoutX="189.0" layoutY="70.0" styleClass="smallBoldText" text="Leveransdag" />
                   <Label layoutX="405.0" layoutY="70.0" styleClass="smallBoldText" text="Leveranstid" />
-                  <ChoiceBox layoutX="188.0" layoutY="94.0" prefWidth="150.0" />
-                  <ChoiceBox layoutX="404.0" layoutY="94.0" prefWidth="150.0" />
+                  <ChoiceBox fx:id="deliveryDay" layoutX="188.0" layoutY="94.0" prefWidth="150.0" />
+                  <ChoiceBox fx:id="deliveryTime" layoutX="404.0" layoutY="94.0" prefWidth="150.0" />
                   <Label layoutX="188.0" layoutY="145.0" styleClass="smallBoldText" text="Kommentar" />
                   <TextArea layoutX="188.0" layoutY="169.0" prefHeight="152.0" prefWidth="364.0" />
                   <Button layoutX="266.0" layoutY="377.0" mnemonicParsing="false" onAction="#loadConfirmation" prefHeight="54.0" prefWidth="212.0" text="Skicka beställning" textFill="WHITE" />
