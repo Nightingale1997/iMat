@@ -45,7 +45,7 @@ public class Controller implements Initializable {
     private TreeView categories;
 
     @FXML
-    private ListView shoppingCart;
+    private ListView shoppingCartView;
 
     @FXML
     private Button getSearchButton, loginButton, addItem, incItem, decItem, item0, item1, item2, item3, item4, item5, item6, item7, item8;
@@ -80,9 +80,11 @@ public class Controller implements Initializable {
 
     HashMap categoryHash;
 
-    IMatDataHandler instance = IMatDataHandler.getInstance();
+    static IMatDataHandler instance = IMatDataHandler.getInstance();
 
     static SearchController searchController = new SearchController();
+
+    static ShoppingCart shoppingCart = instance.getShoppingCart();
 
     private HashMap<String, ProductCategory> createHashMap() {
         HashMap<String, ProductCategory> categoryMap = new HashMap<String, ProductCategory>();

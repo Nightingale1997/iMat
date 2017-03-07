@@ -1,5 +1,6 @@
 package sample;
 
+import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
@@ -11,6 +12,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
 import se.chalmers.ait.dat215.project.IMatDataHandler;
+import se.chalmers.ait.dat215.project.ShoppingCart;
 
 /**
  * Created by flirre on 3/2/17.
@@ -36,7 +38,9 @@ public class SearchController {
     
     static Controller controller = Controller.getThisInstance();
 
-    IMatDataHandler cartInstance = IMatDataHandler.getInstance();
+    static IMatDataHandler cartInstance = IMatDataHandler.getInstance();
+
+    static ShoppingCart shoppingCart = cartInstance.getShoppingCart();
 
     public String getItemName(AnchorPane anchorPane) {
         Pane childPane = (Pane) anchorPane.getChildren().get(0);
@@ -86,16 +90,34 @@ public class SearchController {
         Text idText = (Text) childPane.getChildren().get(9);
         idText.setText(new Integer(id).toString());
     }
-    
+
+    @FXML
     public int getItemId(AnchorPane anchorPane){
         Pane childPane = (Pane) anchorPane.getChildren().get(0);
         Text itemId = (Text) childPane.getChildren().get(9);
         return Integer.parseInt(itemId.getText());
     }
-    
     @FXML
-    private void addToCart(){
-        
+    public void setAddItemField(AnchorPane anchorPane, int quantity){
+        Pane childPane = (Pane) anchorPane.getChildren().get(0);
+        TextField quantText = (TextField) childPane.getChildren().get(6);
+        quantText.setText(new Integer(quantity).toString());
+    }
+    @FXML
+    public int getAddItemField(AnchorPane anchorPane){
+        Pane childPane = (Pane) anchorPane.getChildren().get(0);
+        TextField itemquantity = (TextField) childPane.getChildren().get(6);
+        return Integer.parseInt(itemquantity.getText());
+    }
+
+    @FXML
+    private void addToCart(Event event) {
+        Button pressedButton = (Button) event.getSource();
+        AnchorPane source = (AnchorPane) pressedButton.getParent().getParent();
+        shoppingCart.addProduct(cartInstance.getProduct(getItemId(source)));
+        double total = shoppingCart.getTotal();
+        System.out.println(total);
+
     }
     
 }
