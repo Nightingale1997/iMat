@@ -67,6 +67,12 @@ public class Controller implements Initializable {
 
     @FXML
     private Pane mainPane;
+    
+    @FXML
+    private ScrollPane itemScroll;
+    
+    @FXML
+    private FlowPane itemList;
 
     List<Product> currentSearch = new ArrayList<>();
 
@@ -238,41 +244,20 @@ public class Controller implements Initializable {
         Button pressedButton = (Button) event.getSource();
         pressedButton.setText(event.getSource().toString());
         System.out.println(currentSearch);
-        setupSearch();
-    }
-
-    @FXML
-    private void setupSearch() {
-        FlowPane childPane = (FlowPane) firstSearchView.getChildren().get(0);
-        ObservableList searchItems = childPane.getChildren();
-        ImageView imageView = (ImageView) searchItems.get(0);
-        String home = System.getProperty("user.home");
-        imageView.setImage(new Image("file:" + home + "/.dat215/imat/images/" + currentSearch.get(0).getImageName()));
-        Label label = (Label) searchItems.get(1);
-        label.setText(currentSearch.get(0).getName());
-        searchItems.set(1, label);
-        Label priceLabel = (Label) searchItems.get(2);
-        priceLabel.setText(currentSearch.get(0).getPrice() + " " + currentSearch.get(0).getUnit());
-        searchItems.set(2, priceLabel);
-        Text favourite = (Text) searchItems.get(7);
-        //TODO:check if favourite and adjust text. 
-        //System.out.println(searchItems.get(7));
+        
     }
 
 
     private void addSearchHits() {
-        FlowPane childPane = (FlowPane) firstSearchView.getChildren().get(0);
-        childPane.getChildren().clear();
+        itemList.getChildren().clear();
         for (int i = 0; i < currentSearch.size(); i++) {
             try {
                 AnchorPane x = FXMLLoader.load(getClass().getResource("scenes/components/Searchresult1.fxml"));
-                Pane y = (Pane)x.getChildren().get(0);
                 searchController.setItemName(x, currentSearch.get(i).getName());
                 searchController.setItemPic(x, currentSearch.get(i).getImageName());
                 searchController.setItemPrice(x, currentSearch.get(i).getPrice() + " " + currentSearch.get(i).getUnit());
                 searchController.setFavouriteStar(x, "sample/img/keditbookmarks.png");
-                System.out.println(y.getChildren());
-                childPane.getChildren().add(x);
+                itemList.getChildren().add(x);
 
 
             } catch (Exception e) {
@@ -280,9 +265,10 @@ public class Controller implements Initializable {
             }
             ;
         }
-        ObservableList searchItems = childPane.getChildren();
-        System.out.println(searchItems);
-        mainPane.getChildren().add(firstSearchView);
+        
+        ObservableList searchItems = itemList.getChildren();
+        itemScroll.setContent(itemList);
+        mainPane.getChildren().add(itemScroll);
     }
 
 
