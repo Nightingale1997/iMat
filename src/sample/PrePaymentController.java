@@ -36,4 +36,9 @@ public class PrePaymentController {
     private void loadPayChoice() {
         controller.changeMainTo("scenes/components/payChoice.fxml");
     }
+
+    @FXML
+    private void loadMainPageCategories() {
+        controller.loadMainPageCategories();
+    }
 }

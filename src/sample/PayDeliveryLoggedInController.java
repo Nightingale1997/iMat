@@ -5,7 +5,7 @@ import javafx.fxml.FXML;
 /**
  * Created by Elina Olsson on 2017-03-07.
  */
-public class PayLoggedInController {
+public class PayDeliveryLoggedInController {
 
     static Controller controller = Controller.getThisInstance();
 

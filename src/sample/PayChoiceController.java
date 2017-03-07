@@ -28,10 +28,14 @@ public class PayChoiceController {
     @FXML
     private void loadPayCardLoggedIn() {
         controller.changeMainTo("scenes/components/payCardLoggedIn.fxml");
+        /*payHeadline.setText("Betalning med kort");
+        payImage.setImage(new Image("img/Betala vid leverans.png"));*/
     }
 
     @FXML
     private void loadPayInvoiceLoggedIn() {
         controller.changeMainTo("scenes/components/payInvoiceLoggedIn.fxml");
+        /*payHeadline.setText("Betalning med faktura");
+        payImage.setImage(new Image("img/Betala vid leverans.png"));*/
     }
 }

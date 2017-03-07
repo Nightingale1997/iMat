@@ -282,7 +282,7 @@ public class Controller implements Initializable {
 
 
     @FXML
-    private void loadMainPageCategories() {
+    public void loadMainPageCategories() {
         changeMainTo("scenes/components/mainPageCategories.fxml");
     }
 
