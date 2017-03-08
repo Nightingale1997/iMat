@@ -26,12 +26,12 @@
                   </ImageView>
                   <Label layoutX="189.0" layoutY="71.0" styleClass="smallBoldText" text="Leveransdag" />
                   <Label layoutX="405.0" layoutY="71.0" styleClass="smallBoldText" text="Leveranstid" />
-                  <ChoiceBox layoutX="188.0" layoutY="94.0" prefWidth="150.0" />
-                  <ChoiceBox layoutX="404.0" layoutY="94.0" prefWidth="150.0" />
                   <Label layoutX="188.0" layoutY="146.0" styleClass="smallBoldText" text="Kommentar" />
                   <TextArea layoutX="188.0" layoutY="169.0" prefHeight="152.0" prefWidth="364.0" />
                   <Button layoutX="266.0" layoutY="377.0" mnemonicParsing="false" onAction="#loadConfirmation" prefHeight="54.0" prefWidth="212.0" text="Skicka beställning" textFill="WHITE" />
                   <Label layoutX="319.0" layoutY="337.0" styleClass="standardText" text="Totalpris: x kr" />
+                  <ComboBox fx:id="deliveryDay" layoutX="189.0" layoutY="91.0" prefWidth="150.0" />
+                  <ComboBox fx:id="deliveryTime" layoutX="405.0" layoutY="91.0" prefWidth="150.0" />
                </children>
             </Pane>
          </children>

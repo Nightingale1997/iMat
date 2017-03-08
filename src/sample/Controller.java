@@ -65,7 +65,7 @@ public class Controller implements Initializable {
     private GridPane frame;
 
     @FXML
-    private Label itemLabel, itemPriceLabel;
+    private Label itemLabel, itemPriceLabel, totalPriceLabel, totalQuantity;
 
     @FXML
     private ImageView addFavourite, itemImage, setFavourite;
@@ -84,6 +84,16 @@ public class Controller implements Initializable {
     
     @FXML
     private FlowPane itemList;
+
+    public boolean getTutorial() {
+        return tutorial;
+    }
+
+    public void setTutorial(boolean tutorial) {
+        this.tutorial = tutorial;
+    }
+
+    private  boolean tutorial;
 
     static List<Product> currentSearch = new ArrayList<>();
 
@@ -290,7 +300,7 @@ public class Controller implements Initializable {
     }
 
 
-    private void addSearchHits() {
+    public void addSearchHits() {
         int currentId;
         itemList.getChildren().clear();
         for (int i = 0; i < currentSearch.size(); i++) {
@@ -337,7 +347,7 @@ public class Controller implements Initializable {
     }
 
     @FXML
-    private void loadHelpOverview() {
+    public void loadHelpOverview() {
         changeMainTo("scenes/components/helpOverview.fxml");
     }
 
@@ -419,27 +429,6 @@ public class Controller implements Initializable {
         templist.addAll(names);
         shoppingCartView.setItems(names);
     }
-
-    /*public void updateCartView(){
-        ObservableList<String> names = FXCollections.observableArrayList();
-        ObservableList<Double> quantities = FXCollections.observableArrayList();
-        ObservableList<Double> prices = FXCollections.observableArrayList();
-        double totalQuant = 0;
-        double totalPrice = 0;
-        for(ShoppingItem si : shoppingCart.getItems()){
-            double quantity = si.getAmount();
-            totalQuant += quantity;
-            double price = si.getProduct().getPrice();
-            totalPrice += price;
-            String name = si.getProduct().getName();
-            names.add(name +" "+ price + " "+ quantity);
-        }
-        shoppingCartView.setItems(names);
-        totalQuantity.setText(""+totalQuant);
-        totalPriceLabel.setText(""+totalPrice);
-    }*/
-
-
     /* Började göra metoder för att lägga till och ta bort favorier men behöver lite hjälp :)
 
     @FXML
