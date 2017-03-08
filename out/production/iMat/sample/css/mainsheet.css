@@ -105,6 +105,11 @@
      -fx-cursor:hand;
 }
 
+.handcursor{
+    
+     -fx-cursor:hand;
+}
+
 .button:pressed,
 .bigbutton:pressed {
     -fx-translate-y: 1.5;
