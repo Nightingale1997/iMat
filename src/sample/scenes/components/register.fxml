@@ -21,21 +21,21 @@
                <font>
                   <Font size="14.0" />
                </font></Label>
-            <TextField layoutX="160.0" layoutY="43.0" prefHeight="25.0" prefWidth="200.0" />
+            <TextField fx:id="firstName" layoutX="160.0" layoutY="43.0" prefHeight="25.0" prefWidth="200.0" />
             <Label layoutX="388.0" layoutY="22.0" styleClass="smallBoldText" text="Efternamn" textFill="#1c6d11" />
-            <TextField layoutX="388.0" layoutY="42.0" prefHeight="25.0" prefWidth="200.0" />
+            <TextField fx:id="lastName" layoutX="388.0" layoutY="42.0" prefHeight="25.0" prefWidth="200.0" />
             <Label layoutX="160.0" layoutY="94.0" styleClass="smallBoldText" text="Adress" textFill="#1c6d11" />
-            <TextField layoutX="160.0" layoutY="115.0" prefHeight="25.0" prefWidth="428.0" />
+            <TextField fx:id="address" layoutX="160.0" layoutY="115.0" prefHeight="25.0" prefWidth="428.0" />
             <Label layoutX="160.0" layoutY="158.0" styleClass="smallBoldText" text="Postnummer" textFill="#1c6d11" />
-            <TextField layoutX="160.0" layoutY="178.0" prefHeight="25.0" prefWidth="96.0" />
+            <TextField fx:id="postCode" layoutX="160.0" layoutY="178.0" prefHeight="25.0" prefWidth="96.0" />
             <Label layoutX="278.0" layoutY="158.0" styleClass="smallBoldText" text="Ort" textFill="#1c6d11" />
-            <TextField layoutX="278.0" layoutY="178.0" prefHeight="25.0" prefWidth="310.0" />
+            <TextField fx:id="city" layoutX="278.0" layoutY="178.0" prefHeight="25.0" prefWidth="310.0" />
             <Label layoutX="160.0" layoutY="238.0" styleClass="smallBoldText" text="Telefonnummer" textFill="#1c6d11" />
-            <TextField layoutX="160.0" layoutY="261.0" prefHeight="25.0" prefWidth="200.0" />
+            <TextField fx:id="phoneNumber" layoutX="160.0" layoutY="261.0" prefHeight="25.0" prefWidth="200.0" />
             <Label layoutX="374.0" layoutY="239.0" styleClass="smallBoldText" text="E-post" textFill="#1c6d11" />
-            <TextField layoutX="374.0" layoutY="261.0" prefHeight="39.0" prefWidth="215.0" />
+            <TextField fx:id="email" layoutX="374.0" layoutY="261.0" prefHeight="39.0" prefWidth="215.0" />
             <Label layoutX="159.0" layoutY="314.0" styleClass="smallBoldText" text="Lösenord" textFill="#1c6d11" />
-            <TextField layoutX="160.0" layoutY="337.0" prefHeight="25.0" prefWidth="200.0" />
+            <TextField fx:id="password" layoutX="160.0" layoutY="337.0" prefHeight="25.0" prefWidth="200.0" />
             <Button layoutX="457.0" layoutY="392.0" mnemonicParsing="false" onMouseClicked="#loadMyAccount" prefHeight="39.0" prefWidth="138.0" text="Skapa konto" textFill="WHITE" />
          </children>
       </Pane>
