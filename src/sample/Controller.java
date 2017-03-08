@@ -31,6 +31,8 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.*;
 
+import static java.lang.Integer.parseInt;
+
 public class Controller implements Initializable {
 
     public static Controller getThisInstance() {
@@ -49,6 +51,12 @@ public class Controller implements Initializable {
 
     @FXML
     private ListView shoppingCartView;
+
+    @FXML
+    private Label totalpricelabel;
+
+    @FXML
+    private Label totalamountlabel;
 
     @FXML
     private Button getSearchButton, loginButton, addItem, incItem, decItem, item0, item1, item2, item3, item4, item5, item6, item7, item8;
@@ -88,6 +96,9 @@ public class Controller implements Initializable {
     static SearchController searchController = new SearchController();
 
     static ShoppingCart shoppingCart = instance.getShoppingCart();
+
+    int totalprice = 0;
+    int totalamount = 0;
 
     private HashMap<Text, ProductCategory> createHashMap() {
         HashMap<Text, ProductCategory> categoryMap = new HashMap<Text, ProductCategory>();
@@ -386,16 +397,47 @@ public class Controller implements Initializable {
 
     public void updateCartView(){
         ObservableList<String> names = FXCollections.observableArrayList();
-        ObservableList<Double> quantities = FXCollections.observableArrayList();
-        ObservableList<Double> prices = FXCollections.observableArrayList();
+        //ObservableList<Double> quantities = FXCollections.observableArrayList();
+        //ObservableList<Double> prices = FXCollections.observableArrayList();
+            //double quantity = si.getAmount();
+
+
+
         for(ShoppingItem si : shoppingCart.getItems()){
             double quantity = si.getAmount();
-            double price = si.getProduct().getPrice();
+            totalamount += quantity;
+            double price = si.getProduct().getPrice()*si.getAmount();
             String name = si.getProduct().getName();
-            names.add(quantity +" "+ name +" "+ price);
+            names.add(name +" "+ quantity + " " +price);
         }
+
+
+        totalpricelabel.setText(shoppingCart.getTotal() + " " + "kr");
+        totalamountlabel.setText(totalamount + " "+"st");
+
+        ObservableList<String> templist = shoppingCartView.getItems();
+        templist.addAll(names);
         shoppingCartView.setItems(names);
     }
+
+    /*public void updateCartView(){
+        ObservableList<String> names = FXCollections.observableArrayList();
+        ObservableList<Double> quantities = FXCollections.observableArrayList();
+        ObservableList<Double> prices = FXCollections.observableArrayList();
+        double totalQuant = 0;
+        double totalPrice = 0;
+        for(ShoppingItem si : shoppingCart.getItems()){
+            double quantity = si.getAmount();
+            totalQuant += quantity;
+            double price = si.getProduct().getPrice();
+            totalPrice += price;
+            String name = si.getProduct().getName();
+            names.add(name +" "+ price + " "+ quantity);
+        }
+        shoppingCartView.setItems(names);
+        totalQuantity.setText(""+totalQuant);
+        totalPriceLabel.setText(""+totalPrice);
+    }*/
 
 
     /* Började göra metoder för att lägga till och ta bort favorier men behöver lite hjälp :)

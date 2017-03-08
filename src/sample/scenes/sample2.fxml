@@ -36,7 +36,7 @@
                 <Font name="System Bold" size="26.0" fx:id="x1" />
               </font>
             </Label>
-            <TreeView fx:id="categories" layoutX="11.0" layoutY="56.0" prefHeight="464.0" prefWidth="196.0">
+            <TreeView fx:id="categories" layoutX="14.0" layoutY="56.0" prefHeight="464.0" prefWidth="188.0">
                      <styleClass>
                         <String fx:value="handcursor" />
                         <String fx:value="myTree" />
@@ -50,8 +50,8 @@
               <children>
                 <Label layoutX="35.0" layoutY="330.0" styleClass="standardText" stylesheets="@../css/mainsheet.css" text="Antal varor:" />
                 <Label layoutX="35.0" layoutY="353.0" styleClass="standardText" text="Totalpris:" />
-                <Label layoutX="157.0" layoutY="332.0" styleClass="standardText" text="0 st" />
-                <Label layoutX="157.0" layoutY="353.0" styleClass="standardText" text="0 kr" />
+                <Label fx:id="totalamountlabel" layoutX="157.0" layoutY="332.0" styleClass="standardText" text="0 st" />
+                <Label fx:id="totalpricelabel" layoutX="157.0" layoutY="353.0" styleClass="standardText" text="0 kr" />
                         <ListView fx:id="shoppingCartView" prefHeight="326.0" prefWidth="224.0" />
               </children>
             </Pane>
@@ -68,7 +68,7 @@
                      </image>
                   </ImageView>
                </children></Pane>
-        <Button fx:id="loginButton" layoutX="1116.0" layoutY="36.0" mnemonicParsing="false" onMouseClicked="#loadMyAccount" prefHeight="69.0" prefWidth="148.0" text="Logga in eller registrera" textAlignment="CENTER" textFill="WHITE" wrapText="true" />
+        <Button fx:id="loginButton" layoutX="1116.0" layoutY="36.0" mnemonicParsing="false" onMouseClicked="#loadRegisterOrLogin" prefHeight="69.0" prefWidth="148.0" text="Logga in eller registrera" textAlignment="CENTER" textFill="WHITE" wrapText="true" />
         <ImageView fitHeight="134.0" fitWidth="217.0" layoutX="14.0" layoutY="-7.0" onMouseClicked="#loadMainPageCategories" pickOnBounds="true" preserveRatio="true" styleClass="handcursor">
           <image>
             <Image url="@../img/Logga.png" />

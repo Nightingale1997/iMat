@@ -12,7 +12,13 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
 import se.chalmers.ait.dat215.project.IMatDataHandler;
+import se.chalmers.ait.dat215.project.Product;
 import se.chalmers.ait.dat215.project.ShoppingCart;
+import se.chalmers.ait.dat215.project.ShoppingItem;
+
+import java.util.ArrayList;
+
+import static java.lang.Integer.parseInt;
 
 /**
  * Created by flirre on 3/2/17.
@@ -95,7 +101,7 @@ public class SearchController {
     public int getItemId(AnchorPane anchorPane){
         Pane childPane = (Pane) anchorPane.getChildren().get(0);
         Text itemId = (Text) childPane.getChildren().get(9);
-        return Integer.parseInt(itemId.getText());
+        return parseInt(itemId.getText());
     }
     @FXML
     public void setAddItemField(AnchorPane anchorPane, int quantity){
@@ -107,16 +113,40 @@ public class SearchController {
     public int getAddItemField(AnchorPane anchorPane){
         Pane childPane = (Pane) anchorPane.getChildren().get(0);
         TextField itemquantity = (TextField) childPane.getChildren().get(6);
-        return Integer.parseInt(itemquantity.getText());
+        return parseInt(itemquantity.getText());
     }
 
     @FXML
     private void addToCart(Event event) {
         Button pressedButton = (Button) event.getSource();
         AnchorPane source = (AnchorPane) pressedButton.getParent().getParent();
-        shoppingCart.addProduct(cartInstance.getProduct(getItemId(source)));
-        System.out.println(shoppingCart.getItems());
+        Product toAdd = cartInstance.getProduct(getItemId(source));
+        int amount = parseInt(addItemField.getText());
+        boolean founditem = false;
+        for(ShoppingItem si : shoppingCart.getItems()){
+            System.out.println("Hej");
+            if(toAdd.equals(si.getProduct())){
+                si.setAmount(si.getAmount()+amount);
+                founditem = true;
+            }
+        }
+        if(!founditem){
+            shoppingCart.addProduct(toAdd, amount);
+        }
+
+        System.out.println(shoppingCart.getItems().toString());
         Controller.getThisInstance().updateCartView();
     }
-    
+
+       /*    @FXML
+    private void addToCart(Event event) {
+        Button pressedButton = (Button) event.getSource();
+        AnchorPane source = (AnchorPane) pressedButton.getParent().getParent();
+        shoppingCart.addProduct(cartInstance.getProduct(getItemId(source)));
+        System.out.println(shoppingCart.getItems());
+        int amount = parseInt(addItemField.getText());
+        shoppingItem itemToAdd = cartInstance.getProduct(getItemId(source));
+        Controller.getThisInstance().updateCartView(amount, itemToAdd);
+    }*/
+
 }

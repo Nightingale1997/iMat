@@ -1,21 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.net.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.geometry.*?>
-<?import javafx.scene.text.*?>
-<?import javafx.scene.control.*?>
-<?import java.lang.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.Pane?>
 
-<Pane maxHeight="578.0" maxWidth="765.0" minHeight="530.0" minWidth="709.0" prefHeight="530.0" prefWidth="765.0" styleClass="subpane" stylesheets="@../../css/mainsheet.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="578.0" maxWidth="765.0" minHeight="530.0" minWidth="709.0" prefHeight="530.0" prefWidth="765.0" styleClass="subpane" stylesheets="@../../css/mainsheet.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Label layoutX="300.0" layoutY="12.0" prefHeight="45.0" prefWidth="166.0" styleClass="headline1" text="Sökresultat" textAlignment="CENTER" />
       <ScrollPane layoutX="1.0" layoutY="57.0" prefHeight="478.0" prefWidth="765.0">
          <content>
-            <AnchorPane fx:id="firstSearchView" prefHeight="474.0" prefWidth="762.0">
+            <AnchorPane fx:id="firstSearchView" prefHeight="469.0" prefWidth="762.0">
                <children>
-                  <FlowPane prefHeight="478.0" prefWidth="750.0" />
+                  <FlowPane layoutY="8.0" prefHeight="470.0" prefWidth="750.0" />
                </children>
             </AnchorPane>
          </content>
