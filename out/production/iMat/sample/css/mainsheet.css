@@ -99,6 +99,12 @@
      -fx-background-color: linear-gradient(to bottom, rgba(158,131,109,1) 0%, rgba(99,88,76,1) 50%, rgba(92,78,60,1) 51%, rgba(138,114,95,1) 100%);
 }
 
+.button,
+.bigbutton{
+    
+     -fx-cursor:hand;
+}
+
 .button:pressed,
 .bigbutton:pressed {
     -fx-translate-y: 1.5;
