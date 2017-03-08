@@ -77,6 +77,16 @@ public class Controller implements Initializable {
     @FXML
     private FlowPane itemList;
 
+    public boolean getTutorial() {
+        return tutorial;
+    }
+
+    public void setTutorial(boolean tutorial) {
+        this.tutorial = tutorial;
+    }
+
+    private  boolean tutorial;
+
     static List<Product> currentSearch = new ArrayList<>();
 
     List<Product> favourites = new ArrayList<>();
@@ -326,7 +336,7 @@ public class Controller implements Initializable {
     }
 
     @FXML
-    private void loadHelpOverview() {
+    public void loadHelpOverview() {
         changeMainTo("scenes/components/helpOverview.fxml");
     }
 

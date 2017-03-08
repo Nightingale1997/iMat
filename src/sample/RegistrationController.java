@@ -18,6 +18,17 @@ public class RegistrationController {
     @FXML
     private void loadMyAccount() { controller.changeMainTo("scenes/components/myAccountWelcome.fxml"); }
 
+    @FXML
+    private void createAccount() {
+        setFirstName();
+        setLastName();
+        setAddress();
+        setPostCode();
+        setCity();
+        setPhoneNumber();
+        setEmail();
+        setPassword();
+    }
 
     private void setFirstName() {
         firstName.getText();

@@ -36,7 +36,7 @@
             <TextField fx:id="email" layoutX="374.0" layoutY="261.0" prefHeight="39.0" prefWidth="215.0" />
             <Label layoutX="159.0" layoutY="314.0" styleClass="smallBoldText" text="Lösenord" textFill="#1c6d11" />
             <TextField fx:id="password" layoutX="160.0" layoutY="337.0" prefHeight="25.0" prefWidth="200.0" />
-            <Button layoutX="457.0" layoutY="392.0" mnemonicParsing="false" onMouseClicked="#loadMyAccount" prefHeight="39.0" prefWidth="138.0" text="Skapa konto" textFill="WHITE" />
+            <Button layoutX="457.0" layoutY="392.0" mnemonicParsing="false" onAction="#createAccount" onMouseClicked="#loadMyAccount" prefHeight="39.0" prefWidth="138.0" text="Skapa konto" textFill="WHITE" />
          </children>
       </Pane>
       <Button layoutX="15.0" layoutY="9.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="159.0" text="Tillbaka" textFill="WHITE">
