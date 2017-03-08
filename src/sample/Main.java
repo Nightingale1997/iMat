@@ -11,7 +11,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-
+        
 
         // load the  font.
         Font.loadFont(getClass().getResourceAsStream("css/OpenSans.ttf"), 14);
