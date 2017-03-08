@@ -155,7 +155,7 @@
     -fx-font-weight: bold;
 }
 
-.tree-cell:odd:empty{
+.tree-cell:odd{
  -fx-background-color: #E3F2AC;    
 }
 

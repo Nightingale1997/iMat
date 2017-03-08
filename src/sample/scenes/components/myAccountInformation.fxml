@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
@@ -12,13 +13,25 @@
 <Pane maxHeight="574.0" maxWidth="767.0" minHeight="530.0" minWidth="728.0" prefHeight="534.0" prefWidth="767.0" styleClass="subpane" stylesheets="@../../css/mainsheet.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MyAccountInformationController">
    <children>
       <ListView layoutX="14.0" layoutY="57.0" prefHeight="466.0" prefWidth="197.0" styleClass="lightpane" />
-      <Label layoutX="32.0" layoutY="73.0" onMouseClicked="#loadMyAccountWelcome" styleClass="boldStandardText" text="Välkommen" />
-      <Label layoutX="32.0" layoutY="106.0" styleClass="boldStandardText" text="Personuppgifter">
+      <Label layoutX="32.0" layoutY="73.0" onMouseClicked="#loadMyAccountWelcome" text="Välkommen">
+         <styleClass>
+            <String fx:value="boldStandardText" />
+            <String fx:value="handcursor" />
+         </styleClass></Label>
+      <Label layoutX="32.0" layoutY="106.0" text="Personuppgifter">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
+         <styleClass>
+            <String fx:value="boldStandardText" />
+            <String fx:value="handcursor" />
+         </styleClass>
       </Label>
-      <Label layoutX="32.0" layoutY="173.0" onMouseClicked="#loadMyAccountHistory" styleClass="boldStandardText" text="Tidigare inköp" />
+      <Label layoutX="32.0" layoutY="173.0" onMouseClicked="#loadMyAccountHistory" text="Tidigare inköp">
+         <styleClass>
+            <String fx:value="boldStandardText" />
+            <String fx:value="handcursor" />
+         </styleClass></Label>
       <Pane fx:id="informationPane" layoutX="217.0" layoutY="57.0" prefHeight="466.0" prefWidth="541.0" styleClass="lightpane">
          <children>
             <Label layoutX="22.0" layoutY="11.0" styleClass="headline2" text="Personuppgifter" />
@@ -43,11 +56,15 @@
             <TextField layoutX="222.0" layoutY="111.0" prefHeight="25.0" prefWidth="166.0" />
             <Label layoutX="222.0" layoutY="89.0" styleClass="smallBoldText" text="Efternamn" />
             <TextField layoutX="22.0" layoutY="111.0" prefHeight="25.0" prefWidth="166.0" />
-            <Label layoutX="22.0" layoutY="89.0" styleClass="smallBoldText" text="Förnamn" textFill="#1c6d11" />
+            <Label layoutX="22.0" layoutY="89.0" styleClass="smallBoldText" text="Förnamn" />
          </children>
       </Pane>
       <Label layoutX="307.0" layoutY="10.0" styleClass="headline1" text="Mitt konto" />
-      <Label layoutX="32.0" layoutY="139.0" onMouseClicked="#loadMyAccountCard" styleClass="boldStandardText" text="Kortuppgifter" />
+      <Label layoutX="32.0" layoutY="139.0" onMouseClicked="#loadMyAccountCard" text="Kortuppgifter">
+         <styleClass>
+            <String fx:value="boldStandardText" />
+            <String fx:value="handcursor" />
+         </styleClass></Label>
       <Button layoutX="15.0" layoutY="9.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="159.0" text="Tillbaka" textFill="WHITE">
          <graphic>
             <ImageView fitHeight="27.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
