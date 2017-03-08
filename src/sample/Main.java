@@ -11,8 +11,10 @@ import java.io.File;
 
 public class Main extends Application {
 
+    static Controller controller = Controller.getThisInstance();
+
     @Override
-    public void start(Stage primaryStage) throws Exception{
+    public void start(Stage primaryStage) throws Exception {
 
         // load the  font.
         Font.loadFont(getClass().getResourceAsStream("css/OpenSans.ttf"), 14);
@@ -20,7 +22,7 @@ public class Main extends Application {
 
         File file = new File("firstrun.txt");
         boolean firstRun = false;
-        if(!file.exists()){
+        if (!file.exists()) {
             firstRun = true;
             file.createNewFile();
 
@@ -30,8 +32,7 @@ public class Main extends Application {
             primaryStage.setScene(new Scene(root, 1280, 720));
             primaryStage.show();
             //primaryStage.setFullScreen(true);
-        }
-        else{
+        } else {
             //Parent root = FXMLLoader.load(getClass().getResource("scenes/payinfo.fxml"));
             Parent root = FXMLLoader.load(getClass().getResource("scenes/sample2.fxml"));
             primaryStage.setTitle("iMat - Handla Enkelt!");
@@ -39,13 +40,10 @@ public class Main extends Application {
             primaryStage.show();
             //primaryStage.setFullScreen(true);
         }
-
-
-
     }
 
 
     public static void main(String[] args) {
-        launch(args);   
+        launch(args);
     }
 }
