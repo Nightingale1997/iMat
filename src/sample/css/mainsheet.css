@@ -155,6 +155,10 @@
     -fx-font-weight: bold;
 }
 
+.tree-cell:odd{
+ -fx-background-color: #E3F2AC;    
+}
+
 .standardText {
 	-fx-font-size: 18;
     -fx-font-weight: normal;

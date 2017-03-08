@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
 <?import java.lang.String?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
@@ -23,7 +18,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<GridPane id="" fx:id="frame" alignment="CENTER" hgap="10.0" stylesheets="@../css/mainsheet.css" vgap="10.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<GridPane id="" fx:id="frame" alignment="CENTER" hgap="10.0" stylesheets="@../css/mainsheet.css" vgap="10.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
   <children>
     <Pane prefHeight="720.0" prefWidth="1280.0" styleClass="mainpane" stylesheets="@../css/mainsheet.css" GridPane.columnIndex="0" GridPane.rowIndex="0">
       <children>
@@ -43,8 +38,8 @@
             </Label>
             <TreeView fx:id="categories" layoutX="14.0" layoutY="56.0" prefHeight="464.0" prefWidth="188.0">
                      <styleClass>
-                        <String fx:value="lightpane" />
                         <String fx:value="handcursor" />
+                        <String fx:value="myTree" />
                      </styleClass></TreeView>
           </children>
         </Pane>
