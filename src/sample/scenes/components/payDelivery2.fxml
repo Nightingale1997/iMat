@@ -8,7 +8,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane maxHeight="528.0" maxWidth="767.0" minHeight="528.0" minWidth="728.0" prefHeight="528.0" prefWidth="767.0" styleClass="backgroundPane" stylesheets="@../../css/mainsheet.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="528.0" maxWidth="767.0" minHeight="528.0" minWidth="728.0" prefHeight="528.0" prefWidth="767.0" styleClass="backgroundPane" stylesheets="@../../css/mainsheet.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.PayChoiceController">
    <children>
       <Pane prefHeight="534.0" prefWidth="767.0" styleClass="subpane" stylesheets="@../../css/mainsheet.css">
          <children>
@@ -26,7 +26,7 @@
                   </ImageView>
                   <Label layoutX="189.0" layoutY="70.0" styleClass="smallBoldText" text="Leveransdag" />
                   <Label layoutX="405.0" layoutY="70.0" styleClass="smallBoldText" text="Leveranstid" />
-                  <ChoiceBox layoutX="188.0" layoutY="94.0" prefWidth="150.0" />
+                  <ChoiceBox fx:id="deliveryDay" layoutX="188.0" layoutY="94.0" prefWidth="150.0" />
                   <ChoiceBox layoutX="404.0" layoutY="94.0" prefWidth="150.0" />
                   <Label layoutX="188.0" layoutY="144.0" styleClass="smallBoldText" text="Kommentar" />
                   <TextArea layoutX="188.0" layoutY="169.0" prefHeight="152.0" prefWidth="364.0" />
