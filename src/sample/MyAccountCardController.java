@@ -91,7 +91,10 @@ public class MyAccountCardController implements Initializable {
         IMatDataHandler.getInstance().getCreditCard().setCardNumber(cardNumber.getText());
         IMatDataHandler.getInstance().getCreditCard().setHoldersName(cardName.getText());
 
-        IMatDataHandler.getInstance().getCreditCard().setVerificationCode(Integer.parseInt(cardCVC.getText()));
+        if (!cardCVC.getText().equals("")) {
+            IMatDataHandler.getInstance().getCreditCard().setVerificationCode(Integer.parseInt(cardCVC.getText()));
+        } 
+
         IMatDataHandler.getInstance().getCreditCard().setValidMonth(Integer.parseInt(cardMonth.getValue().toString()));
         IMatDataHandler.getInstance().getCreditCard().setValidYear(Integer.parseInt(cardYear.getValue().toString()));
     }
