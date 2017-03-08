@@ -279,7 +279,7 @@ public class Controller implements Initializable {
     }
 
 
-    private void addSearchHits() {
+    public void addSearchHits() {
         int currentId;
         itemList.getChildren().clear();
         for (int i = 0; i < currentSearch.size(); i++) {
