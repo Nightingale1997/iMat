@@ -36,7 +36,7 @@
                 <Font name="System Bold" size="26.0" fx:id="x1" />
               </font>
             </Label>
-            <TreeView fx:id="categories" layoutX="14.0" layoutY="56.0" prefHeight="464.0" prefWidth="188.0">
+            <TreeView fx:id="categories" layoutX="11.0" layoutY="56.0" prefHeight="464.0" prefWidth="196.0">
                      <styleClass>
                         <String fx:value="handcursor" />
                         <String fx:value="myTree" />
