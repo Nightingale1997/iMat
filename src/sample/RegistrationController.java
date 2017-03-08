@@ -1,6 +1,7 @@
 package sample;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import se.chalmers.ait.dat215.project.IMatDataHandler;
 
@@ -14,7 +15,10 @@ public class RegistrationController {
     static Controller controller = Controller.getThisInstance();
 
     @FXML
-    private TextField firstName, lastName, address, postCode, city, phoneNumber, email, password;
+    private TextField firstName, lastName, address, postCode, city, phoneNumber, email;
+
+    @FXML
+    private PasswordField password;
 
     @FXML
     private void loadMyAccount() {
@@ -43,6 +47,8 @@ public class RegistrationController {
 
     }
 
+
+    /* Gjorde en massa getters och setters för att kunna spara uppgifter men löste det på ett annat sättså jag tror inte att dessa metoder behövs
 
     private void saveInfo() {
         IMatDataHandler.getInstance().getCustomer().setAddress(address.getText());
@@ -112,5 +118,5 @@ public class RegistrationController {
 
     public String getPassword() {
         return password.getText();
-    }
+    }*/
 }

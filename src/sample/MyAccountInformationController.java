@@ -2,6 +2,7 @@ package sample;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
@@ -30,7 +31,10 @@ public class MyAccountInformationController extends Pane{
     static Controller controller = Controller.getThisInstance();
 
     @FXML
-    private TextField firstName, lastName, address, postCode, city, phoneNumber, email, password;
+    private TextField firstName, lastName, address, postCode, city, phoneNumber, email;
+
+    @FXML
+    private PasswordField password;
 
     @FXML
     private void showInfo() {

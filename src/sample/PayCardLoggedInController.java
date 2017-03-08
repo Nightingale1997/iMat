@@ -36,4 +36,5 @@ public class PayCardLoggedInController implements Initializable {
         deliveryTime.setItems(timeChoices);
         //deliveryDay.getItems().addAll("Måndag", "Tisdag");
     }
+
 }

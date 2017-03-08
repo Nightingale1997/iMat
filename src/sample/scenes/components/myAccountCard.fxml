@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 <?import java.lang.String?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
@@ -12,7 +17,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="574.0" maxWidth="767.0" minHeight="530.0" minWidth="728.0" prefHeight="534.0" prefWidth="767.0" styleClass="subpane" stylesheets="@../../css/mainsheet.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MyAccountCardController">
+<Pane maxHeight="574.0" maxWidth="767.0" minHeight="530.0" minWidth="728.0" onMouseEntered="#showCardInfo" prefHeight="534.0" prefWidth="767.0" styleClass="subpane" stylesheets="@../../css/mainsheet.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MyAccountCardController">
    <children>
       <ListView layoutX="14.0" layoutY="57.0" prefHeight="466.0" prefWidth="197.0" styleClass="lightpane" />
       <Label layoutX="32.0" layoutY="73.0" onMouseClicked="#loadMyAccountWelcome" text="Välkommen">
@@ -43,19 +48,20 @@
                   <Image url="@../../img/cog-147414_960_720.png" />
                </image>
             </ImageView>
-            <ComboBox fx:id="cardYear" layoutX="98.0" layoutY="392.0" prefHeight="25.0" prefWidth="64.0" />
-            <Label layoutX="98.0" layoutY="374.0" styleClass="smallText" text="År" />
-            <ComboBox fx:id="cardMonth" layoutX="22.0" layoutY="393.0" prefHeight="25.0" prefWidth="64.0" />
-            <Label layoutX="22.0" layoutY="374.0" styleClass="smallText" text="Månad" />
-            <Label layoutX="22.0" layoutY="354.0" prefHeight="25.0" prefWidth="96.0" styleClass="smallBoldText" text="Utgångsdatum" />
-            <TextField fx:id="cardCVC" layoutX="22.0" layoutY="309.0" prefHeight="25.0" prefWidth="64.0" />
-            <Label layoutX="22.0" layoutY="278.0" styleClass="smallBoldText" text="CVC" />
+            <ComboBox fx:id="cardYear" layoutX="141.0" layoutY="397.0" prefHeight="20.0" prefWidth="92.0" />
+            <ComboBox fx:id="cardMonth" layoutX="23.0" layoutY="398.0" prefHeight="13.0" prefWidth="92.0" />
+            <Label layoutX="22.0" layoutY="356.0" prefHeight="25.0" prefWidth="124.0" styleClass="smallBoldText" text="Utgångsdatum" />
+            <TextField fx:id="cardCVC" layoutX="22.0" layoutY="308.0" prefHeight="25.0" prefWidth="64.0" />
+            <Label layoutX="22.0" layoutY="289.0" styleClass="smallBoldText" text="CVC" />
             <TextField fx:id="cardName" layoutX="22.0" layoutY="253.0" prefHeight="25.0" prefWidth="166.0" />
             <Label layoutX="22.0" layoutY="233.0" styleClass="smallBoldText" text="Kortinnehavarens namn" />
-            <TextField fx:id="cardNumber" layoutX="22.0" layoutY="199.0" prefHeight="25.0" prefWidth="166.0" />
+            <TextField fx:id="cardNumber" layoutX="22.0" layoutY="199.0" prefHeight="11.0" prefWidth="166.0" />
             <Label layoutX="22.0" layoutY="179.0" styleClass="smallBoldText" text="Kortnummer" />
-            <RadioButton fx:id="cardMastercard" layoutX="88.0" layoutY="146.0" mnemonicParsing="false" text="MasterCard" />
+            <RadioButton fx:id="cardMastercard" layoutX="115.0" layoutY="146.0" mnemonicParsing="false" text="MasterCard" />
             <RadioButton fx:id="cardVisa" layoutX="22.0" layoutY="146.0" mnemonicParsing="false" text="Visa" />
+            <Button fx:id="save" layoutX="389.0" layoutY="396.0" mnemonicParsing="false" onAction="#saveCardInfo" prefHeight="41.0" prefWidth="127.0" text="Spara" textFill="WHITE" />
+            <Label layoutX="21.0" layoutY="375.0" styleClass="smallText" text="Månad" />
+            <Label layoutX="141.0" layoutY="375.0" styleClass="smallText" text="År" />
          </children>
       </Pane>
       <Label layoutX="307.0" layoutY="10.0" styleClass="headline1" text="Mitt konto" />
