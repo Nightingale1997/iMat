@@ -324,6 +324,8 @@ public class Controller implements Initializable {
         mainPane.getChildren().add(itemScroll);
     }
 
+    
+
 
     //Laddar in aktuella sidan i huvudutrymmet
     public void changeMainTo(String path) {
