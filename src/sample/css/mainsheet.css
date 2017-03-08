@@ -48,7 +48,7 @@
 
 
 .lightpane {
-    -fx-background-color: #fff;
+    -fx-background-color: #E3F2AC;
     -fx-effect: innershadow( gaussian, rgba(0, 0, 0, 0.7), 7.5, 0, 0, 0);
 }
 
@@ -146,7 +146,8 @@
 
 .headline1 {
     -fx-font-size: 30;
-    -fx-font-weight: bold;
+    -fx-font-weight: bold !important;
+    
 }
 
 .headline2 {
