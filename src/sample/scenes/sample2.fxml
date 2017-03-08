@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 <?import java.lang.String?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
@@ -18,7 +23,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<GridPane id="" fx:id="frame" alignment="CENTER" hgap="10.0" stylesheets="@../css/mainsheet.css" vgap="10.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<GridPane id="" fx:id="frame" alignment="CENTER" hgap="10.0" stylesheets="@../css/mainsheet.css" vgap="10.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
   <children>
     <Pane prefHeight="720.0" prefWidth="1280.0" styleClass="mainpane" stylesheets="@../css/mainsheet.css" GridPane.columnIndex="0" GridPane.rowIndex="0">
       <children>
@@ -48,9 +53,11 @@
             <Button layoutX="56.0" layoutY="466.0" mnemonicParsing="false" onAction="#goToPayment" prefHeight="48.0" prefWidth="148.0" text="Betala" textFill="WHITE" />
             <Pane layoutX="14.0" layoutY="66.0" prefHeight="387.0" prefWidth="224.0" styleClass="lightpane">
               <children>
+                <Label layoutX="35.0" layoutY="330.0" styleClass="standardText" stylesheets="@../css/mainsheet.css" text="Antal varor:" />
                 <Label layoutX="35.0" layoutY="353.0" styleClass="standardText" text="Totalpris:" />
-                <Label layoutX="157.0" layoutY="353.0" styleClass="standardText" text="0 kr" />
-                        <ListView fx:id="shoppingCartView" prefHeight="349.0" prefWidth="224.0" />
+                <Label fx:id="totalamountlabel" layoutX="157.0" layoutY="332.0" styleClass="standardText" text="0 st" />
+                <Label fx:id="totalpricelabel" layoutX="157.0" layoutY="353.0" styleClass="standardText" text="0 kr" />
+                        <ListView fx:id="shoppingCartView" prefHeight="326.0" prefWidth="224.0" />
               </children>
             </Pane>
             <Label font="$x1" layoutX="73.0" layoutY="12.0" styleClass="headline2" text="Kundvagn" textFill="BLACK" />

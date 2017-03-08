@@ -425,6 +425,7 @@ public class Controller implements Initializable {
 
 
         totalpricelabel.setText(shoppingCart.getTotal() + " " + "kr");
+        totalamountlabel.setText(totalamount + " "+"st");
 
         ObservableList<String> templist = shoppingCartView.getItems();
         templist.addAll(names);
