@@ -146,7 +146,8 @@
 
 .headline1 {
     -fx-font-size: 30;
-    -fx-font-weight: bold;
+    -fx-font-weight: bold !important;
+    
 }
 
 .headline2 {

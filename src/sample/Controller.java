@@ -171,27 +171,47 @@ public class Controller implements Initializable {
     Ett tomt träd skapas där man sedan lägger till alla rotnoder och sedan läggs alla kategorier som ska ligga under rotnoderna.
      */
     private TreeItem<Text> createCategoryTree() {
-        Text[] greens = {new Text("Citrusfrukter"), new Text("Exotiska frukter"), new Text("Kål"), new Text("Meloner"), new Text("Rotfrukter"), new Text("Stenfrukter"), new Text("Rotfrukter"), new Text("Örter")};
-        Text[] dryStuff = {new Text("Mjöl, socker och salt"), new Text("Nötter och frön"), new Text("Pasta"), new Text("Potatis och ris")};
+        Text[] greens = {new Text("Bär"),new Text("Citrusfrukter"), new Text("Exotiska frukter"), new Text("Kål"), new Text("Meloner"), new Text("Rotfrukter"), new Text("Stenfrukter"), new Text("Rotfrukter"),new Text("Grönsaksfrukter"), new Text("Örter")};
+        Text[] dryStuff = {new Text("Varma drycker"),new Text("Baljväxter"), new Text("Mjöl, socker och salt"), new Text("Nötter och frön"), new Text("Pasta"), new Text("Potatis och ris")};
+        Text[] meat = {new Text("Kött"),new Text("Fisk")};
+        Text[] fridgeprods = {new Text("Kalla drycker"),new Text("Mejeriprodukter")};
+        Text[] sweetsprods = {new Text("Bröd"),new Text("Sötsaker")};
         TreeItem<Text> tree = new TreeItem<>();
         /* creates the "roots" of the tree from where branches/leaves will branch out. */
         Text[] mothers = new Text[5];
         TreeItem<Text> fruitsgreens = addNode(mothers[0]= new Text("Frukt och grönt"), tree);
         TreeItem<Text> drygoods = addNode(mothers[1]=new Text("Skafferi"), tree);
-        TreeItem<Text> sweets = addNode(mothers[2]=new Text("Sötsaker"), tree);
-        TreeItem<Text> meat = addNode(mothers[3]=new Text("Kött"), tree);
-        TreeItem<Text> dairies = addNode(mothers[4]=new Text("Mejeriprodukter"), tree);
+        TreeItem<Text> sweetsbread = addNode(mothers[2]=new Text("Bröd och sötsaker"), tree);
+        TreeItem<Text> meatfish = addNode(mothers[3]=new Text("Kött och fisk"), tree);
+        TreeItem<Text> fridge = addNode(mothers[4]=new Text("Kyl"), tree);
 
         for(int i=0; i<5 ; i++){
-            mothers[i].setFont(Font.font("Verdana", FontWeight.BOLD, 16));
+            mothers[i].setFont(Font.font("Verdana", FontWeight.BOLD, 15));
         }
 
         for (Text productCategory : greens) {
             addNode(productCategory, fruitsgreens);
+            productCategory.setFont(Font.font ("Verdana", 15));
 
         }
         for (Text productCategory : dryStuff) {
             addNode(productCategory, drygoods);
+            productCategory.setFont(Font.font ("Verdana", 15));
+        }
+
+        for (Text productCategory : meat) {
+            addNode(productCategory, meatfish);
+            productCategory.setFont(Font.font ("Verdana", 15));
+        }
+
+        for (Text productCategory : fridgeprods) {
+            addNode(productCategory, fridge);
+            productCategory.setFont(Font.font ("Verdana", 15));
+        }
+
+        for (Text productCategory : sweetsprods) {
+            addNode(productCategory, sweetsbread);
+            productCategory.setFont(Font.font ("Verdana", 15));
         }
 
         return tree;
