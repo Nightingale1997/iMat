@@ -17,8 +17,8 @@ public class RegistrationController {
     @FXML
     private TextField firstName, lastName, address, postCode, city, phoneNumber, email;
 
-    @FXML
-    private PasswordField password;
+    /*@FXML
+    private PasswordField password;*/
 
     @FXML
     private void loadMyAccount() {
@@ -34,7 +34,7 @@ public class RegistrationController {
         IMatDataHandler.getInstance().getCustomer().setPostAddress(city.getText());
         IMatDataHandler.getInstance().getCustomer().setMobilePhoneNumber(phoneNumber.getText());
         IMatDataHandler.getInstance().getCustomer().setEmail(email.getText());
-        IMatDataHandler.getInstance().getUser().setPassword(password.getText());
+        //IMatDataHandler.getInstance().getUser().setPassword(password.getText());
 
         /*setFirstName();
         setLastName();

@@ -42,26 +42,26 @@
       <Pane layoutX="217.0" layoutY="57.0" prefHeight="466.0" prefWidth="541.0" styleClass="lightpane">
          <children>
             <Label layoutX="22.0" layoutY="11.0" styleClass="headline2" text="Kortuppgifter" />
-            <Label layoutX="21.0" layoutY="40.0" prefHeight="94.0" prefWidth="448.0" styleClass="standardText" text="Här kan du spara dina kortuppgifter för att det ska gå ännu smidigare om du vill betala med kort. Alla ändringar sparas automatiskt." wrapText="true" />
             <ImageView fitHeight="39.0" fitWidth="39.0" layoutX="488.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../img/cog-147414_960_720.png" />
                </image>
             </ImageView>
-            <ComboBox fx:id="cardYear" layoutX="141.0" layoutY="397.0" prefHeight="20.0" prefWidth="92.0" />
-            <ComboBox fx:id="cardMonth" layoutX="23.0" layoutY="398.0" prefHeight="13.0" prefWidth="92.0" />
-            <Label layoutX="22.0" layoutY="356.0" prefHeight="25.0" prefWidth="124.0" styleClass="smallBoldText" text="Utgångsdatum" />
-            <TextField fx:id="cardCVC" layoutX="22.0" layoutY="308.0" prefHeight="25.0" prefWidth="64.0" />
-            <Label layoutX="22.0" layoutY="289.0" styleClass="smallBoldText" text="CVC" />
-            <TextField fx:id="cardName" layoutX="22.0" layoutY="253.0" prefHeight="25.0" prefWidth="166.0" />
-            <Label layoutX="22.0" layoutY="233.0" styleClass="smallBoldText" text="Kortinnehavarens namn" />
-            <TextField fx:id="cardNumber" layoutX="22.0" layoutY="199.0" prefHeight="11.0" prefWidth="166.0" />
-            <Label layoutX="22.0" layoutY="179.0" styleClass="smallBoldText" text="Kortnummer" />
-            <RadioButton fx:id="cardMastercard" layoutX="115.0" layoutY="146.0" mnemonicParsing="false" text="MasterCard" />
-            <RadioButton fx:id="cardVisa" layoutX="22.0" layoutY="146.0" mnemonicParsing="false" text="Visa" />
-            <Button fx:id="save" layoutX="389.0" layoutY="396.0" mnemonicParsing="false" onAction="#saveCardInfo" prefHeight="41.0" prefWidth="127.0" text="Spara" textFill="WHITE" />
-            <Label layoutX="21.0" layoutY="375.0" styleClass="smallText" text="Månad" />
-            <Label layoutX="141.0" layoutY="375.0" styleClass="smallText" text="År" />
+            <ComboBox fx:id="cardYear" layoutX="141.0" layoutY="316.0" prefHeight="20.0" prefWidth="92.0" />
+            <ComboBox fx:id="cardMonth" layoutX="23.0" layoutY="317.0" prefHeight="13.0" prefWidth="92.0" />
+            <Label layoutX="22.0" layoutY="275.0" prefHeight="25.0" prefWidth="124.0" styleClass="smallBoldText" text="Utgångsdatum" />
+            <TextField fx:id="cardCVC" layoutX="22.0" layoutY="239.0" prefHeight="25.0" prefWidth="64.0" />
+            <Label layoutX="22.0" layoutY="220.0" styleClass="smallBoldText" text="CVC" />
+            <TextField fx:id="cardName" layoutX="22.0" layoutY="184.0" prefHeight="25.0" prefWidth="166.0" />
+            <Label layoutX="22.0" layoutY="164.0" styleClass="smallBoldText" text="Kortinnehavarens namn" />
+            <TextField fx:id="cardNumber" layoutX="22.0" layoutY="130.0" prefHeight="11.0" prefWidth="166.0" />
+            <Label layoutX="22.0" layoutY="110.0" styleClass="smallBoldText" text="Kortnummer" />
+            <RadioButton fx:id="cardMastercard" layoutX="115.0" layoutY="77.0" mnemonicParsing="false" text="MasterCard" />
+            <RadioButton fx:id="cardVisa" layoutX="22.0" layoutY="77.0" mnemonicParsing="false" text="Visa" />
+            <Button fx:id="save" layoutX="264.0" layoutY="395.0" mnemonicParsing="false" onAction="#saveCardInfo" prefHeight="45.0" prefWidth="123.0" text="Spara" textFill="WHITE" />
+            <Label layoutX="24.0" layoutY="294.0" styleClass="smallText" text="Månad" />
+            <Label layoutX="141.0" layoutY="294.0" styleClass="smallText" text="År" />
+            <Label layoutX="22.0" layoutY="53.0" styleClass="smallText" text="Korttyp" />
          </children>
       </Pane>
       <Label layoutX="307.0" layoutY="10.0" styleClass="headline1" text="Mitt konto" />

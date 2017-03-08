@@ -16,12 +16,13 @@ public class HomePageController {
 
     static Controller controller = Controller.getThisInstance();
     static HelpController helpController  = HelpController.getThisInstance();
+    //static MyAccountController myAccountController = MyAccountController.getThisInstance();
 
     @FXML
     private Pane tutorialButton, shopButton;
 
     @FXML
-    private Button registerOrLogin;
+    private Button registerInfo;
 
     @FXML
     private void loadMainPageCategories() {
@@ -40,6 +41,26 @@ public class HomePageController {
     }
 
     @FXML
+    private void loadAccountInformation() {
+
+        //controller = Controller.getThisInstance();
+        try {
+            Stage stage = (Stage) registerInfo.getScene().getWindow();
+            Parent root = FXMLLoader.load(getClass().getResource("scenes/sample2.fxml"));
+            stage.setTitle("iMat - Handla Enkelt!");
+            stage.setScene(new Scene(root, 1280, 720));
+            stage.show();
+            controller = Controller.getThisInstance();
+            //myAccountController.setAccountInfo(true);
+            controller.loadMyAccount();
+            //myAccountController = MyAccountController.getThisInstance();
+            //myAccountController.loadMyAccountInformation();
+        } catch (Exception e) {
+
+        }
+    }
+
+    /*@FXML
     private void loadRegisterOrLogin() {
         //controller = Controller.getThisInstance();
         try {
@@ -53,7 +74,7 @@ public class HomePageController {
         } catch (Exception e) {
 
         }
-    }
+    }*/
 
     @FXML
     private void loadHelpOverview() {

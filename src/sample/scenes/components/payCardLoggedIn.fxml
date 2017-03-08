@@ -28,8 +28,8 @@
                   <Label layoutX="405.0" layoutY="71.0" styleClass="smallBoldText" text="Leveranstid" />
                   <Label layoutX="188.0" layoutY="146.0" styleClass="smallBoldText" text="Kommentar" />
                   <TextArea layoutX="188.0" layoutY="169.0" prefHeight="152.0" prefWidth="364.0" />
-                  <Button layoutX="266.0" layoutY="377.0" mnemonicParsing="false" onAction="#loadConfirmation" prefHeight="54.0" prefWidth="212.0" text="Skicka beställning" textFill="WHITE" />
-                  <Label layoutX="319.0" layoutY="337.0" styleClass="standardText" text="Totalpris: x kr" />
+                  <Button fx:id="sendOrder" layoutX="266.0" layoutY="377.0" mnemonicParsing="false" onAction="#loadConfirmation" prefHeight="54.0" prefWidth="212.0" text="Skicka beställning" textFill="WHITE" />
+                  <Label fx:id="cardLabel" layoutX="264.0" layoutY="333.0" prefHeight="25.0" prefWidth="212.0" styleClass="standardText" />
                   <ComboBox fx:id="deliveryDay" layoutX="189.0" layoutY="91.0" prefWidth="150.0" />
                   <ComboBox fx:id="deliveryTime" layoutX="405.0" layoutY="91.0" prefWidth="150.0" />
                </children>

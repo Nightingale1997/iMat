@@ -14,7 +14,25 @@ import java.io.IOException;
  */
 public class MyAccountController {
 
+    public MyAccountController() {
+        loadMyAccountInformation();
+    }
+
     static Controller controller = Controller.getThisInstance();
+
+    /*public static MyAccountController getThisInstance() {
+        return thisInstance;
+    }
+
+    static MyAccountController thisInstance;
+    public boolean getAccountInfo() {
+        return accountInfo;
+    }
+    public void setAccountInfo(boolean tutorial) {
+        this.accountInfo = accountInfo;
+    }
+    private boolean accountInfo;*/
+
 
     @FXML
     private ImageView staff, staffBubble;
@@ -62,23 +80,19 @@ public class MyAccountController {
     }
 
     @FXML
-    private void loadMyAccountInformation() {
-        /*String informationText = "Instruktioner till hur iMat fungerar.";
-        loadMyAccountViews(informationText, myAccountInformation.getText());*/
+    public void loadMyAccountInformation() {
         controller.changeMainTo("scenes/components/myAccountInformation.fxml");
     }
 
     @FXML
     private void loadMyAccountCard() {
-        /*String informationText = "Vanliga frågor och svar.";
-        loadMyAccountViews(informationText, myAccountCard.getText());*/
+
         controller.changeMainTo("scenes/components/myAccountCard.fxml");
     }
 
     @FXML
     private void loadMyAccountHistory() {
-        /*String informationText = "Telefonnummer: 031-1234567";
-        loadMyAccountViews(informationText, myAccountHistory.getText());*/
+
         controller.changeMainTo("scenes/components/myAccountHistory.fxml");
     }
 

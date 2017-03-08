@@ -5,6 +5,7 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ComboBox;
+import se.chalmers.ait.dat215.project.IMatDataHandler;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -16,9 +17,50 @@ public class PayCardLoggedInController implements Initializable {
 
     static Controller controller = Controller.getThisInstance();
 
+
+    @FXML
+    private boolean allUserInformation() {
+        if (IMatDataHandler.getInstance().getCustomer().getFirstName().equals("") ||
+                IMatDataHandler.getInstance().getCustomer().getLastName().equals("") ||
+                IMatDataHandler.getInstance().getCustomer().getAddress().equals("") ||
+                IMatDataHandler.getInstance().getCustomer().getPostCode().equals("") ||
+                IMatDataHandler.getInstance().getCustomer().getPostAddress().equals("") ||
+                IMatDataHandler.getInstance().getCustomer().getMobilePhoneNumber().equals("") ||
+                IMatDataHandler.getInstance().getCustomer().getEmail().equals("")) {
+            return false;
+        }
+        return true;
+    }
+
+
+    @FXML
+    private boolean allCardInformation() {
+        if (IMatDataHandler.getInstance().getCreditCard().getCardType().equals("") ||
+                IMatDataHandler.getInstance().getCreditCard().getCardType().equals("") ||
+                //IMatDataHandler.getInstance().getCreditCard().getValidMonth().equals(null) ||
+                //IMatDataHandler.getInstance().getCreditCard().getValidYear().equals(null) ||
+                IMatDataHandler.getInstance().getCreditCard().getCardNumber().equals("") ||
+                IMatDataHandler.getInstance().getCreditCard().getHoldersName().equals("")) {
+            return false;
+    }
+    return true;
+}
+
+
+
     @FXML
     private void loadConfirmation() {
-        controller.changeMainTo("scenes/components/confirmation.fxml");
+        if (!allUserInformation()) {
+            controller.loadMyAccount();
+            System.out.println("skicka till Mitt konto > Personuppgifter");
+        }
+        else if (!allCardInformation()) {
+            controller.loadMyAccount();
+            System.out.println("skicka till Mitt konto > Kortuppgifter");
+        }
+        else
+            controller.changeMainTo("scenes/components/confirmation.fxml");
+            System.out.println("Köpet är utfört!");
     }
 
     @FXML
@@ -36,5 +78,6 @@ public class PayCardLoggedInController implements Initializable {
         deliveryTime.setItems(timeChoices);
         //deliveryDay.getItems().addAll("Måndag", "Tisdag");
     }
+
 
 }

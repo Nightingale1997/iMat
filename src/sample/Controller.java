@@ -95,6 +95,7 @@ public class Controller implements Initializable {
 
     private  boolean tutorial;
 
+
     static List<Product> currentSearch = new ArrayList<>();
 
     List<Product> favourites = new ArrayList<>();

@@ -33,8 +33,8 @@ public class MyAccountInformationController extends Pane{
     @FXML
     private TextField firstName, lastName, address, postCode, city, phoneNumber, email;
 
-    @FXML
-    private PasswordField password;
+    /*@FXML
+    private PasswordField password;*/
 
     @FXML
     private void showInfo() {
@@ -45,7 +45,7 @@ public class MyAccountInformationController extends Pane{
         city.textProperty().set(IMatDataHandler.getInstance().getCustomer().getPostAddress());
         phoneNumber.textProperty().set(IMatDataHandler.getInstance().getCustomer().getMobilePhoneNumber());
         email.textProperty().set(IMatDataHandler.getInstance().getCustomer().getEmail());
-        password.textProperty().set(IMatDataHandler.getInstance().getUser().getPassword());
+        //password.textProperty().set(IMatDataHandler.getInstance().getUser().getPassword());
     }
 
     @FXML
@@ -57,7 +57,7 @@ public class MyAccountInformationController extends Pane{
         IMatDataHandler.getInstance().getCustomer().setPostAddress(city.getText());
         IMatDataHandler.getInstance().getCustomer().setMobilePhoneNumber(phoneNumber.getText());
         IMatDataHandler.getInstance().getCustomer().setEmail(email.getText());
-        IMatDataHandler.getInstance().getUser().setPassword(password.getText());
+        //IMatDataHandler.getInstance().getUser().setPassword(password.getText());
     }
 
     @FXML
