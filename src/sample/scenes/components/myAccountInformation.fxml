@@ -15,7 +15,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="574.0" maxWidth="767.0" minHeight="530.0" minWidth="728.0" prefHeight="534.0" prefWidth="767.0" styleClass="subpane" stylesheets="@../../css/mainsheet.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MyAccountInformationController">
+<Pane maxHeight="574.0" maxWidth="767.0" minHeight="530.0" minWidth="728.0" onMouseEntered="#showInfo" prefHeight="534.0" prefWidth="767.0" styleClass="subpane" stylesheets="@../../css/mainsheet.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MyAccountInformationController">
    <children>
       <ListView layoutX="14.0" layoutY="57.0" prefHeight="466.0" prefWidth="197.0" styleClass="lightpane" />
       <Label layoutX="32.0" layoutY="73.0" onMouseClicked="#loadMyAccountWelcome" text="Välkommen">
@@ -62,6 +62,7 @@
             <Label layoutX="222.0" layoutY="89.0" styleClass="smallBoldText" text="Efternamn" />
             <TextField fx:id="firstName" layoutX="22.0" layoutY="111.0" prefHeight="25.0" prefWidth="166.0" />
             <Label layoutX="22.0" layoutY="89.0" styleClass="smallBoldText" text="Förnamn" />
+            <Button fx:id="save" layoutX="264.0" layoutY="395.0" mnemonicParsing="false" onAction="#saveInfo" prefHeight="45.0" prefWidth="123.0" text="Spara" textFill="WHITE" />
          </children>
       </Pane>
       <Label layoutX="307.0" layoutY="10.0" styleClass="headline1" text="Mitt konto" />

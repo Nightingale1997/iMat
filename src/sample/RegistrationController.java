@@ -2,6 +2,7 @@ package sample;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
+import se.chalmers.ait.dat215.project.IMatDataHandler;
 
 import static sample.RegisterOrLoginController.controller;
 
@@ -16,19 +17,38 @@ public class RegistrationController {
     private TextField firstName, lastName, address, postCode, city, phoneNumber, email, password;
 
     @FXML
-    private void loadMyAccount() { controller.changeMainTo("scenes/components/myAccountWelcome.fxml"); }
+    private void loadMyAccount() {
+        controller.changeMainTo("scenes/components/myAccountWelcome.fxml");
+    }
 
     @FXML
     private void createAccount() {
-        setFirstName();
+        IMatDataHandler.getInstance().getCustomer().setFirstName(firstName.getText());
+        IMatDataHandler.getInstance().getCustomer().setLastName(lastName.getText());
+        IMatDataHandler.getInstance().getCustomer().setAddress(address.getText());
+        IMatDataHandler.getInstance().getCustomer().setPostCode(postCode.getText());
+        IMatDataHandler.getInstance().getCustomer().setPostAddress(city.getText());
+        IMatDataHandler.getInstance().getCustomer().setMobilePhoneNumber(phoneNumber.getText());
+        IMatDataHandler.getInstance().getCustomer().setEmail(email.getText());
+        IMatDataHandler.getInstance().getUser().setPassword(password.getText());
+
+        /*setFirstName();
         setLastName();
         setAddress();
         setPostCode();
         setCity();
         setPhoneNumber();
         setEmail();
-        setPassword();
+        setPassword();*/
+
     }
+
+
+    private void saveInfo() {
+        IMatDataHandler.getInstance().getCustomer().setAddress(address.getText());
+
+    }
+
 
     private void setFirstName() {
         firstName.getText();
@@ -62,35 +82,35 @@ public class RegistrationController {
         password.getText();
     }
 
-    public TextField getFirstName() {
-        return firstName;
+    public String getFirstName() {
+        return firstName.getText();
     }
 
-    public TextField getLastName() {
-        return lastName;
+    public String getLastName() {
+        return lastName.getText();
     }
 
-    public TextField getAddress() {
-        return address;
+    public String getAddress() {
+        return address.getText();
     }
 
-    public TextField getPostCode() {
-        return postCode;
+    public String getPostCode() {
+        return postCode.getText();
     }
 
-    public TextField getCity() {
-        return city;
+    public String getCity() {
+        return city.getText();
     }
 
-    public TextField getPhoneNumber() {
-        return phoneNumber;
+    public String getPhoneNumber() {
+        return phoneNumber.getText();
     }
 
-    public TextField getEmail() {
-        return email;
+    public String getEmail() {
+        return email.getText();
     }
 
-    public TextField getPassword() {
-        return password;
+    public String getPassword() {
+        return password.getText();
     }
 }

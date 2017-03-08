@@ -66,7 +66,7 @@
                      </image>
                   </ImageView>
                </children></Pane>
-        <Button fx:id="loginButton" layoutX="1116.0" layoutY="36.0" mnemonicParsing="false" onMouseClicked="#loadRegisterOrLogin" prefHeight="69.0" prefWidth="148.0" text="Logga in eller registrera" textAlignment="CENTER" textFill="WHITE" wrapText="true" />
+        <Button fx:id="loginButton" layoutX="1116.0" layoutY="36.0" mnemonicParsing="false" onAction="#loadMyAccount" prefHeight="69.0" prefWidth="148.0" text="Logga in eller registrera" textAlignment="CENTER" textFill="WHITE" wrapText="true" />
         <ImageView fitHeight="134.0" fitWidth="217.0" layoutX="14.0" layoutY="-7.0" onMouseClicked="#loadMainPageCategories" pickOnBounds="true" preserveRatio="true" styleClass="handcursor">
           <image>
             <Image url="@../img/Logga.png" />
