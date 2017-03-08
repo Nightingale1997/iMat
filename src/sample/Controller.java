@@ -167,21 +167,21 @@ public class Controller implements Initializable {
     Listor med alla namn på kategorierna skapas.
     Ett tomt träd skapas där man sedan lägger till alla rotnoder och sedan läggs alla kategorier som ska ligga under rotnoderna.
      */
-    private TreeItem<String> createCategoryTree() {
-        String[] greens = {"Citrusfrukter", "Exotiska frukter", "Kål", "Meloner", "Rotfrukter", "Stenfrukter", "Rotfrukter", "Örter"};
-        String[] dryStuff = {"Mjöl, socker och salt", "Nötter och frön", "Pasta", "Potatis och ris"};
-        TreeItem<String> tree = new TreeItem<>();
+    private TreeItem<Text> createCategoryTree() {
+        Text[] greens = {new Text("Citrusfrukter"), new Text("Exotiska frukter"), new Text("Kål"), new Text("Meloner"), new Text("Rotfrukter"), new Text("Stenfrukter"), new Text("Rotfrukter"), new Text("Örter")};
+        Text[] dryStuff = {new Text("Mjöl, socker och salt"), new Text("Nötter och frön"), new Text("Pasta"), new Text("Potatis och ris")};
+        TreeItem<Text> tree = new TreeItem<>();
         /* creates the "roots" of the tree from where branches/leaves will branch out. */
-        TreeItem<String> fruitsgreens = addNode("Frukt och grönt", tree);
-        TreeItem<String> drygoods = addNode("Skafferi", tree);
-        TreeItem<String> sweets = addNode("Sötsaker", tree);
-        TreeItem<String> meat = addNode("Kött", tree);
-        TreeItem<String> dairies = addNode("Mejeriprodukter", tree);
+        TreeItem<Text> fruitsgreens = addNode(new Text("Frukt och grönt"), tree);
+        TreeItem<Text> drygoods = addNode(new Text("Skafferi"), tree);
+        TreeItem<Text> sweets = addNode(new Text("Sötsaker"), tree);
+        TreeItem<Text> meat = addNode(new Text("Kött"), tree);
+        TreeItem<Text> dairies = addNode(new Text("Mejeriprodukter"), tree);
 
-        for (String productCategory : greens) {
+        for (Text productCategory : greens) {
             addNode(productCategory, fruitsgreens);
         }
-        for (String productCategory : dryStuff) {
+        for (Text productCategory : dryStuff) {
             addNode(productCategory, drygoods);
         }
 
@@ -191,8 +191,8 @@ public class Controller implements Initializable {
     /*
     Tar ett namn och en nod som ska vara nodens rot och kopplar ihop dem så man kan bygga ett träd.
      */
-    private TreeItem<String> addNode(String name, TreeItem<String> parent) {
-        TreeItem<String> newNode = new TreeItem<>(name);
+    private TreeItem<Text> addNode(Text name, TreeItem<Text> parent) {
+        TreeItem<Text> newNode = new TreeItem<>(name);
         newNode.setExpanded(false);
         parent.getChildren().add(newNode);
         return newNode;
