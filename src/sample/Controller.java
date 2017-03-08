@@ -1,5 +1,6 @@
 package sample;
 
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.Event;
 import javafx.event.EventHandler;
@@ -232,6 +233,7 @@ public class Controller implements Initializable {
 
     }
 
+
     /*
     Kontrollerar ifall det är enter-knappen som trycks på när man är i searchBar:en.
     Om det är det så kör den searchBarSearch som finns ovan,
@@ -358,6 +360,20 @@ public class Controller implements Initializable {
             System.out.println("something went wrong");
         }
         stage.show();
+    }
+
+
+    public void updateCartView(){
+        ObservableList<String> names = FXCollections.observableArrayList();
+        ObservableList<Double> quantities = FXCollections.observableArrayList();
+        ObservableList<Double> prices = FXCollections.observableArrayList();
+        for(ShoppingItem si : shoppingCart.getItems()){
+            double quantity = si.getAmount();
+            double price = si.getProduct().getPrice();
+            String name = si.getProduct().getName();
+            names.add(quantity +" "+ name +" "+ price);
+        }
+        shoppingCartView.setItems(names);
     }
 
 

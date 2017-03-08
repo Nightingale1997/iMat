@@ -35,7 +35,7 @@ public class SearchController {
     
     @FXML
     private Text favouriteText, id;
-    
+
     static Controller controller = Controller.getThisInstance();
 
     static IMatDataHandler cartInstance = IMatDataHandler.getInstance();
@@ -115,9 +115,8 @@ public class SearchController {
         Button pressedButton = (Button) event.getSource();
         AnchorPane source = (AnchorPane) pressedButton.getParent().getParent();
         shoppingCart.addProduct(cartInstance.getProduct(getItemId(source)));
-        double total = shoppingCart.getTotal();
-        System.out.println(total);
-
+        System.out.println(shoppingCart.getItems());
+        Controller.getThisInstance().updateCartView();
     }
     
 }
