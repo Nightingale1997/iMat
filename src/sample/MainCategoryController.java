@@ -16,53 +16,56 @@ public class MainCategoryController {
     @FXML
     private void findFruitGreens() {
         controller.changeMainTo("scenes/components/searchResults.fxml");
-        controller.currentSearch.clear();
-        controller.currentSearch.addAll(IMatDataHandler.getInstance().getProducts(ProductCategory.BERRY));
-        controller.currentSearch.addAll(IMatDataHandler.getInstance().getProducts(ProductCategory.CABBAGE));
-        controller.currentSearch.addAll(IMatDataHandler.getInstance().getProducts(ProductCategory.CITRUS_FRUIT));
-        controller.currentSearch.addAll(IMatDataHandler.getInstance().getProducts(ProductCategory.EXOTIC_FRUIT));
-        controller.currentSearch.addAll(IMatDataHandler.getInstance().getProducts(ProductCategory.VEGETABLE_FRUIT));
-        controller.currentSearch.addAll(IMatDataHandler.getInstance().getProducts(ProductCategory.MELONS));
-        controller.currentSearch.addAll(IMatDataHandler.getInstance().getProducts(ProductCategory.ROOT_VEGETABLE));
-        controller.currentSearch.addAll(IMatDataHandler.getInstance().getProducts(ProductCategory.FRUIT));
-        controller.currentSearch.addAll(IMatDataHandler.getInstance().getProducts(ProductCategory.HERB));
+        Controller.currentSearch.clear();
+        Controller.currentSearch.addAll(IMatDataHandler.getInstance().getProducts(ProductCategory.BERRY));
+        Controller.currentSearch.addAll(IMatDataHandler.getInstance().getProducts(ProductCategory.CABBAGE));
+        Controller.currentSearch.addAll(IMatDataHandler.getInstance().getProducts(ProductCategory.CITRUS_FRUIT));
+        Controller.currentSearch.addAll(IMatDataHandler.getInstance().getProducts(ProductCategory.EXOTIC_FRUIT));
+        Controller.currentSearch.addAll(IMatDataHandler.getInstance().getProducts(ProductCategory.VEGETABLE_FRUIT));
+        Controller.currentSearch.addAll(IMatDataHandler.getInstance().getProducts(ProductCategory.MELONS));
+        Controller.currentSearch.addAll(IMatDataHandler.getInstance().getProducts(ProductCategory.ROOT_VEGETABLE));
+        Controller.currentSearch.addAll(IMatDataHandler.getInstance().getProducts(ProductCategory.FRUIT));
+        Controller.currentSearch.addAll(IMatDataHandler.getInstance().getProducts(ProductCategory.HERB));
         controller.addSearchHits();
     }
 
    @FXML
     private void findFridge() {
         controller.changeMainTo("scenes/components/searchResults.fxml");
-        controller.currentSearch.clear();
-        controller.currentSearch.addAll(IMatDataHandler.getInstance().getProducts(ProductCategory.DAIRIES));
-        controller.currentSearch.addAll(IMatDataHandler.getInstance().getProducts(ProductCategory.COLD_DRINKS));
+        Controller.currentSearch.clear();
+        Controller.currentSearch.addAll(IMatDataHandler.getInstance().getProducts(ProductCategory.DAIRIES));
+        Controller.currentSearch.addAll(IMatDataHandler.getInstance().getProducts(ProductCategory.COLD_DRINKS));
         controller.addSearchHits();
     }
 
+    @FXML
     private void findDrygoods() {
         controller.changeMainTo("scenes/components/searchResults.fxml");
-        controller.currentSearch.clear();
-        controller.currentSearch.addAll(IMatDataHandler.getInstance().getProducts(ProductCategory.HOT_DRINKS));
-        controller.currentSearch.addAll(IMatDataHandler.getInstance().getProducts(ProductCategory.POD));
-        controller.currentSearch.addAll(IMatDataHandler.getInstance().getProducts(ProductCategory.FLOUR_SUGAR_SALT));
-        controller.currentSearch.addAll(IMatDataHandler.getInstance().getProducts(ProductCategory.NUTS_AND_SEEDS));
-        controller.currentSearch.addAll(IMatDataHandler.getInstance().getProducts(ProductCategory.PASTA));
-        controller.currentSearch.addAll(IMatDataHandler.getInstance().getProducts(ProductCategory.POTATO_RICE));
+        Controller.currentSearch.clear();
+        Controller.currentSearch.addAll(IMatDataHandler.getInstance().getProducts(ProductCategory.HOT_DRINKS));
+        Controller.currentSearch.addAll(IMatDataHandler.getInstance().getProducts(ProductCategory.POD));
+        Controller.currentSearch.addAll(IMatDataHandler.getInstance().getProducts(ProductCategory.FLOUR_SUGAR_SALT));
+        Controller.currentSearch.addAll(IMatDataHandler.getInstance().getProducts(ProductCategory.NUTS_AND_SEEDS));
+        Controller.currentSearch.addAll(IMatDataHandler.getInstance().getProducts(ProductCategory.PASTA));
+        Controller.currentSearch.addAll(IMatDataHandler.getInstance().getProducts(ProductCategory.POTATO_RICE));
         controller.addSearchHits();
     }
 
+    @FXML
     private void findMeatFish() {
         controller.changeMainTo("scenes/components/searchResults.fxml");
-        controller.currentSearch.clear();
-        controller.currentSearch.addAll(IMatDataHandler.getInstance().getProducts(ProductCategory.MEAT));
-        controller.currentSearch.addAll(IMatDataHandler.getInstance().getProducts(ProductCategory.FISH));
+        Controller.currentSearch.clear();
+        Controller.currentSearch.addAll(IMatDataHandler.getInstance().getProducts(ProductCategory.MEAT));
+        Controller.currentSearch.addAll(IMatDataHandler.getInstance().getProducts(ProductCategory.FISH));
         controller.addSearchHits();
     }
 
+    @FXML
     private void findSweetsBread() {
         controller.changeMainTo("scenes/components/searchResults.fxml");
-        controller.currentSearch.clear();
-        controller.currentSearch.addAll(IMatDataHandler.getInstance().getProducts(ProductCategory.SWEET));
-        controller.currentSearch.addAll(IMatDataHandler.getInstance().getProducts(ProductCategory.BREAD));
+        Controller.currentSearch.clear();
+        Controller.currentSearch.addAll(IMatDataHandler.getInstance().getProducts(ProductCategory.SWEET));
+        Controller.currentSearch.addAll(IMatDataHandler.getInstance().getProducts(ProductCategory.BREAD));
         controller.addSearchHits();
     }
 
