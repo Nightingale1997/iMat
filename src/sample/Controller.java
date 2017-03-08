@@ -18,6 +18,8 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import se.chalmers.ait.dat215.project.*;
@@ -172,11 +174,16 @@ public class Controller implements Initializable {
         Text[] dryStuff = {new Text("Mjöl, socker och salt"), new Text("Nötter och frön"), new Text("Pasta"), new Text("Potatis och ris")};
         TreeItem<Text> tree = new TreeItem<>();
         /* creates the "roots" of the tree from where branches/leaves will branch out. */
-        TreeItem<Text> fruitsgreens = addNode(new Text("Frukt och grönt"), tree);
-        TreeItem<Text> drygoods = addNode(new Text("Skafferi"), tree);
-        TreeItem<Text> sweets = addNode(new Text("Sötsaker"), tree);
-        TreeItem<Text> meat = addNode(new Text("Kött"), tree);
-        TreeItem<Text> dairies = addNode(new Text("Mejeriprodukter"), tree);
+        Text[] mothers = new Text[5];
+        TreeItem<Text> fruitsgreens = addNode(mothers[0]= new Text("Frukt och grönt"), tree);
+        TreeItem<Text> drygoods = addNode(mothers[1]=new Text("Skafferi"), tree);
+        TreeItem<Text> sweets = addNode(mothers[2]=new Text("Sötsaker"), tree);
+        TreeItem<Text> meat = addNode(mothers[3]=new Text("Kött"), tree);
+        TreeItem<Text> dairies = addNode(mothers[4]=new Text("Mejeriprodukter"), tree);
+
+        for(int i=0; i<5 ; i++){
+            mothers[i].setFont(Font.font("Verdana", FontWeight.BOLD, 16));
+        }
 
         for (Text productCategory : greens) {
             addNode(productCategory, fruitsgreens);
