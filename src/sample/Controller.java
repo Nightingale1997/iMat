@@ -384,22 +384,15 @@ public class Controller implements Initializable {
     }
 
 
-    public void updateCartView() {
+    public void updateCartView(){
         ObservableList<String> names = FXCollections.observableArrayList();
         ObservableList<Double> quantities = FXCollections.observableArrayList();
         ObservableList<Double> prices = FXCollections.observableArrayList();
-        for (ShoppingItem si : shoppingCart.getItems()) {
+        for(ShoppingItem si : shoppingCart.getItems()){
             double quantity = si.getAmount();
             double price = si.getProduct().getPrice();
             String name = si.getProduct().getName();
-
-            if (name.length()<12){
-                for(int i = 0; i<21-name.length(); i++){
-                    name = name + " ";
-                }
-            }
-
-            names.add(name + " " + quantity + " " + price);
+            names.add(quantity +" "+ name +" "+ price);
         }
         shoppingCartView.setItems(names);
     }
