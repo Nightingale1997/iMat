@@ -8,9 +8,12 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
 import se.chalmers.ait.dat215.project.IMatDataHandler;
 
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Observable;
 import java.util.ResourceBundle;
 
@@ -34,6 +37,8 @@ public class PayDeliveryLoggedInController implements Initializable {
 
     @FXML
     private Label invoiceLabel;
+
+    private List<String> newReciept = new ArrayList<>();
 
     ObservableList<String> dayChoices = FXCollections.observableArrayList("Måndag", "Tisdag", "Onsdag", "Torsdag", "Fredag", "Lördag", "Söndag");
     ObservableList<String> timeChoices = FXCollections.observableArrayList("Förmiddag", "Eftermiddag");
@@ -63,6 +68,8 @@ public class PayDeliveryLoggedInController implements Initializable {
             //sendOrder.setText("Uppdatera personuppgifter");
         } else if (allUserInformation())
             controller.changeMainTo("scenes/components/confirmation.fxml");
+            newReciept.add(IMatDataHandler.getInstance().getShoppingCart().getItems().toString());
+            System.out.println(newReciept.toArray());
     }
 
 

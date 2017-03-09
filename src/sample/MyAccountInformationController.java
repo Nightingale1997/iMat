@@ -14,7 +14,7 @@ import se.chalmers.ait.dat215.project.IMatDataHandler;
 public class MyAccountInformationController extends Pane{
 
     /*private MyAccountInformationController() {
-        //saveInfo();
+        //showInfo();
         /*try {
             controller.changeMainTo("scenes/components/myAccountInformation.fxml");
             FXMLLoader loader = new FXMLLoader(getClass().getResource("scenes/components/myAccountInformation.fxml"));

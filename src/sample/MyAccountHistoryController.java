@@ -1,6 +1,7 @@
 package sample;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.ListView;
 
 /**
  * Created by elina on 2017-03-06.
@@ -8,6 +9,13 @@ import javafx.fxml.FXML;
 public class MyAccountHistoryController {
 
     static Controller controller = Controller.getThisInstance();
+
+    @FXML
+    private ListView historyList;
+
+    private void createReciept() {
+        //historyList
+    }
 
     @FXML
     private void loadMyAccountWelcome() {
