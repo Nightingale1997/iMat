@@ -33,7 +33,7 @@
                   <ComboBox fx:id="deliveryDay" layoutX="189.0" layoutY="91.0" prefWidth="150.0" />
                   <ComboBox fx:id="deliveryTime" layoutX="405.0" layoutY="91.0" prefWidth="150.0" />
                   <Text fx:id="text" layoutX="234.0" layoutY="344.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="standardText" textAlignment="CENTER" wrappingWidth="272.7685546875" />
-                  <Text fx:id="error" layoutX="237.0" layoutY="351.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="standardText" wrappingWidth="270.0" />
+                  <Text fx:id="error" layoutX="251.0" layoutY="355.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="standardText" wrappingWidth="270.0" />
                </children>
             </Pane>
          </children>

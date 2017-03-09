@@ -54,7 +54,7 @@ public class PayInvoiceLoggedInController implements Initializable {
         if (deliveryDay.getValue().equals("Välj dag:") || deliveryTime.getValue().equals("Välj tid:")) {
             error.setText("Välj dag och tid för leverans.");
         }
-        if (!allUserInformation()) {
+        else if (!allUserInformation()) {
             controller.loadMyAccount();
             System.out.println("skicka till Mitt konto > Personuppgifter");
         } else if (allUserInformation()) {
