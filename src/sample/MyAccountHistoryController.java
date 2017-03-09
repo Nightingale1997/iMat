@@ -8,6 +8,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import se.chalmers.ait.dat215.project.IMatDataHandler;
 import se.chalmers.ait.dat215.project.Order;
@@ -85,8 +87,9 @@ public class MyAccountHistoryController {
         ObservableList<Text> orderlist = FXCollections.observableArrayList();
         for (Order o : IMatDataHandler.getInstance().getOrders()) {
 
-
-            Text historytext = new Text("Order Nr. " + o.getOrderNumber() + " - " + o.getDate().toString());
+            String shortDate = o.getDate().toString().substring(4,19);
+            Text historytext = new Text("Order Nr. " + o.getOrderNumber() + " - " + shortDate);
+            historytext.setFont(Font.font("OpenSans", FontWeight.NORMAL, 15));
             historytext.setOnMouseClicked(new EventHandler<MouseEvent>() {
                 @Override
                 public void handle(MouseEvent event) {
