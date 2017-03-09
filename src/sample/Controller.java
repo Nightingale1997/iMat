@@ -344,6 +344,15 @@ public class Controller implements Initializable {
         }
     }
 
+    public void setMainTo(Pane pane){
+        try {
+            mainPane.getChildren().add(pane);
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
 
     @FXML
     public void loadMainPageCategories() {

@@ -3,9 +3,11 @@ package sample;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
+import se.chalmers.ait.dat215.project.IMatDataHandler;
 
 import java.io.IOException;
 
@@ -19,6 +21,8 @@ public class MyAccountController {
     }
 
     static Controller controller = Controller.getThisInstance();
+
+    static MyAccountInformationController myAccountInformationController = MyAccountInformationController.getThisInstance();
 
     /*public static MyAccountController getThisInstance() {
         return thisInstance;
@@ -81,7 +85,27 @@ public class MyAccountController {
 
     @FXML
     public void loadMyAccountInformation() {
-        controller.changeMainTo("scenes/components/myAccountInformation.fxml");
+        try {
+            Pane pane = FXMLLoader.load(getClass().getResource("scenes/components/myAccountInformation.fxml"));
+            Pane childPane = (Pane) pane.getChildren().get(4);
+            TextField email =(TextField) childPane.getChildren().get(3);
+            email.textProperty().set(IMatDataHandler.getInstance().getCustomer().getEmail());
+            TextField phoneNumber =(TextField) childPane.getChildren().get(5);
+            phoneNumber.textProperty().set(IMatDataHandler.getInstance().getCustomer().getMobilePhoneNumber());
+            TextField city =(TextField) childPane.getChildren().get(7);
+            city.textProperty().set(IMatDataHandler.getInstance().getCustomer().getPostAddress());
+            TextField postCode = (TextField) childPane.getChildren().get(9);
+            postCode.textProperty().set(IMatDataHandler.getInstance().getCustomer().getPostCode());
+            TextField address = (TextField) childPane.getChildren().get(11);
+            address.textProperty().set(IMatDataHandler.getInstance().getCustomer().getAddress());
+            TextField lastName = (TextField) childPane.getChildren().get(13);
+            lastName.textProperty().set(IMatDataHandler.getInstance().getCustomer().getLastName());
+            TextField firstName = (TextField) childPane.getChildren().get(15);
+            firstName.textProperty().set(IMatDataHandler.getInstance().getCustomer().getFirstName());
+            controller.setMainTo(pane);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML

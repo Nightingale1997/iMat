@@ -26,9 +26,12 @@ public class MyAccountInformationController extends Pane{
             System.out.println(e.getMessage());
         }
     }*/
-
-
     static Controller controller = Controller.getThisInstance();
+
+    static MyAccountInformationController thisInstance;
+    public static MyAccountInformationController getThisInstance() {
+        return thisInstance;
+    }
 
     @FXML
     private TextField firstName, lastName, address, postCode, city, phoneNumber, email;
@@ -50,6 +53,7 @@ public class MyAccountInformationController extends Pane{
 
     @FXML
     private void saveInfo() {
+        System.out.println("helo");
         IMatDataHandler.getInstance().getCustomer().setFirstName(firstName.getText());
         IMatDataHandler.getInstance().getCustomer().setLastName(lastName.getText());
         IMatDataHandler.getInstance().getCustomer().setAddress(address.getText());
