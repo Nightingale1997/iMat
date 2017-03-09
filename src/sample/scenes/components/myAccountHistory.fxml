@@ -39,10 +39,12 @@
       <Pane layoutX="217.0" layoutY="57.0" prefHeight="466.0" prefWidth="541.0" styleClass="lightpane">
          <children>
             <Button fx:id="historyAddToCart" layoutX="268.0" layoutY="374.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="242.0" text="Lägg dessa varor i kundvagnen" textAlignment="CENTER" textFill="WHITE" wrapText="true" />
-            <ListView fx:id="historyReciept" layoutX="258.0" layoutY="53.0" prefHeight="307.0" prefWidth="262.0" />
+            <ListView fx:id="historyReciept" layoutX="258.0" layoutY="53.0" prefHeight="307.0" prefWidth="138.0" />
             <ListView fx:id="historyList" layoutX="22.0" layoutY="53.0" prefHeight="389.0" prefWidth="223.0" />
             <Label layoutX="22.0" layoutY="11.0" styleClass="headline2" text="Tidigare inköp" />
-            <Label fx:id="historyLabel" layoutX="295.0" layoutY="67.0" prefHeight="76.0" prefWidth="189.0" styleClass="standardText" text="Välj datum i listan till vänster" textAlignment="CENTER" wrapText="true" />
+            <ListView fx:id="historyReciept1" layoutX="396.0" layoutY="53.0" prefHeight="307.0" prefWidth="61.0" />
+            <ListView fx:id="historyReciept2" layoutX="457.0" layoutY="53.0" prefHeight="307.0" prefWidth="61.0" />
+            <Label fx:id="historyLabel" layoutX="299.0" layoutY="83.0" prefHeight="76.0" prefWidth="189.0" styleClass="standardText" text="Välj datum i listan till vänster" textAlignment="CENTER" wrapText="true" />
          </children>
       </Pane>
       <Label layoutX="307.0" layoutY="10.0" styleClass="headline1" text="Mitt konto" />

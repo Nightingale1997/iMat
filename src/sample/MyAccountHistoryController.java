@@ -4,6 +4,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.ListView;
 import se.chalmers.ait.dat215.project.IMatDataHandler;
 import se.chalmers.ait.dat215.project.Order;
+import se.chalmers.ait.dat215.project.ShoppingItem;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,8 +20,10 @@ public class MyAccountHistoryController {
     private ListView historyList;
     */
 
-    private List<Order> historyList = new ArrayList<>();
+    private List<Order> history = new ArrayList<>();
 
+    @FXML
+    private ListView historyList;
 
 
     @FXML
@@ -41,7 +44,7 @@ public class MyAccountHistoryController {
     @FXML
     private void loadMyAccountHistory() {
         controller.changeMainTo("scenes/components/myAccountHistory.fxml");
-        historyList = IMatDataHandler.getInstance().getOrders();
+        //historyList.setItems(IMatDataHandler.getInstance().getOrders().toString());
     }
 
 }

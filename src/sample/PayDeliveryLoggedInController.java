@@ -10,12 +10,10 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import se.chalmers.ait.dat215.project.IMatDataHandler;
+import se.chalmers.ait.dat215.project.Order;
 
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Observable;
-import java.util.ResourceBundle;
+import java.util.*;
 
 /**
  * Created by Elina Olsson on 2017-03-07.
@@ -68,9 +66,24 @@ public class PayDeliveryLoggedInController implements Initializable {
             //sendOrder.setText("Uppdatera personuppgifter");
         } else if (allUserInformation())
             controller.changeMainTo("scenes/components/confirmation.fxml");
-            IMatDataHandler.getInstance().placeOrder();
-            /*newReciept.add(IMatDataHandler.getInstance().getShoppingCart().getItems().toString());
-            System.out.println(newReciept.toArray());*/
+        Order neworder = IMatDataHandler.getInstance().placeOrder();
+        neworder.setDate(new Date());
+        //neworder.setOrderNumber();
+
+        String ordernumber = (IMatDataHandler.getInstance().getCustomer().getPhoneNumber());
+        if (ordernumber == null) {
+            ordernumber = "0";
+            IMatDataHandler.getInstance().getCustomer().setPhoneNumber(ordernumber);
+
+        } else{
+
+            int temp = Integer.parseInt(ordernumber);
+            temp = temp + 1;
+            IMatDataHandler.getInstance().getCustomer().setPhoneNumber(""+temp);
+
+        }
+            neworder.setOrderNumber(Integer.parseInt(ordernumber));
+            
     }
 
 

@@ -429,15 +429,6 @@ public class Controller implements Initializable {
             price = Math.round(price * 100.0) / 100.0;
             String name = si.getProduct().getName();
 
-            /*if(name.length()<12){
-            for(int i = 0; i<(21-name.length()); i++){
-                    name += " ";
-
-                }
-
-
-            }*/
-
             names.add(name);
             quantities.add(quantity);
             prices.add(price);

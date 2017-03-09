@@ -23,6 +23,7 @@ public class Main extends Application {
         Font.loadFont(getClass().getResourceAsStream("css/OpenSans.ttf"), 14);
 
 
+
         File file = new File("firstrun.txt");
         boolean firstRun = false;
         if (!file.exists()) {
@@ -49,6 +50,7 @@ public class Main extends Application {
         primaryStage.setOnCloseRequest(new EventHandler<WindowEvent>() {
             @Override
             public void handle(WindowEvent event) {
+                IMatDataHandler.getInstance().getShoppingCart().clear();
                 IMatDataHandler.getInstance().shutDown();
             }
         });
