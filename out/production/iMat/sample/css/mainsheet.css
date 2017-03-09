@@ -153,6 +153,7 @@
 .headline2 {
     -fx-font-size: 24;
     -fx-font-weight: bold;
+    -fx-text-fill:black;
 }
 
 .tree-cell:odd{
@@ -172,11 +173,13 @@
 .smallText {
     -fx-font-size: 14;
     -fx-font-weight: normal;
+    -fx-text-fill:black;
 }
 
 .smallBoldText {
     -fx-font-size: 14;
     -fx-font-weight: bold;
+    -fx-text-fill:black;
 }
 
 
