@@ -443,15 +443,29 @@ public class Controller implements Initializable {
             prices.add(price);
         }
 
+        int roundedtotal = (int) shoppingCart.getTotal();
+        if((shoppingCart.getTotal()-(int)shoppingCart.getTotal())!=0) {
+            totalpricelabel.setText(shoppingCart.getTotal() + " " + "kr");
+        }
+        else {
+            totalpricelabel.setText(roundedtotal + " " + "kr");
+        }
 
+        double sum = 0;
 
-        totalpricelabel.setText(shoppingCart.getTotal() + " " + "kr");
-        totalamountlabel.setText((Math.round(totalamount * 100.0) / 100.0) + " "+"st");
+        for (double i : quantities){
+            sum = sum + i;
+        }
+
+        int roundedsum = (int) sum;
+
+        totalamountlabel.setText(roundedsum + " " + "st");
 
         shoppingCartView.setItems(names);
         shoppingCartView2.setItems(quantities);
         shoppingCartView3.setItems(prices);
     }
+
     /* Började göra metoder för att lägga till och ta bort favorier men behöver lite hjälp :)
 
     @FXML
