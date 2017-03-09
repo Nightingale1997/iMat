@@ -10,6 +10,7 @@ import javafx.scene.image.ImageView;
  */
 public class PayChoiceController {
 
+
     @FXML
     private Label payHeadline, totalPrice;
 
@@ -21,21 +22,15 @@ public class PayChoiceController {
     @FXML
     private void loadPayDeliveryLoggedIn() {
         controller.changeMainTo("scenes/components/payDeliveryLoggedIn.fxml");
-        /*payHeadline.setText("Betalning vid leverans");
-        payImage.setImage(new Image("img/Betala vid leverans.png"));*/
     }
 
     @FXML
     private void loadPayCardLoggedIn() {
         controller.changeMainTo("scenes/components/payCardLoggedIn.fxml");
-        /*payHeadline.setText("Betalning med kort");
-        payImage.setImage(new Image("img/Betala vid leverans.png"));*/
     }
 
     @FXML
     private void loadPayInvoiceLoggedIn() {
         controller.changeMainTo("scenes/components/payInvoiceLoggedIn.fxml");
-        /*payHeadline.setText("Betalning med faktura");
-        payImage.setImage(new Image("img/Betala vid leverans.png"));*/
     }
 }

@@ -70,14 +70,5 @@
             <String fx:value="boldStandardText" />
             <String fx:value="handcursor" />
          </styleClass></Label>
-      <Button layoutX="15.0" layoutY="9.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="159.0" text="Tillbaka" textFill="WHITE">
-         <graphic>
-            <ImageView fitHeight="27.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../img/_416389.png" />
-               </image>
-            </ImageView>
-         </graphic>
-      </Button>
    </children>
 </Pane>

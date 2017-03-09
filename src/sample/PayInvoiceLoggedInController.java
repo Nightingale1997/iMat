@@ -6,8 +6,10 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ComboBox;
 import se.chalmers.ait.dat215.project.IMatDataHandler;
+import se.chalmers.ait.dat215.project.Order;
 
 import java.net.URL;
+import java.util.Date;
 import java.util.ResourceBundle;
 
 /**
@@ -45,7 +47,24 @@ public class PayInvoiceLoggedInController implements Initializable {
             System.out.println("skicka till Mitt konto > Personuppgifter");
         } else
             controller.changeMainTo("scenes/components/confirmation.fxml");
-        System.out.println("Köpet är utfört!");
+        Order neworder = IMatDataHandler.getInstance().placeOrder();
+        neworder.setDate(new Date());
+        //neworder.setOrderNumber();
+
+        String ordernumber = (IMatDataHandler.getInstance().getCustomer().getPhoneNumber());
+        if (ordernumber == null) {
+            ordernumber = "0";
+            IMatDataHandler.getInstance().getCustomer().setPhoneNumber(ordernumber);
+
+        } else {
+
+            int temp = Integer.parseInt(ordernumber);
+            temp = temp + 1;
+            IMatDataHandler.getInstance().getCustomer().setPhoneNumber("" + temp);
+
+        }
+        neworder.setOrderNumber(Integer.parseInt(ordernumber));
+        IMatDataHandler.getInstance().getShoppingCart().clear();
     }
 
 

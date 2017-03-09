@@ -32,6 +32,7 @@
                   <Label fx:id="cardLabel" layoutX="264.0" layoutY="333.0" prefHeight="25.0" prefWidth="212.0" styleClass="standardText" />
                   <ComboBox fx:id="deliveryDay" layoutX="189.0" layoutY="91.0" prefWidth="150.0" />
                   <ComboBox fx:id="deliveryTime" layoutX="405.0" layoutY="91.0" prefWidth="150.0" />
+                  <Text fx:id="text" layoutX="234.0" layoutY="344.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="standardText" textAlignment="CENTER" wrappingWidth="272.7685546875" />
                </children>
             </Pane>
          </children>

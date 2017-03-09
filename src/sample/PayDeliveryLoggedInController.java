@@ -22,6 +22,7 @@ public class PayDeliveryLoggedInController implements Initializable {
 
 
     static Controller controller = Controller.getThisInstance();
+    //static PayChoiceController payChoiceController = PayChoiceController.getThisInstance();
 
 
     //@FXML
@@ -56,6 +57,10 @@ public class PayDeliveryLoggedInController implements Initializable {
         return true;
     }
 
+    @FXML
+    private void goBack() {
+        //payChoiceController.
+    }
 
     @FXML
     private void loadConfirmation() {
@@ -85,6 +90,7 @@ public class PayDeliveryLoggedInController implements Initializable {
         }
         System.out.println("Ordernummer" + IMatDataHandler.getInstance().getCustomer().getPhoneNumber());
         neworder.setOrderNumber(Integer.parseInt(IMatDataHandler.getInstance().getCustomer().getPhoneNumber()));
+
     }
 
 
