@@ -8,7 +8,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane maxHeight="528.0" maxWidth="767.0" minHeight="528.0" minWidth="728.0" prefHeight="528.0" prefWidth="767.0" styleClass="backgroundPane" stylesheets="@../../css/mainsheet.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="528.0" maxWidth="767.0" minHeight="528.0" minWidth="728.0" prefHeight="528.0" prefWidth="767.0" styleClass="backgroundPane" stylesheets="@../../css/mainsheet.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MainCategoryController">
    <children>
       <Pane prefHeight="534.0" prefWidth="767.0" styleClass="subpane" stylesheets="@../../css/mainsheet.css">
          <children>
@@ -28,7 +28,7 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Button mnemonicParsing="false" prefHeight="165.0" prefWidth="372.0" styleClass="topleftcornerround" text=" Frukt och grönt" textAlignment="RIGHT" textFill="WHITE">
+                  <Button mnemonicParsing="false" onAction="#findFruitGreens" prefHeight="165.0" prefWidth="372.0" styleClass="topleftcornerround" text=" Frukt och grönt" textAlignment="RIGHT" textFill="WHITE">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -40,7 +40,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button mnemonicParsing="false" prefHeight="179.0" prefWidth="371.0" styleClass="toprightcornerround" text="Mejeriprodukter" textFill="WHITE" GridPane.columnIndex="1">
+                  <Button mnemonicParsing="false" onAction="#findFridge" prefHeight="179.0" prefWidth="371.0" styleClass="toprightcornerround" text="Mejeriprodukter" textFill="WHITE" GridPane.columnIndex="1">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -52,7 +52,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button mnemonicParsing="false" prefHeight="159.0" prefWidth="372.0" text="Skafferi" textFill="WHITE" GridPane.rowIndex="1">
+                  <Button mnemonicParsing="false" onAction="#findDrygoods" prefHeight="159.0" prefWidth="372.0" text="Skafferi" textFill="WHITE" GridPane.rowIndex="1">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -64,7 +64,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button mnemonicParsing="false" prefHeight="150.0" prefWidth="389.0" text="Kött och fisk" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                  <Button mnemonicParsing="false" onAction="#findMeatFish" prefHeight="150.0" prefWidth="389.0" text="Kött och fisk" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -76,7 +76,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button mnemonicParsing="false" prefHeight="171.0" prefWidth="372.0" styleClass="bottomleftcornerround" text="Sötsaker" textFill="WHITE" GridPane.rowIndex="2">
+                  <Button mnemonicParsing="false" onAction="#findSweetsBread" prefHeight="171.0" prefWidth="372.0" styleClass="bottomleftcornerround" text="Sötsaker" textFill="WHITE" GridPane.rowIndex="2">
                      <font>
                         <Font size="18.0" />
                      </font>
