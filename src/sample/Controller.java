@@ -313,6 +313,7 @@ public class Controller implements Initializable {
         for (int i = 0; i < currentSearch.size(); i++) {
             try {
                 AnchorPane x = FXMLLoader.load(getClass().getResource("scenes/components/searchresult2.fxml"));
+                searchController.setDefault(x);
                 searchController.setItemName(x, currentSearch.get(i).getName());
                 searchController.setItemPic(x, currentSearch.get(i).getImageName());
                 searchController.setItemPrice(x, currentSearch.get(i).getPrice() + " " + currentSearch.get(i).getUnit());

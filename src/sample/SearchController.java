@@ -34,7 +34,10 @@ public class SearchController {
     private Label itemName, itemPrice;
     
     @FXML
-    private Button addButton, decItem, incItem;
+    private Button addButton, decItem;
+
+    @FXML
+    private Button incItem;
     
     @FXML
     private TextField addItemField;
@@ -98,6 +101,13 @@ public class SearchController {
     }
 
     @FXML
+    public void setDefault(AnchorPane anchorPane){
+        Pane childPane = (Pane) anchorPane.getChildren().get(0);
+        TextField quantText = (TextField) childPane.getChildren().get(6);
+        quantText.setText(new Integer(1).toString());
+    }
+
+    @FXML
     public int getItemId(AnchorPane anchorPane){
         Pane childPane = (Pane) anchorPane.getChildren().get(0);
         Text itemId = (Text) childPane.getChildren().get(9);
@@ -136,6 +146,13 @@ public class SearchController {
 
         System.out.println(shoppingCart.getItems().toString());
         Controller.getThisInstance().updateCartView();
+    }
+
+    private void addQuantity(Event event) {
+        Button pressedButton = (Button) event.getSource();
+        AnchorPane source = (AnchorPane) pressedButton.getParent().getParent();
+        TextField quantText = (TextField) source.getChildren().get(6);
+        quantText.setText(new Integer(Integer.parseInt(addItemField.getText()) + 1).toString());
     }
 
        /*    @FXML
