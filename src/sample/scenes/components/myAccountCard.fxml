@@ -17,7 +17,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="574.0" maxWidth="767.0" minHeight="530.0" minWidth="728.0" onMouseEntered="#showCardInfo" prefHeight="534.0" prefWidth="767.0" styleClass="subpane" stylesheets="@../../css/mainsheet.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MyAccountCardController">
+<Pane maxHeight="574.0" maxWidth="767.0" minHeight="530.0" minWidth="728.0" prefHeight="534.0" prefWidth="767.0" styleClass="subpane" stylesheets="@../../css/mainsheet.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MyAccountCardController">
    <children>
       <ListView layoutX="14.0" layoutY="57.0" prefHeight="466.0" prefWidth="197.0" styleClass="lightpane" />
       <Label layoutX="32.0" layoutY="73.0" onMouseClicked="#loadMyAccountWelcome" text="Välkommen">
