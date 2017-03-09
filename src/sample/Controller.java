@@ -53,6 +53,12 @@ public class Controller implements Initializable {
     private ListView shoppingCartView;
 
     @FXML
+    private ListView shoppingCartView2;
+
+    @FXML
+    private ListView shoppingCartView3;
+
+    @FXML
     private Label totalpricelabel;
 
     @FXML
@@ -410,8 +416,8 @@ public class Controller implements Initializable {
 
     public void updateCartView(){
         ObservableList<String> names = FXCollections.observableArrayList();
-        //ObservableList<Double> quantities = FXCollections.observableArrayList();
-        //ObservableList<Double> prices = FXCollections.observableArrayList();
+        ObservableList<Double> quantities = FXCollections.observableArrayList();
+        ObservableList<Double> prices = FXCollections.observableArrayList();
             //double quantity = si.getAmount();
 
 
@@ -420,17 +426,31 @@ public class Controller implements Initializable {
             double quantity = si.getAmount();
             totalamount += quantity;
             double price = si.getProduct().getPrice()*si.getAmount();
+            price = Math.round(price * 100.0) / 100.0;
             String name = si.getProduct().getName();
-            names.add(name +" "+ quantity + " " +price);
+
+            /*if(name.length()<12){
+            for(int i = 0; i<(21-name.length()); i++){
+                    name += " ";
+
+                }
+
+
+            }*/
+
+            names.add(name);
+            quantities.add(quantity);
+            prices.add(price);
         }
 
 
-        totalpricelabel.setText(shoppingCart.getTotal() + " " + "kr");
-        totalamountlabel.setText(totalamount + " "+"st");
 
-        ObservableList<String> templist = shoppingCartView.getItems();
-        templist.addAll(names);
+        totalpricelabel.setText(shoppingCart.getTotal() + " " + "kr");
+        totalamountlabel.setText((Math.round(totalamount * 100.0) / 100.0) + " "+"st");
+
         shoppingCartView.setItems(names);
+        shoppingCartView2.setItems(quantities);
+        shoppingCartView3.setItems(prices);
     }
     /* Började göra metoder för att lägga till och ta bort favorier men behöver lite hjälp :)
 
