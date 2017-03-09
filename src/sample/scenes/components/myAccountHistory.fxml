@@ -31,7 +31,7 @@
          </styleClass></Label>
       <Pane layoutX="217.0" layoutY="57.0" prefHeight="466.0" prefWidth="541.0" styleClass="lightpane">
          <children>
-            <Button fx:id="historyAddToCart" layoutX="284.0" layoutY="374.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="242.0" text="Lägg dessa varor i kundvagnen" textAlignment="CENTER" textFill="WHITE" wrapText="true" />
+            <Button fx:id="historyAddToCart" layoutX="284.0" layoutY="374.0" mnemonicParsing="false" onAction="#addhistory" prefHeight="66.0" prefWidth="242.0" text="Lägg dessa varor i kundvagnen" textAlignment="CENTER" textFill="WHITE" wrapText="true" />
             <ListView fx:id="historyReciept" layoutX="273.0" layoutY="53.0" prefHeight="307.0" prefWidth="138.0" />
             <ListView fx:id="historyList" layoutX="14.0" layoutY="53.0" prefHeight="389.0" prefWidth="253.0" />
             <Label layoutX="22.0" layoutY="11.0" styleClass="headline2" text="Tidigare inköp" />

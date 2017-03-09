@@ -36,6 +36,9 @@ public class MyAccountHistoryController {
     private ListView historyList;
 
     @FXML
+    private Button historyAddToCart;
+
+    @FXML
     private ListView historyReciept2;
 
     @FXML
@@ -82,6 +85,9 @@ public class MyAccountHistoryController {
         }
     }
 
+    Order temporder = new Order();
+
+
     @FXML
     private void showHistory() {
         ObservableList<Text> orderlist = FXCollections.observableArrayList();
@@ -99,11 +105,12 @@ public class MyAccountHistoryController {
                     ObservableList<Integer> quantities = FXCollections.observableArrayList();
                     ObservableList<Double> prices = FXCollections.observableArrayList();
 
-                    for(ShoppingItem si : o.getItems()){
-                        double quantity = si.getAmount();
-                        double price = si.getProduct().getPrice()*si.getAmount();
+                    for(ShoppingItem si3 : o.getItems()){
+                        temporder = o;
+                        double quantity = si3.getAmount();
+                        double price = si3.getProduct().getPrice()*si3.getAmount();
                         price = Math.round(price * 100.0) / 100.0;
-                        String name = si.getProduct().getName();
+                        String name = si3.getProduct().getName();
 
                         names.add(name);
                         quantities.add((int) quantity);
@@ -115,6 +122,12 @@ public class MyAccountHistoryController {
                     historyReciept2.setItems(prices);
                     historyLabel.setText("");
 
+                    if(names.size() == 0){
+                        historyAddToCart.setDisable(true);
+                    }
+                    else{
+                        historyAddToCart.setDisable(false);
+                    }
 
 
 
@@ -125,6 +138,36 @@ public class MyAccountHistoryController {
 
         }
         historyList.setItems(orderlist);
+    }
+
+    @FXML
+    private void addhistory(){
+    controller.shoppingCart.clear();
+
+        for(ShoppingItem si : temporder.getItems()){
+            controller.shoppingCart.addItem(si);
+            controller.updateCartView();
+        }
+
+/*
+        for(ShoppingItem si : temporder.getItems()){
+            double amount = si.getAmount();
+            boolean founditem = false;
+            for (ShoppingItem si2 : controller.shoppingCart.getItems()) {
+                System.out.println("Hej");
+                if (si.getProduct().equals(si2.getProduct())) {
+                    si2.setAmount(si2.getAmount() + amount);
+                    si.setAmount(si.getAmount()/2);
+                    founditem = true;
+                }
+            }
+            if (!founditem) {
+                Controller.shoppingCart.addItem(si);
+            }
+
+        }
+        Controller.getThisInstance().updateCartView();
+*/
     }
 
     @FXML
