@@ -247,32 +247,32 @@ public class Controller implements Initializable {
         TreeItem<Text> fridge = addNode(mothers[4]=new Text("Kyl"), tree);
 
         for(int i=0; i<5 ; i++){
-            mothers[i].setFont(Font.font("Verdana", FontWeight.BOLD, 15));
+            mothers[i].setFont(Font.font("OpenSans", FontWeight.BOLD, 15));
         }
 
         for (Text productCategory : greens) {
             addNode(productCategory, fruitsgreens);
-            productCategory.setFont(Font.font ("Verdana", 15));
+            productCategory.setFont(Font.font ("OpenSans", 15));
 
         }
         for (Text productCategory : dryStuff) {
             addNode(productCategory, drygoods);
-            productCategory.setFont(Font.font ("Verdana", 15));
+            productCategory.setFont(Font.font ("OpenSans", 15));
         }
 
         for (Text productCategory : meat) {
             addNode(productCategory, meatfish);
-            productCategory.setFont(Font.font ("Verdana", 15));
+            productCategory.setFont(Font.font ("OpenSans", 15));
         }
 
         for (Text productCategory : fridgeprods) {
             addNode(productCategory, fridge);
-            productCategory.setFont(Font.font ("Verdana", 15));
+            productCategory.setFont(Font.font ("OpenSans", 15));
         }
 
         for (Text productCategory : sweetsprods) {
             addNode(productCategory, sweetsbread);
-            productCategory.setFont(Font.font ("Verdana", 15));
+            productCategory.setFont(Font.font ("OpenSans", 15));
         }
 
         return tree;

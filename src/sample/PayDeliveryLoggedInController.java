@@ -41,7 +41,7 @@ public class PayDeliveryLoggedInController implements Initializable {
     private List<String> newReciept = new ArrayList<>();
 
     ObservableList<String> dayChoices = FXCollections.observableArrayList("Måndag", "Tisdag", "Onsdag", "Torsdag", "Fredag", "Lördag", "Söndag");
-    ObservableList<String> timeChoices = FXCollections.observableArrayList("Förmiddag", "Eftermiddag");
+    ObservableList<String> timeChoices = FXCollections.observableArrayList("9-12", "12-15", "15-18");
 
 
     @FXML

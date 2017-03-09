@@ -101,7 +101,7 @@ public class PayCardLoggedInController implements Initializable {
     private ComboBox deliveryDay, deliveryTime;
 
     ObservableList<String> dayChoices = FXCollections.observableArrayList("Måndag", "Tisdag", "Onsdag", "Torsdag", "Fredag", "Lördag", "Söndag");
-    ObservableList<String> timeChoices = FXCollections.observableArrayList("Förmiddag", "Eftermiddag");
+    ObservableList<String> timeChoices = FXCollections.observableArrayList("9-12", "12-15", "15-18");
 
 
     @Override
