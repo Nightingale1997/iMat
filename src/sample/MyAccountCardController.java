@@ -27,13 +27,14 @@ public class MyAccountCardController implements Initializable {
 
 
     @FXML
-    private TextField cardNumber, cardName, cardCVC;
+    private TextField cardNumber, cardName, cardCVC, cardNumber1, cardNumber2, cardNumber3;
 
     @FXML
     private RadioButton cardVisa, cardMastercard;
 
     @FXML
     private ComboBox cardMonth, cardYear;
+
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -170,7 +171,9 @@ public class MyAccountCardController implements Initializable {
             IMatDataHandler.getInstance().getCreditCard().setCardType("Mastercard");
         }
 
-        IMatDataHandler.getInstance().getCreditCard().setCardNumber(cardNumber.getText());
+        //String totalCardNumber = cardNumber.getText() + cardNumber1.getText() + cardNumber2.getText() + cardNumber3.getText();
+
+        IMatDataHandler.getInstance().getCreditCard().setCardNumber(cardNumber.toString());
         IMatDataHandler.getInstance().getCreditCard().setHoldersName(cardName.getText());
 
         if (!cardCVC.getText().equals("")) {

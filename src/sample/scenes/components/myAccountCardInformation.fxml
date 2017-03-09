@@ -57,13 +57,16 @@
             <Label layoutX="22.0" layoutY="291.0" styleClass="smallBoldText" text="CVC" />
             <TextField fx:id="cardName" layoutX="22.0" layoutY="253.0" prefHeight="25.0" prefWidth="166.0" />
             <Label layoutX="22.0" layoutY="233.0" styleClass="smallBoldText" text="Kortinnehavarens namn" />
-            <TextField fx:id="cardNumber" layoutX="22.0" layoutY="199.0" prefHeight="25.0" prefWidth="166.0" />
+            <TextField fx:id="cardNumber" layoutX="22.0" layoutY="199.0" prefHeight="39.0" prefWidth="64.0" />
             <Label layoutX="22.0" layoutY="179.0" styleClass="smallBoldText" text="Kortnummer" />
             <RadioButton fx:id="cardMastercard" layoutX="88.0" layoutY="146.0" mnemonicParsing="false" text="MasterCard">
                <toggleGroup>
                   <ToggleGroup fx:id="creditCards" />
                </toggleGroup></RadioButton>
             <RadioButton fx:id="cardVisa" layoutX="22.0" layoutY="146.0" mnemonicParsing="false" text="Visa" toggleGroup="$creditCards" />
+            <TextField fx:id="cardNumber1" layoutX="90.0" layoutY="199.0" prefHeight="39.0" prefWidth="64.0" />
+            <TextField fx:id="cardNumber2" layoutX="158.0" layoutY="199.0" prefHeight="39.0" prefWidth="64.0" />
+            <TextField fx:id="cardNumber3" layoutX="226.0" layoutY="199.0" prefHeight="39.0" prefWidth="64.0" />
          </children>
       </Pane>
       <Label layoutX="307.0" layoutY="10.0" styleClass="headline1" text="Mitt konto" />

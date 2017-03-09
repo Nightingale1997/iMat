@@ -47,7 +47,7 @@ public class PrePaymentController {
     @FXML
     public void loadPayChoice() {
         if (!allUserInformation()) {
-            controller.loadRegistration();
+            controller.changeMainTo("scenes/components/addInfo.fxml");
             //System.out.println("skicka till Mitt konto > Personuppgifter");
             //invoiceLabel.setText("Personuppgifter saknas!");
             //sendOrder.setText("Uppdatera personuppgifter");

@@ -66,9 +66,10 @@ public class PayCardLoggedInController implements Initializable {
             error.setText("Välj dag och tid för leverans.");
 
         } else if (!allUserInformation()) {
-            controller.loadMyAccount();
+            controller.changeMainTo("scenes/components/addInfo.fxml");
             System.out.println("skicka till Mitt konto > Personuppgifter");
         } else if (!allCardInformation()) {
+            //controller.changeMainTo("scenes/components/addCardInfo.fxml");
             error.setText("");
             text.setText("Lägg till dina kortuppgifter under Personuppgifter");
             //controller.loadMyAccount();
