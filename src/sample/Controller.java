@@ -187,8 +187,27 @@ public class Controller implements Initializable {
         Node node = event.getPickResult().getIntersectedNode();
         // Accept clicks only on node cells, and not on empty spaces of the TreeView
         if (node instanceof Text || (node instanceof TreeCell && ((TreeCell) node).getText() != null)) {
-            String name = (String) ((TreeItem) categories.getSelectionModel().getSelectedItem()).getValue();
-            List x = instance.getProducts((ProductCategory) categoryHash.get(name));
+            Text nameText = (Text) ((TreeItem) categories.getSelectionModel().getSelectedItem()).getValue();
+            String nameString = nameText.textProperty().get().toLowerCase();
+            switch (nameString) {
+                case "frukt och grönt":
+                    findFruitGreens();
+                    break;
+                case "skafferi":
+                    findDrygoods();
+                    break;
+                case "bröd och sötsaker":
+                    findSweetsBread();
+                    break;
+                case "kött och fisk":
+                    findMeatFish();
+                    break;
+                case "kyl":
+                    findFridge();
+                    break;
+                default:
+                    break;
+            }
         }
     }
 
