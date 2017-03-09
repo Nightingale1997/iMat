@@ -1,20 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
 <?import java.lang.String?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="574.0" maxWidth="767.0" minHeight="530.0" minWidth="728.0" onMouseEntered="#showHistory" prefHeight="534.0" prefWidth="767.0" styleClass="subpane" stylesheets="@../../css/mainsheet.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MyAccountHistoryController">
+<Pane maxHeight="574.0" maxWidth="767.0" minHeight="530.0" minWidth="728.0" onMouseEntered="#showHistory" prefHeight="534.0" prefWidth="767.0" styleClass="subpane" stylesheets="@../../css/mainsheet.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MyAccountHistoryController">
    <children>
       <ListView layoutX="14.0" layoutY="57.0" prefHeight="466.0" prefWidth="197.0" styleClass="lightpane" />
       <Label layoutX="32.0" layoutY="73.0" onMouseClicked="#loadMyAccountWelcome" text="Välkommen">
@@ -44,7 +37,7 @@
             <Label layoutX="22.0" layoutY="11.0" styleClass="headline2" text="Tidigare inköp" />
             <ListView fx:id="historyReciept1" layoutX="411.0" layoutY="53.0" prefHeight="307.0" prefWidth="61.0" />
             <ListView fx:id="historyReciept2" layoutX="472.0" layoutY="53.0" prefHeight="307.0" prefWidth="61.0" />
-            <Label fx:id="historyLabel" layoutX="299.0" layoutY="83.0" prefHeight="76.0" prefWidth="189.0" styleClass="standardText" text="Välj datum i listan till vänster" textAlignment="CENTER" wrapText="true" />
+            <Label fx:id="historyLabel" layoutX="317.0" layoutY="111.0" prefHeight="76.0" prefWidth="189.0" styleClass="standardText" text="Välj datum i listan till vänster" textAlignment="CENTER" wrapText="true" />
          </children>
       </Pane>
       <Label layoutX="307.0" layoutY="10.0" styleClass="headline1" text="Mitt konto" />
