@@ -365,6 +365,11 @@ public class Controller implements Initializable {
     }
 
     @FXML
+    public void loadRegistration() {
+        changeMainTo("scenes/components/register.fxml");
+    }
+
+    @FXML
     public void loadHelpOverview() {
         changeMainTo("scenes/components/helpOverview.fxml");
     }

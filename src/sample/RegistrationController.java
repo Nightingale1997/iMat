@@ -25,6 +25,18 @@ public class RegistrationController {
         controller.changeMainTo("scenes/components/myAccountWelcome.fxml");
     }
 
+
+    @FXML
+    private void showInfo() {
+        firstName.textProperty().set(IMatDataHandler.getInstance().getCustomer().getFirstName());
+        lastName.textProperty().set(IMatDataHandler.getInstance().getCustomer().getLastName());
+        address.textProperty().set(IMatDataHandler.getInstance().getCustomer().getAddress());
+        postCode.textProperty().set(IMatDataHandler.getInstance().getCustomer().getPostCode());
+        city.textProperty().set(IMatDataHandler.getInstance().getCustomer().getPostAddress());
+        phoneNumber.textProperty().set(IMatDataHandler.getInstance().getCustomer().getMobilePhoneNumber());
+        email.textProperty().set(IMatDataHandler.getInstance().getCustomer().getEmail());
+    }
+
     @FXML
     private void createAccount() {
         IMatDataHandler.getInstance().getCustomer().setFirstName(firstName.getText());
@@ -34,17 +46,7 @@ public class RegistrationController {
         IMatDataHandler.getInstance().getCustomer().setPostAddress(city.getText());
         IMatDataHandler.getInstance().getCustomer().setMobilePhoneNumber(phoneNumber.getText());
         IMatDataHandler.getInstance().getCustomer().setEmail(email.getText());
-        //IMatDataHandler.getInstance().getUser().setPassword(password.getText());
-
-        /*setFirstName();
-        setLastName();
-        setAddress();
-        setPostCode();
-        setCity();
-        setPhoneNumber();
-        setEmail();
-        setPassword();*/
-
+        controller.loadMainPageCategories();
     }
 
 

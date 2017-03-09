@@ -5,9 +5,12 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ComboBox;
+import javafx.scene.text.Text;
 import se.chalmers.ait.dat215.project.IMatDataHandler;
+import se.chalmers.ait.dat215.project.Order;
 
 import java.net.URL;
+import java.util.Date;
 import java.util.ResourceBundle;
 
 /**
@@ -16,6 +19,9 @@ import java.util.ResourceBundle;
 public class PayCardLoggedInController implements Initializable {
 
     static Controller controller = Controller.getThisInstance();
+
+    @FXML
+    private Text text;
 
 
     @FXML
@@ -42,10 +48,9 @@ public class PayCardLoggedInController implements Initializable {
                 IMatDataHandler.getInstance().getCreditCard().getCardNumber().equals("") ||
                 IMatDataHandler.getInstance().getCreditCard().getHoldersName().equals("")) {
             return false;
+        }
+        return true;
     }
-    return true;
-}
-
 
 
     @FXML
@@ -53,14 +58,31 @@ public class PayCardLoggedInController implements Initializable {
         if (!allUserInformation()) {
             controller.loadMyAccount();
             System.out.println("skicka till Mitt konto > Personuppgifter");
-        }
-        else if (!allCardInformation()) {
-            controller.loadMyAccount();
+        } else if (!allCardInformation()) {
+            text.setText("Lägg till dina kortuppgifter under Personuppgifter");
+            //controller.loadMyAccount();
             System.out.println("skicka till Mitt konto > Kortuppgifter");
-        }
-        else
+        } else
             controller.changeMainTo("scenes/components/confirmation.fxml");
-            System.out.println("Köpet är utfört!");
+        Order neworder = IMatDataHandler.getInstance().placeOrder();
+        neworder.setDate(new Date());
+        //neworder.setOrderNumber();
+
+        String ordernumber = (IMatDataHandler.getInstance().getCustomer().getPhoneNumber());
+        if (ordernumber == null) {
+            ordernumber = "0";
+            IMatDataHandler.getInstance().getCustomer().setPhoneNumber(ordernumber);
+
+        } else {
+
+            int temp = Integer.parseInt(ordernumber);
+            temp = temp + 1;
+            IMatDataHandler.getInstance().getCustomer().setPhoneNumber("" + temp);
+
+        }
+        neworder.setOrderNumber(Integer.parseInt(ordernumber));
+        IMatDataHandler.getInstance().getShoppingCart().clear();
+
     }
 
     @FXML

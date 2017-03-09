@@ -60,6 +60,25 @@ public class HomePageController {
         }
     }
 
+    @FXML
+    private void loadRegistration() {
+
+        try {
+            Stage stage = (Stage) registerInfo.getScene().getWindow();
+            Parent root = FXMLLoader.load(getClass().getResource("scenes/sample2.fxml"));
+            stage.setTitle("iMat - Handla Enkelt!");
+            stage.setScene(new Scene(root, 1280, 720));
+            stage.show();
+            controller = Controller.getThisInstance();
+            //myAccountController.setAccountInfo(true);
+            controller.loadRegistration();
+            //myAccountController = MyAccountController.getThisInstance();
+            //myAccountController.loadMyAccountInformation();
+        } catch (Exception e) {
+
+        }
+    }
+
     /*@FXML
     private void loadRegisterOrLogin() {
         //controller = Controller.getThisInstance();

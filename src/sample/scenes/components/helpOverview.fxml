@@ -11,13 +11,25 @@
 <Pane maxHeight="574.0" maxWidth="767.0" minHeight="530.0" minWidth="728.0" prefHeight="534.0" prefWidth="767.0" styleClass="subpane" stylesheets="@../../css/mainsheet.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.HelpController">
    <children>
       <ListView layoutX="14.0" layoutY="57.0" prefHeight="466.0" prefWidth="197.0" styleClass="lightpane" />
-      <Label fx:id="helpOverview" layoutX="32.0" layoutY="73.0" onMouseClicked="#loadHelpOverview" styleClass="boldStandardText" text="Översikt" />
-      <Label fx:id="helpTutorial" layoutX="32.0" layoutY="106.0" onMouseClicked="#loadHelpTutorial" styleClass="boldStandardText" text="Hur handlar jag?">
+      <Label fx:id="helpOverview" layoutX="32.0" layoutY="73.0" onMouseClicked="#loadHelpOverview" text="Översikt">
+         <styleClass>
+            <String fx:value="boldStandardText" />
+            <String fx:value="handcursor" />
+         </styleClass></Label>
+      <Label fx:id="helpTutorial" layoutX="32.0" layoutY="106.0" onMouseClicked="#loadHelpTutorial" text="Hur handlar jag?">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
+         <styleClass>
+            <String fx:value="boldStandardText" />
+            <String fx:value="handcursor" />
+         </styleClass>
       </Label>
-      <Label fx:id="helpContact" layoutX="32.0" layoutY="173.0" onMouseClicked="#loadHelpContact" styleClass="boldStandardText" text="Kontakta oss" />
+      <Label fx:id="helpContact" layoutX="32.0" layoutY="173.0" onMouseClicked="#loadHelpContact" text="Kontakta oss">
+         <styleClass>
+            <String fx:value="boldStandardText" />
+            <String fx:value="handcursor" />
+         </styleClass></Label>
       <Pane layoutX="217.0" layoutY="57.0" prefHeight="466.0" prefWidth="541.0" styleClass="lightpane">
          <children>
             <Label fx:id="helpHeadline" layoutX="22.0" layoutY="11.0" styleClass="headline2" text="Översikt" textFill="#1c6d11" />
@@ -34,22 +46,17 @@
             <Label fx:id="staffLabel" layoutX="66.0" layoutY="90.0" prefHeight="119.0" prefWidth="302.0" styleClass="standardText" text="Vad kan jag hjälpa dig med?&#10;Välj bland kategorierna i listan till vänster.&#10;" textAlignment="CENTER" wrapText="true" />
             <ImageView fitHeight="39.0" fitWidth="39.0" layoutX="488.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../img/help.png" />
+                  <Image url="@../../img/help-97859_960_720.png" />
                </image>
             </ImageView>
             <Label fx:id="information" layoutX="22.0" layoutY="46.0" prefHeight="35.0" prefWidth="442.0" styleClass="standardText" />
          </children>
       </Pane>
       <Label layoutX="346.0" layoutY="10.0" styleClass="headline1" text="Hjälp" />
-      <Label fx:id="helpFAQ" layoutX="32.0" layoutY="139.0" onMouseClicked="#loadHelpFAQ" styleClass="boldStandardText" text="Vanliga frågor" />
-      <Button layoutX="15.0" layoutY="9.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="159.0" text="Tillbaka" textFill="WHITE">
-         <graphic>
-            <ImageView fitHeight="27.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../img/_416389.png" />
-               </image>
-            </ImageView>
-         </graphic>
-      </Button>
+      <Label fx:id="helpFAQ" layoutX="32.0" layoutY="139.0" onMouseClicked="#loadHelpFAQ" text="Vanliga frågor">
+         <styleClass>
+            <String fx:value="boldStandardText" />
+            <String fx:value="handcursor" />
+         </styleClass></Label>
    </children>
 </Pane>
