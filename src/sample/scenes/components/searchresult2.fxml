@@ -43,7 +43,7 @@
         </ImageView>
         <TextField fx:id="addItemField" layoutX="76.0" layoutY="202.0" prefHeight="38.0" prefWidth="66.0" />
             <Label layoutX="193.0" layoutY="207.0" styleClass="standardText" text="st" />
-            <Button layoutX="38.0" layoutY="201.0" minWidth="17.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="39.0" text="-" textFill="WHITE">
+            <Button fx:id="decItem" layoutX="38.0" layoutY="201.0" minWidth="17.0" mnemonicParsing="false" onAction="#removeQuantity" prefHeight="39.0" prefWidth="39.0" text="-" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="18.0" fx:id="x21" />
                </font>

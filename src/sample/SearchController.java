@@ -150,10 +150,30 @@ public class SearchController {
 
     @FXML
     private void addQuantity(Event event) {
+
         Button pressedButton = (Button) event.getSource();
         AnchorPane source = (AnchorPane) pressedButton.getParent().getParent();
-        TextField quantText = (TextField) source.getChildren().get(6);
+        Pane childPane = (Pane) source.getChildren().get(0);
+        TextField quantText = (TextField) childPane.getChildren().get(6);
         quantText.setText(new Integer(Integer.parseInt(addItemField.getText()) + 1).toString());
+    }
+
+    @FXML
+    private void removeQuantity(Event event) {
+
+        Button pressedButton = (Button) event.getSource();
+        AnchorPane source = (AnchorPane) pressedButton.getParent().getParent();
+        Pane childPane = (Pane) source.getChildren().get(0);
+        TextField quantText = (TextField) childPane.getChildren().get(6);
+        int newvalue = 0;
+        if(Integer.parseInt(addItemField.getText())<2){
+            newvalue = 1;
+        }
+        else{
+            newvalue = Integer.parseInt(addItemField.getText()) - 1;
+        }
+
+        quantText.setText(new Integer(newvalue).toString());
     }
 
        /*    @FXML
