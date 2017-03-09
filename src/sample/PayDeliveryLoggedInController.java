@@ -22,7 +22,7 @@ public class PayDeliveryLoggedInController implements Initializable {
 
 
     static Controller controller = Controller.getThisInstance();
-    //static PayChoiceController payChoiceController = PayChoiceController.getThisInstance();
+    static PrePaymentController prePaymentController = PrePaymentController.getThisInstance();
 
 
     //@FXML
@@ -59,7 +59,7 @@ public class PayDeliveryLoggedInController implements Initializable {
 
     @FXML
     private void goBack() {
-        //payChoiceController.
+        controller.changeMainTo("scenes/components/payChoice.fxml");
     }
 
     @FXML

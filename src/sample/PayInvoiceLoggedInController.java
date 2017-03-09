@@ -39,6 +39,11 @@ public class PayInvoiceLoggedInController implements Initializable {
             return true;
     }
 
+    @FXML
+    private void goBack() {
+        controller.changeMainTo("scenes/components/payChoice.fxml");
+    }
+
 
     @FXML
     private void loadConfirmation() {

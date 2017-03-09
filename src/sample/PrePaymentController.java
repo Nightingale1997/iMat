@@ -45,7 +45,7 @@ public class PrePaymentController {
     }
 
     @FXML
-    private void loadPayChoice() {
+    public void loadPayChoice() {
         if (!allUserInformation()) {
             controller.loadRegistration();
             //System.out.println("skicka till Mitt konto > Personuppgifter");

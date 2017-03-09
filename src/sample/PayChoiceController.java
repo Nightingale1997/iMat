@@ -33,4 +33,9 @@ public class PayChoiceController {
     private void loadPayInvoiceLoggedIn() {
         controller.changeMainTo("scenes/components/payInvoiceLoggedIn.fxml");
     }
+
+    @FXML
+    private void goBack() {
+        controller.changeMainTo("scenes/components/checkout.fxml");
+    }
 }
