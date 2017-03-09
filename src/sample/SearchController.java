@@ -148,6 +148,7 @@ public class SearchController {
         Controller.getThisInstance().updateCartView();
     }
 
+    @FXML
     private void addQuantity(Event event) {
         Button pressedButton = (Button) event.getSource();
         AnchorPane source = (AnchorPane) pressedButton.getParent().getParent();
