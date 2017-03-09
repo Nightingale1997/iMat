@@ -1,5 +1,7 @@
 package sample;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.TextField;
@@ -8,6 +10,7 @@ import se.chalmers.ait.dat215.project.IMatDataHandler;
 import se.chalmers.ait.dat215.project.Order;
 import se.chalmers.ait.dat215.project.ShoppingItem;
 import javafx.scene.control.ListView;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.io.IOException;
@@ -39,11 +42,11 @@ public class MyAccountHistoryController {
         try {
             Pane pane = FXMLLoader.load(getClass().getResource("scenes/components/myAccountInformation.fxml"));
             Pane childPane = (Pane) pane.getChildren().get(4);
-            TextField email =(TextField) childPane.getChildren().get(3);
+            TextField email = (TextField) childPane.getChildren().get(3);
             email.textProperty().set(IMatDataHandler.getInstance().getCustomer().getEmail());
-            TextField phoneNumber =(TextField) childPane.getChildren().get(5);
+            TextField phoneNumber = (TextField) childPane.getChildren().get(5);
             phoneNumber.textProperty().set(IMatDataHandler.getInstance().getCustomer().getMobilePhoneNumber());
-            TextField city =(TextField) childPane.getChildren().get(7);
+            TextField city = (TextField) childPane.getChildren().get(7);
             city.textProperty().set(IMatDataHandler.getInstance().getCustomer().getPostAddress());
             TextField postCode = (TextField) childPane.getChildren().get(9);
             postCode.textProperty().set(IMatDataHandler.getInstance().getCustomer().getPostCode());
@@ -57,6 +60,16 @@ public class MyAccountHistoryController {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    @FXML
+    private void showHistory() {
+        ObservableList<String> orderlist = FXCollections.observableArrayList();
+        for (Order o : IMatDataHandler.getInstance().getOrders()) {
+
+            orderlist.add("Order Nr. " + o.getOrderNumber() + " - " + o.getDate().toString());
+        }
+        historyList.setItems(orderlist);
     }
 
     @FXML
