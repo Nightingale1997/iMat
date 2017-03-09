@@ -117,29 +117,29 @@ public class Controller implements Initializable {
     int totalprice = 0;
     int totalamount = 0;
 
-    private HashMap<Text, ProductCategory> createHashMap() {
-        HashMap<Text, ProductCategory> categoryMap = new HashMap<Text, ProductCategory>();
-        categoryMap.put(new Text("Bär"), ProductCategory.BERRY);
-        categoryMap.put(new Text("Bröd"), ProductCategory.BREAD);
-        categoryMap.put(new Text("Kål"), ProductCategory.CABBAGE);
-        categoryMap.put(new Text("Citrusfrukter"), ProductCategory.CITRUS_FRUIT);
-        categoryMap.put(new Text("Kalla drycker"), ProductCategory.COLD_DRINKS);
-        categoryMap.put(new Text("Varma drycker"), ProductCategory.HOT_DRINKS);
-        categoryMap.put(new Text("Exotiska frukter"), ProductCategory.EXOTIC_FRUIT);
-        categoryMap.put(new Text("Fisk"), ProductCategory.FISH);
-        categoryMap.put(new Text("Grönsaksfrukter"), ProductCategory.VEGETABLE_FRUIT);
-        categoryMap.put(new Text("Kött"), ProductCategory.MEAT);
-        categoryMap.put(new Text("Mejeriprodukter"), ProductCategory.DAIRIES);
-        categoryMap.put(new Text("Meloner"), ProductCategory.MELONS);
-        categoryMap.put(new Text("Mjöl, socker och salt"), ProductCategory.FLOUR_SUGAR_SALT);
-        categoryMap.put(new Text("Nötter och frön"), ProductCategory.NUTS_AND_SEEDS);
-        categoryMap.put(new Text("Pasta"), ProductCategory.PASTA);
-        categoryMap.put(new Text("Potatis och ris"), ProductCategory.POTATO_RICE);
-        categoryMap.put(new Text("Rotfrukter"), ProductCategory.ROOT_VEGETABLE);
-        categoryMap.put(new Text("Stenfrukter"), ProductCategory.FRUIT);
-        categoryMap.put(new Text("Sötsaker"), ProductCategory.SWEET);
-        categoryMap.put(new Text("Örter"), ProductCategory.HERB);
-        categoryMap.put(new Text("Baljväxter"), ProductCategory.POD);
+    private HashMap<String, ProductCategory> createHashMap() {
+        HashMap<String, ProductCategory> categoryMap = new HashMap<String, ProductCategory>();
+        categoryMap.put("Bär", ProductCategory.BERRY);
+        categoryMap.put("Bröd", ProductCategory.BREAD);
+        categoryMap.put("Kål", ProductCategory.CABBAGE);
+        categoryMap.put("Citrusfrukter", ProductCategory.CITRUS_FRUIT);
+        categoryMap.put("Kalla drycker", ProductCategory.COLD_DRINKS);
+        categoryMap.put("Varma drycker", ProductCategory.HOT_DRINKS);
+        categoryMap.put("Exotiska frukter", ProductCategory.EXOTIC_FRUIT);
+        categoryMap.put("Fisk", ProductCategory.FISH);
+        categoryMap.put("Grönsaksfrukter", ProductCategory.VEGETABLE_FRUIT);
+        categoryMap.put("Kött", ProductCategory.MEAT);
+        categoryMap.put("Mejeriprodukter", ProductCategory.DAIRIES);
+        categoryMap.put("Meloner", ProductCategory.MELONS);
+        categoryMap.put("Mjöl, socker och salt", ProductCategory.FLOUR_SUGAR_SALT);
+        categoryMap.put("Nötter och frön", ProductCategory.NUTS_AND_SEEDS);
+        categoryMap.put("Pasta", ProductCategory.PASTA);
+        categoryMap.put("Potatis och ris", ProductCategory.POTATO_RICE);
+        categoryMap.put("Rotfrukter", ProductCategory.ROOT_VEGETABLE);
+        categoryMap.put("Stenfrukter", ProductCategory.FRUIT);
+        categoryMap.put("Sötsaker", ProductCategory.SWEET);
+        categoryMap.put("Örter", ProductCategory.HERB);
+        categoryMap.put("Baljväxter", ProductCategory.POD);
 
         return categoryMap;
     }
@@ -188,8 +188,8 @@ public class Controller implements Initializable {
         // Accept clicks only on node cells, and not on empty spaces of the TreeView
         if (node instanceof Text || (node instanceof TreeCell && ((TreeCell) node).getText() != null)) {
             Text nameText = (Text) ((TreeItem) categories.getSelectionModel().getSelectedItem()).getValue();
-            String nameString = nameText.textProperty().get().toLowerCase();
-            switch (nameString) {
+            String nameString = nameText.textProperty().get();
+            switch (nameString.toLowerCase()) {
                 case "frukt och grönt":
                     findFruitGreens();
                     break;
@@ -206,6 +206,7 @@ public class Controller implements Initializable {
                     findFridge();
                     break;
                 default:
+                    findUnderCategories(nameString);
                     break;
             }
         }
@@ -321,7 +322,6 @@ public class Controller implements Initializable {
     private void onClick(Event event) {
         Button pressedButton = (Button) event.getSource();
         pressedButton.setText(event.getSource().toString());
-        System.out.println(currentSearch);
         
     }
 
@@ -338,7 +338,6 @@ public class Controller implements Initializable {
                 searchController.setItemPrice(x, currentSearch.get(i).getPrice() + " " + currentSearch.get(i).getUnit());
                 searchController.setFavouriteStar(x, "sample/img/keditbookmarks.png");
                 searchController.setItemId(x, currentSearch.get(i).getProductId());
-                System.out.println(searchController.getItemId(x));
                 itemList.getChildren().add(x);
             } catch (Exception e) {
                 e.printStackTrace();
@@ -577,6 +576,14 @@ public class Controller implements Initializable {
         currentSearch.clear();
         currentSearch.addAll(IMatDataHandler.getInstance().getProducts(ProductCategory.SWEET));
         currentSearch.addAll(IMatDataHandler.getInstance().getProducts(ProductCategory.BREAD));
+        addSearchHits();
+    }
+
+    public void findUnderCategories(String products){
+        changeMainTo("scenes/components/searchResults.fxml");
+        currentSearch.clear();
+        currentSearch.addAll(IMatDataHandler.getInstance().getProducts((ProductCategory)categoryHash.get(products)));
+
         addSearchHits();
     }
 }
