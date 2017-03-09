@@ -68,8 +68,9 @@ public class PayDeliveryLoggedInController implements Initializable {
             //sendOrder.setText("Uppdatera personuppgifter");
         } else if (allUserInformation())
             controller.changeMainTo("scenes/components/confirmation.fxml");
-            newReciept.add(IMatDataHandler.getInstance().getShoppingCart().getItems().toString());
-            System.out.println(newReciept.toArray());
+            IMatDataHandler.getInstance().placeOrder();
+            /*newReciept.add(IMatDataHandler.getInstance().getShoppingCart().getItems().toString());
+            System.out.println(newReciept.toArray());*/
     }
 
 
