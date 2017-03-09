@@ -55,6 +55,7 @@ public class RegistrationController {
 
     @FXML
     private void createAccount() {
+        //switch ()
         IMatDataHandler.getInstance().getCustomer().setFirstName(firstName.getText());
         IMatDataHandler.getInstance().getCustomer().setLastName(lastName.getText());
         IMatDataHandler.getInstance().getCustomer().setAddress(address.getText());
@@ -65,76 +66,4 @@ public class RegistrationController {
         controller.loadMainPageCategories();
     }
 
-
-    /* Gjorde en massa getters och setters för att kunna spara uppgifter men löste det på ett annat sättså jag tror inte att dessa metoder behövs
-
-    private void saveInfo() {
-        IMatDataHandler.getInstance().getCustomer().setAddress(address.getText());
-
-    }
-
-
-    private void setFirstName() {
-        firstName.getText();
-    }
-
-    private void setLastName() {
-        lastName.getText();
-    }
-
-    private void setAddress() {
-        address.getText();
-    }
-
-    private void setPostCode() {
-        postCode.getText();
-    }
-
-    private void setCity() {
-        city.getText();
-    }
-
-    private void setPhoneNumber() {
-        phoneNumber.getText();
-    }
-
-    private void setEmail() {
-        email.getText();
-    }
-
-    private void setPassword() {
-        password.getText();
-    }
-
-    public String getFirstName() {
-        return firstName.getText();
-    }
-
-    public String getLastName() {
-        return lastName.getText();
-    }
-
-    public String getAddress() {
-        return address.getText();
-    }
-
-    public String getPostCode() {
-        return postCode.getText();
-    }
-
-    public String getCity() {
-        return city.getText();
-    }
-
-    public String getPhoneNumber() {
-        return phoneNumber.getText();
-    }
-
-    public String getEmail() {
-        return email.getText();
-    }
-
-    public String getPassword() {
-        return password.getText();
-    }*/
 }

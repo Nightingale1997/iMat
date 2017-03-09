@@ -78,6 +78,8 @@ public class PayInvoiceLoggedInController implements Initializable {
             }
             System.out.println("Ordernummer" + IMatDataHandler.getInstance().getCustomer().getPhoneNumber());
             neworder.setOrderNumber(Integer.parseInt(IMatDataHandler.getInstance().getCustomer().getPhoneNumber()));
+            IMatDataHandler.getInstance().getShoppingCart().clear();
+            controller.updateCartView();
         }
     }
 
