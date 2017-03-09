@@ -300,7 +300,7 @@ public class Controller implements Initializable {
     }
 
 
-    public void addSearchHits() {
+    private void addSearchHits() {
         int currentId;
         itemList.getChildren().clear();
         for (int i = 0; i < currentSearch.size(); i++) {
@@ -461,4 +461,61 @@ public class Controller implements Initializable {
     }
 
     */
+    //Nedan följer ful kod för "kategorisökningar"
+
+    @FXML
+    public void findFruitGreens() {
+        changeMainTo("scenes/components/searchResults.fxml");
+        currentSearch.clear();
+        currentSearch.addAll(IMatDataHandler.getInstance().getProducts(ProductCategory.BERRY));
+        currentSearch.addAll(IMatDataHandler.getInstance().getProducts(ProductCategory.CABBAGE));
+        currentSearch.addAll(IMatDataHandler.getInstance().getProducts(ProductCategory.CITRUS_FRUIT));
+        currentSearch.addAll(IMatDataHandler.getInstance().getProducts(ProductCategory.EXOTIC_FRUIT));
+        currentSearch.addAll(IMatDataHandler.getInstance().getProducts(ProductCategory.VEGETABLE_FRUIT));
+        currentSearch.addAll(IMatDataHandler.getInstance().getProducts(ProductCategory.MELONS));
+        currentSearch.addAll(IMatDataHandler.getInstance().getProducts(ProductCategory.ROOT_VEGETABLE));
+        currentSearch.addAll(IMatDataHandler.getInstance().getProducts(ProductCategory.FRUIT));
+        currentSearch.addAll(IMatDataHandler.getInstance().getProducts(ProductCategory.HERB));
+        addSearchHits();
+    }
+
+    @FXML
+    public void findFridge() {
+        changeMainTo("scenes/components/searchResults.fxml");
+        currentSearch.clear();
+        currentSearch.addAll(IMatDataHandler.getInstance().getProducts(ProductCategory.DAIRIES));
+        currentSearch.addAll(IMatDataHandler.getInstance().getProducts(ProductCategory.COLD_DRINKS));
+        addSearchHits();
+    }
+
+    @FXML
+    public void findDrygoods() {
+        changeMainTo("scenes/components/searchResults.fxml");
+        currentSearch.clear();
+        currentSearch.addAll(IMatDataHandler.getInstance().getProducts(ProductCategory.HOT_DRINKS));
+        currentSearch.addAll(IMatDataHandler.getInstance().getProducts(ProductCategory.POD));
+        currentSearch.addAll(IMatDataHandler.getInstance().getProducts(ProductCategory.FLOUR_SUGAR_SALT));
+        currentSearch.addAll(IMatDataHandler.getInstance().getProducts(ProductCategory.NUTS_AND_SEEDS));
+        currentSearch.addAll(IMatDataHandler.getInstance().getProducts(ProductCategory.PASTA));
+        currentSearch.addAll(IMatDataHandler.getInstance().getProducts(ProductCategory.POTATO_RICE));
+        addSearchHits();
+    }
+
+    @FXML
+    public void findMeatFish() {
+        changeMainTo("scenes/components/searchResults.fxml");
+        currentSearch.clear();
+        currentSearch.addAll(IMatDataHandler.getInstance().getProducts(ProductCategory.MEAT));
+        currentSearch.addAll(IMatDataHandler.getInstance().getProducts(ProductCategory.FISH));
+        addSearchHits();
+    }
+
+    @FXML
+    public void findSweetsBread() {
+        changeMainTo("scenes/components/searchResults.fxml");
+        currentSearch.clear();
+        currentSearch.addAll(IMatDataHandler.getInstance().getProducts(ProductCategory.SWEET));
+        currentSearch.addAll(IMatDataHandler.getInstance().getProducts(ProductCategory.BREAD));
+        addSearchHits();
+    }
 }
