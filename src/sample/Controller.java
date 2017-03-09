@@ -338,6 +338,8 @@ public class Controller implements Initializable {
                 searchController.setItemPrice(x, currentSearch.get(i).getPrice() + " " + currentSearch.get(i).getUnit());
                 searchController.setFavouriteStar(x, "sample/img/keditbookmarks.png");
                 searchController.setItemId(x, currentSearch.get(i).getProductId());
+                searchController.setUnit(x);
+                //searchController.setUnit();
                 System.out.println(searchController.getItemId(x));
                 itemList.getChildren().add(x);
             } catch (Exception e) {

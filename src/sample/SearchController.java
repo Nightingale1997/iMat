@@ -26,24 +26,24 @@ import static java.lang.Integer.parseInt;
 public class SearchController {
     @FXML
     private Pane panePane;
-    
+
     @FXML
     private ImageView itemPic, favouriteStar;
-    
+
     @FXML
     private Label itemName, itemPrice;
-    
+
     @FXML
     private Button addButton, decItem;
 
     @FXML
     private Button incItem;
-    
+
     @FXML
     private TextField addItemField;
-    
+
     @FXML
-    private Text favouriteText, id;
+    private Text favouriteText, id, unit;
 
     static Controller controller = Controller.getThisInstance();
 
@@ -53,74 +53,85 @@ public class SearchController {
 
     public String getItemName(AnchorPane anchorPane) {
         Pane childPane = (Pane) anchorPane.getChildren().get(0);
-        Label itemLabel = (Label)childPane.getChildren().get(1);
+        Label itemLabel = (Label) childPane.getChildren().get(1);
         return itemLabel.getText();
     }
-    
-    public void setItemName(AnchorPane anchorPane, String newName){
+
+    public void setItemName(AnchorPane anchorPane, String newName) {
         Pane childPane = (Pane) anchorPane.getChildren().get(0);
-        Label itemLabel = (Label)childPane.getChildren().get(1);
+        Label itemLabel = (Label) childPane.getChildren().get(1);
         itemLabel.setText(newName);
     }
-    
+
     public Image getItemPic(AnchorPane anchorPane) {
         Pane childPane = (Pane) anchorPane.getChildren().get(0);
-        ImageView imageView = (ImageView)childPane.getChildren().get(0);
+        ImageView imageView = (ImageView) childPane.getChildren().get(0);
         return imageView.getImage();
     }
-    
-    public void setItemPic(AnchorPane anchorPane, String imageUrl){
+
+    public void setItemPic(AnchorPane anchorPane, String imageUrl) {
         String home = System.getProperty("user.home");
         Pane childPane = (Pane) anchorPane.getChildren().get(0);
-        ImageView imageView = (ImageView) childPane.getChildren().get(0); 
+        ImageView imageView = (ImageView) childPane.getChildren().get(0);
         imageView.setImage(new Image("file:" + home + "/.dat215/imat/images/" + imageUrl));
     }
 
     public String getItemPrice(AnchorPane anchorPane) {
         Pane childPane = (Pane) anchorPane.getChildren().get(0);
-        Label itemLabel = (Label)childPane.getChildren().get(2);
-        return itemLabel.getText();    
+        Label itemLabel = (Label) childPane.getChildren().get(2);
+        return itemLabel.getText();
     }
-    
-    public void setItemPrice(AnchorPane anchorPane, String newPrice){
+
+    public void setItemPrice(AnchorPane anchorPane, String newPrice) {
         Pane childPane = (Pane) anchorPane.getChildren().get(0);
-        Label itemLabel = (Label)childPane.getChildren().get(2);
+        Label itemLabel = (Label) childPane.getChildren().get(2);
         itemLabel.setText(newPrice.toString());
     }
-    
-    public void setFavouriteStar(AnchorPane anchorPane, String imageUrl){
+
+    public void setFavouriteStar(AnchorPane anchorPane, String imageUrl) {
         Pane childPane = (Pane) anchorPane.getChildren().get(0);
         ImageView imageView = (ImageView) childPane.getChildren().get(5);
         imageView.setImage(new Image(imageUrl));
     }
 
-    public void setItemId(AnchorPane anchorPane, int id){
+    public void setItemId(AnchorPane anchorPane, int id) {
         Pane childPane = (Pane) anchorPane.getChildren().get(0);
         Text idText = (Text) childPane.getChildren().get(9);
         idText.setText(new Integer(id).toString());
     }
 
     @FXML
-    public void setDefault(AnchorPane anchorPane){
+    public void setDefault(AnchorPane anchorPane) {
         Pane childPane = (Pane) anchorPane.getChildren().get(0);
         TextField quantText = (TextField) childPane.getChildren().get(6);
         quantText.setText(new Integer(1).toString());
     }
 
     @FXML
-    public int getItemId(AnchorPane anchorPane){
+    public int getItemId(AnchorPane anchorPane) {
         Pane childPane = (Pane) anchorPane.getChildren().get(0);
         Text itemId = (Text) childPane.getChildren().get(9);
         return parseInt(itemId.getText());
     }
+
     @FXML
-    public void setAddItemField(AnchorPane anchorPane, int quantity){
+    public void setAddItemField(AnchorPane anchorPane, int quantity) {
         Pane childPane = (Pane) anchorPane.getChildren().get(0);
         TextField quantText = (TextField) childPane.getChildren().get(6);
         quantText.setText(new Integer(quantity).toString());
     }
+
     @FXML
-    public int getAddItemField(AnchorPane anchorPane){
+    public void setUnit(AnchorPane anchorPane) {
+        Pane childPane = (Pane) anchorPane.getChildren().get(0);
+        Label itemLabel = (Label) childPane.getChildren().get(7);
+        String productUnit = cartInstance.getProduct(getItemId(anchorPane)).getUnit().toString();
+        productUnit = productUnit.substring(3);
+        itemLabel.setText(productUnit);
+    }
+
+    @FXML
+    public int getAddItemField(AnchorPane anchorPane) {
         Pane childPane = (Pane) anchorPane.getChildren().get(0);
         TextField itemquantity = (TextField) childPane.getChildren().get(6);
         return parseInt(itemquantity.getText());
@@ -133,14 +144,14 @@ public class SearchController {
         Product toAdd = cartInstance.getProduct(getItemId(source));
         int amount = parseInt(addItemField.getText());
         boolean founditem = false;
-        for(ShoppingItem si : shoppingCart.getItems()){
+        for (ShoppingItem si : shoppingCart.getItems()) {
             System.out.println("Hej");
-            if(toAdd.equals(si.getProduct())){
-                si.setAmount(si.getAmount()+amount);
+            if (toAdd.equals(si.getProduct())) {
+                si.setAmount(si.getAmount() + amount);
                 founditem = true;
             }
         }
-        if(!founditem){
+        if (!founditem) {
             shoppingCart.addProduct(toAdd, amount);
         }
 
@@ -166,10 +177,9 @@ public class SearchController {
         Pane childPane = (Pane) source.getChildren().get(0);
         TextField quantText = (TextField) childPane.getChildren().get(6);
         int newvalue = 0;
-        if(Integer.parseInt(addItemField.getText())<2){
+        if (Integer.parseInt(addItemField.getText()) < 2) {
             newvalue = 1;
-        }
-        else{
+        } else {
             newvalue = Integer.parseInt(addItemField.getText()) - 1;
         }
 
