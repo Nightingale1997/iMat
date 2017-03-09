@@ -64,8 +64,9 @@ public class PayDeliveryLoggedInController implements Initializable {
             //System.out.println("skicka till Mitt konto > Personuppgifter");
             //invoiceLabel.setText("Personuppgifter saknas!");
             //sendOrder.setText("Uppdatera personuppgifter");
-        } else if (allUserInformation())
+        } else if (allUserInformation()) {
             controller.changeMainTo("scenes/components/confirmation.fxml");
+        }
         Order neworder = IMatDataHandler.getInstance().placeOrder();
         neworder.setDate(new Date());
         //neworder.setOrderNumber();

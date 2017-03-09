@@ -35,6 +35,7 @@ public class Main extends Application {
             primaryStage.setTitle("iMat - Handla Enkelt!");
             primaryStage.setScene(new Scene(root, 1280, 720));
             primaryStage.show();
+            IMatDataHandler.getInstance().getShoppingCart().clear();
             //primaryStage.setFullScreen(true);
         } else {
             //Parent root = FXMLLoader.load(getClass().getResource("scenes/payinfo.fxml"));
