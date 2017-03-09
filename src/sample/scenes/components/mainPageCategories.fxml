@@ -40,7 +40,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button mnemonicParsing="false" onAction="#findFridge" prefHeight="179.0" prefWidth="371.0" styleClass="toprightcornerround" text="Mejeriprodukter" textFill="WHITE" GridPane.columnIndex="1">
+                  <Button mnemonicParsing="false" onAction="#findFridge" prefHeight="179.0" prefWidth="371.0" styleClass="toprightcornerround" text="Kyl" textFill="WHITE" GridPane.columnIndex="1">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -76,7 +76,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button mnemonicParsing="false" onAction="#findSweetsBread" prefHeight="171.0" prefWidth="372.0" styleClass="bottomleftcornerround" text="Sötsaker" textFill="WHITE" GridPane.rowIndex="2">
+                  <Button mnemonicParsing="false" onAction="#findSweetsBread" prefHeight="171.0" prefWidth="372.0" styleClass="bottomleftcornerround" text="Bröd och sötsaker" textFill="WHITE" GridPane.rowIndex="2">
                      <font>
                         <Font size="18.0" />
                      </font>
