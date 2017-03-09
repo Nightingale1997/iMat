@@ -77,19 +77,20 @@ public class PayDeliveryLoggedInController implements Initializable {
         //neworder.setOrderNumber();
 
         String ordernumber = (IMatDataHandler.getInstance().getCustomer().getPhoneNumber());
-        if (ordernumber == null) {
-            ordernumber = "0";
+        if (ordernumber == "0") {
+            ordernumber = "1";
             IMatDataHandler.getInstance().getCustomer().setPhoneNumber(ordernumber);
 
         } else {
-
+            System.out.println("check" + ordernumber);
             int temp = Integer.parseInt(ordernumber);
             temp = temp + 1;
             IMatDataHandler.getInstance().getCustomer().setPhoneNumber("" + temp);
 
         }
-        neworder.setOrderNumber(Integer.parseInt(ordernumber));
-        IMatDataHandler.getInstance().getShoppingCart().clear();
+        System.out.println("Ordernummer" + IMatDataHandler.getInstance().getCustomer().getPhoneNumber());
+        neworder.setOrderNumber(Integer.parseInt(IMatDataHandler.getInstance().getCustomer().getPhoneNumber()));
+
     }
 
 
