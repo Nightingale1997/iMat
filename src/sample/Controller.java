@@ -1,5 +1,15 @@
 package sample;
 
+
+
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.event.EventHandler;
+import javafx.scene.control.Label;
+import javafx.scene.control.ListView;
+import javafx.scene.input.MouseEvent;
+import javafx.stage.Stage;
+
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.Event;
@@ -57,6 +67,9 @@ public class Controller implements Initializable {
 
     @FXML
     private ListView shoppingCartView3;
+
+    @FXML
+    private ListView shoppingCartView4;
 
     @FXML
     private Label totalpricelabel;
@@ -452,7 +465,8 @@ public class Controller implements Initializable {
 
     public void updateCartView(){
         ObservableList<String> names = FXCollections.observableArrayList();
-        ObservableList<Double> quantities = FXCollections.observableArrayList();
+        ObservableList<Text> removelist = FXCollections.observableArrayList();
+        ObservableList<Integer> quantities = FXCollections.observableArrayList();
         ObservableList<Double> prices = FXCollections.observableArrayList();
             //double quantity = si.getAmount();
 
@@ -465,8 +479,29 @@ public class Controller implements Initializable {
             price = Math.round(price * 100.0) / 100.0;
             String name = si.getProduct().getName();
 
+            Text text = new Text("✖");
+            text.setStyle("-fx-fill:red; -fx-font-size: 16;");
+            text.setOnMouseClicked(new EventHandler<MouseEvent>() {
+                @Override
+                public void handle(MouseEvent event) {
+                    System.out.println("Ta Bort");
+
+                   int chosenIndex = removelist.indexOf(text);
+
+                    for(ShoppingItem si2 : shoppingCart.getItems()){
+                        if(si2.getProduct().getName().equals(names.get(chosenIndex))){
+                            shoppingCart.removeItem(si2);
+                            updateCartView();
+                        }
+                    }
+
+
+                }
+            });
+
+            removelist.add(text);
             names.add(name);
-            quantities.add(quantity);
+            quantities.add((int) quantity);
             prices.add(price);
         }
 
@@ -491,6 +526,7 @@ public class Controller implements Initializable {
         shoppingCartView.setItems(names);
         shoppingCartView2.setItems(quantities);
         shoppingCartView3.setItems(prices);
+        shoppingCartView4.setItems(removelist);
     }
 
     /* Började göra metoder för att lägga till och ta bort favorier men behöver lite hjälp :)

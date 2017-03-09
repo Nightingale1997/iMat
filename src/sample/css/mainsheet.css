@@ -156,6 +156,13 @@
     -fx-text-fill:black;
 }
 
+.list2{
+    -fx-font-size: 14;
+    -fx-font-weight: bold;
+
+}   
+
+
 .tree-cell:odd{
  -fx-background-color: #E3F2AC;    
 }

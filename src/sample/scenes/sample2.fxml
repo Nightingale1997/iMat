@@ -46,19 +46,20 @@
         <Pane layoutX="1013.0" layoutY="129.0" prefHeight="534.0" prefWidth="253.0" styleClass="subpane">
           <children>
             <Button layoutX="56.0" layoutY="466.0" mnemonicParsing="false" onAction="#goToPayment" prefHeight="48.0" prefWidth="148.0" text="Betala" textFill="WHITE" />
-            <Pane layoutX="14.0" layoutY="66.0" prefHeight="387.0" prefWidth="224.0" styleClass="lightpane">
+            <Pane layoutX="3.0" layoutY="66.0" prefHeight="387.0" prefWidth="246.0" styleClass="lightpane">
               <children>
                 <Label layoutX="35.0" layoutY="330.0" styleClass="standardText" stylesheets="@../css/mainsheet.css" text="Antal varor:" />
                 <Label layoutX="35.0" layoutY="353.0" styleClass="standardText" text="Totalpris:" />
-                <Label fx:id="totalamountlabel" layoutX="157.0" layoutY="332.0" styleClass="standardText" text="0 st" />
-                <Label fx:id="totalpricelabel" layoutX="157.0" layoutY="353.0" styleClass="standardText" text="0 kr" />
-                        <ListView fx:id="shoppingCartView" prefHeight="326.0" prefWidth="117.0" />
-                        <ListView fx:id="shoppingCartView2" layoutX="117.0" prefHeight="326.0" prefWidth="51.0" />
-                        <ListView fx:id="shoppingCartView3" layoutX="167.0" prefHeight="326.0" prefWidth="51.0" />
+                <Label fx:id="totalamountlabel" layoutX="150.0" layoutY="330.0" styleClass="standardText" text="0 st" />
+                <Label fx:id="totalpricelabel" layoutX="150.0" layoutY="353.0" styleClass="standardText" text="0 kr" />
+                        <ListView fx:id="shoppingCartView" layoutX="1.0" prefHeight="326.0" prefWidth="106.0" styleClass="list2" />
+                        <ListView fx:id="shoppingCartView2" layoutX="107.0" prefHeight="326.0" prefWidth="40.0" styleClass="list2" />
+                        <ListView fx:id="shoppingCartView3" layoutX="147.0" prefHeight="326.0" prefWidth="60.0" styleClass="list2" />
+                        <ListView fx:id="shoppingCartView4" layoutX="206.0" prefHeight="326.0" prefWidth="40.0" />
               </children>
             </Pane>
             <Label font="$x1" layoutX="73.0" layoutY="12.0" styleClass="headline2" text="Kundvagn" textFill="BLACK" />
-                  <Text layoutX="21.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="smallBoldText" text="Vara                      Antal    Totalt" wrappingWidth="216.99996948242188" />
+                  <Text layoutX="16.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="smallBoldText" text="Vara                 Antal  Totalt  Ta bort" wrappingWidth="246.0000228881836" />
           </children>
         </Pane>
         <Pane layoutX="14.0" layoutY="672.0" prefHeight="48.0" prefWidth="1252.0" styleClass="subpane, nobottomborder">
