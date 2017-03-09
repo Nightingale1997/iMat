@@ -2,16 +2,16 @@ package sample;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.RadioButton;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
+import javafx.scene.text.Text;
 import se.chalmers.ait.dat215.project.IMatDataHandler;
 import se.chalmers.ait.dat215.project.Order;
 import se.chalmers.ait.dat215.project.ShoppingItem;
-import javafx.scene.control.ListView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,6 +32,22 @@ public class MyAccountHistoryController {
 
     @FXML
     private ListView historyList;
+
+    @FXML
+    private ListView historyReciept2;
+
+    @FXML
+    private ListView historyReciept1;
+
+    @FXML
+    private ListView historyReciept;
+
+    @FXML
+    private Label historyLabel;
+
+
+
+
 
 
     @FXML
@@ -66,10 +82,42 @@ public class MyAccountHistoryController {
 
     @FXML
     private void showHistory() {
-        ObservableList<String> orderlist = FXCollections.observableArrayList();
+        ObservableList<Text> orderlist = FXCollections.observableArrayList();
         for (Order o : IMatDataHandler.getInstance().getOrders()) {
 
-            orderlist.add("Order Nr. " + o.getOrderNumber() + " - " + o.getDate().toString());
+            Text historytext = new Text("Order Nr. " + o.getOrderNumber() + " - " + o.getDate().toString());
+            historytext.setOnMouseClicked(new EventHandler<MouseEvent>() {
+                @Override
+                public void handle(MouseEvent event) {
+                    System.out.println("Ta Bort");
+
+                    ObservableList<String> names = FXCollections.observableArrayList();
+                    ObservableList<Integer> quantities = FXCollections.observableArrayList();
+                    ObservableList<Double> prices = FXCollections.observableArrayList();
+
+                    for(ShoppingItem si : o.getItems()){
+                        double quantity = si.getAmount();
+                        double price = si.getProduct().getPrice()*si.getAmount();
+                        price = Math.round(price * 100.0) / 100.0;
+                        String name = si.getProduct().getName();
+
+                        names.add(name);
+                        quantities.add((int) quantity);
+                        prices.add(price);
+                    }
+
+                    historyReciept.setItems(names);
+                    historyReciept1.setItems(quantities);
+                    historyReciept2.setItems(prices);
+                    historyLabel.setText("");
+
+
+
+
+
+                }
+            });
+            orderlist.add(historytext);
         }
         historyList.setItems(orderlist);
     }
