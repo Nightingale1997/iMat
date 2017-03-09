@@ -160,6 +160,10 @@
  -fx-background-color: #E3F2AC;    
 }
 
+.tree-cell:even{
+ -fx-background-color: #DFEDA8;    
+}
+
 .standardText {
 	-fx-font-size: 18;
     -fx-font-weight: normal;

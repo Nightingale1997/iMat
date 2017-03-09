@@ -8,6 +8,7 @@ import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import se.chalmers.ait.dat215.project.IMatDataHandler;
 
 /**
  * Created by Elina Olsson on 2017-03-08.
@@ -38,6 +39,7 @@ public class HomePageController {
         } catch (Exception e) {
 
         }
+        IMatDataHandler.getInstance().getCustomer().setPhoneNumber("0");
     }
 
     @FXML
