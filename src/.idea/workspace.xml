@@ -4,12 +4,10 @@
     <list default="true" id="e875e294-ca9e-4ae4-af10-3527fae1f218" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sample/PayCardLoggedInController.java" afterPath="$PROJECT_DIR$/sample/PayCardLoggedInController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sample/PayChoiceController.java" afterPath="$PROJECT_DIR$/sample/PayChoiceController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sample/PayDeliveryLoggedInController.java" afterPath="$PROJECT_DIR$/sample/PayDeliveryLoggedInController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sample/PayInvoiceLoggedInController.java" afterPath="$PROJECT_DIR$/sample/PayInvoiceLoggedInController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sample/PrePaymentController.java" afterPath="$PROJECT_DIR$/sample/PrePaymentController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sample/scenes/components/payCardLoggedIn.fxml" afterPath="$PROJECT_DIR$/sample/scenes/components/payCardLoggedIn.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sample/scenes/components/payChoice.fxml" afterPath="$PROJECT_DIR$/sample/scenes/components/payChoice.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sample/scenes/components/payDeliveryLoggedIn.fxml" afterPath="$PROJECT_DIR$/sample/scenes/components/payDeliveryLoggedIn.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sample/scenes/components/payInvoiceLoggedIn.fxml" afterPath="$PROJECT_DIR$/sample/scenes/components/payInvoiceLoggedIn.fxml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,8 +29,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sample/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="37" column="65" selection-start-line="37" selection-start-column="60" selection-end-line="37" selection-end-column="65" />
+            <state relative-caret-position="80">
+              <caret line="37" column="68" selection-start-line="37" selection-start-column="68" selection-end-line="37" selection-end-column="68" />
               <folding />
             </state>
           </provider>
@@ -41,11 +39,11 @@
       <file leaf-file-name="PayInvoiceLoggedInController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sample/PayInvoiceLoggedInController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="466">
-              <caret line="44" column="5" selection-start-line="44" selection-start-column="5" selection-end-line="44" selection-end-column="5" />
+            <state relative-caret-position="717">
+              <caret line="81" column="5" selection-start-line="81" selection-start-column="5" selection-end-line="81" selection-end-column="5" />
               <folding>
-                <element signature="e#1655#1656#0" expanded="true" />
-                <element signature="e#1730#1731#0" expanded="true" />
+                <element signature="e#1721#1722#0" expanded="true" />
+                <element signature="e#1796#1797#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -57,8 +55,8 @@
             <state relative-caret-position="25">
               <caret line="47" column="10" selection-start-line="47" selection-start-column="10" selection-end-line="47" selection-end-column="10" />
               <folding>
-                <marker date="1489068399468" expanded="false" signature="2261:2272" ph=" { " />
-                <marker date="1489068399468" expanded="false" signature="2332:2338" ph=" }" />
+                <marker date="1489069436573" expanded="false" signature="2261:2272" ph=" { " />
+                <marker date="1489069436573" expanded="false" signature="2332:2338" ph=" }" />
               </folding>
             </state>
           </provider>
@@ -67,12 +65,22 @@
       <file leaf-file-name="PayDeliveryLoggedInController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sample/PayDeliveryLoggedInController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="107">
-              <caret line="59" column="4" selection-start-line="59" selection-start-column="4" selection-end-line="62" selection-end-column="5" />
+            <state relative-caret-position="472">
+              <caret line="81" column="0" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
               <folding>
-                <element signature="e#2058#2059#0" expanded="true" />
-                <element signature="e#2133#2134#0" expanded="true" />
+                <element signature="e#2060#2061#0" expanded="true" />
+                <element signature="e#2135#2136#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HelpController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sample/HelpController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="68" column="10" selection-start-line="68" selection-start-column="10" selection-end-line="68" selection-end-column="10" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -89,7 +97,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PayChoiceController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PayChoiceController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sample/PayChoiceController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="355">
@@ -105,11 +113,11 @@
       <file leaf-file-name="PayCardLoggedInController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sample/PayCardLoggedInController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="52" column="5" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
+            <state relative-caret-position="375">
+              <caret line="71" column="12" selection-start-line="71" selection-start-column="12" selection-end-line="71" selection-end-column="30" />
               <folding>
-                <element signature="e#2069#2070#0" expanded="true" />
-                <element signature="e#2144#2145#0" expanded="true" />
+                <element signature="e#2104#2105#0" expanded="true" />
+                <element signature="e#2179#2180#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -164,16 +172,16 @@
         <option value="$PROJECT_DIR$/sample/MyAccountCardController.java" />
         <option value="$PROJECT_DIR$/sample/MyAccountInformationController.java" />
         <option value="$PROJECT_DIR$/sample/MyAccountHistoryController.java" />
-        <option value="$PROJECT_DIR$/sample/Main.java" />
         <option value="$PROJECT_DIR$/sample/SearchController.java" />
         <option value="$PROJECT_DIR$/sample/Controller.java" />
         <option value="$PROJECT_DIR$/sample/HomePageController.java" />
         <option value="$PROJECT_DIR$/sample/RegistrationController.java" />
         <option value="$PROJECT_DIR$/sample/PrePaymentController.java" />
-        <option value="$PROJECT_DIR$/sample/PayDeliveryLoggedInController.java" />
-        <option value="$PROJECT_DIR$/sample/PayInvoiceLoggedInController.java" />
-        <option value="$PROJECT_DIR$/sample/PayCardLoggedInController.java" />
         <option value="$PROJECT_DIR$/sample/PayChoiceController.java" />
+        <option value="$PROJECT_DIR$/sample/Main.java" />
+        <option value="$PROJECT_DIR$/sample/PayInvoiceLoggedInController.java" />
+        <option value="$PROJECT_DIR$/sample/PayDeliveryLoggedInController.java" />
+        <option value="$PROJECT_DIR$/sample/PayCardLoggedInController.java" />
       </list>
     </option>
   </component>
@@ -570,7 +578,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34958383" sideWeight="0.5043243" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29845423" sideWeight="0.49567568" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.49567568" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936978" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936978" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -875,14 +883,6 @@
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/javafx-src.zip!/javafx/beans/property/ObjectPropertyBase.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/javafx-src.zip!/javafx/fxml/FXMLLoader.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/javafx-src.zip!/javafx/fxml/FXMLLoader.java" />
-    <entry file="file://$PROJECT_DIR$/sample/HelpController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="68" column="10" selection-start-line="68" selection-start-column="10" selection-end-line="68" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sample/MyAccountCardController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1500">
@@ -949,64 +949,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sample/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="37" column="65" selection-start-line="37" selection-start-column="60" selection-end-line="37" selection-end-column="65" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sample/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-97">
           <caret line="355" column="0" selection-start-line="355" selection-start-column="0" selection-end-line="355" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sample/PrePaymentController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="47" column="10" selection-start-line="47" selection-start-column="10" selection-end-line="47" selection-end-column="10" />
-          <folding>
-            <marker date="1489068399468" expanded="false" signature="2261:2272" ph=" { " />
-            <marker date="1489068399468" expanded="false" signature="2332:2338" ph=" }" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sample/PayDeliveryLoggedInController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="59" column="4" selection-start-line="59" selection-start-column="4" selection-end-line="62" selection-end-column="5" />
-          <folding>
-            <element signature="e#2058#2059#0" expanded="true" />
-            <element signature="e#2133#2134#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sample/PayInvoiceLoggedInController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="466">
-          <caret line="44" column="5" selection-start-line="44" selection-start-column="5" selection-end-line="44" selection-end-column="5" />
-          <folding>
-            <element signature="e#1655#1656#0" expanded="true" />
-            <element signature="e#1730#1731#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sample/PayCardLoggedInController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="52" column="5" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
-          <folding>
-            <element signature="e#2069#2070#0" expanded="true" />
-            <element signature="e#2144#2145#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1019,6 +967,66 @@
             <element signature="e#840#841#0" expanded="true" />
             <element signature="e#914#915#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sample/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="37" column="68" selection-start-line="37" selection-start-column="68" selection-end-line="37" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sample/PrePaymentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="47" column="10" selection-start-line="47" selection-start-column="10" selection-end-line="47" selection-end-column="10" />
+          <folding>
+            <marker date="1489069436573" expanded="false" signature="2261:2272" ph=" { " />
+            <marker date="1489069436573" expanded="false" signature="2332:2338" ph=" }" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sample/PayInvoiceLoggedInController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="717">
+          <caret line="81" column="5" selection-start-line="81" selection-start-column="5" selection-end-line="81" selection-end-column="5" />
+          <folding>
+            <element signature="e#1721#1722#0" expanded="true" />
+            <element signature="e#1796#1797#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sample/PayCardLoggedInController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="71" column="12" selection-start-line="71" selection-start-column="12" selection-end-line="71" selection-end-column="30" />
+          <folding>
+            <element signature="e#2104#2105#0" expanded="true" />
+            <element signature="e#2179#2180#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sample/PayDeliveryLoggedInController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="472">
+          <caret line="81" column="0" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
+          <folding>
+            <element signature="e#2060#2061#0" expanded="true" />
+            <element signature="e#2135#2136#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sample/HelpController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="68" column="10" selection-start-line="68" selection-start-column="10" selection-end-line="68" selection-end-column="10" />
+          <folding />
         </state>
       </provider>
     </entry>

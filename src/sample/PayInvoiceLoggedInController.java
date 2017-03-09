@@ -5,6 +5,7 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ComboBox;
+import javafx.scene.text.Text;
 import se.chalmers.ait.dat215.project.IMatDataHandler;
 import se.chalmers.ait.dat215.project.Order;
 
@@ -18,6 +19,9 @@ import java.util.ResourceBundle;
 public class PayInvoiceLoggedInController implements Initializable {
 
     static Controller controller = Controller.getThisInstance();
+
+    @FXML
+    private Text error;
 
     @FXML
     private ComboBox deliveryDay, deliveryTime;
@@ -47,29 +51,34 @@ public class PayInvoiceLoggedInController implements Initializable {
 
     @FXML
     private void loadConfirmation() {
+        if (deliveryDay.getValue().equals("Välj dag:") || deliveryTime.getValue().equals("Välj tid:")) {
+            error.setText("Välj dag och tid för leverans.");
+        }
         if (!allUserInformation()) {
             controller.loadMyAccount();
             System.out.println("skicka till Mitt konto > Personuppgifter");
-        } else
+        } else if (allUserInformation()) {
             controller.changeMainTo("scenes/components/confirmation.fxml");
-        Order neworder = IMatDataHandler.getInstance().placeOrder();
-        neworder.setDate(new Date());
-        //neworder.setOrderNumber();
 
-        String ordernumber = (IMatDataHandler.getInstance().getCustomer().getPhoneNumber());
-        if (ordernumber == null) {
-            ordernumber = "0";
-            IMatDataHandler.getInstance().getCustomer().setPhoneNumber(ordernumber);
+            Order neworder = IMatDataHandler.getInstance().placeOrder();
+            neworder.setDate(new Date());
+            //neworder.setOrderNumber();
 
-        } else {
+            String ordernumber = (IMatDataHandler.getInstance().getCustomer().getPhoneNumber());
+            if (ordernumber == "0") {
+                ordernumber = "1";
+                IMatDataHandler.getInstance().getCustomer().setPhoneNumber(ordernumber);
 
-            int temp = Integer.parseInt(ordernumber);
-            temp = temp + 1;
-            IMatDataHandler.getInstance().getCustomer().setPhoneNumber("" + temp);
+            } else {
+                System.out.println("check" + ordernumber);
+                int temp = Integer.parseInt(ordernumber);
+                temp = temp + 1;
+                IMatDataHandler.getInstance().getCustomer().setPhoneNumber("" + temp);
 
+            }
+            System.out.println("Ordernummer" + IMatDataHandler.getInstance().getCustomer().getPhoneNumber());
+            neworder.setOrderNumber(Integer.parseInt(IMatDataHandler.getInstance().getCustomer().getPhoneNumber()));
         }
-        neworder.setOrderNumber(Integer.parseInt(ordernumber));
-        IMatDataHandler.getInstance().getShoppingCart().clear();
     }
 
 

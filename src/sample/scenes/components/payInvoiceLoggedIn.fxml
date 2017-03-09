@@ -32,6 +32,7 @@
                   <Label fx:id="invoiceLabel" layoutX="166.0" layoutY="337.0" prefHeight="25.0" prefWidth="420.0" styleClass="standardText" />
                   <ComboBox fx:id="deliveryDay" layoutX="188.0" layoutY="91.0" prefWidth="150.0" />
                   <ComboBox fx:id="deliveryTime" layoutX="403.0" layoutY="91.0" prefWidth="150.0" />
+                  <Text fx:id="error" layoutX="248.0" layoutY="344.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="standardText" wrappingWidth="270.0" />
                </children>
             </Pane>
          </children>
