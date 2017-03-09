@@ -2,6 +2,7 @@ package sample;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.PasswordField;
+import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import se.chalmers.ait.dat215.project.IMatDataHandler;
 
@@ -17,12 +18,27 @@ public class RegistrationController {
     @FXML
     private TextField firstName, lastName, address, postCode, city, phoneNumber, email;
 
-    /*@FXML
-    private PasswordField password;*/
+    @FXML
+    private RadioButton cardVisa, cardMastercard;
 
     @FXML
     private void loadMyAccount() {
         controller.changeMainTo("scenes/components/myAccountWelcome.fxml");
+    }
+
+
+    @FXML
+    private void radioMastercard() {
+        if(cardVisa.isSelected()) {
+            cardVisa.setSelected(false);
+        }
+    }
+
+    @FXML
+    private void radioVisa() {
+        if(cardMastercard.isSelected()) {
+            cardMastercard.setSelected(false);
+        }
     }
 
 

@@ -44,6 +44,7 @@ public class MyAccountCardController implements Initializable {
         //deliveryDay.getItems().addAll("Måndag", "Tisdag");
     }
 
+
     @FXML
     private void loadMyAccountWelcome() {
         controller.changeMainTo("scenes/components/myAccountWelcome.fxml");
@@ -116,6 +117,20 @@ public class MyAccountCardController implements Initializable {
             controller.setMainTo(pane);
         } catch (IOException e) {
             e.printStackTrace();
+        }
+    }
+
+    @FXML
+    private void radioMastercard() {
+        if(cardVisa.isSelected()) {
+            cardVisa.setSelected(false);
+        }
+    }
+
+    @FXML
+    private void radioVisa() {
+        if(cardMastercard.isSelected()) {
+            cardMastercard.setSelected(false);
         }
     }
 

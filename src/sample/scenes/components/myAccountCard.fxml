@@ -56,8 +56,8 @@
             <Label layoutX="22.0" layoutY="164.0" styleClass="smallBoldText" text="Kortinnehavarens namn" />
             <TextField fx:id="cardNumber" layoutX="22.0" layoutY="130.0" prefHeight="11.0" prefWidth="166.0" />
             <Label layoutX="22.0" layoutY="110.0" styleClass="smallBoldText" text="Kortnummer" />
-            <RadioButton fx:id="cardMastercard" layoutX="115.0" layoutY="77.0" mnemonicParsing="false" text="MasterCard" />
-            <RadioButton fx:id="cardVisa" layoutX="22.0" layoutY="77.0" mnemonicParsing="false" text="Visa" />
+            <RadioButton fx:id="cardMastercard" layoutX="115.0" layoutY="77.0" mnemonicParsing="false" onAction="#radioMastercard" text="MasterCard" />
+            <RadioButton fx:id="cardVisa" layoutX="22.0" layoutY="77.0" mnemonicParsing="false" onAction="#radioVisa" text="Visa" />
             <Button fx:id="save" layoutX="264.0" layoutY="395.0" mnemonicParsing="false" onAction="#saveCardInfo" prefHeight="45.0" prefWidth="123.0" text="Spara" textFill="WHITE" />
             <Label layoutX="24.0" layoutY="294.0" styleClass="smallText" text="Månad" />
             <Label layoutX="141.0" layoutY="294.0" styleClass="smallText" text="År" />
