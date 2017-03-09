@@ -2,8 +2,7 @@ package sample;
 
 
 
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
+import javafx.collections.*;
 import javafx.event.EventHandler;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
@@ -78,7 +77,7 @@ public class Controller implements Initializable {
     private Label totalamountlabel;
 
     @FXML
-    private Button getSearchButton, loginButton, addItem, incItem, decItem, item0, item1, item2, item3, item4, item5, item6, item7, item8;
+    private Button pay, getSearchButton, loginButton, addItem, incItem, decItem, item0, item1, item2, item3, item4, item5, item6, item7, item8;
 
     @FXML
     private GridPane frame;
@@ -468,9 +467,8 @@ public class Controller implements Initializable {
         ObservableList<Text> removelist = FXCollections.observableArrayList();
         ObservableList<Integer> quantities = FXCollections.observableArrayList();
         ObservableList<Double> prices = FXCollections.observableArrayList();
+
             //double quantity = si.getAmount();
-
-
 
         for(ShoppingItem si : shoppingCart.getItems()){
             double quantity = si.getAmount();
@@ -527,6 +525,12 @@ public class Controller implements Initializable {
         shoppingCartView2.setItems(quantities);
         shoppingCartView3.setItems(prices);
         shoppingCartView4.setItems(removelist);
+        if(names.size() == 0){
+            pay.setDisable(true);
+        }
+        else{
+            pay.setDisable(false);
+        }
     }
 
     /* Började göra metoder för att lägga till och ta bort favorier men behöver lite hjälp :)

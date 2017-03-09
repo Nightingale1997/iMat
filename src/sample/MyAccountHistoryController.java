@@ -68,7 +68,6 @@ public class MyAccountHistoryController {
     private void showHistory() {
         ObservableList<String> orderlist = FXCollections.observableArrayList();
         for (Order o : IMatDataHandler.getInstance().getOrders()) {
-
             orderlist.add("Order Nr. " + o.getOrderNumber() + " - " + o.getDate().toString());
         }
         historyList.setItems(orderlist);
