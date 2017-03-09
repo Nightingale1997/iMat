@@ -60,6 +60,7 @@ public class HomePageController {
         } catch (Exception e) {
 
         }
+        IMatDataHandler.getInstance().getCustomer().setPhoneNumber("0");
     }
 
     /*@FXML
@@ -93,6 +94,7 @@ public class HomePageController {
         } catch (Exception e) {
 
         }
+        IMatDataHandler.getInstance().getCustomer().setPhoneNumber("0");
     }
 
 }
