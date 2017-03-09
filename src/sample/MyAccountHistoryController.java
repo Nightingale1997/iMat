@@ -85,6 +85,7 @@ public class MyAccountHistoryController {
         ObservableList<Text> orderlist = FXCollections.observableArrayList();
         for (Order o : IMatDataHandler.getInstance().getOrders()) {
 
+
             Text historytext = new Text("Order Nr. " + o.getOrderNumber() + " - " + o.getDate().toString());
             historytext.setOnMouseClicked(new EventHandler<MouseEvent>() {
                 @Override
@@ -118,6 +119,7 @@ public class MyAccountHistoryController {
                 }
             });
             orderlist.add(historytext);
+
         }
         historyList.setItems(orderlist);
     }
