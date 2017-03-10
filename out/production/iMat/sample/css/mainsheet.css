@@ -32,6 +32,16 @@
 }
 
 
+.backgroundpane2{
+   -fx-background-color: #DFEDA8;
+    -fx-effect: innershadow( gaussian, rgba(0, 0, 0, 0.5), 3, 0, 0, -1);
+}
+
+.backgroundpane3{
+   -fx-background-color: #DFEDA8;
+    -fx-effect: innershadow( gaussian, rgba(0, 0, 0, 0.5), 3, 0, 0, 1);
+}
+
 .subpane {
     -fx-background-radius: 5;
     -fx-border-radius: 5;
@@ -167,7 +177,7 @@
  -fx-background-color: #E3F2AC;    
 }
 
-.tree-cell:even{
+.tree-cell:even, .backgroundpane{
  -fx-background-color: #DFEDA8;    
 }
 
@@ -205,6 +215,14 @@
 .search {
     -fx-effect: innershadow( gaussian, rgba(0, 0, 0, 0.5), 5, 0, 0, 0);
 }
+
+.backgroundpane{
+    -fx-effect: innershadow( gaussian, rgba(0, 0, 0, 0.5), 5, 0, 0, 0);
+}
+
+
+
+
 
 .list-view {
     -fx-background-radius: 5;
