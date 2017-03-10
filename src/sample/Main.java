@@ -30,7 +30,7 @@ public class Main extends Application {
         boolean firstRun = false;
         if (!file.exists()) {
             firstRun = true;
-            file.createNewFile();
+            //file.createNewFile();
 
             //Parent root = FXMLLoader.load(getClass().getResource("scenes/payinfo.fxml"));
             Parent root = FXMLLoader.load(getClass().getResource("scenes/sample3.fxml"));

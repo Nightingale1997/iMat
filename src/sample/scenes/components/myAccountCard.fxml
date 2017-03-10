@@ -57,6 +57,7 @@
             <Label layoutX="24.0" layoutY="294.0" styleClass="smallText" text="Månad" />
             <Label layoutX="141.0" layoutY="294.0" styleClass="smallText" text="År" />
             <Label layoutX="22.0" layoutY="53.0" styleClass="smallText" text="Korttyp" />
+            <Text fx:id="saved" layoutX="25.0" layoutY="424.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="standardText" wrappingWidth="123.0" />
          </children>
       </Pane>
       <Label layoutX="307.0" layoutY="10.0" styleClass="headline1" text="Mitt konto" />

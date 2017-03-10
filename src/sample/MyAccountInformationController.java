@@ -8,6 +8,7 @@ import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
+import javafx.scene.text.Text;
 import se.chalmers.ait.dat215.project.IMatDataHandler;
 
 import java.io.IOException;
@@ -40,6 +41,9 @@ public class MyAccountInformationController extends Pane{
     @FXML
     private TextField firstName, lastName, address, postCode, city, phoneNumber, email;
 
+    @FXML
+    private Text saved;
+
     /*@FXML
     private PasswordField password;*/
 
@@ -52,7 +56,10 @@ public class MyAccountInformationController extends Pane{
         city.textProperty().set(IMatDataHandler.getInstance().getCustomer().getPostAddress());
         phoneNumber.textProperty().set(IMatDataHandler.getInstance().getCustomer().getMobilePhoneNumber());
         email.textProperty().set(IMatDataHandler.getInstance().getCustomer().getEmail());
-        //password.textProperty().set(IMatDataHandler.getInstance().getUser().getPassword());
+        if(firstName.getText().equals("")) {
+            firstName.setStyle("-fx-fill:red;");
+        }
+
     }
 
     @FXML
@@ -64,7 +71,7 @@ public class MyAccountInformationController extends Pane{
         IMatDataHandler.getInstance().getCustomer().setPostAddress(city.getText());
         IMatDataHandler.getInstance().getCustomer().setMobilePhoneNumber(phoneNumber.getText());
         IMatDataHandler.getInstance().getCustomer().setEmail(email.getText());
-        //IMatDataHandler.getInstance().getUser().setPassword(password.getText());
+        saved.setText("Sparat!");
     }
 
     @FXML
