@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 <?import java.lang.String?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
@@ -8,7 +13,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="574.0" maxWidth="767.0" minHeight="530.0" minWidth="728.0" prefHeight="534.0" prefWidth="767.0" styleClass="subpane" stylesheets="@../../css/mainsheet.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MyAccountController">
+<Pane maxHeight="574.0" maxWidth="767.0" minHeight="530.0" minWidth="728.0" prefHeight="534.0" prefWidth="767.0" styleClass="subpane" stylesheets="@../../css/mainsheet.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MyAccountController">
    <children>
       <ListView layoutX="14.0" layoutY="57.0" prefHeight="466.0" prefWidth="197.0" styleClass="lightpane" />
       <Pane layoutX="15.0" layoutY="65.0" prefHeight="42.0" prefWidth="195.0" styleClass="backgroundpane" />
@@ -53,7 +58,7 @@
             <Label fx:id="informationText" layoutX="22.0" layoutY="46.0" prefHeight="95.0" prefWidth="448.0" styleClass="standardText" />
          </children>
       </Pane>
-      <Label layoutX="307.0" layoutY="10.0" styleClass="headline1" text="Mitt konto" />
+      <Label layoutX="372.0" layoutY="10.0" styleClass="headline1" text="Personuppgifter" />
       <Label fx:id="myAccountCard" layoutX="32.0" layoutY="139.0" onMouseClicked="#loadMyAccountCard" text="Kortuppgifter">
          <styleClass>
             <String fx:value="boldStandardText" />

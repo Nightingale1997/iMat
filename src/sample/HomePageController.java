@@ -40,6 +40,7 @@ public class HomePageController {
 
         }
         IMatDataHandler.getInstance().getCustomer().setPhoneNumber("0");
+        IMatDataHandler.getInstance().getOrders().clear();
     }
 
     @FXML
@@ -61,6 +62,8 @@ public class HomePageController {
 
         }
         IMatDataHandler.getInstance().getCustomer().setPhoneNumber("0");
+        IMatDataHandler.getInstance().getOrders().clear();
+
     }
 
     @FXML
@@ -114,6 +117,7 @@ public class HomePageController {
 
         }
         IMatDataHandler.getInstance().getCustomer().setPhoneNumber("0");
+        IMatDataHandler.getInstance().getOrders().clear();
     }
 
 }
