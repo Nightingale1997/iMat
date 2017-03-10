@@ -91,7 +91,7 @@ public class SearchController {
     public void setFavouriteStar(AnchorPane anchorPane, String imageUrl) {
         Pane childPane = (Pane) anchorPane.getChildren().get(0);
         ImageView imageView = (ImageView) childPane.getChildren().get(5);
-        imageView.setImage(new Image(imageUrl));
+        imageView.setImage(null);
     }
 
     public void setItemId(AnchorPane anchorPane, int id) {

@@ -38,5 +38,9 @@ public class MainCategoryController {
         controller.findSweetsBread();
     }
 
+    @FXML
+    private void goToHelp() {
+        controller.changeMainTo("scenes/components/helpOverView.fxml");
+    }
 
 }

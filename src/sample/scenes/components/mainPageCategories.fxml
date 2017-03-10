@@ -88,14 +88,14 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button mnemonicParsing="false" prefHeight="181.0" prefWidth="371.0" styleClass="bottomrightcornerround" text="Favoriter" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                  <Button mnemonicParsing="false" onAction="#goToHelp" prefHeight="181.0" prefWidth="371.0" styleClass="bottomrightcornerround" text="Hjälp" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2">
                      <font>
                         <Font size="18.0" />
                      </font>
                      <graphic>
                         <ImageView fitHeight="121.0" fitWidth="118.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../img/keditbookmarks.png" />
+                              <Image url="@../../img/help-97859_960_720.png" />
                            </image>
                         </ImageView>
                      </graphic>
