@@ -21,21 +21,22 @@
                <font>
                   <Font size="14.0" />
                </font></Label>
-            <TextField fx:id="firstName" layoutX="159.0" layoutY="91.0" prefHeight="25.0" prefWidth="200.0" />
+            <TextField id="firstName" fx:id="firstName" layoutX="159.0" layoutY="91.0" prefHeight="25.0" prefWidth="200.0" />
             <Label layoutX="387.0" layoutY="70.0" styleClass="smallBoldText" text="Efternamn" textFill="#1c6d11" />
-            <TextField fx:id="lastName" layoutX="387.0" layoutY="90.0" prefHeight="25.0" prefWidth="200.0" />
+            <TextField id="lastName" fx:id="lastName" layoutX="387.0" layoutY="90.0" prefHeight="25.0" prefWidth="200.0" />
             <Label layoutX="159.0" layoutY="142.0" styleClass="smallBoldText" text="Adress" textFill="#1c6d11" />
-            <TextField fx:id="address" layoutX="159.0" layoutY="163.0" prefHeight="25.0" prefWidth="428.0" />
+            <TextField id="address" fx:id="address" layoutX="159.0" layoutY="163.0" prefHeight="25.0" prefWidth="428.0" />
             <Label layoutX="159.0" layoutY="206.0" styleClass="smallBoldText" text="Postnummer" textFill="#1c6d11" />
-            <TextField fx:id="postCode" layoutX="159.0" layoutY="226.0" prefHeight="25.0" prefWidth="96.0" />
+            <TextField id="postCode" fx:id="postCode" layoutX="159.0" layoutY="226.0" prefHeight="25.0" prefWidth="96.0" />
             <Label layoutX="277.0" layoutY="206.0" styleClass="smallBoldText" text="Ort" textFill="#1c6d11" />
-            <TextField fx:id="city" layoutX="277.0" layoutY="226.0" prefHeight="25.0" prefWidth="310.0" />
+            <TextField id="city" fx:id="city" layoutX="277.0" layoutY="226.0" prefHeight="25.0" prefWidth="310.0" />
             <Label layoutX="159.0" layoutY="286.0" styleClass="smallBoldText" text="Telefonnummer" textFill="#1c6d11" />
-            <TextField fx:id="phoneNumber" layoutX="159.0" layoutY="309.0" prefHeight="25.0" prefWidth="200.0" />
+            <TextField id="phoneNumber" fx:id="phoneNumber" layoutX="159.0" layoutY="309.0" prefHeight="25.0" prefWidth="200.0" />
             <Label layoutX="373.0" layoutY="287.0" styleClass="smallBoldText" text="E-post" textFill="#1c6d11" />
-            <TextField fx:id="email" layoutX="373.0" layoutY="309.0" prefHeight="20.0" prefWidth="215.0" />
+            <TextField id="email" fx:id="email" layoutX="373.0" layoutY="309.0" prefHeight="20.0" prefWidth="215.0" />
             <Button layoutX="450.0" layoutY="374.0" mnemonicParsing="false" onAction="#continuePayment" prefHeight="39.0" prefWidth="138.0" text="Fortsätt" textFill="WHITE" />
             <Label layoutX="138.0" layoutY="23.0" styleClass="standardText" text="Du måste lägga till dina personuppgifter för att kunna handla." />
+            <Text fx:id="error" layoutX="160.0" layoutY="400.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="standardText" wrappingWidth="246.0" />
          </children>
       </Pane>
    </children>

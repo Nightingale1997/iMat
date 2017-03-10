@@ -9,6 +9,7 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
+import javafx.scene.text.Text;
 import se.chalmers.ait.dat215.project.IMatDataHandler;
 
 import java.io.IOException;
@@ -34,6 +35,9 @@ public class MyAccountCardController implements Initializable {
 
     @FXML
     private ComboBox cardMonth, cardYear;
+
+    @FXML
+    private Text saved;
 
 
     @Override
@@ -156,7 +160,7 @@ public class MyAccountCardController implements Initializable {
         cardMonth.setValue(IMatDataHandler.getInstance().getCreditCard().getValidMonth());
         cardYear.setValue(IMatDataHandler.getInstance().getCreditCard().getValidYear());
 
-        cardNumber.textProperty().set(IMatDataHandler.getInstance().getCreditCard().getCardNumber());
+        cardNumber.textProperty().set(IMatDataHandler.getInstance().getCreditCard().getCardNumber().toString());
         cardName.textProperty().set(IMatDataHandler.getInstance().getCreditCard().getHoldersName());
         cardCVC.textProperty().set(""+IMatDataHandler.getInstance().getCreditCard().getVerificationCode());
     }
@@ -173,7 +177,7 @@ public class MyAccountCardController implements Initializable {
 
         //String totalCardNumber = cardNumber.getText() + cardNumber1.getText() + cardNumber2.getText() + cardNumber3.getText();
 
-        IMatDataHandler.getInstance().getCreditCard().setCardNumber(cardNumber.toString());
+        IMatDataHandler.getInstance().getCreditCard().setCardNumber(cardNumber.getText());
         IMatDataHandler.getInstance().getCreditCard().setHoldersName(cardName.getText());
 
         if (!cardCVC.getText().equals("")) {
@@ -182,6 +186,7 @@ public class MyAccountCardController implements Initializable {
 
         IMatDataHandler.getInstance().getCreditCard().setValidMonth(Integer.parseInt(cardMonth.getValue().toString()));
         IMatDataHandler.getInstance().getCreditCard().setValidYear(Integer.parseInt(cardYear.getValue().toString()));
+        saved.setText("Sparat!");
     }
 
 }

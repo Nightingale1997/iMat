@@ -34,8 +34,10 @@
             <TextField fx:id="phoneNumber" layoutX="159.0" layoutY="309.0" prefHeight="25.0" prefWidth="200.0" />
             <Label layoutX="373.0" layoutY="287.0" styleClass="smallBoldText" text="E-post" textFill="#1c6d11" />
             <TextField fx:id="email" layoutX="373.0" layoutY="309.0" prefHeight="20.0" prefWidth="215.0" />
-            <Button layoutX="450.0" layoutY="374.0" mnemonicParsing="false" onAction="#createAccount" onMouseClicked="#loadMyAccount" prefHeight="39.0" prefWidth="138.0" text="Skapa konto" textFill="WHITE" />
+            <Button layoutX="450.0" layoutY="374.0" mnemonicParsing="false" onAction="#createAccount" prefHeight="39.0" prefWidth="138.0" text="Skapa konto" textFill="WHITE" />
             <Label layoutX="138.0" layoutY="23.0" styleClass="standardText" text="Du måste lägga till dina personuppgifter för att kunna handla." />
+            <Text fx:id="error" layoutX="161.0" layoutY="400.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="standardText" wrappingWidth="275.0" />
+            <Text fx:id="error" layoutX="159.0" layoutY="399.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="standardText" wrappingWidth="257.205078125" />
          </children>
       </Pane>
    </children>
